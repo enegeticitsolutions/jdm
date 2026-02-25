@@ -13,6 +13,16 @@ from django.shortcuts import get_object_or_404
 
 api = NinjaAPI(csrf=True, urls_namespace="core-api")
 
+def build_file_url(request, file_field):
+    if not file_field:
+        return None
+    url = file_field.url
+    if url.startswith('/assets/') or url.startswith('assets/'):
+        return url
+    return request.build_absolute_uri(url)
+
+
+
 # Highlight JDM Text Utility
 # def highlight_jdm(text):
 #     if not text:
@@ -40,7 +50,7 @@ def get_home(request):
             {
                 "id": hs.service.id,
                 "title": hs.service.title,
-                "image": request.build_absolute_uri(hs.service.image.url) if hs.service.image else None,
+                "image": build_file_url(request, hs.service.image),
             }
             for hs in ordered[:8]
         ]
@@ -50,15 +60,15 @@ def get_home(request):
             {
                 "id": service.id,
                 "title": service.title,
-                "image": request.build_absolute_uri(service.image.url) if service.image else None,
+                "image": build_file_url(request, service.image),
             }
             for service in home.selected_services.all()
         ]
 
     return {
         "hero": {
-            "video_url": request.build_absolute_uri(home.hero_video.url) if home.hero_video else None,
-            "image_url": request.build_absolute_uri(home.hero_image.url) if home.hero_image else None,
+            "video_url": build_file_url(request, home.hero_video),
+            "image_url": build_file_url(request, home.hero_image),
         },
         "services": {
             "heading": home.services_heading,
@@ -67,27 +77,27 @@ def get_home(request):
         },
         "journey": {
             "heading": home.journey_heading,
-            "video_url": request.build_absolute_uri(home.journey_video.url) if home.journey_video else None,
+            "video_url": build_file_url(request, home.journey_video),
         },
         "clientele": {
             "heading": home.clientele_heading,
-            "items": [request.build_absolute_uri(item.logo.url) for item in home.clientele.all()],
+            "items": [build_file_url(request, item.logo) for item in home.clientele.all()],
         },
         "associations": {
             "heading": home.associations_heading,
-            "items": [request.build_absolute_uri(item.logo.url) for item in home.associations.all()],
+            "items": [build_file_url(request, item.logo) for item in home.associations.all()],
         },
         "affiliations": {
             "heading": home.affiliations_heading,
-            "items": [request.build_absolute_uri(item.logo.url) for item in home.affiliations.all()],
+            "items": [build_file_url(request, item.logo) for item in home.affiliations.all()],
         },
         "sea_partners": {
             "heading": home.sea_partners_heading,
-            "items": [request.build_absolute_uri(item.logo.url) for item in home.sea_partners.all()],
+            "items": [build_file_url(request, item.logo) for item in home.sea_partners.all()],
         },
         "air_partners": {
             "heading": home.air_partners_heading,
-            "items": [request.build_absolute_uri(item.logo.url) for item in home.air_partners.all()],
+            "items": [build_file_url(request, item.logo) for item in home.air_partners.all()],
         },
         "locations": {
             "heading": home.locations_heading,
@@ -98,7 +108,7 @@ def get_home(request):
                     "address": loc.address,
                     "phone": loc.phone,
                     "email": loc.email,
-                    "image": request.build_absolute_uri(loc.image.url) if loc.image else None,
+                    "image": build_file_url(request, loc.image),
                     "place": loc.place,
                 }
                 for loc in home.locations.all()
@@ -111,7 +121,7 @@ def get_home(request):
                     "id": ach.id,
                     "title": ach.title,
                     "count": ach.count,
-                    "icon": request.build_absolute_uri(ach.icon.url) if ach.icon else None,
+                    "icon": build_file_url(request, ach.icon),
                     "delay": ach.delay,
                     "suffix": ach.suffix,
                     "prefix": ach.prefix,
@@ -320,7 +330,7 @@ def get_services(request):
         {
             "id": s.id,
             "title": s.title,
-            "image": request.build_absolute_uri(s.image.url) if s.image else None,
+            "image": build_file_url(request, s.image),
             "description": s.description,
             "icon": s.icon,
             "description1": s.description1,
@@ -348,7 +358,7 @@ def get_service_by_id(request, service_id: str):
     return {
         "id": service.id,
         "title": service.title,
-        "image": request.build_absolute_uri(service.image.url) if service.image else None,
+        "image": build_file_url(request, service.image),
         "description": service.description,
         "description1": service.description1,
         "description2": service.description2,
@@ -446,7 +456,7 @@ def get_industry(request):
             "type": obj.type,
             "content": obj.content,
             "list_items": obj.list_items,
-            "image": request.build_absolute_uri(obj.image.url) if obj.image else "",
+            "image": (build_file_url(request, obj.image) or ""),
             "is_image_left": obj.is_image_left,
             "is_active": obj.is_active,
         }
