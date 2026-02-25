@@ -6,12 +6,14 @@ const fetchGalleryEvents = async () => {
     controller.abort();
   }, 8000); // Timeout after 8 seconds
 
-  console.log("Calling Gallery API →", `${process.env.NEXT_PUBLIC_API_URL}/gallery/`);
-
+  console.log(
+    "Calling Gallery API →",
+    `${process.env.NEXT_PUBLIC_API_URL}/gallery/`,
+  );
 
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/gallery/`, {
-      cache: 'no-store',
+      cache: "no-store",
       signal: controller.signal,
     });
 
@@ -23,11 +25,19 @@ const fetchGalleryEvents = async () => {
     if (rawData.error) throw new Error(rawData.error);
 
     // Normalize and prepend base URL to image src
+    const BASE = process.env.NEXT_PUBLIC_BASE_URL || "";
+    const formatUrl = (path) => {
+      if (!path) return path;
+      return path.startsWith("http")
+        ? path
+        : `${BASE}${path.startsWith("/") ? "" : "/"}${path}`;
+    };
+
     const normalizedData = rawData.map((event) => ({
       title: event.title,
       is_active: event.is_active,
       images: (event.images || []).map((image) => ({
-        src: `${process.env.NEXT_PUBLIC_API_URL}${image.image}`, // add base URL
+        src: formatUrl(image.image), // safely format base URL
         alt: image.alt || "Gallery image",
         caption: image.caption || "",
         is_active: image.is_active,
