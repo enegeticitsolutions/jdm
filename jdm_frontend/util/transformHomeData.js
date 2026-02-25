@@ -9,13 +9,18 @@ import { achievementsData as defaultAchievements } from "./achievement";
 
 export const transformHomeData = (data) => {
   const BASE = process.env.NEXT_PUBLIC_BASE_URL;
+  const formatUrl = (path, base) => {
+    if (!path) return path;
+    return path.startsWith('http') ? path : `${base}${path.startsWith('/') ? '' : '/'}${path}`;
+  };
+
   console.log("BASE URL: ", BASE);
   console.log("data in transformHomeData: ", data);
 
   return {
     videoSrc:
       data.is_hero && data.hero.video_url
-        ? `${BASE}${data.hero.video_url}`
+        ? formatUrl(data.hero.video_url, BASE)
         : "/assets/img/hero/intro.mp4",
     services: data.is_services
       ? {
@@ -24,7 +29,7 @@ export const transformHomeData = (data) => {
             data.services?.items?.length > 0
               ? data.services.items.map((item) => ({
                   ...item,
-                  image: `${BASE}${item.image}`,
+                  image: formatUrl(item.image, BASE),
                 }))
               : homeServices,
         }
@@ -33,32 +38,32 @@ export const transformHomeData = (data) => {
       heading: data.is_journey ? data.journey.heading : "Our Journey",
       url:
         data.is_journey && data.journey.video_url
-          ? `${BASE}${data.journey.video_url}`
+          ? formatUrl(data.journey.video_url, BASE)
           : "/assets/img/journey/JDM_Timeline.mp4",
     },
     clientele: data.is_clientele
       ? data.clientele?.items?.length > 0
-        ? data.clientele.items.map((item) => `${BASE}${item}`)
+        ? data.clientele.items.map((item) => formatUrl(item, BASE))
         : generateImagePaths("/assets/img/customer_logo", 40)
       : generateImagePaths("/assets/img/customer_logo", 40),
     affiliations: data.is_affiliations
       ? data.affiliations?.items?.length > 0
-        ? data.affiliations.items.map((item) => `${BASE}${item}`)
+        ? data.affiliations.items.map((item) => formatUrl(item, BASE))
         : generateImagePaths("/assets/img/brand/Associations/International", 10)
       : generateImagePaths("/assets/img/brand/Associations/International", 10),
     associations: data.is_associations
       ? data.associations?.items?.length > 0
-        ? data.associations.items.map((item) => `${BASE}${item}`)
+        ? data.associations.items.map((item) => formatUrl(item, BASE))
         : generateImagePaths("/assets/img/brand/Associations/Domestic", 7)
       : generateImagePaths("/assets/img/brand/Associations/Domestic", 7),
     seaPartners: data.is_sea_partners
       ? data.sea_partners?.items?.length > 0
-        ? data.sea_partners.items.map((item) => `${BASE}${item}`)
+        ? data.sea_partners.items.map((item) => formatUrl(item, BASE))
         : generateImagePaths("/assets/img/career_partner_logos/Sea", 11)
       : generateImagePaths("/assets/img/career_partner_logos/Sea", 11),
     airPartners: data.is_air_partners
       ? data.air_partners?.items?.length > 0
-        ? data.air_partners.items.map((item) => `${BASE}${item}`)
+        ? data.air_partners.items.map((item) => formatUrl(item, BASE))
         : generateImagePaths("/assets/img/career_partner_logos/Air", 17)
       : generateImagePaths("/assets/img/career_partner_logos/Air", 17),
     branches: data.is_locations
@@ -68,7 +73,7 @@ export const transformHomeData = (data) => {
             data.locations?.items?.length > 0
               ? data.locations.items.map((item) => ({
                   ...item,
-                  image: `${BASE}${item.image}`,
+                  image: formatUrl(item.image, BASE),
                 }))
               : defaultBranches,
         }
@@ -80,7 +85,7 @@ export const transformHomeData = (data) => {
             data.achievements?.items?.length > 0
               ? data.achievements.items.map((item) => ({
                   ...item,
-                  icon: `${BASE}${item.icon}`,
+                  icon: formatUrl(item.icon, BASE),
                 }))
               : defaultAchievements.items,
         }
