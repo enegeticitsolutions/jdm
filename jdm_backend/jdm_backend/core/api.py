@@ -20,8 +20,8 @@ def build_file_url(request, file_field):
         return None
     url = file_field.url
     if 'assets/' in url:
-        # Extract everything from 'assets/' onward to remove any leading slashes
-        clean_path = url[url.find('assets/'):]
+        # Extract everything from 'assets/' onward, ensuring no leading slashes
+        clean_path = url[url.find('assets/'):].lstrip('/')
         return f"http://82.112.236.35:3000/{clean_path}"
     return request.build_absolute_uri(url)
 
