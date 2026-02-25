@@ -19,11 +19,10 @@ def build_file_url(request, file_field):
     if not file_field:
         return None
     url = file_field.url
-    if url.startswith('/assets/') or url.startswith('assets/'):
-        # Force the frontend URL prefix for Next.js static assets
-        if url.startswith('assets/'):
-            url = '/' + url
-        return f"http://82.112.236.35:3000{url}"
+    if 'assets/' in url:
+        # Extract everything from 'assets/' onward to remove any leading slashes
+        clean_path = url[url.find('assets/'):]
+        return f"http://82.112.236.35:3000/{clean_path}"
     return request.build_absolute_uri(url)
 
 
