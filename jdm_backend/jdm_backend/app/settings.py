@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+dj&l!#kxmah0g=whf(sb_u*e49_i#=$5oh1b%cbt2$c5)^kqb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['82.112.236.35','localhost', '127.0.0.1', 'api.jdmgroups.com']
 
@@ -83,6 +83,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://jdmgroups.com:3000',
     'https://jdmgroups.com',
     'https://www.jdmgroups.com',
+    'http://82.112.236.35',  # Add this!
+    'https://api.jdmgroups.com' # Add this too!
 ]
 
 # CSRF_COOKIE_HTTPONLY = False
