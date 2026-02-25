@@ -70,10 +70,19 @@ REST_FRAMEWORK = {
 # CORS_ALLOW_ALL_ORIGINS = True #not in production
 CORS_ALLOWED_ORIGINS = (
   'http://localhost:3000',
+  'http://jdmgroups.com:3000',
+  'https://jdmgroups.com:3000',
+  'http://jdmgroups.com',
+  'https://jdmgroups.com',
+  'http://www.jdmgroups.com',
+  'https://www.jdmgroups.com',
 )
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
+    'http://jdmgroups.com:3000',
+    'https://jdmgroups.com',
+    'https://www.jdmgroups.com',
 ]
 
 # CSRF_COOKIE_HTTPONLY = False
