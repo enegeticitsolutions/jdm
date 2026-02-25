@@ -11,7 +11,13 @@ export const transformHomeData = (data) => {
   const BASE = process.env.NEXT_PUBLIC_BASE_URL;
   const formatUrl = (path, base) => {
     if (!path) return path;
-    return path.startsWith('http') ? path : `${base}${path.startsWith('/') ? '' : '/'}${path}`;
+    let cleanPath = path;
+    if (base && cleanPath.startsWith(base)) {
+      cleanPath = cleanPath.replace(base, "");
+    } else if (cleanPath.startsWith("http")) {
+      return cleanPath;
+    }
+    return `${base}${cleanPath.startsWith("/") ? "" : "/"}${cleanPath}`;
   };
 
   console.log("BASE URL: ", BASE);

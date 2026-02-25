@@ -28,9 +28,15 @@ const fetchGalleryEvents = async () => {
     const BASE = process.env.NEXT_PUBLIC_BASE_URL || "";
     const formatUrl = (path) => {
       if (!path) return path;
-      return path.startsWith("http")
-        ? path
-        : `${BASE}${path.startsWith("/") ? "" : "/"}${path}`;
+      // Strip out the BASE url if it already happens to be in the string
+      let cleanPath = path;
+      if (BASE && cleanPath.startsWith(BASE)) {
+        cleanPath = cleanPath.replace(BASE, "");
+      } else if (cleanPath.startsWith("http")) {
+        // If it's a completely different external HTTP link, just return it
+        return cleanPath;
+      }
+      return `${BASE}${cleanPath.startsWith("/") ? "" : "/"}${cleanPath}`;
     };
 
     const normalizedData = rawData.map((event) => ({
