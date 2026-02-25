@@ -38,7 +38,9 @@ const fetchServiceData = async () => {
         id: service.link.split("/").pop(),
         image: service.image?.startsWith("http")
           ? service.image
-          : `${baseUrl}/${service.image}`,
+          : service.image?.startsWith("/")
+            ? service.image
+            : `/${service.image}`,
       }));
     }
 

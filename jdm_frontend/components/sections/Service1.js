@@ -1,7 +1,7 @@
 "use client";
 // import "swiper/css";
 import Link from "next/link";
-import {services} from "@/util/services";
+import { services } from "@/util/services";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useServiceData } from "@/hooks/useServiceData";
@@ -44,8 +44,10 @@ const swiperOptions = {
 };
 
 export default function Service1() {
-  const {data, isLoading, error} = useServiceData();
-  if(isLoading) return <Loading/>
+  const { data, isLoading, error } = useServiceData();
+  if (isLoading) return <Loading />;
+
+  console.log("datadatadata: ", data[0].image);
   return (
     <>
       <section
@@ -59,7 +61,10 @@ export default function Service1() {
             <Swiper {...swiperOptions} className="swiper-wrapper">
               {data.map((service, index) => (
                 <SwiperSlide key={service.id} className="swiper-slide">
-                  <Link  href={`/service-details/${service.id}`} className="service-box-items">
+                  <Link
+                    href={`/service-details/${service.id}`}
+                    className="service-box-items"
+                  >
                     <div className="service-thumb">
                       <img src={service.image} alt={service.title} />
                       {/* <div className="icon">
@@ -77,7 +82,12 @@ export default function Service1() {
                       {/* <Link href={`/service-details/${service.id}`} className="link-btn">
                         Explore More <i className="fa-solid fa-arrow-right" />
                       </Link> */}
-                      <button href={`/service-details/${service.id}`} className="theme-btn bg-white team-btn text-capitalize">Read More <i className="fa-regular fa-arrow-right" /></button>
+                      <button
+                        href={`/service-details/${service.id}`}
+                        className="theme-btn bg-white team-btn text-capitalize"
+                      >
+                        Read More <i className="fa-regular fa-arrow-right" />
+                      </button>
                     </div>
                   </Link>
                 </SwiperSlide>
