@@ -13,12 +13,17 @@ from django.shortcuts import get_object_or_404
 
 api = NinjaAPI(csrf=True, urls_namespace="core-api")
 
+from django.conf import settings
+
 def build_file_url(request, file_field):
     if not file_field:
         return None
     url = file_field.url
     if url.startswith('/assets/') or url.startswith('assets/'):
-        return url
+        # Force the frontend URL prefix for Next.js static assets
+        if url.startswith('assets/'):
+            url = '/' + url
+        return f"http://82.112.236.35:3000{url}"
     return request.build_absolute_uri(url)
 
 
