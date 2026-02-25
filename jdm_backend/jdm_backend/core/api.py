@@ -40,7 +40,7 @@ def get_home(request):
             {
                 "id": hs.service.id,
                 "title": hs.service.title,
-                "image": hs.service.image.url if hs.service.image else None,
+                "image": request.build_absolute_uri(hs.service.image.url) if hs.service.image else None,
             }
             for hs in ordered[:8]
         ]
@@ -50,15 +50,15 @@ def get_home(request):
             {
                 "id": service.id,
                 "title": service.title,
-                "image": service.image.url if service.image else None,
+                "image": request.build_absolute_uri(service.image.url) if service.image else None,
             }
             for service in home.selected_services.all()
         ]
 
     return {
         "hero": {
-            "video_url": home.hero_video.url if home.hero_video else None,
-            "image_url": home.hero_image.url if home.hero_image else None,
+            "video_url": request.build_absolute_uri(home.hero_video.url) if home.hero_video else None,
+            "image_url": request.build_absolute_uri(home.hero_image.url) if home.hero_image else None,
         },
         "services": {
             "heading": home.services_heading,
@@ -67,27 +67,27 @@ def get_home(request):
         },
         "journey": {
             "heading": home.journey_heading,
-            "video_url": home.journey_video.url if home.journey_video else None,
+            "video_url": request.build_absolute_uri(home.journey_video.url) if home.journey_video else None,
         },
         "clientele": {
             "heading": home.clientele_heading,
-            "items": [item.logo.url for item in home.clientele.all()],
+            "items": [request.build_absolute_uri(item.logo.url) for item in home.clientele.all()],
         },
         "associations": {
             "heading": home.associations_heading,
-            "items": [item.logo.url for item in home.associations.all()],
+            "items": [request.build_absolute_uri(item.logo.url) for item in home.associations.all()],
         },
         "affiliations": {
             "heading": home.affiliations_heading,
-            "items": [item.logo.url for item in home.affiliations.all()],
+            "items": [request.build_absolute_uri(item.logo.url) for item in home.affiliations.all()],
         },
         "sea_partners": {
             "heading": home.sea_partners_heading,
-            "items": [item.logo.url for item in home.sea_partners.all()],
+            "items": [request.build_absolute_uri(item.logo.url) for item in home.sea_partners.all()],
         },
         "air_partners": {
             "heading": home.air_partners_heading,
-            "items": [item.logo.url for item in home.air_partners.all()],
+            "items": [request.build_absolute_uri(item.logo.url) for item in home.air_partners.all()],
         },
         "locations": {
             "heading": home.locations_heading,
@@ -98,7 +98,7 @@ def get_home(request):
                     "address": loc.address,
                     "phone": loc.phone,
                     "email": loc.email,
-                    "image": loc.image.url,
+                    "image": request.build_absolute_uri(loc.image.url) if loc.image else None,
                     "place": loc.place,
                 }
                 for loc in home.locations.all()
@@ -111,7 +111,7 @@ def get_home(request):
                     "id": ach.id,
                     "title": ach.title,
                     "count": ach.count,
-                    "icon": ach.icon.url,
+                    "icon": request.build_absolute_uri(ach.icon.url) if ach.icon else None,
                     "delay": ach.delay,
                     "suffix": ach.suffix,
                     "prefix": ach.prefix,
@@ -320,7 +320,7 @@ def get_services(request):
         {
             "id": s.id,
             "title": s.title,
-            "image": s.image.url if s.image else None,
+            "image": request.build_absolute_uri(s.image.url) if s.image else None,
             "description": s.description,
             "icon": s.icon,
             "description1": s.description1,
@@ -348,7 +348,7 @@ def get_service_by_id(request, service_id: str):
     return {
         "id": service.id,
         "title": service.title,
-        "image": service.image.url if service.image else None,
+        "image": request.build_absolute_uri(service.image.url) if service.image else None,
         "description": service.description,
         "description1": service.description1,
         "description2": service.description2,
