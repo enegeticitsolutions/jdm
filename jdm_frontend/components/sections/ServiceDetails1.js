@@ -10,7 +10,10 @@ export default function ServiceDetails1({ service }) {
   // Sample categories
 
   // If service is undefined, render a fallback
-  if (!service || !service.image || !service.title 
+  if (
+    !service ||
+    !service.image ||
+    !service.title
     // || !service.description1
   ) {
     return (
@@ -40,15 +43,18 @@ export default function ServiceDetails1({ service }) {
                 <div className="service-details-content col-lg-6">
                   {/* <h2>{service.title}</h2> */}
                   {/* <p>{service.description1}</p> */}
-                  <p className="cont" dangerouslySetInnerHTML={{
+                  <p
+                    className="cont"
+                    dangerouslySetInnerHTML={{
                       __html: renderDescription(service.description1),
-                    }}/>
+                    }}
+                  />
                   {service.benefits && service.benefits.length > 0 && (
                     <ul className="details-list">
                       {service.benefits.map((benefit, index) => (
                         <li key={index}>
                           <i className="fa-solid fa-circle-check" />
-                          {benefit.text}
+                          {typeof benefit === "string" ? benefit : benefit.text}
                         </li>
                       ))}
                     </ul>
@@ -56,17 +62,21 @@ export default function ServiceDetails1({ service }) {
                 </div>
               </div>
             </div>
-            {service.heading === "Warehousing of Goods in Public and Private Bonded Warehouses" && (
+            {service.heading ===
+              "Warehousing of Goods in Public and Private Bonded Warehouses" && (
               <h5 className="pt-3 mt-4">{service.heading}</h5>
             )}
             {/* <p className="cont" dangerouslySetInnerHTML={{
                 __html: renderDescription(service.description2),
               }}/> */}
-            {(service.description2) &&
-              <p className="cont" dangerouslySetInnerHTML={{
+            {service.description2 && (
+              <p
+                className="cont"
+                dangerouslySetInnerHTML={{
                   __html: renderDescription(service.description2),
-                }}/>
-            }
+                }}
+              />
+            )}
           </div>
         </div>
       </section>

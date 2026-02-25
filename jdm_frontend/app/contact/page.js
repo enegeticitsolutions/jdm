@@ -7,7 +7,7 @@
 // import Loading from "../loading";
 
 // export default function Contact() {
-  
+
 // // const data = {
 // //   title: "Contact Us",
 // //   addressTitle: "Corporate and Registered Office",
@@ -26,8 +26,8 @@
 // // if (error) return <p>Error loading contact info</p>;
 //   return (
 //     <>
-//       <Layout headerStyle={1} footerStyle={1} 
-//       breadcrumbTitle={data.title} 
+//       <Layout headerStyle={1} footerStyle={1}
+//       breadcrumbTitle={data.title}
 //       backgroundImage={"/assets/img/banner/contact.jpeg"}>
 //         <ContactInfo data={data}/>
 //         <ContactSection />
@@ -38,7 +38,7 @@
 //   );
 // }
 
-'use client';
+"use client";
 import Layout from "@/components/layout/Layout";
 import ContactInfo from "@/components/sections/contact/ContactInfo";
 import ContactInfo2 from "@/components/sections/contact/ContactInfo2";
@@ -54,7 +54,7 @@ export default function Contact() {
     <Layout
       headerStyle={1}
       footerStyle={1}
-      breadcrumbTitle={data.title}
+      breadcrumbTitle={data?.title || "Contact Us"}
       backgroundImage={"/assets/img/banner/contact.jpeg"}
     >
       <ContactInfo data={data} />

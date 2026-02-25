@@ -9,7 +9,7 @@ const fetchServiceData = async () => {
 
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/services/`, {
-      cache: 'no-store',
+      cache: "no-store",
       signal: controller.signal,
     });
 
@@ -22,16 +22,31 @@ const fetchServiceData = async () => {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL; // e.g., 'https://example.com/'
 
     // Assume data is an array of services
-    const processedData = data.map(service => ({
-      ...service,
-      image: service.image?.startsWith('http') ? service.image : `${baseUrl}${service.image}`,
-    }));
+    let processedData = [];
+    if (data && data.length > 0) {
+      processedData = data.map((service) => ({
+        ...service,
+        image: service.image?.startsWith("http")
+          ? service.image
+          : `${baseUrl}${service.image}`,
+      }));
+    } else {
+      // Fallback if empty database
+      const { homeServices } = require("../util/homeService");
+      processedData = homeServices.map((service) => ({
+        ...service,
+        id: service.link.split("/").pop(),
+        image: service.image?.startsWith("http")
+          ? service.image
+          : `${baseUrl}/${service.image}`,
+      }));
+    }
 
     console.log("Processed Service Data: ", processedData);
 
     return processedData;
   } catch (err) {
-    if (err.name === 'AbortError') {
+    if (err.name === "AbortError") {
       throw new Error("Request timed out");
     }
     throw err;

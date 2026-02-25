@@ -12,7 +12,8 @@ const GallerySection = ({
 
   const showVerticalNav = items.length > 5;
 
-  const selectedImages = items.find((item) => item.title === selectedTitle)?.images || [];
+  const selectedImages =
+    items.find((item) => item.title === selectedTitle)?.images || [];
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -25,9 +26,14 @@ const GallerySection = ({
   };
 
   if (items.length === 0 && !isLoading) {
-    return <h2>No data available...</h2>;
+    return (
+      <div className="text-center py-5">
+        <h4 className="text-muted">
+          No gallery images available at the moment.
+        </h4>
+      </div>
+    );
   }
-
 
   if (showVerticalNav) {
     return (
@@ -58,7 +64,10 @@ const GallerySection = ({
               {selectedImages.length > 0 ? (
                 <div className="image-grid">
                   {selectedImages.map((image, idx) => (
-                    <div key={`${image.src}-${idx}`} className="grid-item w-full">
+                    <div
+                      key={`${image.src}-${idx}`}
+                      className="grid-item w-full"
+                    >
                       <div className="gallery-image center w-full">
                         <img
                           src={image.src}
@@ -162,7 +171,10 @@ const GallerySection = ({
         <div className="image-grid">
           {items.flatMap((item) =>
             item.images.map((image, idx) => (
-              <div key={`${item.title}-${image.src}-${idx}`} className="grid-item w-full">
+              <div
+                key={`${item.title}-${image.src}-${idx}`}
+                className="grid-item w-full"
+              >
                 <div className="gallery-image center w-full">
                   <img
                     src={image.src}
@@ -174,7 +186,7 @@ const GallerySection = ({
                       objectFit: "cover",
                       height: "100%",
                       cursor: "pointer",
-                      maxWidth: "280px"
+                      maxWidth: "280px",
                     }}
                     loading="lazy"
                     onClick={() => handleImageClick(image)}
@@ -185,7 +197,7 @@ const GallerySection = ({
                   <p>{image.caption}</p>
                 </div>
               </div>
-            ))
+            )),
           )}
         </div>
       )}

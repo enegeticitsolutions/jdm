@@ -26,9 +26,10 @@ api = NinjaAPI(csrf=True, urls_namespace="core-api")
 @api.get("/home/", response=HomePageSchema)
 def get_home(request):
     home = HomePageContent.objects.first()  # Get the first instance of HomePageContent
-    print("home back: ", home.journey_video)
     if not home:
-        return HttpError(404, "Home page content not found.")
+        raise HttpError(404, "Home page content not found.")
+    
+    # print("home back: ", home.journey_video)
 
     # 🔹 Try to use ordered services from HomeServiceOrder
     ordered = HomeServiceOrder.objects.filter(home=home).order_by("position")
@@ -138,7 +139,7 @@ def get_home(request):
 def get_about(request):
     about = AboutPageContent.objects.first()
     if not about:
-        return HttpError(404, "About page content not found.")
+        raise HttpError(404, "About page content not found.")
 
     # Parse story points
     story_points = about.story_points
@@ -333,7 +334,17 @@ def get_services(request):
 
 @api.get("/services/{service_id}/", response=ServiceSchema)
 def get_service_by_id(request, service_id: str):
-    service = get_object_or_404(Service, id=service_id)
+    import uuid
+    try:
+        val = uuid.UUID(service_id, version=4)
+        service = get_object_or_404(Service, id=service_id)
+    except ValueError:
+        # Not a UUID, so treat it as a slug (e.g. "air-freight" -> "air freight")
+        title_search = service_id.replace('-', ' ')
+        service = Service.objects.filter(title__iexact=title_search).first()
+        if not service:
+            raise HttpError(404, "Service not found")
+
     return {
         "id": service.id,
         "title": service.title,
@@ -417,7 +428,10 @@ def submit_contact_query(request, payload: ContactQuerySchema):
 
 @api.get("/industry-v1/", response=IndustrySpecificationSchema)
 def list_page_specs(request):
-    return IndustrySpecification.objects.first()
+    specs = IndustrySpecification.objects.first()
+    if not specs:
+        raise HttpError(404, "Industry Specification not found.")
+    return specs
 
 @api.get("/industry/", response=list[IndustrySchema])
 def get_industry(request):

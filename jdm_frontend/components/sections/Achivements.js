@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Counter1 from "./Counter1";
 
 export default function Achievements({ data }) {
-  console.log("Achievements data:", data); 
+  console.log("Achievements data:", data);
   if (!data) return null;
 
   return (
@@ -36,10 +36,10 @@ Achievements.propTypes = {
         count: PropTypes.number.isRequired,
         suffix: PropTypes.string,
         prefix: PropTypes.string,
-        label: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
         icon: PropTypes.node,
         delay: PropTypes.string,
-      })
+      }),
     ),
   }),
 };
