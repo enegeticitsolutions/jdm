@@ -65,12 +65,14 @@ export default function Footer2() {
                         Contact Us
                       </Link>
                     </li>
+                    {/* HIDDEN: News page temporarily disabled
                     <li>
                       <Link href="/news">
                         <i className="fa-solid fa-chevrons-right" />
                         News
                       </Link>
                     </li>
+                    */}
                     <li>
                       <Link href="/faq">
                         <i className="fa-solid fa-chevrons-right" />

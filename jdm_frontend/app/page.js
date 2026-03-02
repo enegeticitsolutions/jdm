@@ -8,8 +8,10 @@ import Brand1 from "@/components/sections/Brand1";
 import IndianBranches from "@/components/sections/branches";
 import Achivements from "@/components/sections/Achivements";
 import CtaBanner2 from "@/components/sections/CtaBanner2";
-import Testimonial2 from "@/components/sections/Testimonial2";
-import News2 from "@/components/sections/News2";
+// HIDDEN: Testimonials section temporarily disabled
+// import Testimonial2 from "@/components/sections/Testimonial2";
+// HIDDEN: News page temporarily disabled
+// import News2 from "@/components/sections/News2";
 import Loading from "./loading";
 import NotFound from "./not-found";
 
@@ -23,7 +25,7 @@ export default function Home2() {
   const [content, setContent] = useState(null);
 
   useEffect(() => {
-  
+
     if (data && data.is_active) {
 
       setContent(transformHomeData(data));
@@ -40,7 +42,7 @@ export default function Home2() {
   return (
     <Layout headerStyle={2} footerStyle={2}>
       <Hero2 video_url={content.videoSrc} />
-      <Service3 data={content.services}/>
+      <Service3 data={content.services} />
       <Journey heading={content.journey.heading} url={content.journey.url} />
       <Brand1 images={content.clientele} know_more="Our Clientele" to="/our-clientele" border="true" />
       <Brand1 images={content.affiliations} heading="Accreditations & Certifications" border="true" pagination="false" />
@@ -50,8 +52,10 @@ export default function Home2() {
       <IndianBranches data={content.branches} />
       <Achivements data={content.achievements} />
       <CtaBanner2 />
-      <Testimonial2 />
-      <News2 />
+      {/* HIDDEN: Testimonials section temporarily disabled */}
+      {/* <Testimonial2 /> */}
+      {/* HIDDEN: News page temporarily disabled */}
+      {/* <News2 /> */}
     </Layout>
   );
 }

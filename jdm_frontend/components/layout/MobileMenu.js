@@ -114,6 +114,7 @@ export default function MobileMenu() {
 							<a className="mean-expand" onClick={() => handleAccordion(5)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>
 						</li> */}
+						{/* HIDDEN: News page temporarily disabled
 						<li>
 							<Link href="/news">
 								News
@@ -121,12 +122,11 @@ export default function MobileMenu() {
 							</Link>
 							<ul className="submenu" style={{ display: `${isAccordion == 6 ? "block" : "none"}` }}>
 								<li><Link href="/news-grid">News</Link></li>
-								{/* <li><Link href="/news">Blog Standard</Link></li> */}
-								{/* <li><Link href="/news-details">Blog Details</Link></li> */}
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(6)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>
 						</li>
+						*/}
 						<li className="mean-last">
 							<Link href="/contact">Contact Us</Link>
 						</li>
