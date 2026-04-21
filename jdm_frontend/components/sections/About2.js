@@ -14,7 +14,7 @@ export default function About2() {
           cache: "no-store", // Fresh data every time
         });
         const data = await response.json();
-		console.log("home about data", data);
+        console.log("home about data", data);
         setAboutData(data.about[0]); // Take the first item from the "about" array
       } catch (err) {
         console.error("Failed to fetch about data:", err);
@@ -28,13 +28,13 @@ export default function About2() {
   const defaultHeading = "JDM Group Of Companies";
   const defaultParagraph =
     "Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.";
-    const defaultPoints = [
-      "JDM Worldwide Freight Solutions Pvt. Ltd. - International Freight Forwarding",
-      "JDM Cargo Planners Pvt. Ltd. - Customs Brokerage, Warehousing, Consultancy",
-      "JDM Express Pvt. Ltd. - Courier Service",
-      "Arrow Transport Service - Transportation",
-      "AS Transport Service - Transportation",
-  ];  
+  const defaultPoints = [
+    "JDM Worldwide Freight Solutions Pvt. Ltd. - International Freight Forwarding",
+    "JDM Cargo Planners Pvt. Ltd. - Customs Brokerage, Warehousing, Consultancy",
+    "JDM Express Pvt. Ltd. - Courier Service",
+    "Arrow Transport Service - Road Transportation",
+    "AS Transport Service - Road Transportation",
+  ];
   const defaultVideoId = "JXMWOmuR1hU";
 
   return (
@@ -98,12 +98,12 @@ export default function About2() {
                   {aboutData?.CEO_Photo && aboutData?.CEO_Name && (
                     <div className="about-author">
                       <div className="author-image wow fadeInUp" data-wow-delay=".2s">
-					  <img
-						src={`https://jdm-backend.onrender.com${aboutData.CEO_Photo}`}
-						alt="ceo-img"
-						className="img-fluid rounded"
-						style={{ height: '100px', width: '100px', objectFit: 'cover' }}
-						/>
+                        <img
+                          src={`https://jdm-backend.onrender.com${aboutData.CEO_Photo}`}
+                          alt="ceo-img"
+                          className="img-fluid rounded"
+                          style={{ height: '100px', width: '100px', objectFit: 'cover' }}
+                        />
                         <h6>{aboutData.CEO_Name}</h6>
                       </div>
                     </div>

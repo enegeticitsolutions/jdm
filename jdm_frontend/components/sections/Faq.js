@@ -134,7 +134,7 @@ export default function Faq() {
 
   //   fetchFaqData();
   // }, []);
-   // Runs once on mount
+  // Runs once on mount
 
   const handleAccordion = (key) => {
     setIsAccordion((prevState) => (prevState === key ? null : key));
@@ -151,8 +151,8 @@ export default function Faq() {
         <div className="container">
           <div className="faq-wrapper">
             <div className="row g-4">
-              <div className="col-lg-6">
-                <div className="faq-content">
+              <div className="col-lg-12 mb-4">
+                <div className="faq-content text-center">
                   <div className="section-title">
                     {/* <h6 className="wow fadeInUp">
                       <i className="fa-regular fa-arrow-left-long" />
@@ -163,13 +163,13 @@ export default function Faq() {
                       your frequently ask & questions
                     </h2>
                   </div>
-                  <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
+                  {/* <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
                     It is a long established fact that a reader will be
                     distracted the readable content of a page when looking at
                     layout the point of using lorem the is Ipsum less normal
                     distribution of letters.
-                  </p>
-                  <div className="icon-items wow fadeInUp" data-wow-delay=".2s">
+                  </p> */}
+                  {/*<div className="icon-items wow fadeInUp" data-wow-delay=".2s">
                     <div className="icon">
                       <i className="fa-regular fa-check" />
                     </div>
@@ -180,8 +180,8 @@ export default function Faq() {
                         distracted the readable content of a page when
                       </span>
                     </div>
-                  </div>
-                  <div className="icon-items wow fadeInUp" data-wow-delay=".4s">
+                  </div>*/}
+                  {/*<div className="icon-items wow fadeInUp" data-wow-delay=".4s">
                     <div className="icon">
                       <i className="fa-regular fa-check" />
                     </div>
@@ -192,10 +192,10 @@ export default function Faq() {
                         distracted the readable content of a page when
                       </span>
                     </div>
-                  </div>
+                  </div>*/}
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-12">
                 <div className="faq-accordion">
                   <div className="accordion" id="accordion">
                     {faqItems.map((item) => (

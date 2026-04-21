@@ -11,7 +11,7 @@ from django.shortcuts import get_object_or_404
 # import form_
 # from djnago.core.files.base import ContentFile
 
-api = NinjaAPI(csrf=True, urls_namespace="core-api")
+api = NinjaAPI(csrf=False, urls_namespace="core-api")
 
 from django.conf import settings
 
@@ -46,28 +46,14 @@ def get_home(request):
     # print("home back: ", home.journey_video)
 
     # 🔹 Try to use ordered services from HomeServiceOrder
-    ordered = HomeServiceOrder.objects.filter(home=home).order_by("position")
-
-    if ordered.exists():
-        # Use the custom order (max 8 for home page)
-        services_items = [
-            {
-                "id": hs.service.id,
-                "title": hs.service.title,
-                "image": build_file_url(request, hs.service.image),
-            }
-            for hs in ordered[:8]
-        ]
-    else:
-        # Fallback: old behaviour, in case no HomeServiceOrder records
-        services_items = [
-            {
-                "id": service.id,
-                "title": service.title,
-                "image": build_file_url(request, service.image),
-            }
-            for service in home.selected_services.all()
-        ]
+    services_items = [
+        {
+            "id": service.id,
+            "title": service.title,
+            "image": build_file_url(request, service.image),
+        }
+        for service in home.selected_services.all().order_by("position")[:8]
+    ]
 
     return {
         "hero": {
@@ -89,7 +75,7 @@ def get_home(request):
         },
         "associations": {
             "heading": home.associations_heading,
-            "items": [build_file_url(request, item.logo) for item in home.associations.all()],
+            "items": [build_file_url(request, item.logo) for item in home.associations.all() if item.is_active],
         },
         "affiliations": {
             "heading": home.affiliations_heading,
@@ -241,11 +227,11 @@ def get_about(request):
 
 @api.get("/jobs/", response=list[JobSchema])
 def jobs(request):
-    return Job.objects.all()
+    return Job.objects.filter(is_active=True)
 
 @api.get("/jobs/{job_id}/", response=JobSchema)
 def get_job(request, job_id: str):
-    job = get_object_or_404(Job, id=job_id)
+    job = get_object_or_404(Job, id=job_id, is_active=True)
     return {
         "id": job.id,
         "title": job.title,

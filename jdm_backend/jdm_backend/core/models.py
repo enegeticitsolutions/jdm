@@ -64,8 +64,8 @@ class HomePageContent(models.Model):
         return "Home Page Content"
     def clean(self):
         super().clean()
-        if self.selected_services.count() > 6:
-            raise ValidationError("You can only select up to 6 services.")
+        if self.selected_services.count() > 8:
+            raise ValidationError("You can only select up to 8 services.")
 
 
 class HomeServiceOrder(models.Model):
@@ -226,6 +226,7 @@ class Job(models.Model):
     type = models.CharField(max_length=20, choices=JOB_TYPE_CHOICES)
     description = models.TextField()
     apply_link = models.URLField()
+    is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -241,7 +242,7 @@ class JobApplication(models.Model):
     state = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
     job = models.ForeignKey(Job, on_delete=models.SET_NULL, null=True, blank=True)
-    cv = models.FileField(upload_to="resumes/")
+    cv = models.FileField(upload_to="resumes/", null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
 

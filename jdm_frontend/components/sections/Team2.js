@@ -226,6 +226,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { defaultTeamMembers } from "@/util/teamMembers";
@@ -260,6 +261,7 @@ const customStyles = `
   overflow: hidden;
   padding: 0;
   border-radius: 3px;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 
@@ -268,6 +270,11 @@ const customStyles = `
     height: 100%;
     object-fit: cover;        /* ✅ uniform crop */
     object-position: top center; /* keeps face visible */
+    image-rendering: high-quality;
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0) scale(1.0);
+    will-change: transform;
+    backface-visibility: hidden;
   }
 
   /* ===== Content ===== */
@@ -308,6 +315,8 @@ const swiperOptions = {
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+    pauseOnTouchMove: true,
   },
   pagination: {
     el: ".dot",
@@ -329,6 +338,7 @@ const swiperOptions = {
 
 export default function TeamSlider({ heading }) {
   const [teamMembers] = useState(defaultTeamMembers);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
     <>
@@ -344,13 +354,20 @@ export default function TeamSlider({ heading }) {
         </div>
 
         <div className="container-fluid">
-          <Swiper {...swiperOptions}>
+          <Swiper {...swiperOptions} onSwiper={(swiper) => setSwiperInstance(swiper)}>
             {teamMembers.map((member) => (
               <SwiperSlide key={member.id}>
                 <Link href={`/team-details/${member.id}`} className="card-hover">
                   <div className="team-box-items">
                     <div className="service-thumb">
-                      <img src={member.image} alt={member.name} />
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 300px"
+                        style={{ objectFit: "cover", objectPosition: "top center" }}
+                        quality={100}
+                      />
                     </div>
 
                     <div className="service-content">

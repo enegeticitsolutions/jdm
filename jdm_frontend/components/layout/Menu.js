@@ -77,6 +77,27 @@ export default function Menu() {
           );
         })}
       </ul>
+      <style jsx global>{`
+        .submenu {
+          max-height: 500px !important; 
+          overflow-y: auto !important;
+        }
+
+        /* Custom Scrollbar Styling */
+        .submenu::-webkit-scrollbar {
+          width: 6px;
+        }
+        .submenu::-webkit-scrollbar-track {
+          background: transparent; 
+        }
+        .submenu::-webkit-scrollbar-thumb {
+          background: #ccc; 
+          border-radius: 10px;
+        }
+        .submenu::-webkit-scrollbar-thumb:hover {
+          background: #888; 
+        }
+      `}</style>
     </nav>
   );
 }

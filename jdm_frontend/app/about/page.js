@@ -8,7 +8,6 @@ import Team2 from "@/components/sections/Team2";
 import StorySection from "@/components/sections/About1";
 import VisionMissionFounder from "@/components/sections/Vission_Mission";
 import Faq from "@/components/sections/Faq";
-
 import { useEffect, useState } from "react";
 import { useAboutData } from "@/hooks/useAboutData";
 

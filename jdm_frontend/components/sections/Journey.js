@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef, useEffect, useState } from 'react';
 
-const Journey = ({url, heading}) => {
+const Journey = ({ url, heading }) => {
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   console.log("Journey url: ", url);
@@ -17,7 +17,7 @@ const Journey = ({url, heading}) => {
 
     if (videoRef.current) {
       console.log("Video is being observe");
-      
+
       observer.observe(videoRef.current);
     }
 
@@ -32,6 +32,7 @@ const Journey = ({url, heading}) => {
 
   useEffect(() => {
     if (videoRef.current) {
+      videoRef.current.playbackRate = 2; // Speed up video
       if (isVisible) {
         videoRef.current.play();
       } else {
@@ -39,7 +40,7 @@ const Journey = ({url, heading}) => {
       }
     }
   }, [isVisible]);
-  console.log("oooo: ",videoRef)
+  console.log("oooo: ", videoRef)
   return (
     <section className="journey-section fix" id="journey">
       <div className="section-title text-center">

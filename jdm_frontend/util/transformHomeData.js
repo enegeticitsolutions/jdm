@@ -30,15 +30,15 @@ export const transformHomeData = (data) => {
         : "/assets/img/hero/intro.mp4",
     services: data.is_services
       ? {
-          heading: data.services?.heading || "Our Services",
-          items:
-            data.services?.items?.length > 0
-              ? data.services.items.map((item) => ({
-                  ...item,
-                  image: formatUrl(item.image, BASE),
-                }))
-              : homeServices,
-        }
+        heading: data.services?.heading || "Our Services",
+        items:
+          data.services?.items?.length > 0
+            ? data.services.items.map((item) => ({
+              ...item,
+              image: formatUrl(item.image, BASE),
+            }))
+            : homeServices,
+      }
       : null,
     journey: {
       heading: data.is_journey ? data.journey.heading : "Our Journey",
@@ -74,27 +74,37 @@ export const transformHomeData = (data) => {
       : generateImagePaths("/assets/img/career_partner_logos/Air", 17),
     branches: data.is_locations
       ? {
-          heading: data.locations?.heading || "Our Locations",
-          items:
-            data.locations?.items?.length > 0
-              ? data.locations.items.map((item) => ({
-                  ...item,
-                  image: formatUrl(item.image, BASE),
-                }))
-              : defaultBranches,
-        }
+        heading: data.locations?.heading || "Our Locations",
+        items:
+          data.locations?.items?.length > 0
+            ? data.locations.items.map((item) => ({
+              ...item,
+              image: formatUrl(item.image, BASE),
+            }))
+            : defaultBranches,
+      }
       : null,
     achievements: data.is_achievements
       ? {
-          heading: data.achievements?.heading || defaultAchievements.heading,
-          items:
-            data.achievements?.items?.length > 0
-              ? data.achievements.items.map((item) => ({
+        heading: data.achievements?.heading || defaultAchievements.heading,
+        items:
+          data.achievements?.items?.length > 0
+            ? [
+              ...data.achievements.items.map((item, index) => {
+                const customApiIcons = [
+                  "/assets/img/icon/experience.png",
+                  "/assets/img/icon/client.png",
+                  "/assets/img/icon/building.png"
+                ];
+                return {
                   ...item,
-                  icon: formatUrl(item.icon, BASE),
-                }))
-              : defaultAchievements.items,
-        }
+                  icon: index < 3 ? customApiIcons[index] : formatUrl(item.icon, BASE),
+                };
+              }),
+              ...defaultAchievements.items,
+            ]
+            : defaultAchievements.items,
+      }
       : null,
   };
 };

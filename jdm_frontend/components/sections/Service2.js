@@ -93,7 +93,7 @@ export default function Service2() {
 											<Link href="service-details">ocean Freight</Link>
 										</h3>
 										<p>
-										JDM provides cost-effective, reliable freight forwarding worldwide, handling bulk shipments via FCL, LCL, and vessel charters. We also manage documentation, insurance, and Letter of Credit processing for seamless delivery.
+											JDM provides cost-effective, reliable freight forwarding worldwide, handling bulk shipments via FCL, LCL, and vessel charters. We also manage documentation, insurance, and Letter of Credit processing for seamless delivery.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -120,7 +120,7 @@ export default function Service2() {
 											<Link href="service-details">Air Freight</Link>
 										</h3>
 										<p>
-										We offer a comprehensive range of airfreight services worldwide. Each movement of Air Cargo is diligently planned by our expert team in close coordination with our worldwide agents to utilize the most economic air carriers that provide safe and speedy delivery.
+											We offer a comprehensive range of airfreight services worldwide. Each movement of Air Cargo is diligently planned by our expert team in close coordination with our worldwide agents to utilize the most economic air carriers that provide safe and speedy delivery.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -147,7 +147,7 @@ export default function Service2() {
 											<Link href="service-details">Road Transportation</Link>
 										</h3>
 										<p>
-											JDM Group was conceptualized by Mr. Pahlad Singh in  the year 1978,with an initial start of Transportation in logistics field. Mr. Pahlad Singh who was well known in this industry for his true commitments and adding the value to your logistics mix.
+											JDM Group was conceptualized by Mr. Pahlad Singh in  the year 1978,with an initial start of Road Transportation in logistics field. Mr. Pahlad Singh who was well known in this industry for his true commitments and adding the value to your logistics mix.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -201,7 +201,7 @@ export default function Service2() {
 											<Link href="service-details">Packers & Movers</Link>
 										</h3>
 										<p>
-										Our wide expertise in the field allows us to provide efficient and quick packing and moving services of all kinds of goods and cargo to any part of the world as required by our clients. We are adeptable in packaging techniques of different products, depending on their fragility.
+											Our wide expertise in the field allows us to provide efficient and quick packing and moving services of all kinds of goods and cargo to any part of the world as required by our clients. We are adeptable in packaging techniques of different products, depending on their fragility.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />

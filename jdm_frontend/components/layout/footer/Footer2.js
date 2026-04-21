@@ -141,10 +141,9 @@ export default function Footer2() {
                   </ul>
                 </div>
               </div>
-
-              {/* JDM GROUP — no hover animation */}
+              {/* JDM GROUP */}
               <div
-                className="col-xl-4 col-lg-6 col-md-7 wow fadeInUp fst-italic no-hover-list"
+                className="col-xl-4 col-lg-6 col-md-7 wow fadeInUp fst-italic"
                 data-wow-delay=".8s"
               >
                 <div className="single-footer-widget">
@@ -153,34 +152,34 @@ export default function Footer2() {
                   </div>
                   <ul className="list-area">
                     <li>
-                      <span>
+                      <Link href="#" onClick={(e) => e.preventDefault()}>
                         <i className="fa-solid fa-chevrons-right" />
                         JDM Worldwide Freight Solutions Pvt. Ltd.
-                      </span>
+                      </Link>
                     </li>
                     <li>
-                      <span>
+                      <Link href="#" onClick={(e) => e.preventDefault()}>
                         <i className="fa-solid fa-chevrons-right" />
                         JDM Cargo Planners Pvt. Ltd.
-                      </span>
+                      </Link>
                     </li>
                     <li>
-                      <span>
+                      <Link href="#" onClick={(e) => e.preventDefault()}>
                         <i className="fa-solid fa-chevrons-right" />
                         JDM Express Pvt. Ltd.
-                      </span>
+                      </Link>
                     </li>
                     <li>
-                      <span>
+                      <Link href="#" onClick={(e) => e.preventDefault()}>
                         <i className="fa-solid fa-chevrons-right" />
                         Arrow Transport Service
-                      </span>
+                      </Link>
                     </li>
                     <li>
-                      <span>
+                      <Link href="#" onClick={(e) => e.preventDefault()}>
                         <i className="fa-solid fa-chevrons-right" />
                         AS Transport Service
-                      </span>
+                      </Link>
                     </li>
                   </ul>
                 </div>

@@ -39,19 +39,20 @@ export default function Brand1({
   const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     spaceBetween: 30,
-    speed: 500,
+    speed: 800,
     loop: images.length > 1,
     autoplay: {
-      delay: 500,
+      delay: 1500,
+      disableOnInteraction: false,
     },
     pagination: pagination
-    ? { clickable: true }
-    : false,
+      ? { clickable: true }
+      : false,
     breakpoints: {
-      1350: { slidesPerView: Math.min(6, images.length-1) },
-      991: { slidesPerView: Math.min(6, images.length-1) },
-      767: { slidesPerView: Math.min(5, images.length-1) },
-      575: { slidesPerView: Math.min(4, images.length-1) },
+      1350: { slidesPerView: Math.min(6, images.length - 1) },
+      991: { slidesPerView: Math.min(6, images.length - 1) },
+      767: { slidesPerView: Math.min(5, images.length - 1) },
+      575: { slidesPerView: Math.min(4, images.length - 1) },
       0: { slidesPerView: 3 },
     },
   };
@@ -67,8 +68,18 @@ export default function Brand1({
         <div className="swiper brand-slider">
           <Swiper {...swiperOptions} className="swiper-wrapper">
             {images.map((image, index) => (
-              <SwiperSlide key={index} className="swiper-slide">
-                <div className="brand-image center">
+              <SwiperSlide
+                key={index}
+                className="swiper-slide"
+                style={{ background: "transparent", backgroundColor: "transparent" }}
+              >
+                <div
+                  className="brand-image center"
+                  style={{
+                    background: "transparent",
+                    backgroundColor: "transparent"
+                  }}
+                >
                   <Image
                     src={typeof image === "string" ? image : image.src}
                     alt={
@@ -78,7 +89,14 @@ export default function Brand1({
                     }
                     width={130}
                     height={100}
-                    style={{ objectFit: "contain", width: "100%", height: "auto" }}
+                    style={{
+                      objectFit: "contain",
+                      width: "100%",
+                      height: "auto",
+                      mixBlendMode: "multiply",
+                      filter: "contrast(1.1)"
+                    }}
+                    unoptimized={true}
                     loading="lazy"
                   />
                 </div>
@@ -98,12 +116,24 @@ export default function Brand1({
           </div>
         )}
       </div>
-      <style jsx>{`
+      <style jsx global>{`
+      .brand-section .swiper-slide,
+        .brand-section .brand-image,
+        .brand-section img {
+          background: transparent !important;
+          background-color: transparent !important;
+          mix-blend-mode: multiply !important;
+        }
+        .swiper-wrapper {
+        mix-blend-mode: multiply !important;
+        }
         .brand-image {
           padding: 15px;
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: transparent !important; 
+          mix-blend-mode: multiply;
           
         }
         @media (max-width:475px){

@@ -9,7 +9,7 @@ const fetchJobs = async () => {
   if (!res.ok) throw new Error("Failed to fetch career data");
   const data = await res.json();
 
-    console.log("Fetched Jobs Data:", data);
+  console.log("Fetched Jobs Data:", data);
   return data.map((job) => ({
     title: job.title || "Untitled Position",
     location: job.location || "Unknown Location",
@@ -23,6 +23,7 @@ export const useCareers = () => {
   return useQuery({
     queryKey: ["careers"],
     queryFn: fetchJobs,
-    staleTime: 5 * 60 * 1000, // optional: cache for 5 minutes
+    staleTime: 0,//instantly reload statues
+    refetchOnWindowFocus: true,//instantly reload statues
   });
 };

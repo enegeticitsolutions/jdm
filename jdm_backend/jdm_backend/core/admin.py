@@ -23,8 +23,8 @@ class HomePageContentForm(forms.ModelForm):
 
     def clean_selected_services(self):
         selected = self.cleaned_data.get('selected_services')
-        if selected and selected.count() > 6:
-            raise ValidationError("You can only select up to 6 services.")
+        if selected and selected.count() > 8:
+            raise ValidationError("You can only select up to 8 services.")
         return selected
 
 # class ServiceItemInline(admin.TabularInline):

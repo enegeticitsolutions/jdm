@@ -4,7 +4,7 @@ from .schemas import SectorSchema, CountrySchema
 # from .
 from django.conf import settings
 
-api = NinjaAPI(csrf=True, urls_namespace="clientele-api")
+api = NinjaAPI(csrf=False, urls_namespace="clientele-api")
 
 
 

@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 export async function uploadApplication(formData) {
   const csrfToken = Cookies.get('csrftoken');
 
-  const res = await fetch('http://localhost:8000/api/v1/job-apply/', {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/job-apply/`, {
     method: 'POST',
     headers: {
       'X-CSRFToken': csrfToken || '', // Add CSRF token to header

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 MEDIA_URL = '/media/'
@@ -70,6 +70,7 @@ REST_FRAMEWORK = {
 # CORS_ALLOW_ALL_ORIGINS = True #not in production
 CORS_ALLOWED_ORIGINS = (
   'http://localhost:3000',
+  'http://127.0.0.1:3000',
   'http://jdmgroups.com:3000',
   'https://jdmgroups.com:3000',
   'http://jdmgroups.com',
@@ -80,6 +81,7 @@ CORS_ALLOWED_ORIGINS = (
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
+    'http://127.0.0.1:3000',
     'http://jdmgroups.com:3000',
     'https://jdmgroups.com',
     'https://www.jdmgroups.com',

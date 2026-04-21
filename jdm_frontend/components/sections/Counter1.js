@@ -9,34 +9,30 @@ export default function Counter1({ counterData }) {
   };
 
   return (
-    <div className="row">
+    <div className="row g-4">
       {counterData.map((item, index) => (
         <div
           key={index}
-          className="col-lg-4 col-md-3 wow fadeInUp"
+          className="col-lg-4 col-md-6 wow fadeInUp"
           data-wow-delay={item.delay}
         >
-          <div className="counter-items">
+          <div className="counter-items style-old">
             <div className="content">
               <div className="icon">
-                <img src={item.icon} alt="img" />
+                {item.icon && <img src={item.icon} alt="icon" />}
               </div>
               <h2>
-              {item.prefix}
+                {item.prefix}
                 <span className="count">
                   <CounterNumber count={item.count} />
                 </span>
-                <br />
                 {item.suffix}
               </h2>
               <p
-                className="mt-3 mt-md-0 wow fadeInUp"
-                data-wow-delay=".4s"
                 dangerouslySetInnerHTML={{
                   __html: renderDescription(item.title),
                 }}
               />
-              {/* <p>{item.label}</p> */}
             </div>
           </div>
         </div>

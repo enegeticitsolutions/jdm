@@ -1,5 +1,5 @@
 export async function getCSRFToken() {
-  await fetch('http://localhost:8000/api/v1/csrf/', {
+  await fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/csrf/`, {
     credentials: 'include', // important: sets the CSRF cookie in browser
   });
 }

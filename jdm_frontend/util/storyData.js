@@ -9,9 +9,9 @@ export const defaultStoryData = {
     "JDM Worldwide Freight Solutions Pvt. Ltd. – International Freight Forwarding",
     "JDM Cargo Planners Pvt. Ltd. – Customs Brokerage, Warehousing, Consultancy",
     "JDM Express Pvt. Ltd. – Courier Service",
-    "Arrow Transport Service – Transportation",
-    "AS Transport Service – Transportation",
+    "Arrow Transport Service – Road Transportation",
+    "AS Transport Service – Road Transportation",
   ],
   para1: "We at JDM are committed with Total Quality Management (TQM) services to our esteemed clientele. Our team of highly experienced professionals from industry are dedicated for expeditious execution of assignments with decentralization of authority at various levels.",
-  para2: "The underlying principle of company\’s operations include working in close collaboration with customers, harnessing latest state of the art technology with data integration platforms; the real time updates, synchronized operations to reduced processing time for Freight Forwarding, Customs Brokerage and Transportation, under one umbrella, has evolved as our USP. The company strives to earn customers\’ delight at all integrated touch points in each transaction."
+  para2: "The underlying principle of company\’s operations include working in close collaboration with customers, harnessing latest state of the art technology with data integration platforms; the real time updates, synchronized operations to reduced processing time for Freight Forwarding, Customs Brokerage and Road Transportation, under one umbrella, has evolved as our USP. The company strives to earn customers\’ delight at all integrated touch points in each transaction."
 };

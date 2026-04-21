@@ -14,12 +14,12 @@ import "react-modal-video/css/modal-video.min.css"; // Import styles if needed
 //     "JDM Worldwide Freight Solutions Pvt. Ltd. – International Freight Forwarding",
 //     "JDM Cargo Planners Pvt. Ltd. – Customs Brokerage, Warehousing, Consultancy",
 //     "JDM Express Pvt. Ltd. – Courier Service",
-//     "Arrow Transport Service – Transportation",
-//     "AS Transport Service – Transportation",
+//     "Arrow Transport Service – Road Transportation",
+//     "AS Transport Service – Road Transportation",
 //   ],
 // };
 
-const About1 = ({data}) => {
+const About1 = ({ data }) => {
   const aboutData = data;
   console.log("Story Section component data:", aboutData);
   const renderDescription = (text) => {

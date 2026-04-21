@@ -40,7 +40,7 @@ export const defaultTeamMembers = [
     role: "Managing Director",
     excerpt: "Managing Director",
     image: "/assets/img/team/2.jpg",
-    bio: "**Sahil Sehrawat** is a visionary leader and the driving force behind the **JDM Group of Companies.** Since taking on the role of Managing Director in 2011, he has been instrumental in steering the organization toward sustained growth and innovation. An alumnus of Deshbandhu College, University of Delhi, Sahil combines academic insight with hands-on industry experience, bringing a strategic edge to every aspect of the business. Prior to JDM Group, Sahil Sehrawat had been actively participated in the family business of transportation, since 1995, which was later restructured as  Arrow Transport service in 2010, after the founder, Mr. Prahalad Singh moved to heaven. The leadership of Sahil Sehrawat has been pivotal in expanding the group's presence across multiple sectors, establishing JDM as a name synonymous with service excellence, operational efficiency, and customer-first solutions started reverse growth from Transportation to Customs Clerance to Freight Forwarding to Courrier Services.",
+    bio: "**Sahil Sehrawat** is a visionary leader and the driving force behind the **JDM Group of Companies.** Since taking on the role of Managing Director in 2011, he has been instrumental in steering the organization toward sustained growth and innovation. An alumnus of Deshbandhu College, University of Delhi, Sahil combines academic insight with hands-on industry experience, bringing a strategic edge to every aspect of the business. Prior to JDM Group, Sahil Sehrawat had been actively participated in the family business of road transportation, since 1995, which was later restructured as  Arrow Transport service in 2010, after the founder, Mr. Prahalad Singh moved to heaven. The leadership of Sahil Sehrawat has been pivotal in expanding the group's presence across multiple sectors, establishing JDM as a name synonymous with service excellence, operational efficiency, and customer-first solutions started reverse growth from Road Transportation to Customs Clerance to Freight Forwarding to Courrier Services.",
     // phone: "+91 1234 5678 901",
     // email: "sahil@example.com",
     // availability: "Full Time",
@@ -49,7 +49,7 @@ export const defaultTeamMembers = [
     //   linkedin: "https://linkedin.com/in/sahil",
     // },
   },
-  { 
+  {
     id: 3,
     name: "Ajay Prakash",
     role: "Director",
