@@ -1,13 +1,5 @@
 import "@/node_modules/react-modal-video/css/modal-video.css"
-import "/public/assets/css/bootstrap.min.css";
-import "/public/assets/css/all.min.css";
-import "/public/assets/css/animate.css";
-import "/public/assets/css/magnific-popup.css";
-import "/public/assets/css/meanmenu.css";
-import "/public/assets/css/swiper-bundle.min.css";
-import "/public/assets/css/nice-select.css";
-import "/public/assets/css/color.css";
-import "/public/assets/css/main.css";
+// Notice: The 9 CSS imports from /public/ have been deleted!
 import Providers from "./provider";
 import { Nunito } from "next/font/google";
 
@@ -17,6 +9,7 @@ const nunito = Nunito({
   variable: "--nunito-font-family",
   display: "swap",
 });
+
 export const metadata = {
   title: "JDM Group - Customer Delight is Our Passion",
   description: "JDM Group - Customer Delight is Our Passion",
@@ -25,6 +18,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* We added the <head> tag here to load the CSS statically */}
+      <head>
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/all.min.css" />
+        <link rel="stylesheet" href="/assets/css/animate.css" />
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="/assets/css/meanmenu.css" />
+        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/assets/css/nice-select.css" />
+        <link rel="stylesheet" href="/assets/css/color.css" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+      </head>
+
       <body className={`${nunito.variable}`}>
         <Providers>{children}</Providers>
       </body>
