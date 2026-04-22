@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+dj&l!#kxmah0g=whf(sb_u*e49_i#=$5oh1b%cbt2$c5)^kqb
 DEBUG = True
 # DEBUG = False
 
-ALLOWED_HOSTS = ['82.112.236.35','localhost', '127.0.0.1', 'api.jdmgroups.com']
+ALLOWED_HOSTS = ['82.112.236.35','localhost', '127.0.0.1', 'api.jdmgroups.com','jdm.datamoshtechnology.com', 'www.jdm.datamoshtechnology.com']
 
 
 # Application definition
@@ -69,6 +69,8 @@ REST_FRAMEWORK = {
 
 # CORS_ALLOW_ALL_ORIGINS = True #not in production
 CORS_ALLOWED_ORIGINS = (
+    "http://jdm.datamoshtechnology.com",
+    "https://jdm.datamoshtechnology.com",
   'http://localhost:3000',
   'http://127.0.0.1:3000',
   'http://jdmgroups.com:3000',
