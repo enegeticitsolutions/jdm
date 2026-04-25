@@ -1,0 +1,96 @@
+/* styles/Careers.module.css
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .heroContent h1 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .heroContent p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ffffff;
+    color: var(--theme);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .ctaButton:hover {
+    background: #e5e7eb;
+  }
+  
+  .jobListings {
+    padding: 40px 20px;
+    background: #f9fafb;
+  }
+  
+  .jobListings h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .jobsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .jobCard {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .jobCard h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .jobCard p {
+    color: #4b5563;
+    margin: 0.5rem 0;
+  }
+  
+  .applyButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .applyButton:hover {
+    background: #1e3a8a;
+  }
+  
+  .applicationInfo {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .applicationInfo h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  } */

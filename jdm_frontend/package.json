@@ -1,0 +1,37 @@
+{
+    "name": "trastek",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
+    },
+    "dependencies": {
+        "@fortawesome/free-brands-svg-icons": "^6.7.2",
+        "@fortawesome/free-solid-svg-icons": "^6.7.2",
+        "@fortawesome/react-fontawesome": "^0.2.2",
+        "@tanstack/react-query": "^5.76.1",
+        "@tanstack/react-query-devtools": "^5.76.1",
+        "js-cookie": "^3.0.5",
+        "next": "14.1.4",
+        "next-auth": "^4.24.11",
+        "react": "18.2.0",
+        "react-countup": "^6.5.3",
+        "react-dom": "18.2.0",
+        "react-markdown": "^10.1.0",
+        "react-modal-video": "^2.0.2",
+        "react-query": "^3.39.3",
+        "react-scroll-trigger": "^0.6.14",
+        "react-window": "^1.8.11",
+        "rehype-raw": "^7.0.0",
+        "remark-gfm": "^4.0.1",
+        "sass": "^1.72.0",
+        "sharp": "^0.34.5",
+        "swiper": "^11.1.12",
+        "wowjs": "^1.1.3",
+        "yet-another-react-lightbox": "^3.21.6"
+    }
+}

@@ -1,0 +1,7 @@
+scripts:
+    server:
+        - cd jdm_backend && python3.12 manage.py runserver 0.0.0.0:8000
+    migrate:
+        - cd jdm_backend && python3.12 manage.py migrate
+    makemigrations:
+        - cd jdm_backend && python3.12 manage.py makemigrations

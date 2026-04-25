@@ -1,0 +1,88 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# -------------------------
+# Virtual Environment
+# -------------------------
+venv/
+env/
+.venv/
+
+# -------------------------
+# Django Runtime
+# -------------------------
+*.log
+*.pot
+db.sqlite3
+db.sqlite3-journal
+*.sqlite3
+*.sqlite3-journal
+
+# Django static & media generated at runtime
+staticfiles/
+static/
+media/
+static_root/
+media_root/
+
+# -------------------------
+# Environment Variables / Secrets
+# -------------------------
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# -------------------------
+# IDE / Editors
+# -------------------------
+.vscode/
+.idea/
+*.iml
+.ipynb_checkpoints/
+
+# -------------------------
+# Node / Frontend (if needed in backend dir)
+# -------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -------------------------
+# OS Files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Backup / Temp / Heavy archives
+# -------------------------
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+tmp/
+temp/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar

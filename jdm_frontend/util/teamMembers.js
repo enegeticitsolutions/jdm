@@ -1,0 +1,195 @@
+// lib/data/teamMembers.js
+
+/**
+ * @typedef {Object} TeamMember
+ * @property {number} id - Unique identifier for the team member
+ * @property {string} name - Full name of the team member
+ * @property {string} role - Job title or role
+ * @property {string} image - Path to the team member's image
+ * @property {string} bio - Short biography or description
+ * @property {string} phone - Contact phone number
+ * @property {string} email - Contact email address
+ * @property {string} website - Personal or professional website URL
+ * @property {string} experience - Years of experience
+ * @property {string} availability - Employment status (e.g., Full Time, Contractor)
+ * @property {{facebook?: string, twitter?: string, youtube?: string, linkedin?: string}} [social] - Optional social media links
+ */
+
+/** @type {肴TeamMember[]} */
+export const defaultTeamMembers = [
+  {
+    id: 1,
+    name: "Late Mr. Pahlad Singh",
+    role: "Founder",
+    image: "/assets/img/team/1.png",
+    excerpt: "Founder",
+    bio: "**Late Mr. Pahlad Singh** was the visionary founder of JDM Group, who laid the foundation of the company in 1978 with a humble beginning in transportation services within the logistics sector. Renowned for his steadfast commitment, integrity, and forward-thinking approach, he built more than just a business—he built a legacy rooted in trust, hard work, and excellence. His entrepreneurial spirit continues to guide JDM Group's values and vision, inspiring generations and shaping the company’s journey as it grows under the leadership of the current management and an ever-dedicated team.",
+    // phone: "+91 5698 0036 420",
+    // email: "pahlad@example.com",
+    // website: "http://example.com/pahlad",
+    // experience: "20 Years",
+    // availability: "Full Time Employee",
+    // social: {
+    //   facebook: "https://facebook.com/pahlad",
+    //   linkedin: "https://linkedin.com/in/pahlad",
+    // },
+  },
+  {
+    id: 2,
+    name: "Sahil Sehrawat",
+    role: "Managing Director",
+    excerpt: "Managing Director",
+    image: "/assets/img/team/2.jpg",
+    bio: "**Sahil Sehrawat** is a visionary leader and the driving force behind the **JDM Group of Companies.** Since taking on the role of Managing Director in 2011, he has been instrumental in steering the organization toward sustained growth and innovation. An alumnus of Deshbandhu College, University of Delhi, Sahil combines academic insight with hands-on industry experience, bringing a strategic edge to every aspect of the business. Prior to JDM Group, Sahil Sehrawat had been actively participated in the family business of road transportation, since 1995, which was later restructured as  Arrow Transport service in 2010, after the founder, Mr. Prahalad Singh moved to heaven. The leadership of Sahil Sehrawat has been pivotal in expanding the group's presence across multiple sectors, establishing JDM as a name synonymous with service excellence, operational efficiency, and customer-first solutions started reverse growth from Road Transportation to Customs Clerance to Freight Forwarding to Courrier Services.",
+    // phone: "+91 1234 5678 901",
+    // email: "sahil@example.com",
+    // availability: "Full Time",
+    // social: {
+    //   twitter: "https://twitter.com/sahil",
+    //   linkedin: "https://linkedin.com/in/sahil",
+    // },
+  },
+  {
+    id: 3,
+    name: "Ajay Prakash",
+    role: "Director",
+    excerpt: "Director",
+    image: "/assets/img/team/Ajay Sir.jpg",
+    bio: "**Ajay Prakash** was appointed as Director in May 2011, considering his 17 years’ experience in various matters related to custom clearance, compliance, liaison with govt. authorities. Prior to JDM, he has a vast experience of 7 years in RS Movers (a CHA Company) as General Manager, leading the role for customs clearance & compliance thereof from 2003 to 2011. Before to RS Movers, Ajay Sehrawat has held the position of Manager of Kunal Travels (Another CHA Company) from 1995 to 2003 worked as a leader responsible for the customs clearance, compliances, coordination with Airlines & shipping lines. Ajay Sehrawat has started his carrier since 1993 as Assistant manager of Romy Enterprises, in the field of Customs Clerance and coordination thereof with different agencies. Apart from above, Mr Ajay Sehrawat has been qualified ‘G’ Card examination in the year 1998-99 which is required to appear before the customs authorities at different locations.",
+    // phone: "+91 2345 6789 012",
+    // email: "ajay@example.com",
+    // website: "http://example.com/ajay",
+    // experience: "15 Years",
+    // availability: "Full Time Employee",
+    // social: {
+    //   linkedin: "https://linkedin.com/in/ajay",
+    // },
+  },
+  {
+    id: 4,
+    name: "Mukesh Gupta",
+    role: "Chief Operating Officer",
+    excerpt: "Chief Operating Officer",
+    image: "/assets/img/team/Mukesh Sir.jpg",
+    bio: "**Mukesh Gupta** was appointed as COO in June 2022. He is a Master Degree holder in commerce, qualified in 1980. Before his role as JDM Groups COO, he had held the position of General Manager of Pantos Logistics India Pvt. Ltd, a group company of LG Electronics India Pvt. Ltd. He joined LG Electronics in 1998 and transferred to Pantos Logistics in 2018 for Import & Export operations, Indirect Tax matters pertaining to Indian customs and other related Rules & Regulations thereof. He retired from Pantos Logistics in 2020 after completing 58 years of life, His role had been extended for a further two years, which ends in May 2022. Prior to LG Electronics, Mukesh Gupta worked with Matsushita Television & Audio India Pvt. Ltd (a group company of Panasonic) from 1992 to 1998, holding leadership positions in the matters of Central Excise & Customs. Starting as an Assistant of Indirect Taxes in Crown Ceramics India Pvt Ltd in the year 1978, Mukesh Gupta has worked in all matters related to Indirect Taxes throughout his entire career of 47 years.",
+    // phone: "+91 3456 7890 123",
+    // email: "mukesh@example.com",
+    // website: "http://example.com/mukesh",
+    // experience: "18 Years",
+    // availability: "Full Time Employee",
+    // social: {
+    //   linkedin: "https://linkedin.com/in/mukesh",
+    // },
+  },
+  {
+    id: 5,
+    name: "Manoj Kumar",
+    role: "Assistant Vice President",
+    excerpt: "Assistant Vice President",
+    image: "/assets/img/team/Manoj Ji.jpg",
+    bio: "**Manoj Kumar (born on 01 September 1974)** is the Assistant Vice President at JDM Group of Companies, with over 29 years of rich experience in the freight forwarding and logistics industry. He graduated from Chaudhary Charan Singh University (U.P.) in 1994 and began his career in 1998 with a Colombo-based MNC as an Air Export Manager. Over the years, he has worked with leading Shipping Lines, IATA-certified companies, and Customs House Agents (CHA), handling both Air and Sea Export-Import operations. He is highly skilled in Customs procedures, freight management, and team leadership.Manoj is a forward-thinking professional, known for his visionary ideas, financial discipline, and deep understanding of regulatory frameworks, which play a crucial role in ensuring compliance and driving operational efficiency at JDM Group.",
+    // phone: "+91 4567 8901 234",
+    // email: "manoj@example.com",
+    // website: "http://example.com/manoj",
+    // experience: "12 Years",
+    // availability: "Full Time Employee",
+    // social: {
+    //   linkedin: "https://linkedin.com/in/manoj",
+    // },
+  },
+  {
+    id: 6,
+    name: "Randhir Kumar Mishra",
+    role: "Accounts Head",
+    excerpt: "Accounts Head",
+    image: "/assets/img/team/Randhir Ji.jpg",
+    bio: "Hailing from **Madhubani, Bihar,** Randhir Kumar Mishra is a seasoned accounting expert with over **16 years of experience** in financial management. **B.Com (Hons.) graduate from LNMU** with an impressive 89% (2003), Randhir began his career with the **Oraon Group of Companies** in 2009, rising to the role of Manager – Accounts before joining **JDM Group** in 2018. At JDM, Randhir plays a critical role in ensuring **financial accuracy, compliance, and operational efficiency.** His responsibilities include preparing financial statements, managing receivables and payables, bank reconciliations, billing, and handling tax matters including TDS, EPF, ESIC, GST, and e-payments. Renowned for his **adaptability, leadership, and attention to detail,** Randhir consistently delivers reliable financial insights and ensures seamless accounting operations. His commitment to excellence and deep knowledge of tax and regulatory frameworks make him an invaluable asset to the JDM Group’s continued success.",
+    // phone: "+91 7777 8888 999",
+    // email: "alice4@example.com",
+    // website: "http://example.com/alice4",
+    // experience: "11 Years",
+    // availability: "Contractor",
+  },
+  {
+    id: 7,
+    name: "Anuj Arora",
+    role: "General Manager",
+    excerpt: "General Manager",
+    image: "/assets/img/team/Anuj Ji.jpg",
+    bio: "As **General Manager,** my journey with JDM Group has been both professionally rewarding and personally fulfilling. Each challenge and achievement has shaped my growth, deepened my appreciation for our team's dedication, and reinforced the power of collaboration in our fast-paced logistics environment. I’m proud to have contributed by streamlining operations, enhancing systems, and nurturing a culture of innovation—always with the goal of empowering our team and driving our collective success. Together, we've built a resilient organization that consistently exceeds client expectations. Looking ahead, I’m excited for the opportunities that await. Let’s continue to push boundaries, support one another, and strive for excellence—together.",
+    // phone: "+91 2222 3333 444",
+    // email: "alice3@example.com",
+    // website: "http://example.com/alice3",
+    // experience: "14 Years",
+    // availability: "Full Time Employee",
+  },
+  {
+    id: 8,
+    name: "Anju Dubey",
+    role: "Corporate Sales Manager",
+    excerpt: "Corporate Sales Manager",
+    image: "/assets/img/team/Anju Ma'am.jpg",
+    bio: "**Anju Dubey** is a dynamic professional with a solid foundation in logistics, supply chain, and client management. As **Corporate Sales Manager at JDM Group**, she leads sales efforts, nurtures client relationships, and ensures smooth, efficient operations. Known for her hands-on approach and results-driven mindset, Anju has a proven ability to onboard clients, streamline processes, and support team collaboration. Her passion for delivering value aligns seamlessly with JDM’s culture of innovation and excellence, making her a key player in driving both client satisfaction and business growth.",
+    // phone: "+91 7777 8888 999",
+    // email: "alice4@example.com",
+    // website: "http://example.com/alice4",
+    // experience: "11 Years",
+    // availability: "Contractor",
+  },
+  {
+    id: 9,
+    name: "Jaspreet Singh",
+    role: "Assistant General Manager",
+    excerpt: "Assistant General Manager",
+    image: "/assets/img/team/Jaspreet Ji.jpg",
+    bio: "**Jaspreet Singh**, AGM – Operations at **JDM Cargo Planners Pvt. Ltd.**, brings over 21 years of experience in import customs clearance and customer relationship management. A **Customs Rule 6-qualified** expert with a postgraduate diploma in international business and certifications in **IATA Cargo and Customs Compliance**, he joined JDM Group in 2021 and now leads strategic planning, key account management, and end-to-end customs operations. One of his career highlights includes managing imports for the Formula One Grand Prix for three consecutive years—a testament to his ability to execute high-pressure, time-sensitive projects with precision. Jaspreet’s leadership, deep industry insight, and consistent delivery of excellence make him a vital contributor to JDM’s continued success and reliability in the logistics space.",
+    // phone: "+91 7777 8888 999",
+    // email: "alice4@example.com",
+    // website: "http://example.com/alice4",
+    // experience: "11 Years",
+    // availability: "Contractor",
+  },
+  {
+    id: 10,
+    name: "Pal Raj",
+    role: "Regional Head South",
+    excerpt: "Regional Head South",
+    image: "/assets/img/team/3.png",
+    bio: "With over **23 years in the logistics industry, Pal** brings deep expertise in **Operational Excellence, Customer Service Management, and P&L Oversight.** As **Regional Head – South at JDM Group**, he leads seamless logistics operations with a customer-first mindset, overseeing P&L, launching new branches, and building strong cross-functional teams across sales, marketing, and operations. Pal has a proven track record of streamlining supply chain processes, enhancing service quality, and driving financial performance. His strategic leadership focuses on minimizing inefficiencies, strengthening client relationships, and balancing cost with service excellence. Through innovation and continuous improvement, Pal plays a key role in delivering high-impact, sustainable logistics solutions for JDM.",
+    // phone: "+91 9876 5432 109",
+    // email: "palraj@example.com",
+    // website: "http://example.com/palraj",
+    // experience: "18 Years",
+    // availability: "Part Time Consultant",
+    // social: {
+    //   facebook: "https://facebook.com/pahlad",
+    //   linkedin: "https://linkedin.com/in/pahlad",
+    // },
+  },
+  {
+    id: 11,
+    name: "Rohit Raj",
+    role: "Branch Manager Pune",
+    excerpt: "Branch Manager Pune",
+    image: "/assets/img/team/4.png",
+    bio: "Rohit Raj is a seasoned International Logistics Professional with over a decade of experience in freight forwarding, sales, and business development. He specializes in temperature-sensitive cargo, overseas networking, and strategic logistics planning. As the Branch Manager at JDM Group Pvt Ltd, Rohit oversees P&L management, key account handling, and new business development. He is instrumental in streamlining operations and ensuring top-notch service delivery. Holding a Postgraduate Diploma in Sales & Marketing and a Bachelor's in Commerce, Rohit combines academic insight with practical expertise to drive business growth. Based in Pune, he is passionate about traveling, exploring new cultures, and staying connected with global industry trends.",
+    // phone: "+91 5555 6666 777",
+    // email: "alice1@example.com",
+    // website: "http://example.com/alice1",
+    // experience: "10 Years",
+    // availability: "Full Time Employee",
+  },
+  {
+    id: 12,
+    name: "Abhilash D",
+    role: "Branch Manager Chennai",
+    excerpt: "Branch Manager Chennai",
+    image: "/assets/img/team/5.png",
+    bio: "**Abhilash D,** Branch Manager – Chennai at **JDM Group**, is a seasoned logistics professional with over 19 years of experience in customs operations. A BBA graduate from Kerala, he began his career in 2004 at an Export-Oriented Unit in New Delhi and later spent 15 years in Chennai managing import-export shipments for top multinational clients through the Chennai port. With deep expertise in Customs regulations, client management, and operational strategy, Abhilash leads customs processes at JDM Group, drives business development, and fosters strong stakeholder relationships. His leadership, compliance knowledge, and strategic insight continue to play a key role in streamlining operations and advancing JDM Group’s success in the logistics space.",
+    // phone: "+91 8888 9999 000",
+    // email: "alice2@example.com",
+    // website: "http://example.com/alice2",
+    // experience: "12 Years",
+    // availability: "Full Time Employee",
+  },
+];
