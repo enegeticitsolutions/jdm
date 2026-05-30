@@ -117,28 +117,37 @@ export default function Brand1({
         )}
       </div>
       <style jsx global>{`
-      .brand-section .swiper-slide,
-        .brand-section .brand-image,
+       .brand-section .swiper-slide,
         .brand-section img {
           background: transparent !important;
           background-color: transparent !important;
           mix-blend-mode: multiply !important;
         }
         .swiper-wrapper {
-        mix-blend-mode: multiply !important;
+          mix-blend-mode: multiply !important;
         }
         .brand-image {
           padding: 15px;
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: transparent !important; 
-          mix-blend-mode: multiply;
-          
+          background-color: #ffffff !important;
+          border: 1px solid #e5e7eb;
+          border-radius: 6px;
+          height: 90px;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+          mix-blend-mode: normal !important;
+        }
+        .brand-image:hover {
+          border-color: var(--theme);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          transform: translateY(-2px);
         }
         @media (max-width:475px){
           .brand-image {
             padding: 5px;
+            height: 70px;
           }
         }
         .swiper-button-next,

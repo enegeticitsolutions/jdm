@@ -21,26 +21,24 @@ export default function Menu() {
       title: "Services",
       href: "/service",
       submenu: servicesData
-        ? [
-          ...servicesData.map((service) => ({
+        ? (() => {
+          const arr = servicesData.map((service) => ({
             title: service.title,
             href: `/service-details/${service.slug || service.id}`,
-          })),
-
-          // ⭐ Add Value Added Service (special page)
-          {
+          }));
+          arr.splice(5, 0, {
             title: "Value Added Services",
             href: "/value-added-services",
-          }
-        ]
+          });
+          return arr;
+        })()
         : null,
 
     },
     { title: "Gallery", href: "/gallery", submenu: null },
-    // HIDDEN: Industry page temporarily disabled
-    // ...(industrySpec?.is_industry
-    //   ? [{ title: "Industries", href: "/industry", submenu: null }]
-    //   : []),
+    ...(industrySpec?.is_industry
+      ? [{ title: "Industries", href: "/industry", submenu: null }]
+      : []),
     { title: "Careers", href: "/careers", submenu: null },
     // HIDDEN: News page temporarily disabled
     // { title: "News", href: "/news", submenu: [{ title: "All News", href: "/news-grid" }] },

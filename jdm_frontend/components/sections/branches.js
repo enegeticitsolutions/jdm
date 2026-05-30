@@ -73,7 +73,7 @@ const IndianBranches = ({data}) => {
                       backgroundPosition: "center",
                     }}
                   >
-                    <div className="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50" />
+                    <div className="position-absolute top-0 start-0 w-100 h-100" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)" }} />
                   </div>
                   <div className="card-body position-absolute d-flex flex-column justify-content-end text-white pt-5 p-4">
                     <h5 className="card-title m-0 fw-bold fs-4 pb-1">{branch.city}</h5>

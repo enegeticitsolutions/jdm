@@ -1,9 +1,11 @@
 'use client'
 import Link from "next/link"
 import { useState } from 'react'
+import { useIndustryVisibility } from "@/hooks/useIndustryVisibility"
 
 export default function MobileMenu() {
 	const [isAccordion, setIsAccordion] = useState(1)
+	const { data: industrySpec } = useIndustryVisibility();
 
 	const handleAccordion = (key) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
@@ -102,6 +104,11 @@ export default function MobileMenu() {
 						<li>
 							<Link href="/careers">Career</Link>
 						</li>
+						{industrySpec?.is_industry && (
+							<li>
+								<Link href="/industry">Industries</Link>
+							</li>
+						)}
 						{/* <li>
 							<Link href="/project">
 								Projects

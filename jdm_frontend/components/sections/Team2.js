@@ -230,6 +230,7 @@ import Image from "next/image";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { defaultTeamMembers } from "@/util/teamMembers";
+import { useTeamData } from "@/hooks/useTeamData";
 
 const customStyles = `
   /* ===== Swiper Layout Fix ===== */
@@ -337,8 +338,25 @@ const swiperOptions = {
 };
 
 export default function TeamSlider({ heading }) {
-  const [teamMembers] = useState(defaultTeamMembers);
+  const { data: teamMembers = defaultTeamMembers, isLoading } = useTeamData();
   const [swiperInstance, setSwiperInstance] = useState(null);
+
+  if (isLoading) {
+    return (
+      <section className="service-section team-section fix section-padding bg-cover">
+        <div className="container">
+          <div className="section-title text-center">
+            <h2 className="wow fadeInUp" data-wow-delay=".2s">
+              {heading}
+            </h2>
+          </div>
+          <div className="text-center mt-5">
+            <p>Loading team members...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <>
@@ -354,7 +372,7 @@ export default function TeamSlider({ heading }) {
         </div>
 
         <div className="container-fluid">
-          <Swiper {...swiperOptions} onSwiper={(swiper) => setSwiperInstance(swiper)}>
+          <Swiper key={teamMembers.length} {...swiperOptions} onSwiper={(swiper) => setSwiperInstance(swiper)}>
             {teamMembers.map((member) => (
               <SwiperSlide key={member.id}>
                 <Link href={`/team-details/${member.id}`} className="card-hover">
@@ -373,7 +391,16 @@ export default function TeamSlider({ heading }) {
                     <div className="service-content">
                       <div>
                         <h3>{member.name}</h3>
-                        <p>{member.excerpt}</p>
+                        {member.role && (
+                          <p className="role" style={{ fontWeight: "600", color: "var(--theme)", marginBottom: "5px", fontSize: "15px" }}>
+                            {member.role}
+                          </p>
+                        )}
+                        {member.excerpt && member.excerpt !== "." && (
+                          <p className="excerpt" style={{ fontSize: "14px", color: "#666", marginBottom: "10px" }}>
+                            {member.excerpt}
+                          </p>
+                        )}
                       </div>
 
                       <button className="theme-btn bg-white team-btn text-capitalize">

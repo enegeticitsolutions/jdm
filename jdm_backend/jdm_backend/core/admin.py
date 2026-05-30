@@ -5,8 +5,39 @@ from django import forms
 from django.core.exceptions import ValidationError
 # from django.contrib.admin import ModelAdmin
 
+class IndustryForm(forms.ModelForm):
+    list_items_text = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 5, 'placeholder': 'Enter each bullet point on a new line'}),
+        required=False,
+        label="Bullet Points (one per line)",
+        help_text="Only used if Type is set to 'Bullet Points'."
+    )
+
+    class Meta:
+        model = Industry
+        fields = ['title', 'type', 'content', 'image', 'is_image_left', 'is_active']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance and self.instance.pk:
+            items = self.instance.list_items
+            if isinstance(items, list):
+                self.initial['list_items_text'] = "\n".join(items)
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        list_items_text = self.cleaned_data.get('list_items_text', '')
+        if list_items_text:
+            instance.list_items = [line.strip() for line in list_items_text.split('\n') if line.strip()]
+        else:
+            instance.list_items = []
+        if commit:
+            instance.save()
+        return instance
+
 @admin.register(Industry)
 class IndustryAdmin(admin.ModelAdmin):
+    form = IndustryForm
     list_display = ('title', 'type', 'is_active', 'is_image_left', 'created_at')
     list_filter = ('type', 'is_active', 'is_image_left')
     search_fields = ('title',)
@@ -128,7 +159,7 @@ class HomePageContentAdmin(admin.ModelAdmin):
     form = HomePageContentForm
     list_display = ('id', 'created_at', 'updated_at')
     search_fields = ('services_heading', 'journey_heading', 'clientele_heading')
-    inlines = [ClienteleItemInline, AssociationItemInline, AffiliationItemInline, AirPartnerItemInline, LocationInline, AchievementInline]
+    inlines = [ClienteleItemInline, AssociationItemInline, AffiliationItemInline, SeaPartnerItemInline, AirPartnerItemInline, LocationInline, AchievementInline]
     readonly_fields = ('created_at', 'updated_at')
 
 

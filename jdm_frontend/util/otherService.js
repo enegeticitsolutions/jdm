@@ -19,6 +19,13 @@ Special Valuation Branch (SVB) is a Branch of the Custom House, specializing in 
     `,
   },
   {
+    id: "sez/stpi",
+    title: "SEZ/STPI",
+    content: `
+Special Economic Zones SEZ/STPI are growth engines that can boost manufacturing, augment experts and generate employment. The SEZs require a special fiscal and regulatory regime in order to ensure a hassle-free operation encompassing the state-of-the-art infrastructure and support services. JDM is the pioneer in setting up SEZ/STPI units in Economic Zones. Well-versed with the intricacies of the SEZ/STPI rules, we stand tall in providing single window solutions to all these units by handling government regulatory authorities such as SEZ/STPI excise and customs.
+    `,
+  },
+  {
     id: "dgft",
     title: "DGFT",
     content: `

@@ -18,11 +18,18 @@ from django.conf import settings
 def build_file_url(request, file_field):
     if not file_field:
         return None
-    url = file_field.url
+    try:
+        url = file_field.url
+    except ValueError:
+        url = str(file_field)
+
     if 'assets/' in url:
         # Extract everything from 'assets/' onward, ensuring no leading slashes
         clean_path = url[url.find('assets/'):].lstrip('/')
-        return f"http://82.112.236.35:3000/{clean_path}"
+        
+        # Use localhost:3000 for frontend assets
+        return f"http://localhost:3000/{clean_path}"
+        
     return request.build_absolute_uri(url)
 
 
