@@ -140,7 +140,7 @@ const VisionMissionFounder = ({ data }) => {
                 title={data.heading}
                 content={content}
                 listItems={listItems}
-                image={section.type === "keyStrengths" ? "http://localhost:8000/media/about/keystrength/key_strenghts.png" : data.image_url || null}
+                image={data.image_url || null}
                 isImageLeft={isImageLeft}
               />
             );

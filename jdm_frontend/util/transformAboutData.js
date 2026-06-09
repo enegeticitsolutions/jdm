@@ -81,6 +81,7 @@ export const transformAboutData = (data) => {
             data.key_strengths?.points?.length > 0
               ? data.key_strengths.points
               : defaultVMData.strengths,
+          image_url: `${BASE}/media/about/keystrength/key_strenghts.png`,
         }
         : null,
     },
