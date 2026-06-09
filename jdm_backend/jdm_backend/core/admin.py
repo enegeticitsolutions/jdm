@@ -234,6 +234,8 @@ class AboutPageContentAdmin(admin.ModelAdmin):
                 'values_heading',
                 ('values_image', 'values_image_preview'),
                 'values_points',
+                'key_strengths_heading',
+                'key_strengths_points',
                 'faq_heading',
                 'faq_paragraph',
                 'team_heading',
