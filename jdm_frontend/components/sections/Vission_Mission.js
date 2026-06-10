@@ -8,95 +8,206 @@ const renderDescription = (text) =>
 // ======================================================
 // Reusable Section Component
 // ======================================================
-const Section = memo(({ title, content, listItems, image, isImageLeft }) => (
-  <div className="section-card-container mb-5">
-    <div className="row g-5 align-items-center justify-content-between">
-      {/* Text Column */}
-      <div className={`col-lg-7 order-lg-${isImageLeft ? 2 : 1}`}>
-        <div className="about-content">
-          <div className="section-title">
-            <h2 className="wow fadeInUp font-weight-bold text-white mb-4" data-wow-delay=".2s">{title}</h2>
+const Section = memo(({ title, content, listItems, image }) => {
+  const titleLower = title?.toLowerCase() || "";
+  const isVision = titleLower.includes("vision");
+  const isValues = titleLower.includes("values");
+  const isMission = titleLower.includes("mission");
+  const isStrengths = titleLower.includes("strengths");
+
+  let cardStyle = {};
+  if (isVision && image) {
+    cardStyle = {
+      backgroundImage: `url(${image})`,
+    };
+  } else if (isValues) {
+    cardStyle = {
+      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('/assets/img/about/our-values-bg.png')`,
+    };
+  } else if (isMission) {
+    cardStyle = {
+      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('/assets/img/about/our-mission-bg.png')`,
+    };
+  } else if (isStrengths) {
+    cardStyle = {
+      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('/assets/img/about/our-strengths-bg.png')`,
+    };
+  } else {
+    let background = "linear-gradient(135deg, #071f30 0%, #030f18 100%)";
+    cardStyle = { background };
+  }
+
+  return (
+    <div className={`section-card-container mb-5 ${isVision && image ? "has-bg-image" : ""} ${isValues ? "is-values" : ""} ${isMission ? "is-mission" : ""} ${isStrengths ? "is-strengths" : ""}`} style={cardStyle}>
+      <div className="row g-5 align-items-center">
+        {/* Text Column (Always on Left) */}
+        <div className={isValues || isMission || isStrengths ? "col-lg-7" : "col-lg-8"} style={{ position: "relative", zIndex: 2 }}>
+          <div className="about-content">
+            <div className="section-title">
+              <h2 className="wow fadeInUp section-card-title" data-wow-delay=".2s">{title}</h2>
+            </div>
+
+            {content && (
+              <p
+                className="mt-3 leading-relaxed wow fadeInUp section-card-text"
+                data-wow-delay=".4s"
+                dangerouslySetInnerHTML={{ __html: renderDescription(content) }}
+              />
+            )}
+
+            {listItems && Array.isArray(listItems) && (
+              <ul className="mt-4 wow fadeInUp" data-wow-delay=".4s" style={{ listStyle: "none", paddingLeft: 0 }}>
+                {listItems.map((item, index) => (
+                  <li key={index} className="value-item d-flex align-items-start mb-3">
+                    <i className="fas fa-check me-3 mt-1" aria-hidden="true" />
+                    <span dangerouslySetInnerHTML={{ __html: renderDescription(item) }} />
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-
-          {content && (
-            <p
-              className="mt-3 leading-relaxed text-slate-300 wow fadeInUp"
-              data-wow-delay=".4s"
-              style={{ fontSize: "16px", color: "#e2e8f0", lineHeight: "1.75" }}
-              dangerouslySetInnerHTML={{ __html: renderDescription(content) }}
-            />
-          )}
-
-          {listItems && Array.isArray(listItems) && (
-            <ul className="mt-4 wow fadeInUp" data-wow-delay=".4s" style={{ listStyle: "none", paddingLeft: 0 }}>
-              {listItems.map((item, index) => (
-                <li key={index} className="value-item d-flex align-items-start mb-3" style={{ fontSize: "15px", color: "#f8fafc" }}>
-                  <i className="fas fa-check me-3 mt-1" aria-hidden="true" />
-                  <span dangerouslySetInnerHTML={{ __html: renderDescription(item) }} />
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
       </div>
 
-      {/* Image Column OR Placeholder */}
-      <div className={`col-lg-5 order-lg-${isImageLeft ? 1 : 2}`}>
-        <div className="about-image text-center">
-          {image ? (
-            <img
-              src={image}
-              alt={`${title} - JDM Group`}
-              className="wow fadeInLeft img-fluid rounded-4 shadow"
-              data-wow-delay=".3s"
-              loading="lazy"
-              style={{ maxHeight: "350px", width: "100%", height: "auto", objectFit: "cover", borderRadius: "1rem" }}
-            />
-          ) : (
-            // Placeholder to maintain zig-zag structure
-            <div className="placeholder-box"></div>
-          )}
+      {/* Floating Seamless Image (Always on Right for others, only on mobile for Vision) */}
+      {image && !isValues && !isMission && !isStrengths && (
+        <div className={`about-image-container ${isVision ? "d-lg-none" : ""}`}>
+          <img
+            src={image}
+            alt={`${title} - JDM Group`}
+            className="wow fadeInRight"
+            data-wow-delay=".3s"
+            loading="lazy"
+          />
         </div>
-      </div>
-    </div>
+      )}
 
-    <style jsx>{`
-      .section-card-container {
-        background: linear-gradient(135deg, #071f30 0%, #030f18 100%);
-        border-radius: 20px;
-        padding: 55px 50px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        position: relative;
-        overflow: hidden;
-      }
-      .section-card-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 80% 20%, rgba(2, 132, 199, 0.15) 0%, transparent 60%);
-        pointer-events: none;
-      }
-      .fa-check {
-        color: #38bdf8; /* Bright cyan/blue tick */
-        font-size: 16px;
-      }
-      .placeholder-box {
-        width: 100%;
-        height: 250px;
-        background: transparent;
-      }
-      @media (max-width: 991px) {
+      <style jsx>{`
         .section-card-container {
-          padding: 35px 25px;
+          border-radius: 24px;
+          padding: 60px 55px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          position: relative;
+          overflow: hidden;
         }
-      }
-    `}</style>
-  </div>
-));
+        .section-card-container.has-bg-image {
+          background-color: #052238 !important;
+          background-size: contain !important;
+          background-position: right center !important;
+          background-repeat: no-repeat !important;
+          min-height: 380px;
+          display: flex;
+          align-items: center;
+        }
+        .section-card-container.is-values,
+        .section-card-container.is-mission,
+        .section-card-container.is-strengths {
+          background-color: #030f18 !important;
+          background-size: cover !important;
+          background-position: right center !important;
+          background-repeat: no-repeat !important;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+        }
+        .section-card-container.has-bg-image .row,
+        .section-card-container.is-values .row,
+        .section-card-container.is-mission .row,
+        .section-card-container.is-strengths .row {
+          width: 100%;
+        }
+        .section-card-container::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+          pointer-events: none;
+        }
+        .section-card-title {
+          font-size: 44px;
+          font-weight: 700;
+          color: #ffffff;
+          margin-bottom: 24px;
+          letter-spacing: -0.5px;
+          line-height: 1.2;
+        }
+        .section-card-text {
+          font-size: 16px;
+          color: #e2e8f0;
+          line-height: 1.75;
+        }
+        .value-item {
+          font-size: 15px;
+          color: #f8fafc;
+          line-height: 1.6;
+        }
+        .fa-check {
+          color: #38bdf8; /* Bright cyan/blue tick */
+          font-size: 16px;
+        }
+        .about-image-container {
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 52%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          pointer-events: none;
+          overflow: hidden;
+          z-index: 1;
+        }
+        .about-image-container img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          object-position: right center;
+          mix-blend-mode: screen;
+          opacity: 0.95;
+        }
+        @media (max-width: 991px) {
+          .section-card-container {
+            padding: 35px 25px;
+          }
+          .section-card-container.has-bg-image {
+            background-image: none !important;
+            background: linear-gradient(135deg, #052335 0%, #000c14 100%) !important;
+            min-height: auto;
+            display: block;
+          }
+          .section-card-container.is-values,
+          .section-card-container.is-mission,
+          .section-card-container.is-strengths {
+            background-size: cover !important;
+            background-position: center right !important;
+            min-height: auto;
+            display: block;
+          }
+          .section-card-title {
+            font-size: 32px;
+            margin-bottom: 16px;
+          }
+          .about-image-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-top: 30px;
+            justify-content: center;
+          }
+          .about-image-container img {
+            max-height: 220px;
+            object-position: center;
+          }
+        }
+      `}</style>
+    </div>
+  );
+});
 
 // ======================================================
 // MAIN COMPONENT
@@ -108,9 +219,9 @@ const VisionMissionFounder = ({ data }) => {
 
   // Build ordered sections to ensure zig-zag consistency
   const sectionList = [
-    mission?.is_active ? { type: "mission", data: mission } : null,
-    vision?.is_active ? { type: "vision", data: vision } : null,
     values?.is_active ? { type: "values", data: values } : null,
+    vision?.is_active ? { type: "vision", data: vision } : null,
+    mission?.is_active ? { type: "mission", data: mission } : null,
     keyStrengths ? { type: "keyStrengths", data: keyStrengths } : null,
   ].filter(Boolean);
 
@@ -120,7 +231,6 @@ const VisionMissionFounder = ({ data }) => {
         <>
           {sectionList.map((section, index) => {
             const { data } = section;
-            const isImageLeft = index % 2 !== 0; // zig-zag logic
 
             let content = data.paragraph;
             let listItems = data.points;
@@ -141,7 +251,6 @@ const VisionMissionFounder = ({ data }) => {
                 content={content}
                 listItems={listItems}
                 image={data.image_url || null}
-                isImageLeft={isImageLeft}
               />
             );
           })}

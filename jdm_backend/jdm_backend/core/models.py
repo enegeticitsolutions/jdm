@@ -98,12 +98,14 @@ class AssociationItem(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     home = models.ForeignKey(HomePageContent, related_name='associations', on_delete=models.CASCADE)
     logo = models.ImageField(upload_to='associations/')
+    title = models.CharField(max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default=True)  # Toggle visibility
 
 class AffiliationItem(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     home = models.ForeignKey(HomePageContent, related_name='affiliations', on_delete=models.CASCADE)
     logo = models.ImageField(upload_to='affiliations/')
+    title = models.CharField(max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default=True)  # Toggle visibility
 
 class SeaPartnerItem(models.Model):
@@ -331,7 +333,11 @@ class TeamMember(models.Model):
     excerpt = models.CharField(max_length=255)
     image = models.ImageField(upload_to="team/")
     bio = models.TextField()
+    position = models.PositiveIntegerField(default=0)  # 👈 ADD THIS FOR HIERARCHY/SORTING
     is_active = models.BooleanField(default=True)  # Toggle visibility
+
+    class Meta:
+        ordering = ["position"]
 
     def __str__(self):
         return self.name

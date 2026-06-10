@@ -211,6 +211,7 @@ class TeamMemberSchema(BaseModel):
     excerpt: str
     image: str  # You may convert to `HttpUrl` if using full URLs
     bio: str
+    position: Optional[int] = 0
     is_active: bool
 
     model_config = {"from_attributes": True}

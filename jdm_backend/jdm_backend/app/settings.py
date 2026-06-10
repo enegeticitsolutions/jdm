@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,11 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+dj&l!#kxmah0g=whf(sb_u*e49_i#=$5oh1b%cbt2$c5)^kqb'
+# Set DJANGO_SECRET_KEY as an environment variable on the production server.
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-+dj&l!#kxmah0g=whf(sb_u*e49_i#=$5oh1b%cbt2$c5)^kqb'  # local dev fallback only
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# Set DJANGO_DEBUG=False on the production server.
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['82.112.236.35','localhost', '127.0.0.1', 'api.jdmgroups.com','jdm.datamoshtechnology.com', 'www.jdm.datamoshtechnology.com', 'jdm.datamoshtechnologies.com', 'www.jdm.datamoshtechnologies.com', 'api.datamoshtechnologies.com', 'www.api.datamoshtechnologies.com']
 
@@ -97,7 +102,8 @@ CSRF_TRUSTED_ORIGINS = [
 
 # CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = 'Lax'  # or 'None' if cross-site
-CSRF_COOKIE_SECURE = False  # Use True in production over HTTPS
+CSRF_COOKIE_SECURE = not DEBUG   # True in production (HTTPS), False in local dev
+SESSION_COOKIE_SECURE = not DEBUG  # True in production (HTTPS), False in local dev
 CORS_ALLOW_CREDENTIALS = True
 CSRF_COOKIE_NAME = "csrftoken"
 

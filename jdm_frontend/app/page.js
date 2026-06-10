@@ -45,10 +45,10 @@ export default function Home2() {
       <Service3 data={content.services} />
       <Journey heading={content.journey.heading} url={content.journey.url} />
       <Brand1 images={content.clientele} know_more="Our Clientele" to="/our-clientele" border="true" />
-      <Brand1 images={content.affiliations} heading="Accreditations & Certifications" border="true" pagination="false" />
-      <Brand1 images={content.associations} heading="Associations" border="true" pagination="false" />
-      <Brand1 images={content.seaPartners} heading="Our Sea Carrier Partners" border="true" pagination="false" />
-      <Brand1 images={content.airPartners} heading="Our Air Carrier Partners" border="true" pagination="false" />
+      <Brand1 images={content.affiliations} heading="Accreditations & Certifications" border="true" pagination="false" showNameStrip={true} />
+      <Brand1 images={content.associations} heading="Associations" border="true" pagination="false" showNameStrip={true} />
+      <Brand1 images={content.seaPartners} heading="Our Sea Carrier Partners" border="true" pagination="false" squareCards={true} />
+      <Brand1 images={content.airPartners} heading="Our Air Carrier Partners" border="true" pagination="false" squareCards={true} />
       <IndianBranches data={content.branches} />
       <Achivements data={content.achievements} />
       <CtaBanner2 />

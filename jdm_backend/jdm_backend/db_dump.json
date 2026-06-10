@@ -1,0 +1,1924 @@
+[
+{
+    "model": "core.industry",
+    "pk": 10,
+    "fields": {
+        "title": "Pharmaceuticals & Healthcare",
+        "type": "bullet",
+        "content": "Ensuring timely delivery of medical consignments is critical for hospitals and healthcare providers. We understand that customers require reliable and trustworthy freight solution providers to help them move swiftly during emergencies and to keep the integrity of their supplies maintained.\r\n\r\nJDM is equipped at managing both active and passive pharmaceutical shipments (-20C, 2-8C, 15C-25C) facilitating trade lane risk assessments alongside designing customer specific SOPs to move shipments at the right temperature.\r\n\r\nOur experience in healthcare encompasses:",
+        "list_items": [
+            "APIs",
+            "Formulations",
+            "Vaccines",
+            "Launch pharmaceutical shipments",
+            "Medical Devices",
+            "Narcotics",
+            "Aid and relief material"
+        ],
+        "image": "industry_images/pharmaceuticals_healthcare_v2.jpg",
+        "is_image_left": true,
+        "is_active": true,
+        "created_at": "2026-05-30T12:17:27.831Z"
+    }
+},
+{
+    "model": "core.industry",
+    "pk": 11,
+    "fields": {
+        "title": "Chemicals",
+        "type": "para",
+        "content": "Chemical logistics consists of hazardous and non hazardous cargo. A lot of the movement of chemical consignments take place through ocean freight transport and some are also carried forward by air freight for faster transit.\n\nEnsuring safety and adhering to all environmental regulations are the major challenges faced in chemical transportation. Hermes Travel and Cargo provides you with all of that and much more.",
+        "list_items": [],
+        "image": "industry_images/chemicals_v2.jpg",
+        "is_image_left": false,
+        "is_active": true,
+        "created_at": "2026-05-30T12:17:27.834Z"
+    }
+},
+{
+    "model": "core.industry",
+    "pk": 12,
+    "fields": {
+        "title": "Engineering",
+        "type": "para",
+        "content": "Engineering goods involve the movement of large scale shipments like solar panels, pipes, water filters, machinery, entire automobiles, spare parts for automobiles, and much more.\r\n\r\nJDM provides a comprehensive range of services to both small scale local businesses and multi national engineering companies. We have a robust infrastructure supported by multi modal modes of transport and a global and local presence across countries that ensures timely and reliable delivery.",
+        "list_items": [],
+        "image": "industry_images/engineering_v2.jpg",
+        "is_image_left": true,
+        "is_active": true,
+        "created_at": "2026-05-30T12:17:27.834Z"
+    }
+},
+{
+    "model": "core.industry",
+    "pk": 13,
+    "fields": {
+        "title": "Automotive",
+        "type": "para",
+        "content": "The automotive supply chain refers to the transportation of export and import of engines, machinery, equipment, spare parts of automobiles, components, subassemblies, and other large scale deliverables.\r\n\r\nAt JDM, we provide bespoke integrated services to ensure end to end delivery of your cargo in the most efficient way possible. Our business partners and vendors are experienced and thorough with their line of work to deliver uncompromised solutions.",
+        "list_items": [],
+        "image": "industry_images/automotive_v2.jpg",
+        "is_image_left": false,
+        "is_active": true,
+        "created_at": "2026-05-30T12:17:27.846Z"
+    }
+},
+{
+    "model": "core.industry",
+    "pk": 14,
+    "fields": {
+        "title": "Apparels and Retail",
+        "type": "para",
+        "content": "The retail and apparel industry is subject to rapid changes. Therefore, managing the retail and fashion industry demands a logistics provider that is flexible and experienced to handle scales at that level.\r\n\r\nJDM provides integrated services to provide productive and efficient supply chain solutions that are tailored to meet your expectations and requirements. Our services help you maintain sustainability in your business practise.",
+        "list_items": [],
+        "image": "industry_images/apparels_retail_v2.jpg",
+        "is_image_left": true,
+        "is_active": true,
+        "created_at": "2026-05-30T12:17:27.847Z"
+    }
+},
+{
+    "model": "core.industry",
+    "pk": 15,
+    "fields": {
+        "title": "Perishables",
+        "type": "bullet",
+        "content": "Maintaining shipment integrity is of prime importance in the shipment of perishables. These include the transportation of sensitive products like seafood, flower, fruits, vegetables and other food products. JDM is the preferred partner for leading perishable exporters in India.\r\n\r\nOur services utilize some of the best in class practices for secured and timely delivery. Some of them include:",
+        "list_items": [
+            "Commercial contracts with capacity allocations",
+            "Scalability of allocations to manage seasonal peaks Mangoes",
+            "Prioritized space on carriers with prioritized handling at ports",
+            "Dedicated perishable handling team",
+            "Temperature controlled perishables 2C - 8C, Pomegranate arils",
+            "15C - 25C transit warehouse",
+            "24/7 custom clearance",
+            "Documentation expertise and custom compliances"
+        ],
+        "image": "industry_images/perishables_v2.jpg",
+        "is_image_left": false,
+        "is_active": true,
+        "created_at": "2026-05-30T12:17:27.847Z"
+    }
+},
+{
+    "model": "core.industry",
+    "pk": 16,
+    "fields": {
+        "title": "Technology",
+        "type": "para",
+        "content": "Technology is one of the most disruptive domains to work with, since product life cycles are likely to get over in months before the next innovation makes it to the market.\r\n\r\nWe understand that such a dynamic market requires dynamic solutions. At JDM, you will find top of the line support to assist you at every stage of your journey. Our uncompromised customer centric solution and legacy of 50 years continue to serve the leading business with a futuristic vision.",
+        "list_items": [],
+        "image": "industry_images/technology_v2.jpg",
+        "is_image_left": true,
+        "is_active": true,
+        "created_at": "2026-05-30T12:17:27.847Z"
+    }
+},
+{
+    "model": "core.industryspecification",
+    "pk": "0167d0a0-1fa5-4506-94f2-fb1e7df77594",
+    "fields": {
+        "is_industry": true
+    }
+},
+{
+    "model": "core.homepagecontent",
+    "pk": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "fields": {
+        "hero_video": "videos/hero/intro.mp4",
+        "hero_image": "hero/Banner.jpg",
+        "services_heading": "Our Services",
+        "journey_heading": "Our Journey",
+        "journey_video": "videos/journey/JDM_Timeline.mp4",
+        "clientele_heading": "Our Clientele",
+        "associations_heading": "Associations",
+        "affiliations_heading": "Accreditations & Certifications",
+        "sea_partners_heading": "Sea Carrier Partners",
+        "air_partners_heading": "Air Carrier Partners",
+        "achievements_heading": "Achievements",
+        "locations_heading": "Our Locations",
+        "created_at": "2026-04-16T10:56:41.716Z",
+        "updated_at": "2026-05-30T14:07:56.710Z",
+        "is_active": true,
+        "is_hero": true,
+        "is_services": true,
+        "is_journey": true,
+        "is_clientele": true,
+        "is_associations": true,
+        "is_affiliations": true,
+        "is_sea_partners": true,
+        "is_air_partners": true,
+        "is_locations": true,
+        "is_achievements": true,
+        "is_news": true,
+        "selected_services": [
+            "33556292-2f8d-4d45-b53a-84324dbb8d8f",
+            "1b72d196-3c60-493a-a2e8-cd4e703b273c",
+            "343764f5-c35a-4aaf-a18c-1a8f6e0e74eb",
+            "5346613c-3133-4120-8286-92456239d4f3",
+            "b9908508-9538-4bd9-b07d-337154c64618",
+            "fdace0b2-ef13-4bb0-8b69-19e6419e41f8",
+            "f8eaf199-3c78-4e20-87b4-d1b9091867a5",
+            "26e2ec73-3aac-4bf3-8e7a-1aa0550918be"
+        ]
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "0c3045ac-88e1-40fa-97fd-8cbec010eda3",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/19.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "0eee818d-3cef-47d2-9ddf-9bcc610c9e91",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/32.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "105490f3-f729-4614-8eba-a5033ff240d2",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/29.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "11077845-e992-4870-b194-e35f1b8ccd7b",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/38.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "12e5a5c4-74ef-4ef2-bc40-376304b4701e",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/37.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "1420acf1-f80b-4821-9e96-fc16cdb3cd54",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/3.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "15335de1-5663-4919-9233-7b8a91f1268c",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/2.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "166dc4d6-7ab3-4e4b-820f-da563319c260",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/9.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "28360e10-0477-437e-9e6b-ec33bfe0ff97",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/13.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "388f22f1-8d8b-428f-8f6d-d045261b40cf",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/20.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "4318bbfc-8485-43c8-a96b-4556379dc377",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/18.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "4b6e9aaa-e867-428b-b701-61d85c0eeb61",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/21.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "4ca1b407-5954-4e99-906f-bb48a95f15fd",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/11.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "53f9b897-0298-4a7b-9479-ed400bbe07b2",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/6.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "5474657f-fe99-42d9-8df5-a1dd851fe70a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/36.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "568fe7ea-4b66-4851-bfd5-8aa6a923f990",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/30.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "59267cfc-457d-4f54-b992-99688fb804d8",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/24.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "7a23ad86-13ab-40d8-86cf-ea18f96b61d9",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/17.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "7b4690f6-9c6a-4645-bb73-18d88a03c47a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/26.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "7d040755-ba7f-4808-9d43-f20e9d5a5e94",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/40.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "8038fa96-dccf-4518-8ed4-302797e126de",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/22.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "88a04ca8-a3da-4ca4-b3ac-3ec0a68e0fda",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/5.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "9081e610-fc49-4305-b3bc-29c57773a087",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/1.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "95a714d5-73be-46a8-a896-1392332bbef9",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/25.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "9c7ba713-fe32-45e0-985b-247e990a9b8a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/14.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "9e82d8c9-3adb-42be-9b5a-5f3b0ed59722",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/16.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "a11e4c0a-fa54-4dca-9d70-aebcca7d261f",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/34.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "bed78639-2ba3-4558-a8bd-b6cf977812f0",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/4.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "c0145f4b-f90b-4640-bf66-9f054ff5f74e",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/12.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "c1e12c5f-939b-410a-9383-0a721a469580",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/33.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "c3a85bf9-f8b4-4b80-ae7c-c1f36e31e0b5",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/35.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "d6ca12bb-4a64-4712-9fd2-c983df6c926b",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/15.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "d6cc3537-ea68-42c9-a215-41040f84bc34",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/23.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "e014b9ce-e2bc-46a7-a762-b48d99daa526",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/10.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "e7786df7-14a0-4501-b571-29201cc8af4b",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/28.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "f2b3c143-027f-4f30-ac29-4fdbc8eebe06",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/39.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "f6cca9ad-5702-462d-bcb4-7dfcbd6690a8",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/7.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "fa0f3b2e-f011-4ea3-9ad6-7dbf4c53a381",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/8.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "fe8790b0-0ba3-481d-bd3d-739a4b9fb714",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/27.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.clienteleitem",
+    "pk": "ffc22680-d3c1-47ca-ac81-65427420cea6",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "clients/31.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "0309faab-f405-4aaa-8fa9-3b81e5e73016",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/MCBA_1ay13cl.png",
+        "title": "MCBA",
+        "is_active": true
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "2824155a-8afe-408d-be65-a7474e41f659",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/3-removebg-preview.png",
+        "title": "Association Member",
+        "is_active": false
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "2fe14e36-d749-41dd-a30c-2c3e7fc79c9f",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/BCBA_gnJbuzi.png",
+        "title": "BCBA",
+        "is_active": true
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "3a9e5515-d48a-4cf5-9224-b3406059c6d1",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/ACBA_CFZKi0p.png",
+        "title": "ACBA",
+        "is_active": true
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "3f3532b7-ed52-4d18-a9dc-d84ddc41e895",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/RCHAA_YCz2BP1.png",
+        "title": "RCHAA",
+        "is_active": true
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "5ac3ab20-f316-4033-9b39-bffcdd2b0798",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/4-removebg-preview.png",
+        "title": "Association Member",
+        "is_active": false
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "696c212a-ec45-4f81-849a-096e08184cb6",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/7-removebg-preview.png",
+        "title": "Association Member",
+        "is_active": false
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "8b879d13-ade0-42d3-9214-467760834749",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/NCBA_6OtCcaq.png",
+        "title": "NCBA",
+        "is_active": true
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "8ff1c2fa-db4a-4e0a-85e3-ca5f2497a479",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/CCBA_2kGB6Wa.png",
+        "title": "CCBA",
+        "is_active": false
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "99a684c3-cbd4-4ad9-8fa0-8b31d1a8238c",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/2-removebg-preview.png",
+        "title": "Association Member",
+        "is_active": false
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "cea76ba5-45ac-4695-903e-bea3807c106a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/BCHAAL_LZN9xmK.png",
+        "title": "BCHAAL",
+        "is_active": true
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "ea5951bd-6a09-4b14-9e81-57eab7c299b4",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/1-removebg-preview.png",
+        "title": "Association Member",
+        "is_active": false
+    }
+},
+{
+    "model": "core.associationitem",
+    "pk": "f25fbc6f-8094-4f77-8253-77125e48d433",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "associations/DCBA_CSaGaV9.png",
+        "title": "DCBA",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "5c30bf46-85d5-4417-9d82-b3730e5824be",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/AEO_o5VU1Hv.png",
+        "title": "AEO Certified",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "9c4e4b1a-0251-44b9-9b99-64f74557537a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/MTO_9fo5qlr.png",
+        "title": "MTO Registered",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "a264d1cf-3443-4aaa-b719-9f77079e0078",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/Federation_of_Freight_Forwarders_Associations_in_India.png",
+        "title": "FFFAI Member",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "c180bad1-0e3e-4f5f-a89d-159f4bb0a3cc",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/IATA_bPA7eUy.png",
+        "title": "IATA Agent",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "c2258070-68bd-48b4-8550-31c23735e0f6",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/ISO_XyCXXTX.png",
+        "title": "ISO 9001:2015",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "da3aa06e-2ead-448d-be1a-c7ab38cfbdbb",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/FMC.png",
+        "title": "FMC Registered",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "fb205447-0106-4a3f-ab73-eae02852ad0f",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/DUN__BRADSTREET.png",
+        "title": "Dun & Bradstreet",
+        "is_active": true
+    }
+},
+{
+    "model": "core.affiliationitem",
+    "pk": "feec3633-cd7d-4222-99db-854bc0809a19",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "affiliations/WCA_Pv6y0PM.png",
+        "title": "WCA Network",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "10cb983c-7cf9-455c-b6ab-3899316c489b",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture12.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "4643cfcd-d766-4577-87e7-3c6991994ba0",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture3.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "55f54a7c-f095-4f66-a2fa-a157bf25673a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture13.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "6efb2472-3b3e-4ad7-a097-e6f91bb29154",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture10.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "74249775-dd81-4b48-bb83-a165ea3b5a24",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture5.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "775170af-73af-4717-bd1e-bcd21145321e",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture9.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "8e0ff9b7-e6e2-4a87-89fa-59f525b38f9d",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture6.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "8e362172-2e59-4031-9388-04a6875ec77a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture8.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "9dc7dee7-b508-4681-a060-9a7bc9e15325",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture1.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "9e357a82-5528-4e2f-add4-d4b18a487661",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture11.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "bca49409-5466-4620-b514-e59ba9b53a10",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture4.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "f05fd5a7-7b4a-4e30-abf0-c835e952e122",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture2.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.seapartneritem",
+    "pk": "fbf232bc-f8c6-4672-ac28-900a83dfd0cc",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/sea/Picture7.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "20025fcb-7cff-4974-823f-17f64dc05552",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/FITS_Air-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "2c382f8b-a344-4520-9477-4e1c260c90f0",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/thai-airways.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "34e2ed2f-6835-45dc-b25f-f2ec2f2da212",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/LOT-Polish-Airlines-Logo.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "4f8398d6-8b5f-4460-b2c6-6637594d1899",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Air_New_zealand-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "50217f85-ed29-4836-99ee-bcf9a1e9ff2f",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Air_Asia-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "594620aa-745f-4029-88ca-ff5f1d451e17",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/My_Freighter-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "5c18e57d-e3e4-4879-8e8c-f0b3b04dce26",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Miat_Mangolian.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "65a4d00b-17b3-4829-a9e3-e58c27d4009f",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Air-Australia-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "6e3c2937-cc9c-4397-8f85-3879d8541ca5",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Azerbaijan-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "6f01cac5-bc9f-4213-b9be-b5126ff24b53",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Air-Europa.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "8e49da4c-d9b3-4079-8d3e-92dbde55de0d",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/fiji airways.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "a1ba203f-3651-4ced-b67e-a497c8457f47",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/SF_Airlines-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "ccb63b5a-ae12-481e-be4a-72e97ead5147",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Bringer.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "d21a1e60-358c-4f81-a6f9-696a9cb5a060",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Tampa_Airline.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "dda81b8d-5651-44ed-a6d5-360f640ea9d1",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/cathay_cargo.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "e4c4ad79-ee09-43bd-8d80-a0aa0e982d39",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/Qatar-Airways-logo.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.airpartneritem",
+    "pk": "ef29243a-de90-47ea-9845-aadeebec2dea",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "logo": "carriers/air/COPA-removebg-preview.png",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "185465a6-fc16-4aff-a1fc-edc08a975ca8",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Delhi",
+        "address": "A-75, Road No. 4,Street No. 6, Mahipalpur Extn., New Delhi - 110037",
+        "phone": [
+            "+91-11-49536400"
+        ],
+        "email": "info@jdmgroups.com",
+        "image": "locations/delhi.jpg",
+        "place": "New Delhi",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "2cc4c39d-519c-45f5-8252-2c72a7ac2a30",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Mundra",
+        "address": "Office No. 34, Shardha Complex, Near Zero Point, HDFC Bank, Mundra \r\nKutch, Gujarat-370421",
+        "phone": [
+            "079-46040170"
+        ],
+        "email": "info@jdmgroups.com",
+        "image": "locations/Unity Statue Mundra.jpg",
+        "place": "Mundra",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "4ef89bc3-1564-4eb8-af1b-d936e5be2009",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Bengaluru",
+        "address": "#2734, 14th Main , E Block, Sahakara Nagar, Bengaluru, Karnataka-560092",
+        "phone": [
+            "080-40945570"
+        ],
+        "email": "bd.blr@jdmworldwide.in",
+        "image": "locations/Vidhana Soudha Bengaluru.jpg",
+        "place": "Bengaluru",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "5f3b3007-12f4-41e8-9ce2-0107e82499c6",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Mumbai",
+        "address": "119, Business Point, 502 A-Wing, 5th Floor, Near Sahar Cargo Complex, Sahar Road, Anderi(E), Mumbai-400099",
+        "phone": [
+            "022-41233070"
+        ],
+        "email": "nitin.mulay@jdmcargoplanners.com",
+        "image": "locations/Mumabi Chhatrapati Shivaji Terminal.jpg",
+        "place": "Mumbai CST",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "6e6cebf7-2a74-4ce9-ad22-59064be0a7da",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Pipavav",
+        "address": "Ram Plaza Complex, Ground Floor, Office No. 7, B/H Shree Ram Petrol Pump, Pipavav Port, Gujarat-365560",
+        "phone": [
+            "079-46040170"
+        ],
+        "email": "info@jdmgroups.com",
+        "image": "locations/Somanath_Temple Pipava.jpg",
+        "place": "Pipavav",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "76ca9efe-f770-4188-8caa-893d1dbf1048",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Chennai",
+        "address": "Kayal Tower No. 67/22, 3rd Floor, Velachery Road, Little Mount, Saidapet, Chennai, Tamil Nadu-600015",
+        "phone": [
+            "044-43025070"
+        ],
+        "email": "abhilash@jdmcargoplanners.com",
+        "image": "locations/Kapaleeswarar Temple, Chennai.jpg",
+        "place": "Chennai",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "7b72e1c6-9e55-4eaf-bd47-0e5b76f3a8f5",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Pune",
+        "address": "Pune Office, Maharashtra",
+        "phone": [
+            "+91-20-22345678"
+        ],
+        "email": "pune@jdmgroups.com",
+        "image": "locations/Shrimant Dagdusheth Halwai Ganpati Mandir-Pune.png",
+        "place": "Pune",
+        "is_active": false
+    }
+},
+{
+    "model": "core.location",
+    "pk": "80c50a06-bc4f-4df9-ba1e-21090f5bd436",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Mumbai",
+        "address": "Shelton Sapphire, B-801 Plot No. 18 & 19, Palm Beach Rd, Near Session Count, Sector-15, CBD Belapur, Navi Mumbai, Maharashtra-400614",
+        "phone": [
+            "022-41233070"
+        ],
+        "email": "nitin.mulay@jdmcargoplanners.com",
+        "image": "locations/Mumbai-India-Taj-Mahal-Palace.jpg",
+        "place": "Mumbai",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "9b8de48a-1755-4234-8f85-d97024095dae",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Khatuwas",
+        "address": "Cabin No. 5,1st Floor, Administrative Building, Inland Container Depot, Khatuwas, Alwar, Rajasthan-301704",
+        "phone": [
+            "011-49707070"
+        ],
+        "email": "info@jdmgroups.com",
+        "image": "locations/Neemrana fort Khatuwas.png",
+        "place": "Khatuwas",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "afa834cc-54b2-4679-b1cd-6f0404091e01",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Ahmedabad",
+        "address": "Unit No. 1006, 10th Floor Sakar-IX, Near Old Rbi Ashram Road, Ahmedabad - 380009",
+        "phone": [
+            "+91-79-22345678"
+        ],
+        "email": "bd.amd@jdmworldwide.in",
+        "image": "locations/Narendra_Modi_Stadium Ahmedabad.jpg",
+        "place": "Ahmedabad",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "bbf527f2-a421-4d33-a8ef-a0f0cf630c5b",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "Dadadri",
+        "address": "F-44, Concor Administrative Building, Tripata Road, ICD Dadri, Gautam Budh Nagar, Uttar Pradesh-201307",
+        "phone": [
+            "+91-120-1234567"
+        ],
+        "email": "dadri@jdmgroups.com",
+        "image": "locations/Ayodhya_Ram_Mandir Dadri.jpg",
+        "place": "Dadri",
+        "is_active": true
+    }
+},
+{
+    "model": "core.location",
+    "pk": "fa778824-084c-4a4b-af24-57510891b33c",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "city": "TKD",
+        "address": "Room No. 224/4, 2nd Floor, Concor Adminstrative Building, ICD Tugalkabad, New Delhi-110020",
+        "phone": [
+            "011-49707070"
+        ],
+        "email": "info@jdmgroups.com",
+        "image": "locations/India_Gate_Delhi.jpg",
+        "place": "TKD",
+        "is_active": true
+    }
+},
+{
+    "model": "core.aboutpagecontent",
+    "pk": 1,
+    "fields": {
+        "heading": "About JDM Group",
+        "story_heading": "Our Story",
+        "story_paragraph": "JDM GROUP was conceptualized by Late Mr. Pahlad Singh in the year 1978, with an initial starting of Transportation in the logistics field. He was well known in this industry for his true commitments, passing the legacy that JDM proudly follows under the dynamic leadership of the Group Chairman & Managing Director Mr. Sahil Sehrawat and a team of dedicated professionals. JDM has evolved as one of the fastest growing integrated supply chain logistics enterprises with verticals as below:",
+        "story_points": [
+            "Founded with a vision for excellence in logistics",
+            "Over 30 years of industry experience",
+            "Pan-India presence with global reach",
+            "Committed to customer satisfaction"
+        ],
+        "founder_image": "founder/Lt._Sh._Pahlad_Singh_Ji.png",
+        "para1": "We at JDM are committed to delivering Total Quality Management (TQM) services to our esteemed clientele. Our team of highly experienced professionals is dedicated to the expeditious execution of assignments through decentralized authority and accountable operations at every level.",
+        "para2": "The underlying principle of the company’s operations lies in close collaboration with customers and the adoption of state-of-the-art technology with integrated data platforms. Real-time updates, synchronized operations, and reduced processing timelines across Freight Forwarding, Customs Brokerage, and Transportation under one umbrella have evolved as our unique strength, ensuring customer delight at every touchpoint.",
+        "mission_heading": "Our Mission",
+        "mission_paragraph": "By acquiring and servicing reputed and ethical customers.\nBy constantly upgrading technology, team skills and infrastructure to increase freight management efficiency and creating cost effective logistics solutions.\nBy attracting and retaining quality people who possess enthusiasm for excellence, leadership and passion to win.\nTo function in an economically, socially and environmentally responsible manner respecting the interests of all stakeholders including our team members.",
+        "mission_image": "about/mission/Our Mission.jpg",
+        "vision_heading": "Our Vision",
+        "vision_paragraph": "To be the best freight management company, providing smart, innovative and socially responsible solutions to a diversified customer base.\nTo provide operational excellence, competitive cost control and transparency to our partners for sourcing and distributing in the integrated supply chain environment, globally.",
+        "vision_image": "about/vision/Our Vision.png",
+        "values_heading": "Our Values",
+        "values_image": "about/values/Our Values.jpg",
+        "values_points": [
+            "Customer First - We prioritize our customers in everything we do",
+            "Integrity - We conduct business with honesty and transparency",
+            "Innovation - We continuously improve our services and processes",
+            "Excellence - We strive for the highest standards in all operations",
+            "Teamwork - We believe in the power of collaboration"
+        ],
+        "key_strengths_heading": "Our Key Strengths",
+        "key_strengths_points": [
+            "30+ years of industry experience",
+            "Pan-India presence with 11+ offices",
+            "Global network spanning 150+ countries",
+            "500+ satisfied clients",
+            "Advanced technology-driven solutions",
+            "Dedicated and experienced team"
+        ],
+        "achievements_heading": "Achievements",
+        "team_heading": "Our Team",
+        "faq_heading": "Frequently Asked Questions",
+        "faq_paragraph": "Find answers to commonly asked questions about our logistics services.",
+        "is_active": true,
+        "is_mission": true,
+        "is_vision": true,
+        "is_values": true,
+        "is_story": true,
+        "is_faq": true,
+        "is_achievements": true,
+        "created_at": "2026-04-16T10:56:41.742Z",
+        "updated_at": "2026-06-10T10:36:42.423Z"
+    }
+},
+{
+    "model": "core.achievement",
+    "pk": "3d07de8f-59f1-4e12-b986-73ed6acb91f7",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "about": 1,
+        "title": "Team Members",
+        "count": 200,
+        "icon": "achievements/minus.svg",
+        "delay": ".6s",
+        "suffix": "+",
+        "prefix": null,
+        "is_active": false
+    }
+},
+{
+    "model": "core.achievement",
+    "pk": "56c227d5-43df-4559-9758-2ab79e6c363a",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "about": 1,
+        "title": "Years of Experience",
+        "count": 30,
+        "icon": "achievements/30.svg",
+        "delay": ".2s",
+        "suffix": "+",
+        "prefix": null,
+        "is_active": false
+    }
+},
+{
+    "model": "core.achievement",
+    "pk": "7f4fbd17-2666-46b1-bb68-510cd2406bf6",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "about": 1,
+        "title": "Happy Clients",
+        "count": 500,
+        "icon": "achievements/plus.svg",
+        "delay": ".4s",
+        "suffix": "+",
+        "prefix": null,
+        "is_active": false
+    }
+},
+{
+    "model": "core.achievement",
+    "pk": "8c94da67-766c-4c01-b648-25294e879e37",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "about": null,
+        "title": "Happy Clients",
+        "count": 500,
+        "icon": "achievements/plus.svg",
+        "delay": ".4s",
+        "suffix": "+",
+        "prefix": null,
+        "is_active": false
+    }
+},
+{
+    "model": "core.achievement",
+    "pk": "aa78038b-289d-4f5f-beb3-4409248a62a9",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "about": null,
+        "title": "Offices Worldwide",
+        "count": 15,
+        "icon": "achievements/minus.svg",
+        "delay": ".6s",
+        "suffix": "+",
+        "prefix": null,
+        "is_active": false
+    }
+},
+{
+    "model": "core.achievement",
+    "pk": "e3cfd492-07cb-4c07-a51c-3e89b5ba3f8f",
+    "fields": {
+        "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+        "about": null,
+        "title": "Years of Experience",
+        "count": 30,
+        "icon": "achievements/30.svg",
+        "delay": ".2s",
+        "suffix": "+",
+        "prefix": null,
+        "is_active": false
+    }
+},
+{
+    "model": "core.faq",
+    "pk": 1,
+    "fields": {
+        "about": 1,
+        "title": "What services does JDM Group offer?",
+        "description": "JDM Group offers comprehensive logistics solutions including Air Freight, Ocean Freight, Customs Brokerage, Project Cargo, Perishable Cargo, Courier Services, Warehousing, Exhibition Cargo, Transportation, and Rail Freight.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.faq",
+    "pk": 2,
+    "fields": {
+        "about": 1,
+        "title": "How can I track my shipment?",
+        "description": "You can track your shipment through our online tracking portal or by contacting our customer service team with your tracking number.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.faq",
+    "pk": 3,
+    "fields": {
+        "about": 1,
+        "title": "Do you handle international shipments?",
+        "description": "Yes, we handle both domestic and international shipments across air, sea, and land routes, connecting to 150+ countries worldwide.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.faq",
+    "pk": 4,
+    "fields": {
+        "about": 1,
+        "title": "What is the minimum shipment size you handle?",
+        "description": "We handle shipments of all sizes, from small parcels to oversized project cargo. Our LCL services are perfect for smaller shipments.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.faq",
+    "pk": 5,
+    "fields": {
+        "about": 1,
+        "title": "How do I get a quote for my shipment?",
+        "description": "You can request a quote by contacting us through our website, email, or phone. Our team will provide a competitive quote based on your requirements.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.service",
+    "pk": "167f24fb-1c37-4730-917f-2c75432672c6",
+    "fields": {
+        "title": "Exhibition Cargo",
+        "image": "assets/img/service/Exhibition.jpg",
+        "description": "Express Cargo services for urgent deliveries.",
+        "icon": "fa-regular fa-truck-front",
+        "description1": "We proudly hold a distinct reputation in managing exhibition cargo for both inward and outward movements with absolute precision and regulatory compliance. Whether its goods headed for the India Trade Promotion Organization (ITPO), or materials bound for public or privately funded seminars, expos, or demonstrations, our experienced team ensures smooth execution aligned with all customs regulations and procedural guidelines. We specialize in handling shipments governed under ATA Carnet and related exhibition protocols, offering tailored solutions for high-value display items, fragile exhibits, and demonstration kits. From meticulous planning to seamless delivery at the event site, we manage the entire logistics chain — ensuring that your materials arrive on time, intact, and exhibition-ready. With extensive knowledge of international exhibition standards and documentation formalities, we are your trusted partner for delivering excellence on the global exhibition stage.",
+        "heading": ".",
+        "description2": ".",
+        "position": 9
+    }
+},
+{
+    "model": "core.service",
+    "pk": "1b72d196-3c60-493a-a2e8-cd4e703b273c",
+    "fields": {
+        "title": "Ocean Freight",
+        "image": "assets/img/service/Ocean.jpg",
+        "description": "Cost-effective ocean freight solutions for bulk shipments.",
+        "icon": "fa-regular fa-ship",
+        "description1": "We understand that **ocean freight is the backbone of global trade,** playing a pivotal role in connecting supply chains across continents. Our ocean freight solutions are built on a foundation of cost-effectiveness, **reliability, safety, and timely delivery,** offering seamless movement through **FCL, LCL, Reefer, and specialized vessel charters** equipped with onboard cranes for heavy or oversized cargo. With a team of highly qualified professionals, we manage both **bulk and liquid commodities** with unmatched precision and care. While our ocean division continues to expand, we bring **modern flexibility** to every shipment — from selecting the ideal carrier to arranging last-mile delivery. By leveraging our vast partner network and working in sync with shipping lines, we ensure your cargo reaches even the most remote interiors of the country and across borders, all at an optimized cost and with complete transparency.",
+        "heading": "",
+        "description2": "",
+        "position": 1
+    }
+},
+{
+    "model": "core.service",
+    "pk": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+    "fields": {
+        "title": "Warehousing",
+        "image": "assets/img/service/Warehouse.jpg",
+        "description": "Secure and scalable warehousing solutions.",
+        "icon": "fa-regular fa-warehouse",
+        "description1": "We have grown rapidly in 5PL solutions in the form of warehousing, distribution and trans-load operations. We have the capabilities to serve right from packing, loading/unload, customs brokerage, inventory control, warehouse management, transportation, includes multi model transportation, to our esteemed customers and final distribution to the retail outlets in a cost-effective manner with safe and intact deliveries.",
+        "heading": "Warehousing of Goods in Public and Private Bonded Warehouses",
+        "description2": "As an emerging leader in the warehousing services, we also assist our esteemed customers to warehouse the goods in public & private bonded warehouses (governed under customs act/rules) for better supply chain, inventory control, and deferred customs duty payments.",
+        "position": 7
+    }
+},
+{
+    "model": "core.service",
+    "pk": "33556292-2f8d-4d45-b53a-84324dbb8d8f",
+    "fields": {
+        "title": "Air Freight",
+        "image": "assets/img/service/Air_Freight.jpeg",
+        "description": "Fast and reliable air freight services for global shipping.",
+        "icon": "fa-regular fa-plane",
+        "description1": "We offer comprehensive range of airfreight services worldwide. Each movement of Air Cargo is diligently planned by our experts in close coordination with our worldwide agents to utilize the most economic air carriers that provide safe and speedy delivery. Strong relationships with all leading airlines enable us to secure space with reasonable price in all significant sectors. Exporters/Importers of specialized cargo, Automotive cargo, Electronics cargo, high value cargo, perishable cargo, Hazardous/Dangerous goods cargo and many other types of cargoes can rely on us for providing them value addition with our state-of-the-art services. We offer **\"consolidations, Back to Back, Door to Door, and Airport to Airport\"** services as per the requirements of our valued customers.",
+        "heading": "",
+        "description2": "",
+        "position": 0
+    }
+},
+{
+    "model": "core.service",
+    "pk": "343764f5-c35a-4aaf-a18c-1a8f6e0e74eb",
+    "fields": {
+        "title": "Rail Freight",
+        "image": "assets/img/service/Rail.jpg",
+        "description": "Efficient train freight services for regional transport.",
+        "icon": "fa-regular fa-train",
+        "description1": "We recognize the immense value of rail freight as a highly efficient and reliable mode of transport, particularly for the movement of large volumes of goods over medium to long distances. Leveraging rail transport enables us to reduce the number of trips required for large-scale shipments, leading to significant cost savings and a marked reduction in the environmental footprint of logistics operations. Rail freight is less susceptible to traffic congestion and adverse weather conditions compared to road transport, ensuring reliable and timely deliveries, even in challenging circumstances. This capability is particularly advantageous for industries such as manufacturing, agriculture, and mining, where demand for scalable, secure, and cost-effective transportation solutions is paramount. We harness the power of rail freight to optimize supply chain efficiency, ensuring seamless operations while remaining fully compliant with industry standards and environmental regulations.",
+        "heading": "",
+        "description2": "By integrating rail transport into our comprehensive logistics offerings, we further our commitment to sustainability, delivering reliable, green, and cost-efficient solutions to our clients.",
+        "position": 2
+    }
+},
+{
+    "model": "core.service",
+    "pk": "5346613c-3133-4120-8286-92456239d4f3",
+    "fields": {
+        "title": "Road Transportation",
+        "image": "assets/img/service/truck.jpg",
+        "description": "Flexible road transportation for local and regional deliveries.",
+        "icon": "fa-regular fa-truck-fast",
+        "description1": "JDM GROUP was conceptualized by Late Mr. Pahlad Singh in the year 1978, with an initial starting of Road Transportation in logistics field. His desire towards the value services and deep understanding of Logistics, made the foundations of the organization stronger and today these two aspects are our guiding principles. <br> Road Transportation is one of the vital parts of modern logistics segment and its cycles begin with pick-up of cargo/consignments to and from the designated port, customs station and/or warehouses. Today we are one of the leading and promising Logistics partners associated with some of the best corporate houses. We firmly believe in \"Just in Time\" concept by providing seamless Logistics support to our valued customer through our well informed and experienced staff. ** We are progressing toward the greener future by adopting electric vehicles and removing emissions-heavy alternatives, in Alignment with the Mission 2050 initiative.**",
+        "heading": "",
+        "description2": "",
+        "position": 3
+    }
+},
+{
+    "model": "core.service",
+    "pk": "b9908508-9538-4bd9-b07d-337154c64618",
+    "fields": {
+        "title": "Custom Brokerage",
+        "image": "assets/img/service/Customs_Brokrage.jpg",
+        "description": "Seamless custom clearance services for international shipments.",
+        "icon": "fa-regular fa-file-signature",
+        "description1": "We have an adept team of Customs Brokerage professionals with years of experience, who are proficient not only with Custom's procedures and regulations but also with the allied laws. We assist in effectively and efficiently filing of all customs-related compliances across multiple regulatory agencies, includes additional facilitations for:",
+        "heading": "",
+        "description2": "",
+        "position": 4
+    }
+},
+{
+    "model": "core.service",
+    "pk": "ddcf6648-656e-43ac-839f-50d993a0ac87",
+    "fields": {
+        "title": "Perishable Cargo",
+        "image": "assets/img/service/Perishable.jpg",
+        "description": "Express Cargo services for urgent deliveries.",
+        "icon": "fa-regular fa-truck-front",
+        "description1": "We are trusted for delivering reliable, specialized logistics solutions for the export and import of perishable commodities, including vegetables, fruits, cut flowers, and other temperature-sensitive goods. What sets us apart is our deep understanding of the time-critical nature of perishables and our commitment to maintaining their freshness, quality, and safety at every stage of transit. Our team is trained in cold chain handling, ensuring proper packaging, temperature control, and hygiene protocols from origin to destination. Whether it’s a rose bouquet to Europe or fresh produce to the Middle East, we manage it with precision, speed, and care. With international expertise and a customer-centric approach, for goods that can’t wait, trust the team that never rests.",
+        "heading": "",
+        "description2": "",
+        "position": 8
+    }
+},
+{
+    "model": "core.service",
+    "pk": "f8eaf199-3c78-4e20-87b4-d1b9091867a5",
+    "fields": {
+        "title": "Project Cargo",
+        "image": "assets/img/service/Project_Cargo.jpg",
+        "description": "Specialized handling for oversized and complex cargo.",
+        "icon": "fa-regular fa-box-open",
+        "description1": "We take immense pride in offering **comprehensive project cargo handling services** that consistently exceed client expectations. From infrastructure giants to energy sector leaders, our clients trust us to move their most challenging and oversized cargo with unmatched precision. Our team, comprising **highly trained and experienced professionals**, brings meticulous planning and hands-on expertise to every project — be it **Over Dimensional Cargo (ODC)** or **Overweight Cargo (OWC)**. Utilizing **specialized equipment** like open-top and flat-rack containers, we handle end-to-end execution — starting from **vessel booking, route optimization, to safe on-board loading.** Our longstanding relationships with leading vessel owners allow us to offer **cost-effective solutions without compromising service quality.** What sets us apart is our ability to adapt to the complexity of each shipment, ensuring it is moved securely, timely, and in compliance with international standards. It's a mission delivered with integrity, care, and commitment.",
+        "heading": ".",
+        "description2": ".",
+        "position": 6
+    }
+},
+{
+    "model": "core.service",
+    "pk": "fdace0b2-ef13-4bb0-8b69-19e6419e41f8",
+    "fields": {
+        "title": "Courier Services",
+        "image": "assets/img/service/Courier.jpg",
+        "description": "Express courier services for urgent deliveries.",
+        "icon": "fa-regular fa-truck-front",
+        "description1": "We specialize in providing **customized, door-to-door express delivery solutions** designed to meet the fast-paced demands of modern business. Our courier services are tailored for the **swift and secure movement of time-sensitive documents and parcels** to destinations across the globe. Backed by a robust international network and diverse transit time options, we ensure, shipments reach on schedule, no matter the urgency or complexity. <br> What truly distinguishes our service is our approach: **before proposing a solution, we take time to understand your business challenge**, offering logistics that are not only efficient but also strategically aligned with your goals. Every package entrusted to us is handled with the utmost care, backed by advanced tracking systems and stringent safety protocols. Whether it’s an urgent contract, confidential paperwork, or a vital product sample, **we guarantee secure, reliable, and on-time global delivery — every time.**",
+        "heading": ".",
+        "description2": ".",
+        "position": 5
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 56,
+    "fields": {
+        "service": "b9908508-9538-4bd9-b07d-337154c64618",
+        "text": "Special Economic Zones (SEZ)"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 57,
+    "fields": {
+        "service": "b9908508-9538-4bd9-b07d-337154c64618",
+        "text": "Software Technology Parks of India (STPI)"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 58,
+    "fields": {
+        "service": "b9908508-9538-4bd9-b07d-337154c64618",
+        "text": "Free Trade and Warehousing Zone (FTWZ)"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 59,
+    "fields": {
+        "service": "b9908508-9538-4bd9-b07d-337154c64618",
+        "text": "Export Promotion Capital Goods (EPCG)"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 60,
+    "fields": {
+        "service": "b9908508-9538-4bd9-b07d-337154c64618",
+        "text": "Import of Goods at Concessional Rate of Duty (IGCR)"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 61,
+    "fields": {
+        "service": "b9908508-9538-4bd9-b07d-337154c64618",
+        "text": "Manufacturing and Other Operations in a Warehouse Rules (MOOWR)"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 62,
+    "fields": {
+        "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+        "text": "Cost effective & safety of goods"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 63,
+    "fields": {
+        "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+        "text": "Our warehouse has zero liability to end clients"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 64,
+    "fields": {
+        "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+        "text": "Warehouse distance -4 km from New Delhi Airport"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 65,
+    "fields": {
+        "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+        "text": "Round the clock 24xl security equipped with security camera etc"
+    }
+},
+{
+    "model": "core.servicebenefit",
+    "pk": 66,
+    "fields": {
+        "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+        "text": "Hi-tech sophisticated handling equipment’s for taking appropriate care of your cargo"
+    }
+},
+{
+    "model": "core.valueaddedservice",
+    "pk": "38b668c1-97b3-4674-bac0-15fef80ec09a",
+    "fields": {
+        "title": "Trade Compliance",
+        "para1": "Navigate complex international trade regulations with our compliance advisory services.",
+        "para2": "We help you stay compliant with import/export regulations, sanctions, and trade agreements."
+    }
+},
+{
+    "model": "core.valueaddedservice",
+    "pk": "5053c458-7cf0-404c-9438-0231c233ad53",
+    "fields": {
+        "title": "Supply Chain Consulting",
+        "para1": "Our experts analyze your supply chain to identify optimization opportunities and cost savings.",
+        "para2": "We provide end-to-end supply chain consulting services to help you streamline operations and improve efficiency."
+    }
+},
+{
+    "model": "core.valueaddedservice",
+    "pk": "9bba63d5-fa69-46c9-b4b3-4d734f565398",
+    "fields": {
+        "title": "Cargo Insurance",
+        "para1": "Protect your shipments with comprehensive cargo insurance coverage. We offer competitive rates and hassle-free claims processing.",
+        "para2": "Our insurance solutions cover all modes of transport and protect against damage, loss, and theft during transit."
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "043171b7-109e-4d58-89ad-3834c5687728",
+    "fields": {
+        "name": "Pal Raj",
+        "role": "Regional Head South",
+        "excerpt": ".",
+        "image": "team/palraj.png",
+        "bio": "With over 23 years in the logistics industry, Pal brings deep expertise in Operational Excellence, Customer Service Management, and P&L Oversight. As Regional Head – South at JDM Group, he leads seamless logistics operations with a customer-first mindset, overseeing P&L, launching new branches, and building strong cross-functional teams across sales, marketing, and operations. Pal has a proven track record of streamlining supply chain processes, enhancing service quality, and driving financial performance. His strategic leadership focuses on minimizing inefficiencies, strengthening client relationships, and balancing cost with service excellence. Through innovation and continuous improvement, Pal plays a key role in delivering high-impact, sustainable logistics solutions for JDM.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "0a67462f-40cb-4b53-acae-e6961bb64008",
+    "fields": {
+        "name": "Lt. Sh. Pahlad Singh Ji",
+        "role": "Founder",
+        "excerpt": "Visionary of JDM Group",
+        "image": "team/Lt._Sh._Pahlad_Singh_Ji.png",
+        "bio": "Late Mr. Pahlad Singh was the visionary founder of JDM Group, who laid the foundation of the company in 1978 with a humble beginning in transportation services within the logistics sector. Renowned for his steadfast commitment, integrity, and forward-thinking approach, he built more than just a business—he built a legacy rooted in trust, hard work, and excellence. His entrepreneurial spirit continues to guide JDM Group's values and vision, inspiring generations and shaping the company’s journey as it grows under the leadership of the current management and an ever-dedicated team.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "129aab49-8aec-4481-8a5a-26a6e37b29c2",
+    "fields": {
+        "name": "Mukesh Gupta",
+        "role": "Senior Manager",
+        "excerpt": "Operations excellence",
+        "image": "team/Mukesh Sir.jpg",
+        "bio": "Mukesh Gupta was appointed as COO in June 2022. He is a Master Degree holder in commerce, qualified in 1980. Before his role as JDM Groups COO, he had held the position of General Manager of Pantos Logistics India Pvt. Ltd, a group company of LG Electronics India Pvt. Ltd. He joined LG Electronics in 1998 and transferred to Pantos Logistics in 2018 for Import & Export operations, Indirect Tax matters pertaining to Indian customs and other related Rules & Regulations thereof. He retired from Pantos Logistics in 2020 after completing 58 years of life, His role had been extended for a further two years, which ends in May 2022. Prior to LG Electronics, Mukesh Gupta worked with Matsushita Television & Audio India Pvt. Ltd (a group company of Panasonic) from 1992 to 1998, holding leadership positions in the matters of Central Excise & Customs. Starting as an Assistant of Indirect Taxes in Crown Ceramics India Pvt Ltd in the year 1978, Mukesh Gupta has worked in all matters related to Indirect Taxes throughout his entire career of 47 years.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "276fba5b-76a6-4432-87fb-2a112dde3e3c",
+    "fields": {
+        "name": "Lijeesh",
+        "role": "Branch Manager Chennai",
+        "excerpt": "Freight Forwarding",
+        "image": "team/Lijeesh.jpg",
+        "bio": "My name is Lijeesh. I was born in Thrissur, Kerala, and moved to Chennai in 1990. I completed both my schooling and college education in Chennai. I graduated with a B.Com degree in the year 2002. Following that, my first work experience began at Ashok Leyland in 2002, which marked the start of my career in logistics. After that, I worked across several companies. In 2023, I co-founded a company alongside my senior, but due to certain challenges, I stepped out of it. Afterwards, in 2024, I joined JDM Groups. Two years have passed since, and here I have the complete freedom to operate independently, which enables me to work with great confidence",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "511db454-6f9f-43d1-b5d0-a17d5888d4b4",
+    "fields": {
+        "name": "Sahil Sehrawat",
+        "role": "Managing Director",
+        "excerpt": "IT and digital transformation",
+        "image": "team/SahilSir.jpg",
+        "bio": "Sahil Sehrawat is a visionary leader and the driving force behind the JDM Group of Companies. Since taking on the role of Managing Director in 2011, he has been instrumental in steering the organization toward sustained growth and innovation. An alumnus of Deshbandhu College, University of Delhi, Sahil combines academic insight with hands-on industry experience, bringing a strategic edge to every aspect of the business. Prior to JDM Group, Sahil Sehrawat had been actively participated in the family business of road transportation, since 1995, which was later restructured as Arrow Transport service in 2010, after the founder, Mr. Prahalad Singh moved to heaven. The leadership of Sahil Sehrawat has been pivotal in expanding the group's presence across multiple sectors, establishing JDM as a name synonymous with service excellence, operational efficiency, and customer-first solutions started reverse growth from Road Transportation to Customs Clerance to Freight Forwarding to Courrier Services.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "64c72bef-d425-4fe5-bf87-4fa0f5506895",
+    "fields": {
+        "name": "Abhilash D",
+        "role": "Branch Manager Chennai",
+        "excerpt": "Customs House Brokerage",
+        "image": "team/abhilashD.png",
+        "bio": "Abhilash D, Branch Manager – Chennai at JDM Group, is a seasoned logistics professional with over 19 years of experience in customs operations. A BBA graduate from Kerala, he began his career in 2004 at an Export-Oriented Unit in New Delhi and later spent 15 years in Chennai managing import-export shipments for top multinational clients through the Chennai port. With deep expertise in Customs regulations, client management, and operational strategy, Abhilash leads customs processes at JDM Group, drives business development, and fosters strong stakeholder relationships. His leadership, compliance knowledge, and strategic insight continue to play a key role in streamlining operations and advancing JDM Group’s success in the logistics space.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "a42ad5d7-0b1e-4d3e-bbe2-3a43b683bdc2",
+    "fields": {
+        "name": "Manoj Kumar",
+        "role": "Assistant Vice President",
+        "excerpt": "Export Air Freight Forwarding and Export Customs House Brokerage",
+        "image": "team/Manoj Ji.jpg",
+        "bio": "Manoj Kumar (born on 01 September 1974) is the Assistant Vice President at JDM Group of Companies, with over 29 years of rich experience in the freight forwarding and logistics industry. He graduated from Chaudhary Charan Singh University (U.P.) in 1994 and began his career in 1998 with a Colombo-based MNC as an Air Export Manager. Over the years, he has worked with leading Shipping Lines, IATA-certified companies, and Customs House Agents (CHA), handling both Air and Sea Export-Import operations. He is highly skilled in Customs procedures, freight management, and team leadership.Manoj is a forward-thinking professional, known for his visionary ideas, financial discipline, and deep understanding of regulatory frameworks, which play a crucial role in ensuring compliance and driving operational efficiency at JDM Group.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "ac37b04d-f4a3-4828-8334-616d8d430102",
+    "fields": {
+        "name": "Randhir Kumar Mishra",
+        "role": "Accounts Head",
+        "excerpt": "Warehouse operations",
+        "image": "team/Randhir Ji.jpg",
+        "bio": "Hailing from Madhubani, Bihar, Randhir Kumar Mishra is a seasoned accounting expert with over 16 years of experience in financial management. B.Com (Hons.) graduate from LNMU with an impressive 89% (2003), Randhir began his career with the Oraon Group of Companies in 2009, rising to the role of Manager – Accounts before joining JDM Group in 2018. At JDM, Randhir plays a critical role in ensuring financial accuracy, compliance, and operational efficiency. His responsibilities include preparing financial statements, managing receivables and payables, bank reconciliations, billing, and handling tax matters including TDS, EPF, ESIC, GST, and e-payments. Renowned for his adaptability, leadership, and attention to detail, Randhir consistently delivers reliable financial insights and ensures seamless accounting operations. His commitment to excellence and deep knowledge of tax and regulatory frameworks make him an invaluable asset to the JDM Group’s continued success.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "b9a0185d-3e11-4c98-9b18-e139217fc1f8",
+    "fields": {
+        "name": "Ajay Prakash",
+        "role": "Director",
+        "excerpt": "Leading operations and strategic growth",
+        "image": "team/Ajay Sir.jpg",
+        "bio": "Ajay Prakash was appointed as Director in May 2011, considering his 17 years’ experience in various matters related to custom clearance, compliance, liaison with govt. authorities. Prior to JDM, he has a vast experience of 7 years in RS Movers (a CHA Company) as General Manager, leading the role for customs clearance & compliance thereof from 2003 to 2011. Before to RS Movers, Ajay Sehrawat has held the position of Manager of Kunal Travels (Another CHA Company) from 1995 to 2003 worked as a leader responsible for the customs clearance, compliances, coordination with Airlines & shipping lines. Ajay Sehrawat has started his carrier since 1993 as Assistant manager of Romy Enterprises, in the field of Customs Clerance and coordination thereof with different agencies. Apart from above, Mr Ajay Sehrawat has been qualified ‘G’ Card examination in the year 1998-99 which is required to appear before the customs authorities at different locations.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "c418d4e4-4bf9-45d6-b5be-a26ef40b1aeb",
+    "fields": {
+        "name": "Anju Dubey",
+        "role": "Corporate Sales Manager",
+        "excerpt": ".",
+        "image": "team/Anju_Maam.jpg",
+        "bio": "Anju Dubey is a dynamic professional with a solid foundation in logistics, supply chain, and client management. As Corporate Sales Manager at JDM Group, she leads sales efforts, nurtures client relationships, and ensures smooth, efficient operations. Known for her hands-on approach and results-driven mindset, Anju has a proven ability to onboard clients, streamline processes, and support team collaboration. Her passion for delivering value aligns seamlessly with JDM’s culture of innovation and excellence, making her a key player in driving both client satisfaction and business growth.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "d5dfc83a-15ea-49a2-a077-0ec2f9a9e6e8",
+    "fields": {
+        "name": "Jaspreet Singh",
+        "role": "Assistant General Manager",
+        "excerpt": "Corporate Customs House Brokerage",
+        "image": "team/Jaspreet Ji.jpg",
+        "bio": "Jaspreet Singh, AGM – Operations at JDM Cargo Planners Pvt. Ltd., brings over 21 years of experience in import customs clearance and customer relationship management. A Customs Rule 6-qualified expert with a postgraduate diploma in international business and certifications in IATA Cargo and Customs Compliance, he joined JDM Group in 2021 and now leads strategic planning, key account management, and end-to-end customs operations. One of his career highlights includes managing imports for the Formula One Grand Prix for three consecutive years—a testament to his ability to execute high-pressure, time-sensitive projects with precision. Jaspreet’s leadership, deep industry insight, and consistent delivery of excellence make him a vital contributor to JDM’s continued success and reliability in the logistics space.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.teammember",
+    "pk": "dc3fdf32-996f-41d6-b364-47767023285d",
+    "fields": {
+        "name": "Rohit Raj",
+        "role": "Branch Manager Pune",
+        "excerpt": ".",
+        "image": "team/rohitraj.png",
+        "bio": "Rohit Raj is a seasoned International Logistics Professional with over a decade of experience in freight forwarding, sales, and business development. He specializes in temperature-sensitive cargo, overseas networking, and strategic logistics planning. As the Branch Manager at JDM Group Pvt Ltd, Rohit oversees P&L management, key account handling, and new business development. He is instrumental in streamlining operations and ensuring top-notch service delivery. Holding a Postgraduate Diploma in Sales & Marketing and a Bachelor's in Commerce, Rohit combines academic insight with practical expertise to drive business growth. Based in Pune, he is passionate about traveling, exploring new cultures, and staying connected with global industry trends.",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryevent",
+    "pk": "98cc70b7-e2e2-44c5-bff2-0270f6fef490",
+    "fields": {
+        "title": "GFI Golf Tour 2023",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryevent",
+    "pk": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "fields": {
+        "title": "Company Events",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "00d491e7-bd38-4b05-be80-d954397e0908",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/9.jpg",
+        "alt": "Gallery Photo 9",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "0600ecfc-eef3-4651-8b51-413e615817b8",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/1.png",
+        "alt": "Gallery Photo 1",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "2b458f0a-10e7-44ad-aff1-0dff1a540c91",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/4.jpg",
+        "alt": "Gallery Photo 4",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "5affcc46-0d65-41ab-abc0-f490b0ca2b95",
+    "fields": {
+        "event": "98cc70b7-e2e2-44c5-bff2-0270f6fef490",
+        "image": "gallery/GFI Golf Tour 2023.png",
+        "alt": "GFI Golf Tour 2023",
+        "caption": "GFI Golf Tour 2023",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "5b6b16a9-0f60-4fb2-8d66-820b68a99556",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/6.jpg",
+        "alt": "Gallery Photo 6",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "6b65f796-7d80-4d00-b69e-88b60e7b2564",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/5.jpg",
+        "alt": "Gallery Photo 5",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "745f5bc5-5487-47cd-8883-b165af3ffd3f",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/2.JPG",
+        "alt": "Gallery Photo 2",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "90a8db37-b89e-45a1-95e3-af86cb3045f8",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/8.JPG",
+        "alt": "Gallery Photo 8",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.galleryphoto",
+    "pk": "e77273d9-1cd3-47a3-80c4-54e972a910b4",
+    "fields": {
+        "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+        "image": "gallery/3.jpg",
+        "alt": "Gallery Photo 3",
+        "caption": "",
+        "is_active": true
+    }
+},
+{
+    "model": "core.contactinfo",
+    "pk": "bac9dcf9-daa6-4da5-bd4a-8985928f15cc",
+    "fields": {
+        "title": "Contact Us",
+        "address_title": "Our Head Office",
+        "address": "4, Mahipalpur Extn., New Delhi - 110037, India",
+        "contact_title": "Get in Touch",
+        "phone_label": "Phone",
+        "phone": "+91-11-49536400",
+        "phone_href": "tel:+911149536400",
+        "email_label": "Email",
+        "email": "info@jdmgroups.com",
+        "email_href": "mailto:info@jdmgroups.com",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8671!2d77.1176!3d28.5511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzA0LjAiTiA3N8KwMDcnMDMuNCJF!5e0!3m2!1sen!2sin!4v1234567890\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>"
+    }
+}
+]

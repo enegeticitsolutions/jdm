@@ -24,7 +24,17 @@ const nextConfig = {
         hostname: "api.jdmgroups.com",
         pathname: "/**",
       },
+      // Production API server — required for all uploaded images to load
+      {
+        protocol: "https",
+        hostname: "api.datamoshtechnologies.com",
+        pathname: "/**",
+      },
     ],
+  },
+  // Automatically removes all console.log/warn/error calls in production builds
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
   },
 };
 

@@ -309,7 +309,8 @@ admin.site.register(ValueAddedService)
 
 @admin.register(TeamMember)
 class TeamMemberAdmin(admin.ModelAdmin):
-    list_display = ("name", "role", "is_active", "preview_image")
+    list_display = ("name", "role", "position", "is_active", "preview_image")
+    list_editable = ("position",)
     list_filter = ("is_active",)
     readonly_fields = ("preview_image",)
 

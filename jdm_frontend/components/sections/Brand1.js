@@ -25,6 +25,9 @@ export default function Brand1({
   to,
   border = false,
   pagination,
+  layout = "slider",
+  squareCards = false,
+  showNameStrip = false,
 }) {
 
   console.log("Brand1 images: ", images);
@@ -65,45 +68,156 @@ export default function Brand1({
             {heading}
           </h2>
         </div>
-        <div className="swiper brand-slider">
-          <Swiper {...swiperOptions} className="swiper-wrapper">
-            {images.map((image, index) => (
-              <SwiperSlide
-                key={index}
-                className="swiper-slide"
-                style={{ background: "transparent", backgroundColor: "transparent" }}
-              >
+        {layout === "grid" ? (
+          <div className="brand-grid">
+            {images.map((image, index) => {
+              const imageSrc = typeof image === "string" ? image : (image.logo || image.src);
+              const imageTitle = typeof image === "object" ? image.title : "";
+              const imageAlt = typeof image === "string" ? `Partner logo ${index + 1}` : (image.alt || `Partner logo ${index + 1}`);
+
+              return (
                 <div
+                  key={index}
                   className="brand-image center"
                   style={{
                     background: "transparent",
-                    backgroundColor: "transparent"
+                    backgroundColor: "transparent",
+                    padding: imageTitle ? "20px 16px 16px 16px" : "15px"
                   }}
                 >
-                  <Image
-                    src={typeof image === "string" ? image : image.src}
-                    alt={
-                      typeof image === "string"
-                        ? `Partner logo ${index + 1}`
-                        : image.alt || `Partner logo ${index + 1}`
-                    }
-                    width={130}
-                    height={100}
+                  <div
+                    className="logo-wrapper"
                     style={{
-                      objectFit: "contain",
+                      height: imageTitle ? "160px" : "160px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                       width: "100%",
-                      height: "auto",
-                      mixBlendMode: "multiply",
-                      filter: "contrast(1.1)"
+                      position: "relative"
                     }}
-                    unoptimized={true}
-                    loading="lazy"
-                  />
+                  >
+                    <Image
+                      src={imageSrc}
+                      alt={imageAlt}
+                      width={220}
+                      height={160}
+                      style={{
+                        objectFit: "contain",
+                        width: "100%",
+                        height: "100%",
+                        maxHeight: "160px",
+                        maxWidth: "100%",
+                        mixBlendMode: "multiply",
+                        filter: "contrast(1.1)"
+                      }}
+                      unoptimized={true}
+                      loading="lazy"
+                    />
+                  </div>
+                  {imageTitle && (
+                    <div
+                      className="brand-title"
+                      style={{
+                        fontSize: "12px",
+                        fontWeight: "600",
+                        color: "#1f2937",
+                        marginTop: "10px",
+                        textAlign: "center",
+                        lineHeight: "1.4",
+                        width: "100%",
+                        minHeight: "36px"
+                      }}
+                    >
+                      {imageTitle}
+                    </div>
+                  )}
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="swiper brand-slider">
+            <Swiper {...swiperOptions} className="swiper-wrapper">
+              {images.map((image, index) => {
+                const imageSrc = typeof image === "string" ? image : (image.logo || image.src);
+                const imageTitle = typeof image === "object" ? image.title : "";
+                const imageAlt = typeof image === "string" ? `Partner logo ${index + 1}` : (image.alt || `Partner logo ${index + 1}`);
+
+                return (
+                  <SwiperSlide
+                    key={index}
+                    className="swiper-slide"
+                    style={{ background: "transparent", backgroundColor: "transparent" }}
+                  >
+                    <div
+                      className={`brand-image center${squareCards ? " brand-image-square" : showNameStrip ? " brand-image-with-title" : ""}`}
+                      style={{
+                        background: "transparent",
+                        backgroundColor: "transparent",
+                        padding: squareCards ? "10px" : showNameStrip ? "12px 14px 0 14px" : "14px"
+                      }}
+                    >
+                      {/* Logo area — fixed height so logos stay large */}
+                      <div
+                        className="logo-wrapper"
+                        style={{
+                          height: squareCards ? "90px" : "140px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: "100%",
+                          position: "relative"
+                        }}
+                      >
+                        <Image
+                          src={imageSrc}
+                          alt={imageAlt}
+                          width={squareCards ? 150 : 200}
+                          height={squareCards ? 90 : 140}
+                          style={{
+                            objectFit: "contain",
+                            width: "100%",
+                            height: "100%",
+                            maxHeight: squareCards ? "90px" : "140px",
+                            maxWidth: "100%",
+                            mixBlendMode: "multiply",
+                            filter: "contrast(1.1)"
+                          }}
+                          unoptimized={true}
+                          loading="lazy"
+                        />
+                      </div>
+                      {/* Name strip — only shown for Associations / Accreditations */}
+                      {showNameStrip && (
+                        <div
+                          className="brand-title-strip"
+                          style={{
+                            borderTop: "1px solid #e5e7eb",
+                            marginTop: "10px",
+                            paddingTop: "8px",
+                            paddingBottom: "10px",
+                            fontSize: "12px",
+                            fontWeight: "600",
+                            color: "#1f2937",
+                            textAlign: "center",
+                            lineHeight: "1.4",
+                            width: "100%",
+                            minHeight: "46px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center"
+                          }}
+                        >
+                          {imageTitle || ""}
+                        </div>
+                      )}
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+        )}
         {know_more && to && (
           <div className="know-more-button p-4 flex justify-content-center">
             <Link
@@ -117,7 +231,12 @@ export default function Brand1({
         )}
       </div>
       <style jsx global>{`
-       .brand-section .swiper-slide,
+        .brand-section .swiper-slide {
+          height: auto !important;
+          display: flex !important;
+          background: transparent !important;
+          background-color: transparent !important;
+        }
         .brand-section img {
           background: transparent !important;
           background-color: transparent !important;
@@ -125,19 +244,35 @@ export default function Brand1({
         }
         .swiper-wrapper {
           mix-blend-mode: multiply !important;
+          display: flex !important;
         }
         .brand-image {
           padding: 15px;
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
           background-color: #ffffff !important;
           border: 1px solid #e5e7eb;
           border-radius: 6px;
-          height: 90px;
+          height: 100%;
+          width: 100%;
+          min-height: 175px;
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
           transition: all 0.3s ease;
           mix-blend-mode: normal !important;
+        }
+        .brand-image-with-title {
+          min-height: 230px !important;
+          padding: 0 !important;
+        }
+        .brand-section .swiper-slide .brand-image-with-title {
+          display: flex;
+          flex-direction: column;
+        }
+        .brand-image-square {
+          min-height: 120px !important;
+          justify-content: center !important;
         }
         .brand-image:hover {
           border-color: var(--theme);
@@ -146,8 +281,39 @@ export default function Brand1({
         }
         @media (max-width:475px){
           .brand-image {
-            padding: 5px;
-            height: 70px;
+            padding: 8px 6px;
+            min-height: 130px;
+            height: auto;
+          }
+          .brand-image-with-title {
+            min-height: 180px !important;
+          }
+          .brand-image-square {
+            min-height: 100px !important;
+          }
+        }
+        .brand-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 24px 20px;
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 10px 0;
+        }
+        .brand-grid .brand-image {
+          width: 220px;
+          min-height: 250px !important;
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+        @media (max-width: 575px) {
+          .brand-grid {
+            gap: 16px 12px;
+          }
+          .brand-grid .brand-image {
+            width: calc(50% - 6px);
           }
         }
         .swiper-button-next,

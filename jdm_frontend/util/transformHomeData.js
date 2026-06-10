@@ -54,14 +54,20 @@ export const transformHomeData = (data) => {
       : generateImagePaths("/assets/img/customer_logo", 40),
     affiliations: data.is_affiliations
       ? data.affiliations?.items?.length > 0
-        ? data.affiliations.items.map((item) => formatUrl(item, BASE))
-        : generateImagePaths("/assets/img/brand/Associations/International", 10)
-      : generateImagePaths("/assets/img/brand/Associations/International", 10),
+        ? data.affiliations.items.map((item) => ({
+            logo: formatUrl(item.logo, BASE),
+            title: item.title || "",
+          }))
+        : generateImagePaths("/assets/img/brand/Associations/International", 10).map((path) => ({ logo: path, title: "" }))
+      : generateImagePaths("/assets/img/brand/Associations/International", 10).map((path) => ({ logo: path, title: "" })),
     associations: data.is_associations
       ? data.associations?.items?.length > 0
-        ? data.associations.items.map((item) => formatUrl(item, BASE))
-        : generateImagePaths("/assets/img/brand/Associations/Domestic", 7)
-      : generateImagePaths("/assets/img/brand/Associations/Domestic", 7),
+        ? data.associations.items.map((item) => ({
+            logo: formatUrl(item.logo, BASE),
+            title: item.title || "",
+          }))
+        : generateImagePaths("/assets/img/brand/Associations/Domestic", 7).map((path) => ({ logo: path, title: "" }))
+      : generateImagePaths("/assets/img/brand/Associations/Domestic", 7).map((path) => ({ logo: path, title: "" })),
     seaPartners: data.is_sea_partners
       ? data.sea_partners?.items?.length > 0
         ? data.sea_partners.items.map((item) => formatUrl(item, BASE))

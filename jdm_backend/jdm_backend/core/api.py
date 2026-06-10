@@ -82,11 +82,23 @@ def get_home(request):
         },
         "associations": {
             "heading": home.associations_heading,
-            "items": [build_file_url(request, item.logo) for item in home.associations.all() if item.is_active],
+            "items": [
+                {
+                    "logo": build_file_url(request, item.logo),
+                    "title": item.title or ""
+                }
+                for item in home.associations.all() if item.is_active
+            ],
         },
         "affiliations": {
             "heading": home.affiliations_heading,
-            "items": [build_file_url(request, item.logo) for item in home.affiliations.all()],
+            "items": [
+                {
+                    "logo": build_file_url(request, item.logo),
+                    "title": item.title or ""
+                }
+                for item in home.affiliations.all()
+            ],
         },
         "sea_partners": {
             "heading": home.sea_partners_heading,
@@ -382,6 +394,7 @@ def list_team_members(request):
             "excerpt": member.excerpt,
             "image": member.image.url if member.image else None,
             "bio": member.bio,
+            "position": member.position,
             "is_active": member.is_active,
         } for member in queryset
     ]

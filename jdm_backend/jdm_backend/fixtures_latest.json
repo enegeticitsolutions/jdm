@@ -1,0 +1,3634 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-04-17T22:05:37.704Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "125b77db-2b3d-4fd7-8a02-e0fbab8bb2a0",
+    "object_repr": "Road Transportation",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-04-19T10:37:49.518Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "a2f43b9d-8c63-45b9-a8a0-d96709516e2f",
+    "object_repr": "assitant manager",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-04-19T10:38:20.489Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "dbf1ed4e-bfad-44f2-877b-be8a0ff18e3d",
+    "object_repr": "assitant manager - assitant manager",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-04-19T10:41:28.390Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "dbf1ed4e-bfad-44f2-877b-be8a0ff18e3d",
+    "object_repr": "assitant manager - assitant manager",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-04-19T10:41:28.390Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "64d42f2b-b92c-49ae-9849-4dc9c226c4f3",
+    "object_repr": "yashdknkc - assitant manager",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-04-20T10:16:36.942Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "b11679fd-4f0c-4013-911e-1af22a109510",
+    "object_repr": "Rail Freight",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-04-20T10:16:52.138Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "125b77db-2b3d-4fd7-8a02-e0fbab8bb2a0",
+    "object_repr": "Road Transportation",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-04-20T10:17:11.919Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "125b77db-2b3d-4fd7-8a02-e0fbab8bb2a0",
+    "object_repr": "Road Transportation",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-04-20T10:17:25.235Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "65ba9717-ed38-4a3d-8925-e497bca85234",
+    "object_repr": "Customs Brokerage",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-04-20T10:18:12.858Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "69a58d0a-aae6-4f69-8e9f-5b4f1c506ea2",
+    "object_repr": "Project Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-04-20T10:18:28.870Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "93f8f4be-7531-46fc-bf3d-179e72a346f9",
+    "object_repr": "Courier Service",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-04-20T10:18:48.633Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "5e65b036-6921-4a6d-a69c-fab32f548f4f",
+    "object_repr": "Perishable Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-04-20T10:19:07.224Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "69a58d0a-aae6-4f69-8e9f-5b4f1c506ea2",
+    "object_repr": "Project Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-04-20T10:19:29.416Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2dccb870-fb55-499c-8bb4-44ac6a3b0f45",
+    "object_repr": "Warehousing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-04-20T10:19:37.959Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "d3a81915-0bcb-4776-8f08-c63ec08ea323",
+    "object_repr": "Packing & Moving",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-04-20T10:19:53.906Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "7594324c-236d-45f2-9646-b84fdd86cd26",
+    "object_repr": "Exhibition Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-04-20T10:20:16.590Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "5e65b036-6921-4a6d-a69c-fab32f548f4f",
+    "object_repr": "Perishable Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-04-20T10:20:27.757Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2dccb870-fb55-499c-8bb4-44ac6a3b0f45",
+    "object_repr": "Warehousing",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-04-20T10:20:35.386Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "69a58d0a-aae6-4f69-8e9f-5b4f1c506ea2",
+    "object_repr": "Project Cargo",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-04-20T10:20:46.646Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "93f8f4be-7531-46fc-bf3d-179e72a346f9",
+    "object_repr": "Courier Service",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-04-20T10:21:38.193Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "65ba9717-ed38-4a3d-8925-e497bca85234",
+    "object_repr": "Customs Brokerage",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-04-20T10:21:45.022Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "125b77db-2b3d-4fd7-8a02-e0fbab8bb2a0",
+    "object_repr": "Road Transportation",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-04-20T10:21:52.374Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "b11679fd-4f0c-4013-911e-1af22a109510",
+    "object_repr": "Rail Freight",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-04-20T10:48:38.166Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selected services\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-04-20T10:49:28.588Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "23f19911-678c-45b8-9bbd-2db0f7b44697",
+    "object_repr": "Home Page Content",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-04-20T10:57:24.455Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "23f19911-678c-45b8-9bbd-2db0f7b44697",
+    "object_repr": "Home Page Content",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-04-20T10:57:56.982Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "c979d071-2ff1-491f-98f1-4969f6a90d80",
+    "object_repr": "Home Page Content",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-04-20T11:00:18.543Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selected services\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-04-20T11:05:49.121Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "c979d071-2ff1-491f-98f1-4969f6a90d80",
+    "object_repr": "Home Page Content",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-04-20T11:06:23.595Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-04-20T12:18:02.507Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selected services\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (2824155a-8afe-408d-be65-a7474e41f659)\", \"fields\": [\"Is active\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (5ac3ab20-f316-4033-9b39-bffcdd2b0798)\", \"fields\": [\"Is active\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (696c212a-ec45-4f81-849a-096e08184cb6)\", \"fields\": [\"Is active\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (99a684c3-cbd4-4ad9-8fa0-8b31d1a8238c)\", \"fields\": [\"Is active\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (ea5951bd-6a09-4b14-9e81-57eab7c299b4)\", \"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-04-20T12:21:00.065Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"achievement\", \"object\": \"Happy Clients\", \"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-04-20T12:22:26.405Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"achievement\", \"object\": \"Offices Worldwide\", \"fields\": [\"Is active\"]}}, {\"changed\": {\"name\": \"achievement\", \"object\": \"Years of Experience\", \"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-04-20T12:46:12.052Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-04-20T12:47:15.301Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selected services\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-04-20T13:12:47.286Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "a2f43b9d-8c63-45b9-a8a0-d96709516e2f",
+    "object_repr": "assitant manager",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-05-04T08:01:25.077Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-05-29T11:36:58.643Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "ffd7c037-1ead-47bf-bb9a-9ec941baee8d",
+    "object_repr": "Anju",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-05-29T11:40:36.161Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "276fba5b-76a6-4432-87fb-2a112dde3e3c",
+    "object_repr": "Lijeesh",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-05-29T12:47:04.521Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "AboutPageContent object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Mission paragraph\"]}}, {\"changed\": {\"name\": \"achievement\", \"object\": \"Team Members\", \"fields\": [\"Home\", \"Is active\"]}}, {\"changed\": {\"name\": \"achievement\", \"object\": \"Years of Experience\", \"fields\": [\"Home\", \"Is active\"]}}, {\"changed\": {\"name\": \"achievement\", \"object\": \"Happy Clients\", \"fields\": [\"Home\", \"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-05-29T13:19:27.846Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "fceea7fa-8328-4ce0-b5ed-d0629be552fe",
+    "object_repr": "Anuj Arora",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-05-29T13:20:31.584Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "d5dfc83a-15ea-49a2-a077-0ec2f9a9e6e8",
+    "object_repr": "Jaspreet Singh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-05-29T13:22:47.660Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "ac37b04d-f4a3-4828-8334-616d8d430102",
+    "object_repr": "Randhir Kumar Mishra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-05-29T13:23:11.069Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "b9a0185d-3e11-4c98-9b18-e139217fc1f8",
+    "object_repr": "Ajay Prakash",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-05-29T13:23:30.413Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "a42ad5d7-0b1e-4d3e-bbe2-3a43b683bdc2",
+    "object_repr": "Manoj Kumar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-05-29T13:24:50.307Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "129aab49-8aec-4481-8a5a-26a6e37b29c2",
+    "object_repr": "Mukesh Gupta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-05-29T13:30:18.784Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "511db454-6f9f-43d1-b5d0-a17d5888d4b4",
+    "object_repr": "Sahil Sehrawat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-05-29T13:30:41.508Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "cd28c680-38d4-496d-8311-efbe77de6c7b",
+    "object_repr": "Ashish Sehrawat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-05-29T13:30:41.508Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "a96f7894-dbfa-4cd0-87fb-ee35d06e85fd",
+    "object_repr": "Jatin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-05-29T13:30:41.508Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "30018f50-80ab-498b-8511-d9e2853c9a12",
+    "object_repr": "Kusum",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-05-29T13:31:02.218Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "280422f3-c197-487e-8559-72188fc6205d",
+    "object_repr": "Bikram",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-05-29T13:34:04.025Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "043171b7-109e-4d58-89ad-3834c5687728",
+    "object_repr": "Pal Raj",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-05-29T13:35:41.193Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "dc3fdf32-996f-41d6-b364-47767023285d",
+    "object_repr": "Rohit Raj",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-05-29T13:36:49.445Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "64c72bef-d425-4fe5-bf87-4fa0f5506895",
+    "object_repr": "Abhilash D",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-05-29T13:45:41.365Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"location\", \"object\": \"New Delhi - New Delhi\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-05-30T07:50:23.295Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "AboutPageContent object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Story paragraph\", \"Para1\", \"Para2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-05-30T07:52:26.442Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "AboutPageContent object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Mission paragraph\", \"Vision paragraph\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-05-30T07:55:41.229Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "33e59342-5891-48e2-8e54-5d7bfe46c7bf",
+    "object_repr": "Air Freight",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"service benefit\", \"object\": \"Air Freight - Door-to-door delivery\"}}, {\"deleted\": {\"name\": \"service benefit\", \"object\": \"Air Freight - Real-time tracking\"}}, {\"deleted\": {\"name\": \"service benefit\", \"object\": \"Air Freight - Customs clearance\"}}, {\"deleted\": {\"name\": \"service benefit\", \"object\": \"Air Freight - Competitive rates\"}}, {\"deleted\": {\"name\": \"service benefit\", \"object\": \"Air Freight - Express and economy options\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-05-30T07:56:19.216Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "33e59342-5891-48e2-8e54-5d7bfe46c7bf",
+    "object_repr": "Air Freight",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-05-30T07:56:42.174Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "33e59342-5891-48e2-8e54-5d7bfe46c7bf",
+    "object_repr": "Air Freight",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-05-30T08:27:40.826Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "dc3fdf32-996f-41d6-b364-47767023285d",
+    "object_repr": "Rohit Raj",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-05-30T08:27:55.149Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "64c72bef-d425-4fe5-bf87-4fa0f5506895",
+    "object_repr": "Abhilash D",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-05-30T08:28:09.873Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "043171b7-109e-4d58-89ad-3834c5687728",
+    "object_repr": "Pal Raj",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-05-30T08:28:35.366Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "276fba5b-76a6-4432-87fb-2a112dde3e3c",
+    "object_repr": "Lijeesh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-05-30T10:29:03.261Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "167f24fb-1c37-4730-917f-2c75432672c6",
+    "object_repr": "Exhibition Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Heading\", \"Description2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-05-30T10:29:43.917Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+    "object_repr": "Warehousing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Heading\", \"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-05-30T10:31:10.128Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "fdace0b2-ef13-4bb0-8b69-19e6419e41f8",
+    "object_repr": "Courier Service",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Heading\", \"Description2\", \"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-05-30T10:32:01.433Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "fdace0b2-ef13-4bb0-8b69-19e6419e41f8",
+    "object_repr": "Courier Services",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-05-30T10:33:22.454Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "f8eaf199-3c78-4e20-87b4-d1b9091867a5",
+    "object_repr": "Project Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Heading\", \"Description2\", \"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-05-30T10:33:35.439Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "fdace0b2-ef13-4bb0-8b69-19e6419e41f8",
+    "object_repr": "Courier Services",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-05-30T10:35:12.255Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selected services\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-05-30T10:51:54.467Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-05-30T11:05:06.415Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (3a9e5515-d48a-4cf5-9224-b3406059c6d1)\", \"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-05-30T11:07:41.004Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (0309faab-f405-4aaa-8fa9-3b81e5e73016)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (2fe14e36-d749-41dd-a30c-2c3e7fc79c9f)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (3f3532b7-ed52-4d18-a9dc-d84ddc41e895)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (8b879d13-ade0-42d3-9214-467760834749)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (8ff1c2fa-db4a-4e0a-85e3-ca5f2497a479)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (cea76ba5-45ac-4695-903e-bea3807c106a)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (f25fbc6f-8094-4f77-8253-77125e48d433)\", \"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-05-30T11:08:43.135Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (8ff1c2fa-db4a-4e0a-85e3-ca5f2497a479)\", \"fields\": [\"Logo\", \"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-05-30T11:13:23.727Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (da3aa06e-2ead-448d-be1a-c7ab38cfbdbb)\"}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (5c30bf46-85d5-4417-9d82-b3730e5824be)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (9c4e4b1a-0251-44b9-9b99-64f74557537a)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (a264d1cf-3443-4aaa-b719-9f77079e0078)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (c180bad1-0e3e-4f5f-a89d-159f4bb0a3cc)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (c2258070-68bd-48b4-8550-31c23735e0f6)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (fb205447-0106-4a3f-ab73-eae02852ad0f)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (feec3633-cd7d-4222-99db-854bc0809a19)\", \"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-05-30T11:50:12.551Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (bca49409-5466-4620-b514-e59ba9b53a10)\", \"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-05-30T12:20:02.746Z",
+    "user": 1,
+    "content_type": 34,
+    "object_id": "16",
+    "object_repr": "Technology",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-05-30T12:20:21.650Z",
+    "user": 1,
+    "content_type": 34,
+    "object_id": "15",
+    "object_repr": "Perishables",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\", \"Bullet Points (one per line)\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-05-30T12:20:35.738Z",
+    "user": 1,
+    "content_type": 34,
+    "object_id": "14",
+    "object_repr": "Apparels and Retail",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-05-30T12:20:48.246Z",
+    "user": 1,
+    "content_type": 34,
+    "object_id": "13",
+    "object_repr": "Automotive",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-05-30T12:21:07.868Z",
+    "user": 1,
+    "content_type": 34,
+    "object_id": "12",
+    "object_repr": "Engineering",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-05-30T12:21:46.828Z",
+    "user": 1,
+    "content_type": 34,
+    "object_id": "10",
+    "object_repr": "Pharmaceuticals & Healthcare",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\", \"Bullet Points (one per line)\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-05-30T12:33:29.445Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "c418d4e4-4bf9-45d6-b5be-a26ef40b1aeb",
+    "object_repr": "Anju Dubey",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-05-30T12:34:26.095Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "a42ad5d7-0b1e-4d3e-bbe2-3a43b683bdc2",
+    "object_repr": "Manoj Kumar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\", \"Excerpt\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-05-30T12:36:39.296Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "a42ad5d7-0b1e-4d3e-bbe2-3a43b683bdc2",
+    "object_repr": "Manoj Kumar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-05-30T12:38:08.607Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "d5dfc83a-15ea-49a2-a077-0ec2f9a9e6e8",
+    "object_repr": "Jaspreet Singh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\", \"Excerpt\", \"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-05-30T12:38:31.402Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "64c72bef-d425-4fe5-bf87-4fa0f5506895",
+    "object_repr": "Abhilash D",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Excerpt\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-05-30T12:39:05.813Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "fceea7fa-8328-4ce0-b5ed-d0629be552fe",
+    "object_repr": "Anuj Arora",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-05-30T12:39:34.076Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "b9a0185d-3e11-4c98-9b18-e139217fc1f8",
+    "object_repr": "Ajay Prakash",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-05-30T12:40:47.307Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "ac37b04d-f4a3-4828-8334-616d8d430102",
+    "object_repr": "Randhir Kumar Mishra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\", \"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-05-30T12:41:28.652Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "511db454-6f9f-43d1-b5d0-a17d5888d4b4",
+    "object_repr": "Sahil Sehrawat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-05-30T12:41:59.236Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "129aab49-8aec-4481-8a5a-26a6e37b29c2",
+    "object_repr": "Mukesh Gupta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-05-30T12:42:39.214Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "0a67462f-40cb-4b53-acae-e6961bb64008",
+    "object_repr": "Lt. Sh. Pahlad Singh Ji",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bio\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-05-30T12:44:15.132Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "fceea7fa-8328-4ce0-b5ed-d0629be552fe",
+    "object_repr": "Anuj Arora",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-05-30T13:03:23.641Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "0a67462f-40cb-4b53-acae-e6961bb64008",
+    "object_repr": "Lt. Sh. Pahlad Singh Ji",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Excerpt\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-05-30T13:12:37.349Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (4643cfcd-d766-4577-87e7-3c6991994ba0)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (6efb2472-3b3e-4ad7-a097-e6f91bb29154)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (74249775-dd81-4b48-bb83-a165ea3b5a24)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (775170af-73af-4717-bd1e-bcd21145321e)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (8e0ff9b7-e6e2-4a87-89fa-59f525b38f9d)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (8e362172-2e59-4031-9388-04a6875ec77a)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (9dc7dee7-b508-4681-a060-9a7bc9e15325)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (9e357a82-5528-4e2f-add4-d4b18a487661)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (f05fd5a7-7b4a-4e30-abf0-c835e952e122)\", \"fields\": [\"Logo\"]}}, {\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (fbf232bc-f8c6-4672-ac28-900a83dfd0cc)\", \"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-05-30T13:20:29.645Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (55f54a7c-f095-4f66-a2fa-a157bf25673a)\", \"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-05-30T13:21:16.365Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"sea partner item\", \"object\": \"SeaPartnerItem object (10cb983c-7cf9-455c-b6ab-3899316c489b)\", \"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-05-30T13:37:30.970Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"location\", \"object\": \"TKD - TKD\"}}, {\"changed\": {\"name\": \"location\", \"object\": \"Delhi - New Delhi\", \"fields\": [\"City\", \"Address\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Ahmedabad - Ahmedabad\", \"fields\": [\"Address\", \"Email\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Dadadri - Dadri\", \"fields\": [\"City\", \"Address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-05-30T13:51:39.336Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"location\", \"object\": \"Mundra - Mundra\", \"fields\": [\"Address\", \"Phone\", \"Email\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Mumbai - Mumbai CST\", \"fields\": [\"City\", \"Address\", \"Phone\", \"Email\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Mumbai - Mumbai\", \"fields\": [\"Address\", \"Phone\", \"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-05-30T14:07:05.071Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"location\", \"object\": \"Bengaluru - Bengaluru\", \"fields\": [\"Address\", \"Phone\", \"Email\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Pipavav - Pipavav\", \"fields\": [\"Address\", \"Phone\", \"Email\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Chennai - Chennai\", \"fields\": [\"Address\", \"Phone\", \"Email\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Pune - Pune\", \"fields\": [\"Is active\"]}}, {\"changed\": {\"name\": \"location\", \"object\": \"Khatuwas - Khatuwas\", \"fields\": [\"Address\", \"Phone\", \"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-05-30T14:07:56.727Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"location\", \"object\": \"Delhi - New Delhi\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-06-10T10:53:03.987Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "AboutPageContent object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Mission paragraph\", \"Vision paragraph\", \"Vision image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-06-10T11:43:10.791Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (f25fbc6f-8094-4f77-8253-77125e48d433)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (5c30bf46-85d5-4417-9d82-b3730e5824be)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (a264d1cf-3443-4aaa-b719-9f77079e0078)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (c180bad1-0e3e-4f5f-a89d-159f4bb0a3cc)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (c2258070-68bd-48b4-8550-31c23735e0f6)\", \"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "dc3fdf32-996f-41d6-b364-47767023285d",
+    "object_repr": "Rohit Raj",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "d5dfc83a-15ea-49a2-a077-0ec2f9a9e6e8",
+    "object_repr": "Jaspreet Singh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "c418d4e4-4bf9-45d6-b5be-a26ef40b1aeb",
+    "object_repr": "Anju Dubey",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "ac37b04d-f4a3-4828-8334-616d8d430102",
+    "object_repr": "Randhir Kumar Mishra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "a42ad5d7-0b1e-4d3e-bbe2-3a43b683bdc2",
+    "object_repr": "Manoj Kumar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "64c72bef-d425-4fe5-bf87-4fa0f5506895",
+    "object_repr": "Abhilash D",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "511db454-6f9f-43d1-b5d0-a17d5888d4b4",
+    "object_repr": "Sahil Sehrawat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "276fba5b-76a6-4432-87fb-2a112dde3e3c",
+    "object_repr": "Lijeesh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "129aab49-8aec-4481-8a5a-26a6e37b29c2",
+    "object_repr": "Mukesh Gupta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-06-10T11:57:10.634Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "0a67462f-40cb-4b53-acae-e6961bb64008",
+    "object_repr": "Lt. Sh. Pahlad Singh Ji",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-06-10T11:58:57.019Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "129aab49-8aec-4481-8a5a-26a6e37b29c2",
+    "object_repr": "Mukesh Gupta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-06-10T11:59:30.403Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "ac37b04d-f4a3-4828-8334-616d8d430102",
+    "object_repr": "Randhir Kumar Mishra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\", \"Excerpt\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-06-10T12:00:44.800Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "043171b7-109e-4d58-89ad-3834c5687728",
+    "object_repr": "Pal Raj",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\", \"Excerpt\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-06-10T12:01:26.371Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "043171b7-109e-4d58-89ad-3834c5687728",
+    "object_repr": "Pal Raj",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-06-10T12:01:26.372Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "64c72bef-d425-4fe5-bf87-4fa0f5506895",
+    "object_repr": "Abhilash D",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-06-10T12:01:26.373Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "276fba5b-76a6-4432-87fb-2a112dde3e3c",
+    "object_repr": "Lijeesh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-06-10T12:03:52.455Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "c91364e1-1057-4106-81e1-83a913991720",
+    "object_repr": "Nitin Balasaheb Mulay",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-06-10T12:04:56.923Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "b9a0185d-3e11-4c98-9b18-e139217fc1f8",
+    "object_repr": "Ajay Sehrawat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Position\", \"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-06-10T12:30:19.258Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "b9a0185d-3e11-4c98-9b18-e139217fc1f8",
+    "object_repr": "Ajay Sehrawat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bio\", \"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-06-10T13:06:39.910Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (0309faab-f405-4aaa-8fa9-3b81e5e73016)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (2fe14e36-d749-41dd-a30c-2c3e7fc79c9f)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (3f3532b7-ed52-4d18-a9dc-d84ddc41e895)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (8b879d13-ade0-42d3-9214-467760834749)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (8ff1c2fa-db4a-4e0a-85e3-ca5f2497a479)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (cea76ba5-45ac-4695-903e-bea3807c106a)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (5c30bf46-85d5-4417-9d82-b3730e5824be)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"affiliation item\", \"object\": \"AffiliationItem object (feec3633-cd7d-4222-99db-854bc0809a19)\", \"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-06-10T13:08:00.508Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (cea76ba5-45ac-4695-903e-bea3807c106a)\", \"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-06-10T13:29:18.022Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "object_repr": "Home Page Content",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (3a9e5515-d48a-4cf5-9224-b3406059c6d1)\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"association item\", \"object\": \"AssociationItem object (8ff1c2fa-db4a-4e0a-85e3-ca5f2497a479)\", \"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cExvK8MjQcZiAEAV2kPJyr$3NVleDUEisoHehBEeNTzVAiOYeS6lxDwqcokUmcmMgk=",
+    "last_login": "2026-05-30T13:01:01.436Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-17T22:04:34.068Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2n2eu2b1q4daebkna8r1ht8w4x5ktgnv",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCg0gGX7nsGMgODVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwJ3ERWpx-N8L44LqDdMd6azK2ui4zyV2RB-1yaomf18P9OyjYy7cGMCobTgOQddEpHyFrMAPhecTECuJg0FqGpNAj5-y90aMntM5oT1a8P-EZN9w:1wTJJF:JIZg8hlnXXiQwApczWh7XsLPMWB4r9oIjHsb5gkpu4w",
+    "expire_date": "2026-06-13T13:01:01.447Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "coewylgn5fx6lp5ad1ar0agp3yhohl7a",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCg0gGX7nsGMgODVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwJ3ERWpx-N8L44LqDdMd6azK2ui4zyV2RB-1yaomf18P9OyjYy7cGMCobTgOQddEpHyFrMAPhecTECuJg0FqGpNAj5-y90aMntM5oT1a8P-EZN9w:1wIo7z:PpEZZu19MSVVG8v1sx7hvmgc7srWJ3MnbflC7vRMnxk",
+    "expire_date": "2026-05-15T13:41:59.426Z"
+  }
+},
+{
+  "model": "core.industry",
+  "pk": 10,
+  "fields": {
+    "title": "Pharmaceuticals & Healthcare",
+    "type": "bullet",
+    "content": "Ensuring timely delivery of medical consignments is critical for hospitals and healthcare providers. We understand that customers require reliable and trustworthy freight solution providers to help them move swiftly during emergencies and to keep the integrity of their supplies maintained.\r\n\r\nJDM is equipped at managing both active and passive pharmaceutical shipments (-20C, 2-8C, 15C-25C) facilitating trade lane risk assessments alongside designing customer specific SOPs to move shipments at the right temperature.\r\n\r\nOur experience in healthcare encompasses:",
+    "list_items": [
+      "APIs",
+      "Formulations",
+      "Vaccines",
+      "Launch pharmaceutical shipments",
+      "Medical Devices",
+      "Narcotics",
+      "Aid and relief material"
+    ],
+    "image": "industry_images/pharmaceuticals_healthcare_v2.jpg",
+    "is_image_left": true,
+    "is_active": true,
+    "created_at": "2026-05-30T12:17:27.831Z"
+  }
+},
+{
+  "model": "core.industry",
+  "pk": 11,
+  "fields": {
+    "title": "Chemicals",
+    "type": "para",
+    "content": "Chemical logistics consists of hazardous and non hazardous cargo. A lot of the movement of chemical consignments take place through ocean freight transport and some are also carried forward by air freight for faster transit.\n\nEnsuring safety and adhering to all environmental regulations are the major challenges faced in chemical transportation. Hermes Travel and Cargo provides you with all of that and much more.",
+    "list_items": [],
+    "image": "industry_images/chemicals_v2.jpg",
+    "is_image_left": false,
+    "is_active": true,
+    "created_at": "2026-05-30T12:17:27.834Z"
+  }
+},
+{
+  "model": "core.industry",
+  "pk": 12,
+  "fields": {
+    "title": "Engineering",
+    "type": "para",
+    "content": "Engineering goods involve the movement of large scale shipments like solar panels, pipes, water filters, machinery, entire automobiles, spare parts for automobiles, and much more.\r\n\r\nJDM provides a comprehensive range of services to both small scale local businesses and multi national engineering companies. We have a robust infrastructure supported by multi modal modes of transport and a global and local presence across countries that ensures timely and reliable delivery.",
+    "list_items": [],
+    "image": "industry_images/engineering_v2.jpg",
+    "is_image_left": true,
+    "is_active": true,
+    "created_at": "2026-05-30T12:17:27.834Z"
+  }
+},
+{
+  "model": "core.industry",
+  "pk": 13,
+  "fields": {
+    "title": "Automotive",
+    "type": "para",
+    "content": "The automotive supply chain refers to the transportation of export and import of engines, machinery, equipment, spare parts of automobiles, components, subassemblies, and other large scale deliverables.\r\n\r\nAt JDM, we provide bespoke integrated services to ensure end to end delivery of your cargo in the most efficient way possible. Our business partners and vendors are experienced and thorough with their line of work to deliver uncompromised solutions.",
+    "list_items": [],
+    "image": "industry_images/automotive_v2.jpg",
+    "is_image_left": false,
+    "is_active": true,
+    "created_at": "2026-05-30T12:17:27.846Z"
+  }
+},
+{
+  "model": "core.industry",
+  "pk": 14,
+  "fields": {
+    "title": "Apparels and Retail",
+    "type": "para",
+    "content": "The retail and apparel industry is subject to rapid changes. Therefore, managing the retail and fashion industry demands a logistics provider that is flexible and experienced to handle scales at that level.\r\n\r\nJDM provides integrated services to provide productive and efficient supply chain solutions that are tailored to meet your expectations and requirements. Our services help you maintain sustainability in your business practise.",
+    "list_items": [],
+    "image": "industry_images/apparels_retail_v2.jpg",
+    "is_image_left": true,
+    "is_active": true,
+    "created_at": "2026-05-30T12:17:27.847Z"
+  }
+},
+{
+  "model": "core.industry",
+  "pk": 15,
+  "fields": {
+    "title": "Perishables",
+    "type": "bullet",
+    "content": "Maintaining shipment integrity is of prime importance in the shipment of perishables. These include the transportation of sensitive products like seafood, flower, fruits, vegetables and other food products. JDM is the preferred partner for leading perishable exporters in India.\r\n\r\nOur services utilize some of the best in class practices for secured and timely delivery. Some of them include:",
+    "list_items": [
+      "Commercial contracts with capacity allocations",
+      "Scalability of allocations to manage seasonal peaks Mangoes",
+      "Prioritized space on carriers with prioritized handling at ports",
+      "Dedicated perishable handling team",
+      "Temperature controlled perishables 2C - 8C, Pomegranate arils",
+      "15C - 25C transit warehouse",
+      "24/7 custom clearance",
+      "Documentation expertise and custom compliances"
+    ],
+    "image": "industry_images/perishables_v2.jpg",
+    "is_image_left": false,
+    "is_active": true,
+    "created_at": "2026-05-30T12:17:27.847Z"
+  }
+},
+{
+  "model": "core.industry",
+  "pk": 16,
+  "fields": {
+    "title": "Technology",
+    "type": "para",
+    "content": "Technology is one of the most disruptive domains to work with, since product life cycles are likely to get over in months before the next innovation makes it to the market.\r\n\r\nWe understand that such a dynamic market requires dynamic solutions. At JDM, you will find top of the line support to assist you at every stage of your journey. Our uncompromised customer centric solution and legacy of 50 years continue to serve the leading business with a futuristic vision.",
+    "list_items": [],
+    "image": "industry_images/technology_v2.jpg",
+    "is_image_left": true,
+    "is_active": true,
+    "created_at": "2026-05-30T12:17:27.847Z"
+  }
+},
+{
+  "model": "core.industryspecification",
+  "pk": "0167d0a0-1fa5-4506-94f2-fb1e7df77594",
+  "fields": {
+    "is_industry": true
+  }
+},
+{
+  "model": "core.homepagecontent",
+  "pk": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+  "fields": {
+    "hero_video": "videos/hero/intro.mp4",
+    "hero_image": "hero/Banner.jpg",
+    "services_heading": "Our Services",
+    "journey_heading": "Our Journey",
+    "journey_video": "videos/journey/JDM_Timeline.mp4",
+    "clientele_heading": "Our Clientele",
+    "associations_heading": "Associations",
+    "affiliations_heading": "Accreditations & Certifications",
+    "sea_partners_heading": "Sea Carrier Partners",
+    "air_partners_heading": "Air Carrier Partners",
+    "achievements_heading": "Achievements",
+    "locations_heading": "Our Locations",
+    "created_at": "2026-04-16T10:56:41.716Z",
+    "updated_at": "2026-06-10T13:29:18.022Z",
+    "is_active": true,
+    "is_hero": true,
+    "is_services": true,
+    "is_journey": true,
+    "is_clientele": true,
+    "is_associations": true,
+    "is_affiliations": true,
+    "is_sea_partners": true,
+    "is_air_partners": true,
+    "is_locations": true,
+    "is_achievements": true,
+    "is_news": true,
+    "selected_services": [
+      "33556292-2f8d-4d45-b53a-84324dbb8d8f",
+      "1b72d196-3c60-493a-a2e8-cd4e703b273c",
+      "343764f5-c35a-4aaf-a18c-1a8f6e0e74eb",
+      "5346613c-3133-4120-8286-92456239d4f3",
+      "b9908508-9538-4bd9-b07d-337154c64618",
+      "fdace0b2-ef13-4bb0-8b69-19e6419e41f8",
+      "f8eaf199-3c78-4e20-87b4-d1b9091867a5",
+      "26e2ec73-3aac-4bf3-8e7a-1aa0550918be"
+    ]
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "0c3045ac-88e1-40fa-97fd-8cbec010eda3",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/19.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "0eee818d-3cef-47d2-9ddf-9bcc610c9e91",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/32.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "105490f3-f729-4614-8eba-a5033ff240d2",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/29.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "11077845-e992-4870-b194-e35f1b8ccd7b",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/38.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "12e5a5c4-74ef-4ef2-bc40-376304b4701e",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/37.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "1420acf1-f80b-4821-9e96-fc16cdb3cd54",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/3.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "15335de1-5663-4919-9233-7b8a91f1268c",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/2.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "166dc4d6-7ab3-4e4b-820f-da563319c260",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/9.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "28360e10-0477-437e-9e6b-ec33bfe0ff97",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/13.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "388f22f1-8d8b-428f-8f6d-d045261b40cf",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/20.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "4318bbfc-8485-43c8-a96b-4556379dc377",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/18.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "4b6e9aaa-e867-428b-b701-61d85c0eeb61",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/21.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "4ca1b407-5954-4e99-906f-bb48a95f15fd",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/11.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "53f9b897-0298-4a7b-9479-ed400bbe07b2",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/6.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "5474657f-fe99-42d9-8df5-a1dd851fe70a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/36.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "568fe7ea-4b66-4851-bfd5-8aa6a923f990",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/30.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "59267cfc-457d-4f54-b992-99688fb804d8",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/24.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "7a23ad86-13ab-40d8-86cf-ea18f96b61d9",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/17.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "7b4690f6-9c6a-4645-bb73-18d88a03c47a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/26.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "7d040755-ba7f-4808-9d43-f20e9d5a5e94",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/40.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "8038fa96-dccf-4518-8ed4-302797e126de",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/22.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "88a04ca8-a3da-4ca4-b3ac-3ec0a68e0fda",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/5.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "9081e610-fc49-4305-b3bc-29c57773a087",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/1.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "95a714d5-73be-46a8-a896-1392332bbef9",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/25.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "9c7ba713-fe32-45e0-985b-247e990a9b8a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/14.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "9e82d8c9-3adb-42be-9b5a-5f3b0ed59722",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/16.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "a11e4c0a-fa54-4dca-9d70-aebcca7d261f",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/34.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "bed78639-2ba3-4558-a8bd-b6cf977812f0",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/4.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "c0145f4b-f90b-4640-bf66-9f054ff5f74e",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/12.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "c1e12c5f-939b-410a-9383-0a721a469580",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/33.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "c3a85bf9-f8b4-4b80-ae7c-c1f36e31e0b5",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/35.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "d6ca12bb-4a64-4712-9fd2-c983df6c926b",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/15.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "d6cc3537-ea68-42c9-a215-41040f84bc34",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/23.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "e014b9ce-e2bc-46a7-a762-b48d99daa526",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/10.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "e7786df7-14a0-4501-b571-29201cc8af4b",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/28.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "f2b3c143-027f-4f30-ac29-4fdbc8eebe06",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/39.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "f6cca9ad-5702-462d-bcb4-7dfcbd6690a8",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/7.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "fa0f3b2e-f011-4ea3-9ad6-7dbf4c53a381",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/8.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "fe8790b0-0ba3-481d-bd3d-739a4b9fb714",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/27.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.clienteleitem",
+  "pk": "ffc22680-d3c1-47ca-ac81-65427420cea6",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "clients/31.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "0309faab-f405-4aaa-8fa9-3b81e5e73016",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/MCBA_1ay13cl.png",
+    "title": "Mundra Custom Broker Association",
+    "is_active": true
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "2824155a-8afe-408d-be65-a7474e41f659",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/3-removebg-preview.png",
+    "title": "Association Member",
+    "is_active": false
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "2fe14e36-d749-41dd-a30c-2c3e7fc79c9f",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/BCBA_gnJbuzi.png",
+    "title": "Brihanmumbai Custom Broker Association",
+    "is_active": true
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "3a9e5515-d48a-4cf5-9224-b3406059c6d1",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/ACBA_CFZKi0p.png",
+    "title": "Ahmedabad Custom Brokers’ Association",
+    "is_active": true
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "3f3532b7-ed52-4d18-a9dc-d84ddc41e895",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/RCHAA_YCz2BP1.png",
+    "title": "Rajasthan Custom House Agent's Association",
+    "is_active": true
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "5ac3ab20-f316-4033-9b39-bffcdd2b0798",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/4-removebg-preview.png",
+    "title": "Association Member",
+    "is_active": false
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "696c212a-ec45-4f81-849a-096e08184cb6",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/7-removebg-preview.png",
+    "title": "Association Member",
+    "is_active": false
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "8b879d13-ade0-42d3-9214-467760834749",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/NCBA_6OtCcaq.png",
+    "title": "Noida Custom Brokers Association",
+    "is_active": true
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "8ff1c2fa-db4a-4e0a-85e3-ca5f2497a479",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/CCBA_2kGB6Wa.png",
+    "title": "Chennai Custom Brokers Association",
+    "is_active": false
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "99a684c3-cbd4-4ad9-8fa0-8b31d1a8238c",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/2-removebg-preview.png",
+    "title": "Association Member",
+    "is_active": false
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "cea76ba5-45ac-4695-903e-bea3807c106a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/BCHAAL_LZN9xmK.png",
+    "title": "Bangalore Custom House Agents Association Ltd.",
+    "is_active": true
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "ea5951bd-6a09-4b14-9e81-57eab7c299b4",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/1-removebg-preview.png",
+    "title": "Association Member",
+    "is_active": false
+  }
+},
+{
+  "model": "core.associationitem",
+  "pk": "f25fbc6f-8094-4f77-8253-77125e48d433",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "associations/DCBA_CSaGaV9.png",
+    "title": "Delhi Custom House Broker Association",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "5c30bf46-85d5-4417-9d82-b3730e5824be",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/AEO_o5VU1Hv.png",
+    "title": "Authorized Economic Operator",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "9c4e4b1a-0251-44b9-9b99-64f74557537a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/MTO_9fo5qlr.png",
+    "title": "MTO Registered",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "a264d1cf-3443-4aaa-b719-9f77079e0078",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/Federation_of_Freight_Forwarders_Associations_in_India.png",
+    "title": "Federation of Freight Forwarders associations in India",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "c180bad1-0e3e-4f5f-a89d-159f4bb0a3cc",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/IATA_bPA7eUy.png",
+    "title": "International Air Transport Association",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "c2258070-68bd-48b4-8550-31c23735e0f6",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/ISO_XyCXXTX.png",
+    "title": "Quality Management System",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "da3aa06e-2ead-448d-be1a-c7ab38cfbdbb",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/FMC.png",
+    "title": "FMC Registered",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "fb205447-0106-4a3f-ab73-eae02852ad0f",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/DUN__BRADSTREET.png",
+    "title": "Dun & Bradstreet",
+    "is_active": true
+  }
+},
+{
+  "model": "core.affiliationitem",
+  "pk": "feec3633-cd7d-4222-99db-854bc0809a19",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "affiliations/WCA_Pv6y0PM.png",
+    "title": "WCA Inter Global",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "10cb983c-7cf9-455c-b6ab-3899316c489b",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture12.jpg",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "4643cfcd-d766-4577-87e7-3c6991994ba0",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture3.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "55f54a7c-f095-4f66-a2fa-a157bf25673a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture13.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "6efb2472-3b3e-4ad7-a097-e6f91bb29154",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture10.jpg",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "74249775-dd81-4b48-bb83-a165ea3b5a24",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture5.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "775170af-73af-4717-bd1e-bcd21145321e",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture9.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "8e0ff9b7-e6e2-4a87-89fa-59f525b38f9d",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture6.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "8e362172-2e59-4031-9388-04a6875ec77a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture8.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "9dc7dee7-b508-4681-a060-9a7bc9e15325",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture1.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "9e357a82-5528-4e2f-add4-d4b18a487661",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture11.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "bca49409-5466-4620-b514-e59ba9b53a10",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture4.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "f05fd5a7-7b4a-4e30-abf0-c835e952e122",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture2.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.seapartneritem",
+  "pk": "fbf232bc-f8c6-4672-ac28-900a83dfd0cc",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/sea/Picture7.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "20025fcb-7cff-4974-823f-17f64dc05552",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/FITS_Air-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "2c382f8b-a344-4520-9477-4e1c260c90f0",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/thai-airways.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "34e2ed2f-6835-45dc-b25f-f2ec2f2da212",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/LOT-Polish-Airlines-Logo.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "4f8398d6-8b5f-4460-b2c6-6637594d1899",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Air_New_zealand-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "50217f85-ed29-4836-99ee-bcf9a1e9ff2f",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Air_Asia-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "594620aa-745f-4029-88ca-ff5f1d451e17",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/My_Freighter-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "5c18e57d-e3e4-4879-8e8c-f0b3b04dce26",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Miat_Mangolian.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "65a4d00b-17b3-4829-a9e3-e58c27d4009f",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Air-Australia-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "6e3c2937-cc9c-4397-8f85-3879d8541ca5",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Azerbaijan-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "6f01cac5-bc9f-4213-b9be-b5126ff24b53",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Air-Europa.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "8e49da4c-d9b3-4079-8d3e-92dbde55de0d",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/fiji airways.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "a1ba203f-3651-4ced-b67e-a497c8457f47",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/SF_Airlines-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "ccb63b5a-ae12-481e-be4a-72e97ead5147",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Bringer.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "d21a1e60-358c-4f81-a6f9-696a9cb5a060",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Tampa_Airline.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "dda81b8d-5651-44ed-a6d5-360f640ea9d1",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/cathay_cargo.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "e4c4ad79-ee09-43bd-8d80-a0aa0e982d39",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/Qatar-Airways-logo.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.airpartneritem",
+  "pk": "ef29243a-de90-47ea-9845-aadeebec2dea",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "logo": "carriers/air/COPA-removebg-preview.png",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "185465a6-fc16-4aff-a1fc-edc08a975ca8",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Delhi",
+    "address": "A-75, Road No. 4,Street No. 6, Mahipalpur Extn., New Delhi - 110037",
+    "phone": [
+      "+91-11-49536400"
+    ],
+    "email": "info@jdmgroups.com",
+    "image": "locations/delhi.jpg",
+    "place": "New Delhi",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "2cc4c39d-519c-45f5-8252-2c72a7ac2a30",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Mundra",
+    "address": "Office No. 34, Shardha Complex, Near Zero Point, HDFC Bank, Mundra \r\nKutch, Gujarat-370421",
+    "phone": [
+      "079-46040170"
+    ],
+    "email": "info@jdmgroups.com",
+    "image": "locations/Unity Statue Mundra.jpg",
+    "place": "Mundra",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "4ef89bc3-1564-4eb8-af1b-d936e5be2009",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Bengaluru",
+    "address": "#2734, 14th Main , E Block, Sahakara Nagar, Bengaluru, Karnataka-560092",
+    "phone": [
+      "080-40945570"
+    ],
+    "email": "bd.blr@jdmworldwide.in",
+    "image": "locations/Vidhana Soudha Bengaluru.jpg",
+    "place": "Bengaluru",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "5f3b3007-12f4-41e8-9ce2-0107e82499c6",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Mumbai",
+    "address": "119, Business Point, 502 A-Wing, 5th Floor, Near Sahar Cargo Complex, Sahar Road, Anderi(E), Mumbai-400099",
+    "phone": [
+      "022-41233070"
+    ],
+    "email": "nitin.mulay@jdmcargoplanners.com",
+    "image": "locations/Mumabi Chhatrapati Shivaji Terminal.jpg",
+    "place": "Mumbai CST",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "6e6cebf7-2a74-4ce9-ad22-59064be0a7da",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Pipavav",
+    "address": "Ram Plaza Complex, Ground Floor, Office No. 7, B/H Shree Ram Petrol Pump, Pipavav Port, Gujarat-365560",
+    "phone": [
+      "079-46040170"
+    ],
+    "email": "info@jdmgroups.com",
+    "image": "locations/Somanath_Temple Pipava.jpg",
+    "place": "Pipavav",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "76ca9efe-f770-4188-8caa-893d1dbf1048",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Chennai",
+    "address": "Kayal Tower No. 67/22, 3rd Floor, Velachery Road, Little Mount, Saidapet, Chennai, Tamil Nadu-600015",
+    "phone": [
+      "044-43025070"
+    ],
+    "email": "abhilash@jdmcargoplanners.com",
+    "image": "locations/Kapaleeswarar Temple, Chennai.jpg",
+    "place": "Chennai",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "7b72e1c6-9e55-4eaf-bd47-0e5b76f3a8f5",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Pune",
+    "address": "Pune Office, Maharashtra",
+    "phone": [
+      "+91-20-22345678"
+    ],
+    "email": "pune@jdmgroups.com",
+    "image": "locations/Shrimant Dagdusheth Halwai Ganpati Mandir-Pune.png",
+    "place": "Pune",
+    "is_active": false
+  }
+},
+{
+  "model": "core.location",
+  "pk": "80c50a06-bc4f-4df9-ba1e-21090f5bd436",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Mumbai",
+    "address": "Shelton Sapphire, B-801 Plot No. 18 & 19, Palm Beach Rd, Near Session Count, Sector-15, CBD Belapur, Navi Mumbai, Maharashtra-400614",
+    "phone": [
+      "022-41233070"
+    ],
+    "email": "nitin.mulay@jdmcargoplanners.com",
+    "image": "locations/Mumbai-India-Taj-Mahal-Palace.jpg",
+    "place": "Mumbai",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "9b8de48a-1755-4234-8f85-d97024095dae",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Khatuwas",
+    "address": "Cabin No. 5,1st Floor, Administrative Building, Inland Container Depot, Khatuwas, Alwar, Rajasthan-301704",
+    "phone": [
+      "011-49707070"
+    ],
+    "email": "info@jdmgroups.com",
+    "image": "locations/Neemrana fort Khatuwas.png",
+    "place": "Khatuwas",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "afa834cc-54b2-4679-b1cd-6f0404091e01",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Ahmedabad",
+    "address": "Unit No. 1006, 10th Floor Sakar-IX, Near Old Rbi Ashram Road, Ahmedabad - 380009",
+    "phone": [
+      "+91-79-22345678"
+    ],
+    "email": "bd.amd@jdmworldwide.in",
+    "image": "locations/Narendra_Modi_Stadium Ahmedabad.jpg",
+    "place": "Ahmedabad",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "bbf527f2-a421-4d33-a8ef-a0f0cf630c5b",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "Dadadri",
+    "address": "F-44, Concor Administrative Building, Tripata Road, ICD Dadri, Gautam Budh Nagar, Uttar Pradesh-201307",
+    "phone": [
+      "+91-120-1234567"
+    ],
+    "email": "dadri@jdmgroups.com",
+    "image": "locations/Ayodhya_Ram_Mandir Dadri.jpg",
+    "place": "Dadri",
+    "is_active": true
+  }
+},
+{
+  "model": "core.location",
+  "pk": "fa778824-084c-4a4b-af24-57510891b33c",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "city": "TKD",
+    "address": "Room No. 224/4, 2nd Floor, Concor Adminstrative Building, ICD Tugalkabad, New Delhi-110020",
+    "phone": [
+      "011-49707070"
+    ],
+    "email": "info@jdmgroups.com",
+    "image": "locations/India_Gate_Delhi.jpg",
+    "place": "TKD",
+    "is_active": true
+  }
+},
+{
+  "model": "core.aboutpagecontent",
+  "pk": 1,
+  "fields": {
+    "heading": "About JDM Group",
+    "story_heading": "Our Story",
+    "story_paragraph": "JDM GROUP was conceptualized by Late Mr. Pahlad Singh in the year 1978, with an initial starting of Transportation in the logistics field. He was well known in this industry for his true commitments, passing the legacy that JDM proudly follows under the dynamic leadership of the Group Chairman & Managing Director Mr. Sahil Sehrawat and a team of dedicated professionals. JDM has evolved as one of the fastest growing integrated supply chain logistics enterprises with verticals as below:",
+    "story_points": [
+      "Founded with a vision for excellence in logistics",
+      "Over 30 years of industry experience",
+      "Pan-India presence with global reach",
+      "Committed to customer satisfaction"
+    ],
+    "founder_image": "founder/Lt._Sh._Pahlad_Singh_Ji.png",
+    "para1": "We at JDM are committed to delivering Total Quality Management (TQM) services to our esteemed clientele. Our team of highly experienced professionals is dedicated to the expeditious execution of assignments through decentralized authority and accountable operations at every level.",
+    "para2": "The underlying principle of the company’s operations lies in close collaboration with customers and the adoption of state-of-the-art technology with integrated data platforms. Real-time updates, synchronized operations, and reduced processing timelines across Freight Forwarding, Customs Brokerage, and Transportation under one umbrella have evolved as our unique strength, ensuring customer delight at every touchpoint.",
+    "mission_heading": "Our Mission",
+    "mission_paragraph": "By acquiring and servicing reputed and ethical customers.\r\nBy constantly upgrading technology, team skills and infrastructure to increase freight management efficiency and creating cost effective logistics solutions.\r\nBy attracting and retaining quality people who possess enthusiasm for excellence, leadership and passion to win.\r\nTo function in an economically, socially and environmentally responsible manner respecting the interests of all stakeholders including our team members.",
+    "mission_image": "about/mission/Our Mission.jpg",
+    "vision_heading": "Our Vision",
+    "vision_paragraph": "To be the best freight management company, providing smart, innovative and socially responsible solutions to a diversified customer base.\r\nTo provide operational excellence, competitive cost control and transparency to our partners for sourcing and distributing in the integrated supply chain environment, globally.",
+    "vision_image": "about/vision/Gemini_Generated_Image_mbtvjimbtvjimbtv.png",
+    "values_heading": "Our Values",
+    "values_image": "about/values/Our Values.jpg",
+    "values_points": [
+      "Customer First - We prioritize our customers in everything we do",
+      "Integrity - We conduct business with honesty and transparency",
+      "Innovation - We continuously improve our services and processes",
+      "Excellence - We strive for the highest standards in all operations",
+      "Teamwork - We believe in the power of collaboration"
+    ],
+    "key_strengths_heading": "Our Key Strengths",
+    "key_strengths_points": [
+      "30+ years of industry experience",
+      "Pan-India presence with 11+ offices",
+      "Global network spanning 150+ countries",
+      "500+ satisfied clients",
+      "Advanced technology-driven solutions",
+      "Dedicated and experienced team"
+    ],
+    "achievements_heading": "Achievements",
+    "team_heading": "Our Team",
+    "faq_heading": "Frequently Asked Questions",
+    "faq_paragraph": "Find answers to commonly asked questions about our logistics services.",
+    "is_active": true,
+    "is_mission": true,
+    "is_vision": true,
+    "is_values": true,
+    "is_story": true,
+    "is_faq": true,
+    "is_achievements": true,
+    "created_at": "2026-04-16T10:56:41.742Z",
+    "updated_at": "2026-06-10T10:53:03.987Z"
+  }
+},
+{
+  "model": "core.achievement",
+  "pk": "3d07de8f-59f1-4e12-b986-73ed6acb91f7",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "about": 1,
+    "title": "Team Members",
+    "count": 200,
+    "icon": "achievements/minus.svg",
+    "delay": ".6s",
+    "suffix": "+",
+    "prefix": null,
+    "is_active": false
+  }
+},
+{
+  "model": "core.achievement",
+  "pk": "56c227d5-43df-4559-9758-2ab79e6c363a",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "about": 1,
+    "title": "Years of Experience",
+    "count": 30,
+    "icon": "achievements/30.svg",
+    "delay": ".2s",
+    "suffix": "+",
+    "prefix": null,
+    "is_active": false
+  }
+},
+{
+  "model": "core.achievement",
+  "pk": "7f4fbd17-2666-46b1-bb68-510cd2406bf6",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "about": 1,
+    "title": "Happy Clients",
+    "count": 500,
+    "icon": "achievements/plus.svg",
+    "delay": ".4s",
+    "suffix": "+",
+    "prefix": null,
+    "is_active": false
+  }
+},
+{
+  "model": "core.achievement",
+  "pk": "8c94da67-766c-4c01-b648-25294e879e37",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "about": null,
+    "title": "Happy Clients",
+    "count": 500,
+    "icon": "achievements/plus.svg",
+    "delay": ".4s",
+    "suffix": "+",
+    "prefix": null,
+    "is_active": false
+  }
+},
+{
+  "model": "core.achievement",
+  "pk": "aa78038b-289d-4f5f-beb3-4409248a62a9",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "about": null,
+    "title": "Offices Worldwide",
+    "count": 15,
+    "icon": "achievements/minus.svg",
+    "delay": ".6s",
+    "suffix": "+",
+    "prefix": null,
+    "is_active": false
+  }
+},
+{
+  "model": "core.achievement",
+  "pk": "e3cfd492-07cb-4c07-a51c-3e89b5ba3f8f",
+  "fields": {
+    "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
+    "about": null,
+    "title": "Years of Experience",
+    "count": 30,
+    "icon": "achievements/30.svg",
+    "delay": ".2s",
+    "suffix": "+",
+    "prefix": null,
+    "is_active": false
+  }
+},
+{
+  "model": "core.faq",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "title": "What services does JDM Group offer?",
+    "description": "JDM Group offers comprehensive logistics solutions including Air Freight, Ocean Freight, Customs Brokerage, Project Cargo, Perishable Cargo, Courier Services, Warehousing, Exhibition Cargo, Transportation, and Rail Freight.",
+    "is_active": true
+  }
+},
+{
+  "model": "core.faq",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "title": "How can I track my shipment?",
+    "description": "You can track your shipment through our online tracking portal or by contacting our customer service team with your tracking number.",
+    "is_active": true
+  }
+},
+{
+  "model": "core.faq",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "title": "Do you handle international shipments?",
+    "description": "Yes, we handle both domestic and international shipments across air, sea, and land routes, connecting to 150+ countries worldwide.",
+    "is_active": true
+  }
+},
+{
+  "model": "core.faq",
+  "pk": 4,
+  "fields": {
+    "about": 1,
+    "title": "What is the minimum shipment size you handle?",
+    "description": "We handle shipments of all sizes, from small parcels to oversized project cargo. Our LCL services are perfect for smaller shipments.",
+    "is_active": true
+  }
+},
+{
+  "model": "core.faq",
+  "pk": 5,
+  "fields": {
+    "about": 1,
+    "title": "How do I get a quote for my shipment?",
+    "description": "You can request a quote by contacting us through our website, email, or phone. Our team will provide a competitive quote based on your requirements.",
+    "is_active": true
+  }
+},
+{
+  "model": "core.service",
+  "pk": "167f24fb-1c37-4730-917f-2c75432672c6",
+  "fields": {
+    "title": "Exhibition Cargo",
+    "image": "assets/img/service/Exhibition.jpg",
+    "description": "Express Cargo services for urgent deliveries.",
+    "icon": "fa-regular fa-truck-front",
+    "description1": "We proudly hold a distinct reputation in managing exhibition cargo for both inward and outward movements with absolute precision and regulatory compliance. Whether its goods headed for the India Trade Promotion Organization (ITPO), or materials bound for public or privately funded seminars, expos, or demonstrations, our experienced team ensures smooth execution aligned with all customs regulations and procedural guidelines. We specialize in handling shipments governed under ATA Carnet and related exhibition protocols, offering tailored solutions for high-value display items, fragile exhibits, and demonstration kits. From meticulous planning to seamless delivery at the event site, we manage the entire logistics chain — ensuring that your materials arrive on time, intact, and exhibition-ready. With extensive knowledge of international exhibition standards and documentation formalities, we are your trusted partner for delivering excellence on the global exhibition stage.",
+    "heading": ".",
+    "description2": ".",
+    "position": 9
+  }
+},
+{
+  "model": "core.service",
+  "pk": "1b72d196-3c60-493a-a2e8-cd4e703b273c",
+  "fields": {
+    "title": "Ocean Freight",
+    "image": "assets/img/service/Ocean.jpg",
+    "description": "Cost-effective ocean freight solutions for bulk shipments.",
+    "icon": "fa-regular fa-ship",
+    "description1": "We understand that **ocean freight is the backbone of global trade,** playing a pivotal role in connecting supply chains across continents. Our ocean freight solutions are built on a foundation of cost-effectiveness, **reliability, safety, and timely delivery,** offering seamless movement through **FCL, LCL, Reefer, and specialized vessel charters** equipped with onboard cranes for heavy or oversized cargo. With a team of highly qualified professionals, we manage both **bulk and liquid commodities** with unmatched precision and care. While our ocean division continues to expand, we bring **modern flexibility** to every shipment — from selecting the ideal carrier to arranging last-mile delivery. By leveraging our vast partner network and working in sync with shipping lines, we ensure your cargo reaches even the most remote interiors of the country and across borders, all at an optimized cost and with complete transparency.",
+    "heading": "",
+    "description2": "",
+    "position": 1
+  }
+},
+{
+  "model": "core.service",
+  "pk": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+  "fields": {
+    "title": "Warehousing",
+    "image": "assets/img/service/Warehouse.jpg",
+    "description": "Secure and scalable warehousing solutions.",
+    "icon": "fa-regular fa-warehouse",
+    "description1": "We have grown rapidly in 5PL solutions in the form of warehousing, distribution and trans-load operations. We have the capabilities to serve right from packing, loading/unload, customs brokerage, inventory control, warehouse management, transportation, includes multi model transportation, to our esteemed customers and final distribution to the retail outlets in a cost-effective manner with safe and intact deliveries.",
+    "heading": "Warehousing of Goods in Public and Private Bonded Warehouses",
+    "description2": "As an emerging leader in the warehousing services, we also assist our esteemed customers to warehouse the goods in public & private bonded warehouses (governed under customs act/rules) for better supply chain, inventory control, and deferred customs duty payments.",
+    "position": 7
+  }
+},
+{
+  "model": "core.service",
+  "pk": "33556292-2f8d-4d45-b53a-84324dbb8d8f",
+  "fields": {
+    "title": "Air Freight",
+    "image": "assets/img/service/Air_Freight.jpeg",
+    "description": "Fast and reliable air freight services for global shipping.",
+    "icon": "fa-regular fa-plane",
+    "description1": "We offer comprehensive range of airfreight services worldwide. Each movement of Air Cargo is diligently planned by our experts in close coordination with our worldwide agents to utilize the most economic air carriers that provide safe and speedy delivery. Strong relationships with all leading airlines enable us to secure space with reasonable price in all significant sectors. Exporters/Importers of specialized cargo, Automotive cargo, Electronics cargo, high value cargo, perishable cargo, Hazardous/Dangerous goods cargo and many other types of cargoes can rely on us for providing them value addition with our state-of-the-art services. We offer **\"consolidations, Back to Back, Door to Door, and Airport to Airport\"** services as per the requirements of our valued customers.",
+    "heading": "",
+    "description2": "",
+    "position": 0
+  }
+},
+{
+  "model": "core.service",
+  "pk": "343764f5-c35a-4aaf-a18c-1a8f6e0e74eb",
+  "fields": {
+    "title": "Rail Freight",
+    "image": "assets/img/service/Rail.jpg",
+    "description": "Efficient train freight services for regional transport.",
+    "icon": "fa-regular fa-train",
+    "description1": "We recognize the immense value of rail freight as a highly efficient and reliable mode of transport, particularly for the movement of large volumes of goods over medium to long distances. Leveraging rail transport enables us to reduce the number of trips required for large-scale shipments, leading to significant cost savings and a marked reduction in the environmental footprint of logistics operations. Rail freight is less susceptible to traffic congestion and adverse weather conditions compared to road transport, ensuring reliable and timely deliveries, even in challenging circumstances. This capability is particularly advantageous for industries such as manufacturing, agriculture, and mining, where demand for scalable, secure, and cost-effective transportation solutions is paramount. We harness the power of rail freight to optimize supply chain efficiency, ensuring seamless operations while remaining fully compliant with industry standards and environmental regulations.",
+    "heading": "",
+    "description2": "By integrating rail transport into our comprehensive logistics offerings, we further our commitment to sustainability, delivering reliable, green, and cost-efficient solutions to our clients.",
+    "position": 2
+  }
+},
+{
+  "model": "core.service",
+  "pk": "5346613c-3133-4120-8286-92456239d4f3",
+  "fields": {
+    "title": "Road Transportation",
+    "image": "assets/img/service/truck.jpg",
+    "description": "Flexible road transportation for local and regional deliveries.",
+    "icon": "fa-regular fa-truck-fast",
+    "description1": "JDM GROUP was conceptualized by Late Mr. Pahlad Singh in the year 1978, with an initial starting of Road Transportation in logistics field. His desire towards the value services and deep understanding of Logistics, made the foundations of the organization stronger and today these two aspects are our guiding principles. <br> Road Transportation is one of the vital parts of modern logistics segment and its cycles begin with pick-up of cargo/consignments to and from the designated port, customs station and/or warehouses. Today we are one of the leading and promising Logistics partners associated with some of the best corporate houses. We firmly believe in \"Just in Time\" concept by providing seamless Logistics support to our valued customer through our well informed and experienced staff. ** We are progressing toward the greener future by adopting electric vehicles and removing emissions-heavy alternatives, in Alignment with the Mission 2050 initiative.**",
+    "heading": "",
+    "description2": "",
+    "position": 3
+  }
+},
+{
+  "model": "core.service",
+  "pk": "b9908508-9538-4bd9-b07d-337154c64618",
+  "fields": {
+    "title": "Custom Brokerage",
+    "image": "assets/img/service/Customs_Brokrage.jpg",
+    "description": "Seamless custom clearance services for international shipments.",
+    "icon": "fa-regular fa-file-signature",
+    "description1": "We have an adept team of Customs Brokerage professionals with years of experience, who are proficient not only with Custom's procedures and regulations but also with the allied laws. We assist in effectively and efficiently filing of all customs-related compliances across multiple regulatory agencies, includes additional facilitations for:",
+    "heading": "",
+    "description2": "",
+    "position": 4
+  }
+},
+{
+  "model": "core.service",
+  "pk": "ddcf6648-656e-43ac-839f-50d993a0ac87",
+  "fields": {
+    "title": "Perishable Cargo",
+    "image": "assets/img/service/Perishable.jpg",
+    "description": "Express Cargo services for urgent deliveries.",
+    "icon": "fa-regular fa-truck-front",
+    "description1": "We are trusted for delivering reliable, specialized logistics solutions for the export and import of perishable commodities, including vegetables, fruits, cut flowers, and other temperature-sensitive goods. What sets us apart is our deep understanding of the time-critical nature of perishables and our commitment to maintaining their freshness, quality, and safety at every stage of transit. Our team is trained in cold chain handling, ensuring proper packaging, temperature control, and hygiene protocols from origin to destination. Whether it’s a rose bouquet to Europe or fresh produce to the Middle East, we manage it with precision, speed, and care. With international expertise and a customer-centric approach, for goods that can’t wait, trust the team that never rests.",
+    "heading": "",
+    "description2": "",
+    "position": 8
+  }
+},
+{
+  "model": "core.service",
+  "pk": "f8eaf199-3c78-4e20-87b4-d1b9091867a5",
+  "fields": {
+    "title": "Project Cargo",
+    "image": "assets/img/service/Project_Cargo.jpg",
+    "description": "Specialized handling for oversized and complex cargo.",
+    "icon": "fa-regular fa-box-open",
+    "description1": "We take immense pride in offering **comprehensive project cargo handling services** that consistently exceed client expectations. From infrastructure giants to energy sector leaders, our clients trust us to move their most challenging and oversized cargo with unmatched precision. Our team, comprising **highly trained and experienced professionals**, brings meticulous planning and hands-on expertise to every project — be it **Over Dimensional Cargo (ODC)** or **Overweight Cargo (OWC)**. Utilizing **specialized equipment** like open-top and flat-rack containers, we handle end-to-end execution — starting from **vessel booking, route optimization, to safe on-board loading.** Our longstanding relationships with leading vessel owners allow us to offer **cost-effective solutions without compromising service quality.** What sets us apart is our ability to adapt to the complexity of each shipment, ensuring it is moved securely, timely, and in compliance with international standards. It's a mission delivered with integrity, care, and commitment.",
+    "heading": ".",
+    "description2": ".",
+    "position": 6
+  }
+},
+{
+  "model": "core.service",
+  "pk": "fdace0b2-ef13-4bb0-8b69-19e6419e41f8",
+  "fields": {
+    "title": "Courier Services",
+    "image": "assets/img/service/Courier.jpg",
+    "description": "Express courier services for urgent deliveries.",
+    "icon": "fa-regular fa-truck-front",
+    "description1": "We specialize in providing **customized, door-to-door express delivery solutions** designed to meet the fast-paced demands of modern business. Our courier services are tailored for the **swift and secure movement of time-sensitive documents and parcels** to destinations across the globe. Backed by a robust international network and diverse transit time options, we ensure, shipments reach on schedule, no matter the urgency or complexity. <br> What truly distinguishes our service is our approach: **before proposing a solution, we take time to understand your business challenge**, offering logistics that are not only efficient but also strategically aligned with your goals. Every package entrusted to us is handled with the utmost care, backed by advanced tracking systems and stringent safety protocols. Whether it’s an urgent contract, confidential paperwork, or a vital product sample, **we guarantee secure, reliable, and on-time global delivery — every time.**",
+    "heading": ".",
+    "description2": ".",
+    "position": 5
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 56,
+  "fields": {
+    "service": "b9908508-9538-4bd9-b07d-337154c64618",
+    "text": "Special Economic Zones (SEZ)"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 57,
+  "fields": {
+    "service": "b9908508-9538-4bd9-b07d-337154c64618",
+    "text": "Software Technology Parks of India (STPI)"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 58,
+  "fields": {
+    "service": "b9908508-9538-4bd9-b07d-337154c64618",
+    "text": "Free Trade and Warehousing Zone (FTWZ)"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 59,
+  "fields": {
+    "service": "b9908508-9538-4bd9-b07d-337154c64618",
+    "text": "Export Promotion Capital Goods (EPCG)"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 60,
+  "fields": {
+    "service": "b9908508-9538-4bd9-b07d-337154c64618",
+    "text": "Import of Goods at Concessional Rate of Duty (IGCR)"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 61,
+  "fields": {
+    "service": "b9908508-9538-4bd9-b07d-337154c64618",
+    "text": "Manufacturing and Other Operations in a Warehouse Rules (MOOWR)"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 62,
+  "fields": {
+    "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+    "text": "Cost effective & safety of goods"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 63,
+  "fields": {
+    "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+    "text": "Our warehouse has zero liability to end clients"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 64,
+  "fields": {
+    "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+    "text": "Warehouse distance -4 km from New Delhi Airport"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 65,
+  "fields": {
+    "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+    "text": "Round the clock 24xl security equipped with security camera etc"
+  }
+},
+{
+  "model": "core.servicebenefit",
+  "pk": 66,
+  "fields": {
+    "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
+    "text": "Hi-tech sophisticated handling equipment’s for taking appropriate care of your cargo"
+  }
+},
+{
+  "model": "core.valueaddedservice",
+  "pk": "38b668c1-97b3-4674-bac0-15fef80ec09a",
+  "fields": {
+    "title": "Trade Compliance",
+    "para1": "Navigate complex international trade regulations with our compliance advisory services.",
+    "para2": "We help you stay compliant with import/export regulations, sanctions, and trade agreements."
+  }
+},
+{
+  "model": "core.valueaddedservice",
+  "pk": "5053c458-7cf0-404c-9438-0231c233ad53",
+  "fields": {
+    "title": "Supply Chain Consulting",
+    "para1": "Our experts analyze your supply chain to identify optimization opportunities and cost savings.",
+    "para2": "We provide end-to-end supply chain consulting services to help you streamline operations and improve efficiency."
+  }
+},
+{
+  "model": "core.valueaddedservice",
+  "pk": "9bba63d5-fa69-46c9-b4b3-4d734f565398",
+  "fields": {
+    "title": "Cargo Insurance",
+    "para1": "Protect your shipments with comprehensive cargo insurance coverage. We offer competitive rates and hassle-free claims processing.",
+    "para2": "Our insurance solutions cover all modes of transport and protect against damage, loss, and theft during transit."
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "043171b7-109e-4d58-89ad-3834c5687728",
+  "fields": {
+    "name": "Pal Raj",
+    "role": "Regional Head",
+    "excerpt": "South India",
+    "image": "team/palraj.png",
+    "bio": "With over 23 years in the logistics industry, Pal brings deep expertise in Operational Excellence, Customer Service Management, and P&L Oversight. As Regional Head – South at JDM Group, he leads seamless logistics operations with a customer-first mindset, overseeing P&L, launching new branches, and building strong cross-functional teams across sales, marketing, and operations. Pal has a proven track record of streamlining supply chain processes, enhancing service quality, and driving financial performance. His strategic leadership focuses on minimizing inefficiencies, strengthening client relationships, and balancing cost with service excellence. Through innovation and continuous improvement, Pal plays a key role in delivering high-impact, sustainable logistics solutions for JDM.",
+    "position": 11,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "0a67462f-40cb-4b53-acae-e6961bb64008",
+  "fields": {
+    "name": "Lt. Sh. Pahlad Singh Ji",
+    "role": "Founder",
+    "excerpt": "Visionary of JDM Group",
+    "image": "team/Lt._Sh._Pahlad_Singh_Ji.png",
+    "bio": "Late Mr. Pahlad Singh was the visionary founder of JDM Group, who laid the foundation of the company in 1978 with a humble beginning in transportation services within the logistics sector. Renowned for his steadfast commitment, integrity, and forward-thinking approach, he built more than just a business—he built a legacy rooted in trust, hard work, and excellence. His entrepreneurial spirit continues to guide JDM Group's values and vision, inspiring generations and shaping the company’s journey as it grows under the leadership of the current management and an ever-dedicated team.",
+    "position": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "129aab49-8aec-4481-8a5a-26a6e37b29c2",
+  "fields": {
+    "name": "Mukesh Gupta",
+    "role": "Chief Operating Officer",
+    "excerpt": "Operations excellence",
+    "image": "team/Mukesh Sir.jpg",
+    "bio": "Mukesh Gupta was appointed as COO in June 2022. He is a Master Degree holder in commerce, qualified in 1980. Before his role as JDM Groups COO, he had held the position of General Manager of Pantos Logistics India Pvt. Ltd, a group company of LG Electronics India Pvt. Ltd. He joined LG Electronics in 1998 and transferred to Pantos Logistics in 2018 for Import & Export operations, Indirect Tax matters pertaining to Indian customs and other related Rules & Regulations thereof. He retired from Pantos Logistics in 2020 after completing 58 years of life, His role had been extended for a further two years, which ends in May 2022. Prior to LG Electronics, Mukesh Gupta worked with Matsushita Television & Audio India Pvt. Ltd (a group company of Panasonic) from 1992 to 1998, holding leadership positions in the matters of Central Excise & Customs. Starting as an Assistant of Indirect Taxes in Crown Ceramics India Pvt Ltd in the year 1978, Mukesh Gupta has worked in all matters related to Indirect Taxes throughout his entire career of 47 years.",
+    "position": 4,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "276fba5b-76a6-4432-87fb-2a112dde3e3c",
+  "fields": {
+    "name": "Lijeesh",
+    "role": "Branch Manager Chennai",
+    "excerpt": "Freight Forwarding",
+    "image": "team/Lijeesh.jpg",
+    "bio": "My name is Lijeesh. I was born in Thrissur, Kerala, and moved to Chennai in 1990. I completed both my schooling and college education in Chennai. I graduated with a B.Com degree in the year 2002. Following that, my first work experience began at Ashok Leyland in 2002, which marked the start of my career in logistics. After that, I worked across several companies. In 2023, I co-founded a company alongside my senior, but due to certain challenges, I stepped out of it. Afterwards, in 2024, I joined JDM Groups. Two years have passed since, and here I have the complete freedom to operate independently, which enables me to work with great confidence",
+    "position": 13,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "511db454-6f9f-43d1-b5d0-a17d5888d4b4",
+  "fields": {
+    "name": "Sahil Sehrawat",
+    "role": "Managing Director",
+    "excerpt": "IT and digital transformation",
+    "image": "team/SahilSir.jpg",
+    "bio": "Sahil Sehrawat is a visionary leader and the driving force behind the JDM Group of Companies. Since taking on the role of Managing Director in 2011, he has been instrumental in steering the organization toward sustained growth and innovation. An alumnus of Deshbandhu College, University of Delhi, Sahil combines academic insight with hands-on industry experience, bringing a strategic edge to every aspect of the business. Prior to JDM Group, Sahil Sehrawat had been actively participated in the family business of road transportation, since 1995, which was later restructured as Arrow Transport service in 2010, after the founder, Mr. Prahalad Singh moved to heaven. The leadership of Sahil Sehrawat has been pivotal in expanding the group's presence across multiple sectors, establishing JDM as a name synonymous with service excellence, operational efficiency, and customer-first solutions started reverse growth from Road Transportation to Customs Clerance to Freight Forwarding to Courrier Services.",
+    "position": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "64c72bef-d425-4fe5-bf87-4fa0f5506895",
+  "fields": {
+    "name": "Abhilash D",
+    "role": "Branch Manager Chennai",
+    "excerpt": "Customs House Brokerage",
+    "image": "team/abhilashD.png",
+    "bio": "Abhilash D, Branch Manager – Chennai at JDM Group, is a seasoned logistics professional with over 19 years of experience in customs operations. A BBA graduate from Kerala, he began his career in 2004 at an Export-Oriented Unit in New Delhi and later spent 15 years in Chennai managing import-export shipments for top multinational clients through the Chennai port. With deep expertise in Customs regulations, client management, and operational strategy, Abhilash leads customs processes at JDM Group, drives business development, and fosters strong stakeholder relationships. His leadership, compliance knowledge, and strategic insight continue to play a key role in streamlining operations and advancing JDM Group’s success in the logistics space.",
+    "position": 12,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "a42ad5d7-0b1e-4d3e-bbe2-3a43b683bdc2",
+  "fields": {
+    "name": "Manoj Kumar",
+    "role": "Assistant Vice President",
+    "excerpt": "Export Air Freight Forwarding and Export Customs House Brokerage",
+    "image": "team/Manoj Ji.jpg",
+    "bio": "Manoj Kumar (born on 01 September 1974) is the Assistant Vice President at JDM Group of Companies, with over 29 years of rich experience in the freight forwarding and logistics industry. He graduated from Chaudhary Charan Singh University (U.P.) in 1994 and began his career in 1998 with a Colombo-based MNC as an Air Export Manager. Over the years, he has worked with leading Shipping Lines, IATA-certified companies, and Customs House Agents (CHA), handling both Air and Sea Export-Import operations. He is highly skilled in Customs procedures, freight management, and team leadership.Manoj is a forward-thinking professional, known for his visionary ideas, financial discipline, and deep understanding of regulatory frameworks, which play a crucial role in ensuring compliance and driving operational efficiency at JDM Group.",
+    "position": 6,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "ac37b04d-f4a3-4828-8334-616d8d430102",
+  "fields": {
+    "name": "Randhir Kumar Mishra",
+    "role": "Accounts and Finance Head",
+    "excerpt": "Corporate Office",
+    "image": "team/Randhir Ji.jpg",
+    "bio": "Hailing from Madhubani, Bihar, Randhir Kumar Mishra is a seasoned accounting expert with over 16 years of experience in financial management. B.Com (Hons.) graduate from LNMU with an impressive 89% (2003), Randhir began his career with the Oraon Group of Companies in 2009, rising to the role of Manager – Accounts before joining JDM Group in 2018. At JDM, Randhir plays a critical role in ensuring financial accuracy, compliance, and operational efficiency. His responsibilities include preparing financial statements, managing receivables and payables, bank reconciliations, billing, and handling tax matters including TDS, EPF, ESIC, GST, and e-payments. Renowned for his adaptability, leadership, and attention to detail, Randhir consistently delivers reliable financial insights and ensures seamless accounting operations. His commitment to excellence and deep knowledge of tax and regulatory frameworks make him an invaluable asset to the JDM Group’s continued success.",
+    "position": 5,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "b9a0185d-3e11-4c98-9b18-e139217fc1f8",
+  "fields": {
+    "name": "Ajay Sehrawat",
+    "role": "Director",
+    "excerpt": "Leading operations and strategic growth",
+    "image": "team/Ajay Sir.jpg",
+    "bio": "Ajay Sehrawat was appointed as Director in May 2011, considering his 17 years’ experience in various matters related to custom clearance, compliance, liaison with govt. authorities. Prior to JDM, he has a vast experience of 7 years in RS Movers (a CHA Company) as General Manager, leading the role for customs clearance & compliance thereof from 2003 to 2011. Before to RS Movers, Ajay Sehrawat has held the position of Manager of Kunal Travels (Another CHA Company) from 1995 to 2003 worked as a leader responsible for the customs clearance, compliances, coordination with Airlines & shipping lines. Ajay Sehrawat has started his carrier since 1993 as Assistant manager of Romy Enterprises, in the field of Customs Clerance and coordination thereof with different agencies. Apart from above, Mr Ajay Sehrawat has been qualified ‘G’ Card examination in the year 1998-99 which is required to appear before the customs authorities at different locations.",
+    "position": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "c418d4e4-4bf9-45d6-b5be-a26ef40b1aeb",
+  "fields": {
+    "name": "Anju Dubey",
+    "role": "Corporate Sales Manager",
+    "excerpt": ".",
+    "image": "team/Anju_Maam.jpg",
+    "bio": "Anju Dubey is a dynamic professional with a solid foundation in logistics, supply chain, and client management. As Corporate Sales Manager at JDM Group, she leads sales efforts, nurtures client relationships, and ensures smooth, efficient operations. Known for her hands-on approach and results-driven mindset, Anju has a proven ability to onboard clients, streamline processes, and support team collaboration. Her passion for delivering value aligns seamlessly with JDM’s culture of innovation and excellence, making her a key player in driving both client satisfaction and business growth.",
+    "position": 8,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "c91364e1-1057-4106-81e1-83a913991720",
+  "fields": {
+    "name": "Nitin Balasaheb Mulay",
+    "role": "Branch Manager, Mumbai",
+    "excerpt": "Customs House Brokerage",
+    "image": "team/WhatsApp_Image_2026-06-10_at_3.38.52_PM.jpeg",
+    "bio": "Nitin Balasaheb Mulay, and currently working as AGM – Operations with around 18 years of experience in Customs and Logistics. During my professional tenure, I have handled various sectors such as Automobile, Electronics, Energy , Project Imports and Breakbulk Imports .I possess strong knowledge of customs clearance, import-export procedures, documentation, logistics operations, and supply chain coordination. I have developed excellent operational and team management skills through my extensive industry experience.",
+    "position": 9,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "d5dfc83a-15ea-49a2-a077-0ec2f9a9e6e8",
+  "fields": {
+    "name": "Jaspreet Singh",
+    "role": "Assistant General Manager",
+    "excerpt": "Corporate Customs House Brokerage",
+    "image": "team/Jaspreet Ji.jpg",
+    "bio": "Jaspreet Singh, AGM – Operations at JDM Cargo Planners Pvt. Ltd., brings over 21 years of experience in import customs clearance and customer relationship management. A Customs Rule 6-qualified expert with a postgraduate diploma in international business and certifications in IATA Cargo and Customs Compliance, he joined JDM Group in 2021 and now leads strategic planning, key account management, and end-to-end customs operations. One of his career highlights includes managing imports for the Formula One Grand Prix for three consecutive years—a testament to his ability to execute high-pressure, time-sensitive projects with precision. Jaspreet’s leadership, deep industry insight, and consistent delivery of excellence make him a vital contributor to JDM’s continued success and reliability in the logistics space.",
+    "position": 7,
+    "is_active": true
+  }
+},
+{
+  "model": "core.teammember",
+  "pk": "dc3fdf32-996f-41d6-b364-47767023285d",
+  "fields": {
+    "name": "Rohit Raj",
+    "role": "Branch Manager Pune",
+    "excerpt": ".",
+    "image": "team/rohitraj.png",
+    "bio": "Rohit Raj is a seasoned International Logistics Professional with over a decade of experience in freight forwarding, sales, and business development. He specializes in temperature-sensitive cargo, overseas networking, and strategic logistics planning. As the Branch Manager at JDM Group Pvt Ltd, Rohit oversees P&L management, key account handling, and new business development. He is instrumental in streamlining operations and ensuring top-notch service delivery. Holding a Postgraduate Diploma in Sales & Marketing and a Bachelor's in Commerce, Rohit combines academic insight with practical expertise to drive business growth. Based in Pune, he is passionate about traveling, exploring new cultures, and staying connected with global industry trends.",
+    "position": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryevent",
+  "pk": "98cc70b7-e2e2-44c5-bff2-0270f6fef490",
+  "fields": {
+    "title": "GFI Golf Tour 2023",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryevent",
+  "pk": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+  "fields": {
+    "title": "Company Events",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "00d491e7-bd38-4b05-be80-d954397e0908",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/9.jpg",
+    "alt": "Gallery Photo 9",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "0600ecfc-eef3-4651-8b51-413e615817b8",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/1.png",
+    "alt": "Gallery Photo 1",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "2b458f0a-10e7-44ad-aff1-0dff1a540c91",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/4.jpg",
+    "alt": "Gallery Photo 4",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "5affcc46-0d65-41ab-abc0-f490b0ca2b95",
+  "fields": {
+    "event": "98cc70b7-e2e2-44c5-bff2-0270f6fef490",
+    "image": "gallery/GFI Golf Tour 2023.png",
+    "alt": "GFI Golf Tour 2023",
+    "caption": "GFI Golf Tour 2023",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "5b6b16a9-0f60-4fb2-8d66-820b68a99556",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/6.jpg",
+    "alt": "Gallery Photo 6",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "6b65f796-7d80-4d00-b69e-88b60e7b2564",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/5.jpg",
+    "alt": "Gallery Photo 5",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "745f5bc5-5487-47cd-8883-b165af3ffd3f",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/2.JPG",
+    "alt": "Gallery Photo 2",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "90a8db37-b89e-45a1-95e3-af86cb3045f8",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/8.JPG",
+    "alt": "Gallery Photo 8",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.galleryphoto",
+  "pk": "e77273d9-1cd3-47a3-80c4-54e972a910b4",
+  "fields": {
+    "event": "e6d0ffc3-d29b-4da0-8f2c-06186ec9ab59",
+    "image": "gallery/3.jpg",
+    "alt": "Gallery Photo 3",
+    "caption": "",
+    "is_active": true
+  }
+},
+{
+  "model": "core.contactinfo",
+  "pk": "bac9dcf9-daa6-4da5-bd4a-8985928f15cc",
+  "fields": {
+    "title": "Contact Us",
+    "address_title": "Our Head Office",
+    "address": "4, Mahipalpur Extn., New Delhi - 110037, India",
+    "contact_title": "Get in Touch",
+    "phone_label": "Phone",
+    "phone": "+91-11-49536400",
+    "phone_href": "tel:+911149536400",
+    "email_label": "Email",
+    "email": "info@jdmgroups.com",
+    "email_href": "mailto:info@jdmgroups.com",
+    "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8671!2d77.1176!3d28.5511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzA0LjAiTiA3N8KwMDcnMDMuNCJF!5e0!3m2!1sen!2sin!4v1234567890\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>"
+  }
+}
+]
