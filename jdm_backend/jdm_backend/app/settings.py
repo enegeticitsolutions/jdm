@@ -31,7 +31,19 @@ SECRET_KEY = os.environ.get(
 # Set DJANGO_DEBUG=False on the production server.
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['82.112.236.35','localhost', '127.0.0.1', 'api.jdmgroups.com','jdm.datamoshtechnology.com', 'www.jdm.datamoshtechnology.com', 'jdm.datamoshtechnologies.com', 'www.jdm.datamoshtechnologies.com', 'api.datamoshtechnologies.com', 'www.api.datamoshtechnologies.com']
+# Allowed hosts can be customized per-environment using DJANGO_ALLOWED_HOSTS (comma-separated list).
+# In debug mode, we allow localhost/127.0.0.1 as fallbacks.
+raw_allowed_hosts = os.environ.get('DJANGO_ALLOWED_HOSTS', '')
+if raw_allowed_hosts:
+    ALLOWED_HOSTS = [host.strip() for host in raw_allowed_hosts.split(',') if host.strip()]
+else:
+    ALLOWED_HOSTS = [
+        '82.112.236.35', 'localhost', '127.0.0.1', 
+        'api.jdmgroups.com', 'jdm.datamoshtechnology.com', 'www.jdm.datamoshtechnology.com', 
+        'jdm.datamoshtechnologies.com', 'www.jdm.datamoshtechnologies.com', 
+        'api.datamoshtechnologies.com', 'www.api.datamoshtechnologies.com'
+    ]
+
 
 
 # Application definition
@@ -72,33 +84,42 @@ REST_FRAMEWORK = {
     ],
 }
 
-# CORS_ALLOW_ALL_ORIGINS = True #not in production
-CORS_ALLOWED_ORIGINS = (
-    "http://jdm.datamoshtechnology.com",
-    "https://jdm.datamoshtechnology.com",
-    "http://jdm.datamoshtechnologies.com",
-    "https://jdm.datamoshtechnologies.com",
-    "http://api.datamoshtechnologies.com",
-    "https://api.datamoshtechnologies.com",
-  'http://localhost:3000',
-  'http://127.0.0.1:3000',
-  'http://jdmgroups.com:3000',
-  'https://jdmgroups.com:3000',
-  'http://jdmgroups.com',
-  'https://jdmgroups.com',
-  'http://www.jdmgroups.com',
-  'https://www.jdmgroups.com',
-)
+# CORS configuration
+raw_cors_origins = os.environ.get('DJANGO_CORS_ALLOWED_ORIGINS', '')
+if raw_cors_origins:
+    CORS_ALLOWED_ORIGINS = [origin.strip() for origin in raw_cors_origins.split(',') if origin.strip()]
+else:
+    CORS_ALLOWED_ORIGINS = [
+        "http://jdm.datamoshtechnology.com",
+        "https://jdm.datamoshtechnology.com",
+        "http://jdm.datamoshtechnologies.com",
+        "https://jdm.datamoshtechnologies.com",
+        "http://api.datamoshtechnologies.com",
+        "https://api.datamoshtechnologies.com",
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
+        'http://jdmgroups.com:3000',
+        'https://jdmgroups.com:3000',
+        'http://jdmgroups.com',
+        'https://jdmgroups.com',
+        'http://www.jdmgroups.com',
+        'https://www.jdmgroups.com',
+    ]
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'http://jdmgroups.com:3000',
-    'https://jdmgroups.com',
-    'https://www.jdmgroups.com',
-    'http://82.112.236.35',  # Add this!
-    'https://api.jdmgroups.com' # Add this too!
-]
+# CSRF configuration
+raw_csrf_origins = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', '')
+if raw_csrf_origins:
+    CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in raw_csrf_origins.split(',') if origin.strip()]
+else:
+    CSRF_TRUSTED_ORIGINS = [
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
+        'http://jdmgroups.com:3000',
+        'https://jdmgroups.com',
+        'https://www.jdmgroups.com',
+        'http://82.112.236.35',
+        'https://api.jdmgroups.com'
+    ]
 
 # CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = 'Lax'  # or 'None' if cross-site
@@ -130,12 +151,28 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Database configuration
+# Defaults to SQLite, but dynamically switches to PostgreSQL/MySQL if configuration environment variables are set.
+db_engine = os.environ.get('DJANGO_DB_ENGINE', 'sqlite3')
+
+if db_engine != 'sqlite3' or 'DJANGO_DB_NAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': f'django.db.backends.{os.environ.get("DJANGO_DB_ENGINE", "postgresql")}',
+            'NAME': os.environ.get('DJANGO_DB_NAME'),
+            'USER': os.environ.get('DJANGO_DB_USER'),
+            'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD'),
+            'HOST': os.environ.get('DJANGO_DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DJANGO_DB_PORT', '5432'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
