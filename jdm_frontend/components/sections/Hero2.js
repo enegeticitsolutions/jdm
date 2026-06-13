@@ -63,7 +63,6 @@ export default function Hero2({video_url = "/assets/img/hero/intro.mp4"}) {
           loop
           muted
           playsInline
-          style={{ display: isVisible ? 'block' : 'none' }}
         >
           {console.log("video url inside video tag: ", video_url)}
           <source src={video_url} type="video/mp4" />

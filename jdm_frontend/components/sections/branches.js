@@ -58,24 +58,27 @@ const IndianBranches = ({data}) => {
             {data.items.map((branch, index) => (
               <SwiperSlide key={index} className="swiper-slide">
                 <div
-                  className="card border-0 shadow h-100 overflow-hidden position-relative mx-auto"
+                  className="card border-0 shadow overflow-hidden position-relative mx-auto"
                   style={{
+                    height: "350px",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     maxWidth: "400px",
+                    borderRadius: "12px",
                   }}
                 >
                   <div
-                    className="card-img-top position-relative"
+                    className="card-img-top position-absolute top-0 start-0 w-100 h-100"
                     style={{
-                      height: "200px",
                       backgroundImage: `url(${branch.image})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
-                  >
-                    <div className="position-absolute top-0 start-0 w-100 h-100" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)" }} />
-                  </div>
-                  <div className="card-body position-absolute d-flex flex-column justify-content-end text-white pt-5 p-4">
+                  />
+                  <div 
+                    className="position-absolute top-0 start-0 w-100 h-100" 
+                    style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%)" }} 
+                  />
+                  <div className="card-body position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end text-white p-4">
                     <h5 className="card-title m-0 fw-bold fs-4 pb-1">{branch.city}</h5>
                     <p className="card-text">
                       {branch.address}
