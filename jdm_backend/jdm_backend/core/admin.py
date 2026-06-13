@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry
+from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, JDMGroupCompany
 from django.utils.html import format_html
 from django import forms
 from django.core.exceptions import ValidationError
@@ -214,7 +214,7 @@ class FAQInline(admin.TabularInline):
 @admin.register(AboutPageContent)
 class AboutPageContentAdmin(admin.ModelAdmin):
     inlines = [FAQInline, AchievementInline]
-    readonly_fields = ("created_at", "updated_at", "mission_image_preview", "vision_image_preview", "values_image_preview", "founder_image_preview")
+    readonly_fields = ("created_at", "updated_at", "mission_image_preview", "vision_image_preview", "values_image_preview", "founder_image_preview", "key_strengths_image_preview")
 
     fieldsets = (
         (None, {
@@ -236,6 +236,7 @@ class AboutPageContentAdmin(admin.ModelAdmin):
                 'values_points',
                 'key_strengths_heading',
                 'key_strengths_points',
+                ('key_strengths_image', 'key_strengths_image_preview'),
                 'faq_heading',
                 'faq_paragraph',
                 'team_heading',
@@ -275,13 +276,17 @@ class AboutPageContentAdmin(admin.ModelAdmin):
         return "-"
     founder_image_preview.short_description = "Preview"
 
-# Registering the FAQ model separately, though it’s already manageable inline
-@admin.register(FAQ)
-class FAQAdmin(admin.ModelAdmin):
-    # Fields to show in the list view of FAQs in the admin panel
-    list_display = ("title", "description")  
-    # Enables a search box that filters FAQs by title
-    search_fields = ("title",)
+    def key_strengths_image_preview(self, obj):
+        if obj.key_strengths_image:
+            return format_html('<img src="{}" width="150" />', obj.key_strengths_image.url)
+        return "-"
+    key_strengths_image_preview.short_description = "Preview"
+
+# Registering the FAQ model separately is disabled to keep management inline inside the About Page Content.
+# @admin.register(FAQ)
+# class FAQAdmin(admin.ModelAdmin):
+#     list_display = ("title", "description")  
+#     search_fields = ("title",)
 
 # Registering the Job model for the Career page
 @admin.register(Job)
@@ -305,7 +310,10 @@ class ServiceAdmin(admin.ModelAdmin):
     inlines = [BenefitInline]
     list_display = ('title',)
 
-admin.site.register(ValueAddedService)
+@admin.register(ValueAddedService)
+class ValueAddedServiceAdmin(admin.ModelAdmin):
+    list_display = ('title', 'position')
+    list_editable = ('position',)
 
 @admin.register(TeamMember)
 class TeamMemberAdmin(admin.ModelAdmin):
@@ -356,3 +364,9 @@ class ContactQueryAdmin(admin.ModelAdmin):
 
     def has_change_permission(self, request, obj=None):
         return False  # Make entries read-only (optional)
+
+@admin.register(JDMGroupCompany)
+class JDMGroupCompanyAdmin(admin.ModelAdmin):
+    list_display = ('name', 'link', 'position', 'is_active')
+    list_editable = ('link', 'position', 'is_active')
+    search_fields = ('name',)

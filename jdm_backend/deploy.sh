@@ -51,11 +51,14 @@ echo "Applying database migrations..."
 python manage.py migrate --noinput
 
 # 6. Load database fixtures (seed data)
-if [ -f "fixtures_content.json" ]; then
+if [ -f "fixtures_deploy.json" ]; then
+    echo "Loading data from fixtures_deploy.json..."
+    python manage.py loaddata fixtures_deploy.json
+elif [ -f "fixtures_content.json" ]; then
     echo "Loading data from fixtures_content.json..."
     python manage.py loaddata fixtures_content.json
 else
-    echo "WARNING: fixtures_content.json not found. Database seeding skipped."
+    echo "WARNING: No fixture files (fixtures_deploy.json / fixtures_content.json) found. Database seeding skipped."
 fi
 
 # 7. Collect static files for web server (Nginx)

@@ -68,6 +68,7 @@ class NewsSchema(BaseModel):
 
 class ServiceItem(BaseModel):
     id: UUID
+    slug: str
     title: str
     image: Optional[str]
 
@@ -113,6 +114,7 @@ class StorySchema(BaseModel):
 class KeyStrengthsSchema(BaseModel):
     heading: str
     points: List[str]
+    image_url: Optional[str] = None
 
 
 class MissionSchema(BaseModel):
@@ -183,6 +185,7 @@ class ServiceBenefitSchema(BaseModel):
 
 class ServiceSchema(BaseModel):
     id: UUID
+    slug: str
     title: str
     image: str
     description: str
@@ -197,9 +200,11 @@ class ServiceSchema(BaseModel):
 
 class ValueAddedServiceSchema(BaseModel):
     id: UUID
+    slug: str
     title: str
     para1: str
     para2: str
+    content: str
 
     model_config = {"from_attributes": True}
 
@@ -254,5 +259,13 @@ class ContactQuerySchema(BaseModel):
     phone: str = Field(..., min_length=5)
     email: EmailStr
     message: str = Field(..., min_length=5)
+
+    model_config = ConfigDict(from_attributes=True)
+
+class JDMGroupCompanySchema(BaseModel):
+    name: str
+    link: Optional[str] = None
+    position: int
+    is_active: bool
 
     model_config = ConfigDict(from_attributes=True)

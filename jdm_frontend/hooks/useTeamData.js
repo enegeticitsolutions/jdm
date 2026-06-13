@@ -35,10 +35,7 @@ const fetchTeamData = async () => {
 
         return processedData;
     } catch (err) {
-        if (err.name === "AbortError") {
-            throw new Error("Request timed out");
-        }
-        console.warn("API fetch failed for team members, falling back to mock data.", err);
+        console.warn("API fetch failed for team members, falling back to mock data. Error:", err.message);
         return defaultTeamMembers;
     }
 };

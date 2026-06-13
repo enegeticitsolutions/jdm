@@ -19,10 +19,29 @@ const fetchIndustryData = async () => {
     if (data.error) throw new Error(data.error);
     return data;  // Expected to be an array of industry objects
   } catch (err) {
-    if (err.name === 'AbortError') {
-      throw new Error("Request timed out");
-    }
-    throw err;
+    console.warn("API fetch failed for industry, falling back to mock data. Error:", err.message);
+    return [
+      {
+        title: "Automotive Industry",
+        type: "para",
+        content: "JDM Group provides specialized logistics solutions for the automotive industry, handling everything from spare parts to fully assembled vehicles with precision and care.",
+        image: "/assets/img/mission.png",
+        is_image_left: true,
+      },
+      {
+        title: "Pharmaceutical Industry",
+        type: "bullet",
+        list_items: [
+          "Temperature-controlled transportation",
+          "GDP compliant logistics",
+          "Cold chain management",
+          "Regulatory documentation support",
+          "Last-mile delivery solutions"
+        ],
+        image: "/assets/img/contact-img-shape.png",
+        is_image_left: false,
+      }
+    ];
   } finally {
     clearTimeout(timeout);
   }

@@ -27,29 +27,33 @@ export default function GlobalServices({data}) {
           className="services-grid"
           // style={{ display: "grid", gridTemplateColumns: `repeat(${columnsPerRow}, 1fr)`, gap: 0 }}
         >
-          {services.items.map((service, index) => (
-            <Link href={`/service-details/${service.id}`} key={index}>
-              <div className="service-item cursor-pointer">
-                <div
-                  className="service-image"
-                  role="img"
-                  aria-label={service.title}
-                  style={{
-                    backgroundImage: `url(${service.image})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    // height: "270px",
-                  }}
-                />
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <p>{service.title}</p>
-                    <span>more →</span>
+          {services.items.map((service, index) => {
+            const isVas = service.slug?.includes("value-added") || service.title?.toLowerCase().includes("value added");
+            const targetUrl = isVas ? "/value-added-services" : `/service-details/${service.slug || service.id}`;
+            return (
+              <Link href={targetUrl} key={index}>
+                <div className="service-item cursor-pointer">
+                  <div
+                    className="service-image"
+                    role="img"
+                    aria-label={service.title}
+                    style={{
+                      backgroundImage: `url(${service.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      // height: "270px",
+                    }}
+                  />
+                  <div className="overlay">
+                    <div className="overlay-content">
+                      <p>{service.title}</p>
+                      <span>more →</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
 

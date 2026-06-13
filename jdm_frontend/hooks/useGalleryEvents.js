@@ -52,10 +52,30 @@ const fetchGalleryEvents = async () => {
 
     return normalizedData;
   } catch (err) {
-    if (err.name === "AbortError") {
-      throw new Error("Request timed out");
-    }
-    throw err;
+    console.warn("API fetch failed for gallery events, falling back to mock data. Error:", err.message);
+    return [
+      {
+        title: "Company Events",
+        is_active: true,
+        images: [
+          { src: "/assets/img/gallery/1.png", alt: "Gallery Photo 1", caption: "", is_active: true },
+          { src: "/assets/img/gallery/2.JPG", alt: "Gallery Photo 2", caption: "", is_active: true },
+          { src: "/assets/img/gallery/3.jpg", alt: "Gallery Photo 3", caption: "", is_active: true },
+          { src: "/assets/img/gallery/4.jpg", alt: "Gallery Photo 4", caption: "", is_active: true },
+          { src: "/assets/img/gallery/5.jpg", alt: "Gallery Photo 5", caption: "", is_active: true },
+          { src: "/assets/img/gallery/6.jpg", alt: "Gallery Photo 6", caption: "", is_active: true },
+          { src: "/assets/img/gallery/8.JPG", alt: "Gallery Photo 8", caption: "", is_active: true },
+          { src: "/assets/img/gallery/9.jpg", alt: "Gallery Photo 9", caption: "", is_active: true },
+        ]
+      },
+      {
+        title: "GFI Golf Tour 2023",
+        is_active: true,
+        images: [
+          { src: "/assets/img/gallery/GFI Golf Tour 2023.png", alt: "GFI Golf Tour 2023", caption: "GFI Golf Tour 2023", is_active: true }
+        ]
+      }
+    ];
   }
 };
 

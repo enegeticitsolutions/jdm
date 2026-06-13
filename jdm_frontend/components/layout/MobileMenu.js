@@ -3,9 +3,12 @@ import Link from "next/link"
 import { useState } from 'react'
 import { useIndustryVisibility } from "@/hooks/useIndustryVisibility"
 
+import { useServiceData } from "@/hooks/useServiceData"
+
 export default function MobileMenu() {
 	const [isAccordion, setIsAccordion] = useState(1)
 	const { data: industrySpec } = useIndustryVisibility();
+	const { data: servicesData } = useServiceData();
 
 	const handleAccordion = (key) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
@@ -87,16 +90,16 @@ export default function MobileMenu() {
 							</Link>
 							<ul className="submenu" style={{ display: `${isAccordion == 4 ? "block" : "none"}` }}>
 								<li><Link href="/service">All Services</Link></li>
-								<li><a href="/service-details">Air Freight Forwarding</a></li>
-								<li><a href="/service-details">Ocean Freight Forwarding</a></li>
-								<li><a href="/service-details">Rail Freight</a></li>
-								<li><a href="/service-details">Road Transportation</a></li>
-								<li><a href="/service-details">Customs Brokerage</a></li>
-								<li><a href="/service-details">Project Management</a></li>
-								<li><a href="/service-details">Courier Services</a></li>
-								<li><a href="/service-details">Warehouse</a></li>
-								<li><a href="/service-details">Packers & Movers</a></li>
-								<li><a href="/service-details">Other Services</a></li>
+								{servicesData && servicesData.map((service) => {
+									const isVas = service.slug?.includes("value-added") || service.title?.toLowerCase().includes("value added");
+									return (
+										<li key={service.id}>
+											<Link href={isVas ? "/value-added-services" : `/service-details/${service.slug || service.id}`}>
+												{service.title}
+											</Link>
+										</li>
+									);
+								})}
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(4)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>

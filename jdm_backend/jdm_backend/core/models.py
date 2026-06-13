@@ -171,6 +171,7 @@ class AboutPageContent(models.Model):
     values_points = models.JSONField(default=list)
     key_strengths_heading = models.CharField(max_length=255, default="Our Key Strengths")
     key_strengths_points = models.JSONField(default=list)   
+    key_strengths_image = models.ImageField(upload_to="about/keystrengths/", blank=True, null=True)
     # achievements = models.JSONField(default=list)
     achievements_heading = models.CharField(max_length=200, default="Achievements")
     team_heading = models.CharField(max_length=200, default="Our Team")
@@ -272,6 +273,24 @@ class Service(models.Model):
     def __str__(self):
         return self.title
 
+    @property
+    def slug(self):
+        title_slug = self.title.lower().replace(' ', '-')
+        mapping = {
+            "air freight": "air-freight",
+            "ocean freight": "ocean-freight",
+            "rail freight": "train-freight",
+            "road transportation": "road-transportation",
+            "custom brokerage": "custom-clearance",
+            "project cargo": "project-cargo",
+            "warehousing": "warehousing",
+            "courier service": "courier-services",
+            "perishable cargo": "perishable-cargo",
+            "handling of exhibition cargo": "exhibition-cargo",
+        }
+        normalized_title = self.title.lower().strip()
+        return mapping.get(normalized_title, title_slug)
+
 class ServiceBenefit(models.Model):
     service = models.ForeignKey(Service, related_name='benefits', on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
@@ -285,9 +304,37 @@ class ValueAddedService(models.Model):
     title = models.CharField(max_length=255)
     para1 = models.TextField()
     para2 = models.TextField()
+    position = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ["position"]
 
     def __str__(self):
         return self.title
+
+    @property
+    def slug(self):
+        title_slug = self.title.lower().replace(' ', '-')
+        mapping = {
+            "consultancy": "consultancy",
+            "svb": "svb",
+            "sez/stpi": "sez/stpi",
+            "dgft": "dgft",
+            "aa": "advance-authorization",
+            "edd": "edd",
+            "aeo": "aeo",
+            "drawback": "drawback",
+            "insurance": "insurance",
+            "packers & movers": "packers-movers",
+        }
+        normalized_title = self.title.lower().strip()
+        return mapping.get(normalized_title, title_slug)
+
+    @property
+    def content(self):
+        if self.para2:
+            return f"{self.para1}\n\n{self.para2}"
+        return self.para1
     
 # CLIENT PAGE MODELS
 class Sector(models.Model):
@@ -392,3 +439,16 @@ class ContactQuery(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.email}"
+
+class JDMGroupCompany(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    name = models.CharField(max_length=255)
+    link = models.URLField(blank=True, null=True)
+    position = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['position']
+
+    def __str__(self):
+        return self.name

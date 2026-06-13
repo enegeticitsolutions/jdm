@@ -57,6 +57,14 @@ services_data = [
     ],
   },
   {
+    "id": "value-added-services",
+    "title": "Value Added Services",
+    "image": "assets/img/service/Warehouse.jpg",
+    "description": "Explore JDM Logistics' additional value added services including SVB, drawback, insurance and consulting.",
+    "icon": "fa-regular fa-hand-holding-heart",
+    "description1": "Explore JDM Logistics' additional services including SVB, drawback, cargo insurance, and online filing.",
+  },
+  {
     "id": "project-cargo",
     "title": "Project Cargo",
     "image": "assets/img/service/Project_Cargo.jpg",

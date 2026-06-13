@@ -9,7 +9,7 @@ from core.models import (
     GalleryEvent, GalleryPhoto, TeamMember, Location,
     ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem,
     Achievement, AboutPageContent, FAQ, IndustrySpecification, Industry,
-    ContactInfo, ValueAddedService, News
+    ContactInfo, ValueAddedService, News, JDMGroupCompany
 )
 from datetime import date
 
@@ -349,6 +349,7 @@ def seed_about():
         "Advanced technology-driven solutions",
         "Dedicated and experienced team"
     ]
+    about.key_strengths_image = "about/keystrength/key_strenghts.png"
     about.faq_heading = "Frequently Asked Questions"
     about.faq_paragraph = "Find answers to commonly asked questions about our logistics services."
     about.save()
@@ -473,6 +474,25 @@ def seed_industry_spec():
         print("Industry specification updated (is_industry=True).")
 
 
+def seed_group_companies():
+    """Create default JDM Group Companies."""
+    if JDMGroupCompany.objects.exists():
+        print("JDM Group Companies already exist, skipping.")
+        return
+
+    companies = [
+        {"name": "JDM Worldwide Freight Solutions Pvt. Ltd.", "link": "", "position": 0},
+        {"name": "JDM Cargo Planners Pvt. Ltd.", "link": "", "position": 1},
+        {"name": "JDM Express Pvt. Ltd.", "link": "", "position": 2},
+        {"name": "Arrow Transport Service", "link": "", "position": 3},
+        {"name": "AS Transport Service", "link": "", "position": 4},
+    ]
+
+    for c in companies:
+        JDMGroupCompany.objects.create(**c, is_active=True)
+    print(f"Created {len(companies)} JDM Group Companies.")
+
+
 if __name__ == '__main__':
     print("=== Starting full database seed ===\n")
     seed_services()
@@ -484,4 +504,5 @@ if __name__ == '__main__':
     seed_vas()
     seed_contact()
     seed_industry_spec()
+    seed_group_companies()
     print("\n=== Full database seed complete ===")

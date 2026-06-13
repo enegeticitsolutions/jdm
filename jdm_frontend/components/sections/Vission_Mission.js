@@ -22,15 +22,15 @@ const Section = memo(({ title, content, listItems, image }) => {
     };
   } else if (isValues) {
     cardStyle = {
-      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('/assets/img/about/our-values-bg.png')`,
+      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('${image || "/assets/img/about/our-values-bg.png"}')`,
     };
   } else if (isMission) {
     cardStyle = {
-      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('/assets/img/about/our-mission-bg.png')`,
+      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('${image || "/assets/img/about/our-mission-bg.png"}')`,
     };
   } else if (isStrengths) {
     cardStyle = {
-      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('/assets/img/about/our-strengths-bg.png')`,
+      backgroundImage: `linear-gradient(to right, rgba(3, 15, 24, 0.95) 0%, rgba(3, 15, 24, 0.7) 45%, rgba(3, 15, 24, 0.0) 75%), url('${image || "/assets/img/about/our-strengths-bg.png"}')`,
     };
   } else {
     let background = "linear-gradient(135deg, #071f30 0%, #030f18 100%)";

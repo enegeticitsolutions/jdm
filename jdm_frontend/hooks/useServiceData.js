@@ -48,10 +48,17 @@ const fetchServiceData = async () => {
 
     return processedData;
   } catch (err) {
-    if (err.name === "AbortError") {
-      throw new Error("Request timed out");
-    }
-    throw err;
+    console.warn("API fetch failed for Services, falling back to mock data. Error:", err.message);
+    const { homeServices } = require("../util/homeService");
+    return homeServices.map((service) => ({
+      ...service,
+      id: service.link.split("/").pop(),
+      image: service.image?.startsWith("http")
+        ? service.image
+        : service.image?.startsWith("/")
+          ? service.image
+          : `/${service.image}`,
+    }));
   }
 };
 

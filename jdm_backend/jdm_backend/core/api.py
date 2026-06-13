@@ -4,8 +4,8 @@ from ninja import NinjaAPI, Form, File
 from ninja.files import UploadedFile
 from typing import Optional
 from ninja.errors import HttpError
-from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry
-from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema
+from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, JDMGroupCompany
+from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, JDMGroupCompanySchema
 import json
 from django.shortcuts import get_object_or_404
 # import form_
@@ -27,8 +27,8 @@ def build_file_url(request, file_field):
         # Extract everything from 'assets/' onward, ensuring no leading slashes
         clean_path = url[url.find('assets/'):].lstrip('/')
         
-        # Use localhost:3000 for frontend assets
-        return f"http://localhost:3000/{clean_path}"
+        # Return root-relative URL so frontend resolves it to its own host
+        return f"/{clean_path}"
         
     return request.build_absolute_uri(url)
 
@@ -56,6 +56,7 @@ def get_home(request):
     services_items = [
         {
             "id": service.id,
+            "slug": service.slug,
             "title": service.title,
             "image": build_file_url(request, service.image),
         }
@@ -236,6 +237,7 @@ def get_about(request):
         "key_strengths": {
             "heading": about.key_strengths_heading,
             "points": about.key_strengths_points,
+            "image_url": about.key_strengths_image.url if about.key_strengths_image else None,
         },
         "team_heading": about.team_heading,
         "is_active": about.is_active,
@@ -338,6 +340,7 @@ def get_services(request):
     return [
         {
             "id": s.id,
+            "slug": s.slug,
             "title": s.title,
             "image": build_file_url(request, s.image),
             "description": s.description,
@@ -359,13 +362,28 @@ def get_service_by_id(request, service_id: str):
         service = get_object_or_404(Service, id=service_id)
     except ValueError:
         # Not a UUID, so treat it as a slug (e.g. "air-freight" -> "air freight")
-        title_search = service_id.replace('-', ' ')
+        slug_mapping = {
+            "air-freight": "Air Freight",
+            "ocean-freight": "Ocean Freight",
+            "train-freight": "Rail Freight",
+            "road-transportation": "Road Transportation",
+            "custom-clearance": "Custom Brokerage",
+            "project-cargo": "Project Cargo",
+            "warehousing": "Warehousing",
+            "courier-services": "Courier Service",
+            "perishable-cargo": "Perishable Cargo",
+            "exhibition-cargo": "Handling of Exhibition Cargo",
+        }
+        title_search = slug_mapping.get(service_id.lower().strip())
+        if not title_search:
+            title_search = service_id.replace('-', ' ')
         service = Service.objects.filter(title__iexact=title_search).first()
         if not service:
             raise HttpError(404, "Service not found")
 
     return {
         "id": service.id,
+        "slug": service.slug,
         "title": service.title,
         "image": build_file_url(request, service.image),
         "description": service.description,
@@ -474,3 +492,7 @@ def get_industry(request):
     ]
 
     return result
+
+@api.get("/group-companies/", response=list[JDMGroupCompanySchema])
+def get_group_companies(request):
+    return list(JDMGroupCompany.objects.filter(is_active=True))

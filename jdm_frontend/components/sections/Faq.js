@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useAboutData } from "@/hooks/useAboutData";
 
 // Default FAQ data as fallback
 const defaultFaqItems = [
@@ -104,37 +105,26 @@ const defaultFaqItems = [
 ];
 
 
-export default function Faq() {
+export default function Faq({ data }) {
   const [isAccordion, setIsAccordion] = useState(1);
-  const [faqItems, setFaqItems] = useState(defaultFaqItems); // Initialize with default FAQ items
+  const [faqItems, setFaqItems] = useState([]);
 
-  // Fetch FAQ data from API on mount
-  // useEffect(() => {
-  //   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  // Fetch FAQ data from API if not passed via props
+  const { data: aboutData } = useAboutData();
+  const sourceData = data || aboutData?.faqData;
 
-  //   // const fetchFaqData = async () => {
-  //   //   try {
-  //   //     const response = await fetch(`${apiUrl}/home/api/faq/`); // Hypothetical endpoint
-  //   //     const data = await response.json();
-  //   //     // Assuming the API returns an array of objects with id, question, and answer
-  //   //     if (data && Array.isArray(data) && data.length > 0) {
-  //   //       const fetchedFaqItems = data.map((item, index) => ({
-  //   //         id: item.id || index + 1, // Use API ID or fallback to index
-  //   //         question: item.question || "Unnamed Question",
-  //   //         answer: item.answer || item.content || "No answer provided.",
-  //   //         delay: defaultFaqItems[index % defaultFaqItems.length].delay, // Reuse delays
-  //   //       }));
-  //   //       setFaqItems(fetchedFaqItems);
-  //   //     }
-  //   //   } catch (error) {
-  //   //     console.error("Error fetching FAQ data:", error);
-  //   //     // Fallback to defaultFaqItems (already set)
-  //   //   }
-  //   // };
-
-  //   fetchFaqData();
-  // }, []);
-  // Runs once on mount
+  useEffect(() => {
+    const rawItems = sourceData?.items || defaultFaqItems;
+    if (rawItems && rawItems.length > 0) {
+      const mappedItems = rawItems.map((item, index) => ({
+        id: item.id || index + 1,
+        question: item.title || item.question,
+        answer: item.description || item.answer,
+        delay: item.delay || `${((index % 10) + 1) * 0.1}s`,
+      }));
+      setFaqItems(mappedItems);
+    }
+  }, [sourceData]);
 
   const handleAccordion = (key) => {
     setIsAccordion((prevState) => (prevState === key ? null : key));

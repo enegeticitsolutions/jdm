@@ -21,19 +21,14 @@ export default function Menu() {
       title: "Services",
       href: "/service",
       submenu: servicesData
-        ? (() => {
-          const arr = servicesData.map((service) => ({
-            title: service.title,
-            href: `/service-details/${service.slug || service.id}`,
-          }));
-          arr.splice(5, 0, {
-            title: "Value Added Services",
-            href: "/value-added-services",
-          });
-          return arr;
-        })()
+        ? servicesData.map((service) => {
+            const isVas = service.slug?.includes("value-added") || service.title?.toLowerCase().includes("value added");
+            return {
+              title: service.title,
+              href: isVas ? "/value-added-services" : `/service-details/${service.slug || service.id}`,
+            };
+          })
         : null,
-
     },
     { title: "Gallery", href: "/gallery", submenu: null },
     ...(industrySpec?.is_industry

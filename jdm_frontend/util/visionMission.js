@@ -1,32 +1,33 @@
 export const defaultVMData = {
   mission: {
-    heading: "Mission",
+    heading: "Our Mission",
     paragraph:
-      "To provide operational excellence, competitive costs, and transparency to our customers for sourcing and distributing in the integrated supply chain environment, globally.",
-    image_url: "/assets/img/mission.png",
+      "To provide world-class logistics solutions that exceed customer expectations through innovation, reliability, and integrity.",
+    image_url: null,
   },
   vision: {
-    heading: "Vision",
+    heading: "Our Vision",
     paragraph:
-      "We are determined to be among the market leaders offering reliable services, meeting customer expectations through well-trained staff, and striving for continuous growth in the logistics industry.",
+      "To be the most trusted and preferred logistics partner globally, known for excellence in service delivery and customer satisfaction.",
     image_url: "/assets/img/vision.png",
   },
   values: {
-    heading: "Values",
+    heading: "Our Values",
     points: [
-      "Integrity",
-      "Reliability",
-      "Commitment",
-      "Accountability",
-      "Customer Centric",
+      "Customer First - We prioritize our customers in everything we do",
+      "Integrity - We conduct business with honesty and transparency",
+      "Innovation - We continuously improve our services and processes",
+      "Excellence - We strive for the highest standards in all operations",
+      "Teamwork - We believe in the power of collaboration"
     ],
-    image_url: "/assets/img/values.png",
+    image_url: null,
   },
   strengths: [
-    "Strong Worldwide Agency Network",
-    "Recognized 24*7 Customs Brokerage",
-    "10+ offices at prominent locations in India",
-    "Dedicated customer support for personalized services",
-    "Comprehensive compliance and regulatory expertise to ensure smooth logistics solutions",
+    "30+ years of industry experience",
+    "Pan-India presence with 11+ offices",
+    "Global network spanning 150+ countries",
+    "500+ satisfied clients",
+    "Advanced technology-driven solutions",
+    "Dedicated and experienced team"
   ],
 };

@@ -1,15 +1,10 @@
 'use client'
 import React from 'react';
 
+import { useGroupCompanies } from "@/hooks/useGroupCompanies";
+
 const GroupofCompanies = () => {
-  // List of companies extracted from the image
-  const companies = [
-    'JDM Worldwide Freight Solutions Pvt. Ltd.',
-    'JDM Cargo Planners Pvt. Ltd.',
-    'AS Transport Service',
-    'JDM Express Pvt. Ltd.',
-    'Arrow Transport Service',
-  ];
+  const { data: companies = [] } = useGroupCompanies();
 
   return (
   <>
@@ -31,7 +26,15 @@ const GroupofCompanies = () => {
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg list-items">
           {companies.map((company, index) => (
             <li key={index} className="text-black">
-               <i className="fa-solid fa-circle-check" /> {company}
+              {company.link ? (
+                <a href={company.link} target="_blank" rel="noopener noreferrer" className="hover:underline text-black">
+                  <i className="fa-solid fa-circle-check" /> {company.name}
+                </a>
+              ) : (
+                <>
+                  <i className="fa-solid fa-circle-check" /> {company.name}
+                </>
+              )}
             </li>
           ))}
         </ul>

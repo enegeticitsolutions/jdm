@@ -1,8 +1,11 @@
+"use client";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useGroupCompanies } from "@/hooks/useGroupCompanies";
 
 export default function Footer2() {
+  const { data: companies = [] } = useGroupCompanies();
   return (
     <>
       {/* ======== Inline Styling & Hover Disable for JDM Section ========= */}
@@ -151,36 +154,21 @@ export default function Footer2() {
                     <h5>JDM Group</h5>
                   </div>
                   <ul className="list-area">
-                    <li>
-                      <Link href="#" onClick={(e) => e.preventDefault()}>
-                        <i className="fa-solid fa-chevrons-right" />
-                        JDM Worldwide Freight Solutions Pvt. Ltd.
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" onClick={(e) => e.preventDefault()}>
-                        <i className="fa-solid fa-chevrons-right" />
-                        JDM Cargo Planners Pvt. Ltd.
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" onClick={(e) => e.preventDefault()}>
-                        <i className="fa-solid fa-chevrons-right" />
-                        JDM Express Pvt. Ltd.
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" onClick={(e) => e.preventDefault()}>
-                        <i className="fa-solid fa-chevrons-right" />
-                        Arrow Transport Service
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" onClick={(e) => e.preventDefault()}>
-                        <i className="fa-solid fa-chevrons-right" />
-                        AS Transport Service
-                      </Link>
-                    </li>
+                    {companies.map((company, idx) => (
+                      <li key={idx}>
+                        {company.link ? (
+                          <Link href={company.link} target="_blank" rel="noopener noreferrer">
+                            <i className="fa-solid fa-chevrons-right" />
+                            {company.name}
+                          </Link>
+                        ) : (
+                          <Link href="#" onClick={(e) => e.preventDefault()}>
+                            <i className="fa-solid fa-chevrons-right" />
+                            {company.name}
+                          </Link>
+                        )}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

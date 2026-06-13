@@ -59,39 +59,43 @@ export default function Service1() {
         <div className="container-fluid">
           <div className="swiper service-slider">
             <Swiper {...swiperOptions} className="swiper-wrapper">
-              {data.map((service, index) => (
-                <SwiperSlide key={service.id} className="swiper-slide">
-                  <Link
-                    href={`/service-details/${service.id}`}
-                    className="service-box-items"
-                  >
-                    <div className="service-thumb">
-                      <img src={service.image} alt={service.title} />
-                      {/* <div className="icon">
-                        <i className={service.icon} />
-                      </div> */}
-                    </div>
-                    <div className="service-content text-center">
-                      {/* <h2 className="number">{String(index + 1).padStart(2, "0")}</h2> */}
-                      <h3>
-                        <Link href={`/service-details/${service.id}`}>
-                          {service.title}
-                        </Link>
-                      </h3>
-                      {/* <p>{service.description}</p> */}
-                      {/* <Link href={`/service-details/${service.id}`} className="link-btn">
-                        Explore More <i className="fa-solid fa-arrow-right" />
-                      </Link> */}
-                      <button
-                        href={`/service-details/${service.id}`}
-                        className="theme-btn bg-white team-btn text-capitalize"
-                      >
-                        Read More <i className="fa-regular fa-arrow-right" />
-                      </button>
-                    </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
+              {data.map((service, index) => {
+                const isVas = service.slug?.includes("value-added") || service.title?.toLowerCase().includes("value added");
+                const targetUrl = isVas ? "/value-added-services" : `/service-details/${service.slug || service.id}`;
+                return (
+                  <SwiperSlide key={service.id} className="swiper-slide">
+                    <Link
+                      href={targetUrl}
+                      className="service-box-items"
+                    >
+                      <div className="service-thumb">
+                        <img src={service.image} alt={service.title} />
+                        {/* <div className="icon">
+                          <i className={service.icon} />
+                        </div> */}
+                      </div>
+                      <div className="service-content text-center">
+                        {/* <h2 className="number">{String(index + 1).padStart(2, "0")}</h2> */}
+                        <h3>
+                          <Link href={targetUrl}>
+                            {service.title}
+                          </Link>
+                        </h3>
+                        {/* <p>{service.description}</p> */}
+                        {/* <Link href={targetUrl} className="link-btn">
+                          Explore More <i className="fa-solid fa-arrow-right" />
+                        </Link> */}
+                        <button
+                          href={targetUrl}
+                          className="theme-btn bg-white team-btn text-capitalize"
+                        >
+                          Read More <i className="fa-regular fa-arrow-right" />
+                        </button>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
             {/* Navigation Buttons */}
             <div className="array-button d-flex justify-content-center mt-4">

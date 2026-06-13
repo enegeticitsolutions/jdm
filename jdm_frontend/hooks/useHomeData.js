@@ -13,21 +13,38 @@ const fetchHomeData = async () => {
       signal: controller.signal,
     });
 
-    console.log("abcd: ", res);
-
     clearTimeout(timeout);
 
     if (!res.ok) throw new Error("Failed to fetch home data");
     const data = await res.json();
-    console.log("data from home api: ", data);
-    console.log("data123: ", data.error);
     if (data.error) throw new Error(data.error);
     return data;
   } catch (err) {
-    if (err.name === 'AbortError') {
-      throw new Error("Request timed out");
-    }
-    throw err;
+    console.warn("API fetch failed for Home, falling back to mock data. Error:", err.message);
+    return {
+      is_active: true,
+      is_hero: true,
+      is_services: true,
+      is_journey: true,
+      is_clientele: true,
+      is_associations: true,
+      is_affiliations: true,
+      is_sea_partners: true,
+      is_air_partners: true,
+      is_locations: true,
+      is_achievements: true,
+      is_news: true,
+      hero: { video_url: null, image_url: null },
+      services: { heading: "Our Services", items: [] },
+      journey: { heading: "Our Journey", video_url: null },
+      clientele: { items: [] },
+      associations: { items: [] },
+      affiliations: { items: [] },
+      sea_partners: { items: [] },
+      air_partners: { items: [] },
+      locations: { heading: "Our Locations", items: [] },
+      achievements: { heading: "Achievements", items: [] },
+    };
   }
 };
 

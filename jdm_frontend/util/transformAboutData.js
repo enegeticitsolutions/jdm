@@ -81,7 +81,7 @@ export const transformAboutData = (data) => {
             data.key_strengths?.points?.length > 0
               ? data.key_strengths.points
               : defaultVMData.strengths,
-          image_url: `${BASE}/media/about/keystrength/key_strenghts.png`,
+          image_url: transformImage(data.key_strengths?.image_url) || `${BASE}/media/about/keystrength/key_strenghts.png`,
         }
         : null,
     },
@@ -101,7 +101,7 @@ export const transformAboutData = (data) => {
                 ];
                 return {
                   ...item,
-                  icon: index < 3 ? customApiIcons[index] : (item.icon ? transformImage(item.icon) : null),
+                  icon: transformImage(item.icon) || (index < 3 ? customApiIcons[index] : null),
                 };
               }),
               ...defaultAchievements.items,
