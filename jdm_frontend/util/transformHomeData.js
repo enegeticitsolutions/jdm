@@ -12,6 +12,9 @@ export const transformHomeData = (data) => {
   const formatUrl = (path, base) => {
     if (!path) return path;
     let cleanPath = path;
+    if (cleanPath.includes("assets/")) {
+      return cleanPath.startsWith("/") ? cleanPath : `/${cleanPath}`;
+    }
     if (base && cleanPath.startsWith(base)) {
       cleanPath = cleanPath.replace(base, "");
     } else if (cleanPath.startsWith("http")) {

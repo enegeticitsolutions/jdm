@@ -9,7 +9,11 @@ export const transformAboutData = (data) => {
 
   const transformImage = (url) => {
     console.log("transformImage called with:", url);
-    return url ? `${BASE}${url}` : null;
+    if (!url) return null;
+    if (url.startsWith("http") || url.includes("assets/")) {
+      return url.startsWith("/") || url.startsWith("http") ? url : `/${url}`;
+    }
+    return `${BASE}${url}`;
   };
 
   return {

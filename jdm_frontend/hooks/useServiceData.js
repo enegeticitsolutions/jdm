@@ -28,7 +28,9 @@ const fetchServiceData = async () => {
         ...service,
         image: service.image?.startsWith("http")
           ? service.image
-          : `${baseUrl}${service.image}`,
+          : service.image?.includes("assets/")
+            ? (service.image.startsWith("/") ? service.image : `/${service.image}`)
+            : `${baseUrl}${service.image}`,
       }));
     } else {
       // Fallback if empty database
