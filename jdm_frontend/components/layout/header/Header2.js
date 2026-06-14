@@ -58,7 +58,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 
 									<div className="header-button">
 										<Link href="contact" className="theme-btn">
-											GAT A QUOTE <i className="fa-regular fa-arrow-right" />
+											GET A QUOTE <i className="fa-regular fa-arrow-right" />
 										</Link>
 									</div>
 

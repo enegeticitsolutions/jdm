@@ -24,7 +24,7 @@ Version: 1.0.0
   /* --gray: #ebc283; */
 }
 section{
-  background-color: var(--bs-gray-200);
+  background-color: #F2F5FA;
 }
 .swiper-wrapper{
   align-items: center;
@@ -167,7 +167,7 @@ body {
   font-weight: 500;
   line-height: 28px;
   color: var(--text);
-  background-color: var(--bs-gray-200);
+  background-color: #F2F5FA;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -1206,7 +1206,7 @@ span {
 /* styles/Careers.module.css */
 /* styles/global.css */
 .hero#career {
-  background: var(--bs-gray-200);
+  background: #F2F5FA;
   color: var(--theme);
   padding: 60px 20px;
   text-align: center;
@@ -3263,7 +3263,7 @@ span {
   width: 100%;
   z-index: 100;
   transition: all 0.9s;
-  background-color: var(--bs-gray-200);
+  background-color: #ffffff;
   box-shadow: var(--box-shadow);
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
@@ -4212,11 +4212,11 @@ span {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
   .video-container.fixed {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
   }
 }
@@ -6598,7 +6598,8 @@ input.main-search-input::placeholder {
 .service-details-wrapper .service-details-image img {
   width: 100%;
   height: 100%;
-  max-height: fit-content;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .service-details-wrapper .service-details-content h2 {
   margin-bottom: 20px;

@@ -16,8 +16,8 @@ const IndianBranches = ({data}) => {
     loop: true,
     autoplay: { delay: 3000 },
     breakpoints: {
-      1350: { slidesPerView: 4 },
-      991: { slidesPerView: 4 },
+      1350: { slidesPerView: 3 },
+      991: { slidesPerView: 3 },
       767: { slidesPerView: 2 },
       575: { slidesPerView: 1 },
       0: { slidesPerView: 1 },
@@ -42,7 +42,7 @@ const IndianBranches = ({data}) => {
         />
       </Head>
 
-      <section className="py-5 branch-section">
+      <section className="py-5 branch-section position-relative">
         <div className="container">
           <div className="section-title text-center">
             <h2 
@@ -60,9 +60,9 @@ const IndianBranches = ({data}) => {
                 <div
                   className="card border-0 shadow overflow-hidden position-relative mx-auto"
                   style={{
-                    height: "350px",
+                    height: "260px",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                    maxWidth: "400px",
+                    maxWidth: "480px",
                     borderRadius: "12px",
                   }}
                 >
@@ -76,62 +76,98 @@ const IndianBranches = ({data}) => {
                   />
                   <div 
                     className="position-absolute top-0 start-0 w-100 h-100" 
-                    style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%)" }} 
+                    style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.85) 90%)" }} 
                   />
-                  <div className="card-body position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end text-white p-4">
+                  <div className="card-body position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end text-white pt-4 px-4 pb-2">
                     <h5 className="card-title m-0 fw-bold fs-4 pb-1">{branch.city}</h5>
-                    <p className="card-text">
+                    <p className="card-text mb-0">
                       {branch.address}
                       <br />
                       {branch.phone.map((phone, i) => (
-                        <span key={i} className="d-block">
-                          📞 {phone}
+                        <span key={i} className="d-block mt-1">
+                          <i className="fas fa-phone me-2" style={{ color: "#df1119" }} />{phone}
                         </span>
                       ))}
-                      <span className="d-block">✉️ {branch.email}</span>
+                      <span className="d-block mt-1">
+                        <i className="fas fa-envelope me-2" style={{ color: "#ffffff" }} />{branch.email}
+                      </span>
                     </p>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-
-          <div className="array-button d-flex justify-content-center mt-4">
-            <button className="array-prev h1p me-3">
-              <i className="fa-regular fa-arrow-left-long" />
-            </button>
-            <button className="array-next h1n">
-              <i className="fa-regular fa-arrow-right-long" />
-            </button>
-          </div>
         </div>
+
+        {/* Navigation Buttons on the absolute sides of the section */}
+        <button className="array-prev custom-nav-btn prev-btn">
+          <i className="fas fa-chevron-left" />
+        </button>
+        <button className="array-next custom-nav-btn next-btn">
+          <i className="fas fa-chevron-right" />
+        </button>
       </section>
 
       <style jsx>{`
         .branch-section {
           background-color: #b5271f;   /* updated background color */
         }
+        .card {
+          height: 260px;
+          width: 100%;
+        }
         .card:hover{
           cursor: grab;
+        }
+        .card-img-top {
+          transition: transform 0.3s ease;
         }
         .card:hover .card-img-top{
           transform: scale(1.05);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .swiper-container {
-          padding-bottom: 40px;
-        }
-        .branch-place {
-          padding: 0px 8px 0px;
-          font-size: 12px;
-         text-align: right;
-         width: fit-content;
-         align-self: flex-end;
+          padding-bottom: 20px;
         }
         .card-text{
-          font-size: 12px;
+          font-size: 13px;
           line-height: 1.5;
+        }
+        .custom-nav-btn {
+          position: absolute;
+          top: 55%;
+          transform: translateY(-50%);
+          width: 45px;
+          height: 80px;
+          background-color: rgba(28, 37, 56, 0.85); /* Dark blue/gray matching header */
+          color: #ffffff;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          font-size: 20px;
+        }
+        .custom-nav-btn:hover {
+          background-color: rgba(28, 37, 56, 1);
+          color: var(--theme2); /* Yellow highlight on hover */
+          cursor: pointer;
+        }
+        .prev-btn {
+          left: 0;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+        .next-btn {
+          right: 0;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        @media (max-width: 767px) {
+          .custom-nav-btn {
+            display: none;
+          }
         }
       `}</style>
     </>
