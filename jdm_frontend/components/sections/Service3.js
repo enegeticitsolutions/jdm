@@ -41,6 +41,7 @@ export default function GlobalServices({data}) {
                       backgroundImage: `url(${service.image})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
+                      // height: "270px",
                     }}
                   />
                   <div className="overlay">
@@ -71,8 +72,7 @@ export default function GlobalServices({data}) {
         .service-item {
           position: relative;
           overflow: hidden;
-          width: 100%;
-          aspect-ratio: 16 / 10;
+          height: 270px;
         }
         .services-grid {
           display: grid;
@@ -86,10 +86,19 @@ export default function GlobalServices({data}) {
         }
         .service-image {
           width: 100%;
-          height: 100%;
+          height: 270px;
           transition: transform 0.3s ease;
-          transform: scale(1.0);
+          transform: scale(1.1);
         }
+        @media (max-width: 768px) {
+          .service-image {
+            height: 140px;
+          }
+          .service-item {
+            height: 140px;
+          }
+        }
+
 
         .overlay {
           position: absolute;
@@ -104,36 +113,25 @@ export default function GlobalServices({data}) {
           opacity: 0;
           transform: translateY(100%);
           transition: transform 0.3s ease, opacity 0.3s ease;
-          z-index: 2;
         }
 
         .overlay-content {
           text-align: center;
-          padding: 10px;
         }
 
         .overlay-content p {
           margin: 0;
           color: white;
           text-transform: uppercase;
-          font-size: 24px;
+          font-size: 28px;
           font-weight: 600;
         }
 
         .overlay-content span {
           display: block;
           color: white;
-          font-size: 18px;
+          font-size: 24px;
           margin-top: 5px;
-        }
-
-        @media (max-width: 1200px) {
-          .overlay-content p {
-            font-size: 16px;
-          }
-          .overlay-content span {
-            font-size: 12px;
-          }
         }
 
         .overlay-content p:hover,
@@ -147,7 +145,7 @@ export default function GlobalServices({data}) {
         }
 
         .service-item:hover .service-image {
-          transform: scale(1.08);
+          transform: scale(1.1);
         }
       `}</style>
     </section>
