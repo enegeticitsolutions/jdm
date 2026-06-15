@@ -16,9 +16,15 @@ class SubCountrySchema(BaseModel):
 
 class CountrySchema(BaseModel):
     name: str
+    logos: Optional[List[LogoSchema]] = None
     subcountries: Optional[List[SubCountrySchema]] = None
 
 
 class SectorSchema(BaseModel):
     name: str
     logos: List[LogoSchema]
+
+
+class ClienteleResponseSchema(BaseModel):
+    sectors: List[SectorSchema]
+    countries: List[CountrySchema]

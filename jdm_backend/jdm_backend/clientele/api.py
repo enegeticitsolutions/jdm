@@ -1,18 +1,17 @@
 from ninja import NinjaAPI
 from .models import Sector, Country
-from .schemas import SectorSchema, CountrySchema
+from .schemas import SectorSchema, CountrySchema, ClienteleResponseSchema
 # from .
 from django.conf import settings
 
 api = NinjaAPI(csrf=False, urls_namespace="clientele-api")
 
 
-
-def get_logo_data(logos):
+def get_logo_data(request, logos):
     return [
         {
             "id": logo.id,
-            "src": settings.MEDIA_URL + str(logo.image),
+            "src": request.build_absolute_uri(settings.MEDIA_URL + str(logo.image)) if logo.image else "",
             "alt": logo.alt_text or f"Logo {logo.id}"
         }
         for logo in logos
@@ -25,7 +24,7 @@ def get_sectors(request):
     return [
         {
             "name": sector.name,
-            "logos": get_logo_data(sector.logos.all())
+            "logos": get_logo_data(request, sector.logos.all())
         }
         for sector in sectors
     ]
@@ -40,12 +39,30 @@ def get_countries(request):
         for sub in country.subcountries.all():
             sub_data.append({
                 "name": sub.name,
-                "logos": get_logo_data(sub.logos.all())
+                "logos": get_logo_data(request, sub.logos.all())
             })
 
-        result.append({
-            "name": country.name,
-            "subcountries": sub_data if sub_data else None
-        })
+        # If a country has only one subcountry and its name is the same as the country's name (like India),
+        # we elevate the logos to the country level and set subcountries to None.
+        if len(sub_data) == 1 and sub_data[0]["name"] == country.name:
+            result.append({
+                "name": country.name,
+                "logos": sub_data[0]["logos"],
+                "subcountries": None
+            })
+        else:
+            result.append({
+                "name": country.name,
+                "logos": None,
+                "subcountries": sub_data if sub_data else None
+            })
 
     return result
+
+
+@api.get("/", response=ClienteleResponseSchema)
+def get_clientele_all(request):
+    return {
+        "sectors": get_sectors(request),
+        "countries": get_countries(request)
+    }

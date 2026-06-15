@@ -119,25 +119,24 @@ const Clientele = () => {
 
     fetchStaticData();
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    if (apiUrl) {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(`${apiUrl}/clientele/api/`);
-          const data = await response.json();
-          if (data && data.sectors && Array.isArray(data.sectors) && data.sectors.length > 0) {
-            setSectorLogos(data.sectors);
-          }
-          if (data && data.countries && Array.isArray(data.countries) && data.countries.length > 0) {
-            setCountryLogos(data.countries);
-          }
-        } catch (error) {
-          console.error("Error fetching clientele data:", error);
+    const apiUrlV1 = process.env.NEXT_PUBLIC_API_URL_V1 || "http://localhost:8000/api/v1";
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${apiUrlV1}/clientele/`);
+        const data = await response.json();
+        if (data && data.sectors && Array.isArray(data.sectors) && data.sectors.length > 0) {
+          setSectorLogos(data.sectors);
         }
-      };
-      fetchData();
-    }
+        if (data && data.countries && Array.isArray(data.countries) && data.countries.length > 0) {
+          setCountryLogos(data.countries);
+        }
+      } catch (error) {
+        console.error("Error fetching clientele data:", error);
+      }
+    };
+    fetchData();
   }, []);
+
 
   const handleTabChange = (tab) => {
     setIsLoading(true);

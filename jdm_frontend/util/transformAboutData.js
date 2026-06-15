@@ -96,8 +96,7 @@ export const transformAboutData = (data) => {
         heading: data.achievements?.heading || defaultAchievements.heading,
         items:
           data.achievements?.items?.length > 0
-            ? [
-              ...data.achievements.items.map((item, index) => {
+            ? data.achievements.items.map((item, index) => {
                 const customApiIcons = [
                   "/assets/img/icon/experience.png",
                   "/assets/img/icon/client.png",
@@ -107,9 +106,7 @@ export const transformAboutData = (data) => {
                   ...item,
                   icon: transformImage(item.icon) || (index < 3 ? customApiIcons[index] : null),
                 };
-              }),
-              ...defaultAchievements.items,
-            ]
+              })
             : defaultAchievements.items,
       }
       : null,

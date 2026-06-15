@@ -98,8 +98,7 @@ export const transformHomeData = (data) => {
         heading: data.achievements?.heading || defaultAchievements.heading,
         items:
           data.achievements?.items?.length > 0
-            ? [
-              ...data.achievements.items.map((item, index) => {
+            ? data.achievements.items.map((item, index) => {
                 const customApiIcons = [
                   "/assets/img/icon/experience.png",
                   "/assets/img/icon/client.png",
@@ -107,11 +106,9 @@ export const transformHomeData = (data) => {
                 ];
                 return {
                   ...item,
-                  icon: index < 3 ? customApiIcons[index] : formatUrl(item.icon, BASE),
+                  icon: item.icon ? formatUrl(item.icon, BASE) : (index < 3 ? customApiIcons[index] : null),
                 };
-              }),
-              ...defaultAchievements.items,
-            ]
+              })
             : defaultAchievements.items,
       }
       : null,

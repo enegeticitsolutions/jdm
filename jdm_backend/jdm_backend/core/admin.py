@@ -140,12 +140,14 @@ class LocationInline(admin.TabularInline):
 class AchievementInline(admin.TabularInline):
     model = Achievement
     extra = 1  # Number of empty forms to display for quick addition
-    # max_num = 6  # Maximum number of items that can be added
+    readonly_fields = ["preview"]
 
-    # def preview(self, obj):
-    #     if obj.image:
-    #         return format_html('<img src="{}" width="100" />', obj.image.url)
-    #     return ""
+    def preview(self, obj):
+        if obj.icon:
+            return format_html('<img src="{}" style="max-height: 50px; background: #eee; padding: 5px; border-radius: 4px;" />', obj.icon.url)
+        return "-"
+    preview.short_description = "Icon Preview"
+
 
 # @admin.register(HomePageContent)
 # class HomePageContentAdmin(admin.ModelAdmin):
