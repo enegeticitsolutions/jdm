@@ -12,6 +12,9 @@ else
     echo "Warning: Python virtual environment not found in ../venv or ../.venv. Using global python."
 fi
 
+echo -e "\n=== [0/3] Running Database Migrations ==="
+python manage.py migrate --noinput
+
 echo -e "\n=== [1/3] Running Full Database Seeding ==="
 python seed_full.py
 
@@ -30,4 +33,3 @@ else
 fi
 
 echo -e "\nDatabase seeding completed successfully!"
-EOF
