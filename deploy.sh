@@ -99,6 +99,10 @@ SECRET_KEY=$(python3 -c "import secrets; print(secrets.token_urlsafe(50))")
 ALLOWED_HOSTS=$BACKEND_DOMAIN,$FRONTEND_DOMAIN,127.0.0.1,localhost
 EOF
 
+# Run database migrations
+echo "Running database migrations..."
+./venv/bin/python manage.py migrate --noinput
+
 # Collect static files
 ./venv/bin/python manage.py collectstatic --noinput
 
