@@ -32,7 +32,7 @@ const Journey = ({ url, heading }) => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 2; // Speed up video
+      videoRef.current.playbackRate = 0.75; // Speed up video
       if (isVisible) {
         videoRef.current.play();
       } else {

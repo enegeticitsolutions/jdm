@@ -45,7 +45,7 @@ export const transformHomeData = (data) => {
       url:
         data.is_journey && data.journey.video_url
           ? formatUrl(data.journey.video_url, BASE)
-          : "/assets/img/journey/JDM_Timeline.mp4",
+          : "/assets/img/journey/Our_journey_animation.mp4",
     },
     clientele: data.is_clientele
       ? data.clientele?.items?.length > 0
