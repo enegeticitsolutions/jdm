@@ -21,7 +21,7 @@ const defaultFaqItems = [
     id: 3,
     question: "Do you provide international freight forwarding?",
     answer:
-      "Yes, we specialize in international freight forwarding with end-to-end services including pickup, documentation, customs clearance, and final delivery.",
+      "Yes, we specialize in international freight forwarding with end-to-end services including pickup, documentation, customs brokerage, and final delivery.",
     delay: ".3s",
   },
   {
@@ -47,9 +47,9 @@ const defaultFaqItems = [
   },
   {
     id: 7,
-    question: "How long does the customs clearance process take?",
+    question: "How long does the customs brokerage process take?",
     answer:
-      "Customs clearance timelines depend on shipment type and origin/destination. Typically, clearance is completed within 1–3 business days.",
+      "Customs brokerage timelines depend on shipment type and origin/destination. Typically, clearance is completed within 1–3 business days.",
     delay: ".7s",
   },
   {
@@ -61,7 +61,7 @@ const defaultFaqItems = [
   },
   {
     id: 9,
-    question: "What documents are required for customs clearance?",
+    question: "What documents are required for customs brokerage?",
     answer:
       "Essential documents include the commercial invoice, packing list, bill of lading/airway bill, and any relevant certificates or licenses.",
     delay: ".9s",
