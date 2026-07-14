@@ -2,7 +2,7 @@ export const defaultVMData = {
   mission: {
     heading: "Mission",
     paragraph:
-      "To provide operational excellence, competitive costs, and transparency to our customers for sourcing and distributing in the integrated supply chain environment, globally.",
+      "To provide operational excellence, competitive costs, and transparency to our partners for sourcing and distributing in the integrated supply chain environment, globally.",
     image_url: "/assets/img/mission.png",
   },
   vision: {
