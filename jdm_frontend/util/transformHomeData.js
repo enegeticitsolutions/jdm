@@ -45,7 +45,7 @@ export const transformHomeData = (data) => {
       url:
         data.is_journey && data.journey.video_url
           ? formatUrl(data.journey.video_url, BASE)
-          : "/assets/img/journey/JDM_Timeline.mp4",
+          : "/assets/img/journey/Our_journey_animation.mp4",
     },
     clientele: data.is_clientele
       ? data.clientele?.items?.length > 0
@@ -55,17 +55,17 @@ export const transformHomeData = (data) => {
     affiliations: data.is_affiliations
       ? data.affiliations?.items?.length > 0
         ? data.affiliations.items.map((item) => ({
-            logo: formatUrl(item.logo, BASE),
-            title: item.title || "",
-          }))
+          logo: formatUrl(item.logo, BASE),
+          title: item.title || "",
+        }))
         : generateImagePaths("/assets/img/brand/Associations/International", 10).map((path) => ({ logo: path, title: "" }))
       : generateImagePaths("/assets/img/brand/Associations/International", 10).map((path) => ({ logo: path, title: "" })),
     associations: data.is_associations
       ? data.associations?.items?.length > 0
         ? data.associations.items.map((item) => ({
-            logo: formatUrl(item.logo, BASE),
-            title: item.title || "",
-          }))
+          logo: formatUrl(item.logo, BASE),
+          title: item.title || "",
+        }))
         : generateImagePaths("/assets/img/brand/Associations/Domestic", 7).map((path) => ({ logo: path, title: "" }))
       : generateImagePaths("/assets/img/brand/Associations/Domestic", 7).map((path) => ({ logo: path, title: "" })),
     seaPartners: data.is_sea_partners
