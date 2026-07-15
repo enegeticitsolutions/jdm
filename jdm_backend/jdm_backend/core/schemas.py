@@ -251,8 +251,8 @@ class ContactInfoSchema(BaseModel):
 class ContactQuerySchema(BaseModel):
     first_name: str = Field(..., min_length=1)
     last_name: str = Field(..., min_length=1)
-    phone: str = Field(..., min_length=5)
+    phone: str = Field(..., min_length=1)
     email: EmailStr
-    message: str = Field(..., min_length=5)
+    message: str = Field(..., min_length=1)
 
     model_config = ConfigDict(from_attributes=True)
