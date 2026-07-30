@@ -2,8 +2,12 @@
 import React, { memo } from "react";
 
 // Utility to render markdown-like bold text
-const renderDescription = (text) =>
-  text?.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+const renderDescription = (text) => {
+  if (!text) return "";
+  let html = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  html = html.replace(/\b(JDM Group|JDM)\b/g, "<i class='fst-italic'>$1</i>");
+  return html;
+};
 
 // ======================================================
 // Reusable Section Component

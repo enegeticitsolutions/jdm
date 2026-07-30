@@ -148,7 +148,7 @@ export default function Footer2() {
               >
                 <div className="single-footer-widget">
                   <div className="widget-head">
-                    <h5>JDM Group</h5>
+                    <h5><i className="fst-italic">JDM Group</i></h5>
                   </div>
                   <ul className="list-area">
                     <li>
@@ -251,7 +251,7 @@ export default function Footer2() {
             <p>
               © All Copyright {new Date().getFullYear()} by{" "}
               <Link href="/" className="fst-italic">
-                JDM Group
+                <i className="fst-italic">JDM Group</i>
               </Link>
             </p>
           </div>

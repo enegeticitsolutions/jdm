@@ -4,6 +4,12 @@ import { useState, useEffect } from "react";
 import ModalVideo from "react-modal-video";
 
 export default function About2() {
+  const renderDescription = (text) => {
+    if (!text) return "";
+    let html = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    html = html.replace(/\b(JDM Group|JDM)\b/g, "<i class='fst-italic'>$1</i>");
+    return html;
+  };
   const [isOpen, setOpen] = useState(false);
   const [aboutData, setAboutData] = useState(null);
 
@@ -80,18 +86,20 @@ export default function About2() {
                       className="wow fadeInUp fst-italic"
                       data-wow-delay=".2s"
                       dangerouslySetInnerHTML={{
-                        __html: aboutData?.Heading || defaultHeading,
+                        __html: renderDescription(aboutData?.Heading || defaultHeading),
                       }}
                     />
                   </div>
-                  <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
-                    {aboutData?.Paragraph || defaultParagraph}
-                  </p>
+                  <p 
+                    className="mt-3 mt-md-0 wow fadeInUp" 
+                    data-wow-delay=".4s"
+                    dangerouslySetInnerHTML={{ __html: renderDescription(aboutData?.Paragraph || defaultParagraph) }}
+                  />
                   <ul className="list-items wow fadeInUp fst-italic" data-wow-delay=".2s">
                     {(aboutData?.array_of_Points || defaultPoints).map((point, index) => (
                       <li key={index}>
                         <i className="fa-solid fa-circle-check" />
-                        {point}
+                        <span dangerouslySetInnerHTML={{ __html: renderDescription(point) }} />
                       </li>
                     ))}
                   </ul>

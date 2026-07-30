@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Cookies from "js-cookie";
+import React, { useState } from "react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -11,13 +10,6 @@ export default function ContactSection() {
     message: "",
   });
 
-  useEffect(() => {
-    // Get CSRF cookie
-    fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/csrf/`, {
-      method: "GET",
-      credentials: "include",
-    });
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,8 +18,6 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const csrfToken = Cookies.get("csrftoken");
 
     const payload = {
       name: `${formData.firstName} ${formData.lastName}`,
@@ -45,9 +35,7 @@ export default function ContactSection() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "X-CSRFToken": csrfToken,
           },
-          credentials: "include",
           body: JSON.stringify(payload),
         }
       );

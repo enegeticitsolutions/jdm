@@ -42,10 +42,7 @@ export const transformHomeData = (data) => {
       : null,
     journey: {
       heading: data.is_journey ? data.journey.heading : "Our Journey",
-      url:
-        data.is_journey && data.journey.video_url
-          ? formatUrl(data.journey.video_url, BASE)
-          : "/assets/img/journey/JDM_Timeline.mp4",
+      url: "/assets/img/journey/JDM_Journey.mp4",
     },
     clientele: data.is_clientele
       ? data.clientele?.items?.length > 0

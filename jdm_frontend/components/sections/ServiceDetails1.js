@@ -2,7 +2,10 @@ import Link from "next/link";
 import React from "react";
 
 const renderDescription = (text) => {
-  return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  if (!text) return "";
+  let html = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  html = html.replace(/\b(JDM Group|JDM)\b/g, "<i class='fst-italic'>$1</i>");
+  return html;
 };
 
 export default function ServiceDetails1({ service }) {

@@ -93,7 +93,7 @@ export default function Service2() {
 											<Link href="service-details">ocean Freight</Link>
 										</h3>
 										<p>
-											JDM provides cost-effective, reliable freight forwarding worldwide, handling bulk shipments via FCL, LCL, and vessel charters. We also manage documentation, insurance, and Letter of Credit processing for seamless delivery.
+											<i className="fst-italic">JDM</i> provides cost-effective, reliable freight forwarding worldwide, handling bulk shipments via FCL, LCL, and vessel charters. We also manage documentation, insurance, and Letter of Credit processing for seamless delivery.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -147,7 +147,7 @@ export default function Service2() {
 											<Link href="service-details">Road Transportation</Link>
 										</h3>
 										<p>
-											JDM Group was conceptualized by Mr. Pahlad Singh in  the year 1978,with an initial start of Road Transportation in logistics field. Mr. Pahlad Singh who was well known in this industry for his true commitments and adding the value to your logistics mix.
+											<i className="fst-italic">JDM Group</i> was conceptualized by Mr. Pahlad Singh in  the year 1978,with an initial start of Road Transportation in logistics field. Mr. Pahlad Singh who was well known in this industry for his true commitments and adding the value to your logistics mix.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -174,7 +174,7 @@ export default function Service2() {
 											<Link href="service-details">Warehousing</Link>
 										</h3>
 										<p>
-											JDM Group has its own warehousing facilities. JDM has grown rapidly in various other fields of logistics sphere by providing 3PL solutions in the form of warehousing, distribution and transload operations. It provide (MTO) to their esteemed clients
+											<i className="fst-italic">JDM Group</i> has its own warehousing facilities. <i className="fst-italic">JDM</i> has grown rapidly in various other fields of logistics sphere by providing 3PL solutions in the form of warehousing, distribution and transload operations. It provide (MTO) to their esteemed clients
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -228,7 +228,7 @@ export default function Service2() {
 											<Link href="service-details">Warehousing</Link>
 										</h3>
 										<p>
-											JDM Group has its own warehousing facilities. JDM has grown rapidly in various other fields of logistics sphere by providing 3PL solutions in the form of warehousing, distribution and transload operations. It provide (MTO) to their esteemed clients
+											<i className="fst-italic">JDM Group</i> has its own warehousing facilities. <i className="fst-italic">JDM</i> has grown rapidly in various other fields of logistics sphere by providing 3PL solutions in the form of warehousing, distribution and transload operations. It provide (MTO) to their esteemed clients
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />

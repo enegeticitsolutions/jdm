@@ -6,7 +6,9 @@ import Link from "next/link";
 /* ===== Helper ===== */
 const renderDescription = (text) => {
   if (!text) return "";
-  return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  let html = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  html = html.replace(/\b(JDM Group|JDM)\b/g, "<i class='fst-italic'>$1</i>");
+  return html;
 };
 
 export default function TeamDetailsPage({ member }) {

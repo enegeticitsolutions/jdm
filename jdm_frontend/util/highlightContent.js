@@ -1,8 +1,8 @@
 export function highlightContent(text, heading) {
   let updatedText = text;
 
-  // Highlight "JDM"
-  updatedText = updatedText.replace(/\bJDM\b/g, "**JDM**");
+  // Highlight "JDM Group" and "JDM" (italicize using Markdown)
+  updatedText = updatedText.replace(/\b(JDM Group|JDM)\b/g, "_$1_");
 
   // Highlight heading inside its own content
   if (heading) {

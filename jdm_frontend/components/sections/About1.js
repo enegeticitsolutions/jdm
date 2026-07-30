@@ -113,6 +113,7 @@ const About1 = ({ data }) => {
         :global(.jdm-highlight) {
           color: #b5271f;
           font-weight: 700;
+          font-style: italic;
         }
       `}</style>
     </section>

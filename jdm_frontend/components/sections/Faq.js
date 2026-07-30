@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const defaultFaqItems = [
   {
     id: 1,
-    question: "Why should you prefer JDM Group?",
+    question: <>Why should you prefer <i className="fst-italic">JDM Group</i>?</>,
     answer:
       "We are far better than other CHAs because we have all three kinds of services collectively that others don't have (Own Brokerage License, Own Transportation, Own Warehouse). Our warehouse & office in Delhi are close to the airport, enabling superior service especially during COVID-19. We saved customers crores in demurrages by clearing cargo during lockdown and storing it in our warehouse until their facilities reopened.",
     delay: ".1s",
