@@ -97,7 +97,10 @@ CSRF_TRUSTED_ORIGINS = [
     'https://jdmgroups.com',
     'https://www.jdmgroups.com',
     'http://82.112.236.35',  # Add this!
-    'https://api.jdmgroups.com' # Add this too!
+    'https://api.jdmgroups.com', # Add this too!
+    'https://api.datamoshtechnologies.com',
+    'https://jdm.datamoshtechnologies.com',
+    'https://jdm-backend.onrender.com'
 ]
 
 # CSRF_COOKIE_HTTPONLY = False
