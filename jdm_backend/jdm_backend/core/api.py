@@ -117,7 +117,7 @@ def get_home(request):
                     "address": loc.address,
                     "phone": loc.phone,
                     "email": loc.email,
-                    "image": build_file_url(request, loc.image),
+                    "image": build_file_url(request, loc.image).replace("delhi.jpeg", "delhi.jpg") if loc.image else None,
                     "place": loc.place,
                 }
                 for loc in home.locations.all()

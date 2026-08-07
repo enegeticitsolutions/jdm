@@ -1,3 +1,8 @@
 {
-    "python.defaultInterpreterPath": "c:\\Users\\Administrator\\Desktop\\jdm\\jdm_backend\\.venv\\Scripts\\python.exe"
+    "python.defaultInterpreterPath": "c:\\Users\\Administrator\\Desktop\\jdm\\jdm_backend\\.venv\\Scripts\\python.exe",
+    "python.analysis.extraPaths": [
+        "c:\\Users\\Administrator\\Desktop\\jdm\\jdm_backend",
+        "c:\\Users\\Administrator\\Desktop\\jdm\\jdm_backend\\jdm_backend",
+        "c:\\Users\\Administrator\\Desktop\\jdm\\jdm_backend\\.venv\\Lib\\site-packages"
+    ]
 }

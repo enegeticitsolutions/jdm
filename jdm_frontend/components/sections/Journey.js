@@ -54,6 +54,7 @@ const Journey = ({ url, heading }) => {
         </h2>
       </div>
       <video
+        key={url}
         ref={videoRef}
         className="w-full"
         loop

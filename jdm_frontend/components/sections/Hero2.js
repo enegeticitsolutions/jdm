@@ -57,6 +57,7 @@ export default function Hero2({video_url = "/assets/img/hero/intro.mp4"}) {
     <section ref={sectionRef} className="hero-section fix hero-2">
       <div className="video-container fixed">
         <video 
+          key={video_url}
           ref={videoRef}
           className="hero-video"
           autoPlay
