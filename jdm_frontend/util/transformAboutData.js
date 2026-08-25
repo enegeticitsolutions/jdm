@@ -2,7 +2,7 @@ import { achievementsData as defaultAchievements } from "./achievement";
 import { defaultStoryData } from "./storyData";
 import { defaultVMData } from "./visionMission";
 
-const BASE = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:8000';
 
 export const transformAboutData = (data) => {
   if (!data || !data.is_active) return null;
@@ -92,8 +92,7 @@ export const transformAboutData = (data) => {
         heading: data.achievements?.heading || defaultAchievements.heading,
         items:
           data.achievements?.items?.length > 0
-            ? [
-              ...data.achievements.items.map((item, index) => {
+            ? data.achievements.items.map((item, index) => {
                 const customApiIcons = [
                   "/assets/img/icon/experience.png",
                   "/assets/img/icon/client.png",
@@ -103,9 +102,7 @@ export const transformAboutData = (data) => {
                   ...item,
                   icon: index < 3 ? customApiIcons[index] : (item.icon ? transformImage(item.icon) : null),
                 };
-              }),
-              ...defaultAchievements.items,
-            ]
+              })
             : defaultAchievements.items,
       }
       : null,

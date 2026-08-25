@@ -5,7 +5,8 @@ export const useAboutData = () => {
   return useQuery({
     queryKey: ["about"],
     queryFn: async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/about/`, {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
+      const res = await fetch(`${apiUrl}/about/`, {
         cache: "no-store",
       });
 
