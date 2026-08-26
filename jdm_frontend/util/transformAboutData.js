@@ -9,7 +9,12 @@ export const transformAboutData = (data) => {
 
   const transformImage = (url) => {
     console.log("transformImage called with:", url);
-    return url ? `${BASE}${url}` : null;
+    if (!url) return null;
+    let finalUrl = url.startsWith("http") ? url : `${BASE}${url}`;
+    if (BASE.startsWith("https://") && finalUrl.startsWith("http://")) {
+      finalUrl = finalUrl.replace("http://", "https://");
+    }
+    return finalUrl;
   };
 
   return {
@@ -92,18 +97,15 @@ export const transformAboutData = (data) => {
         heading: data.achievements?.heading || defaultAchievements.heading,
         items:
           data.achievements?.items?.length > 0
-            ? data.achievements.items.map((item, index) => {
-                const customApiIcons = [
-                  "/assets/img/icon/experience.png",
-                  "/assets/img/icon/client.png",
-                  "/assets/img/icon/building.png"
-                ];
-                return {
-                  ...item,
-                  icon: index < 3 ? customApiIcons[index] : (item.icon ? transformImage(item.icon) : null),
-                };
-              })
-            : defaultAchievements.items,
+            ? data.achievements.items
+                .filter((v, i, a) => a.findIndex(t => (t.title === v.title)) === i)
+                .map((item) => {
+                  return {
+                    ...item,
+                    icon: item.icon ? transformImage(item.icon) : null,
+                  };
+                })
+            : [],
       }
       : null,
 

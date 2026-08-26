@@ -14,10 +14,15 @@ export const transformHomeData = (data) => {
     let cleanPath = path;
     if (base && cleanPath.startsWith(base)) {
       cleanPath = cleanPath.replace(base, "");
-    } else if (cleanPath.startsWith("http")) {
-      return cleanPath;
     }
-    return `${base}${cleanPath.startsWith("/") ? "" : "/"}${cleanPath}`;
+    let finalUrl = `${base}${cleanPath.startsWith("/") ? "" : "/"}${cleanPath}`;
+    if (cleanPath.startsWith("http")) {
+      finalUrl = cleanPath;
+    }
+    if (base && base.startsWith("https://") && finalUrl.startsWith("http://")) {
+      finalUrl = finalUrl.replace("http://", "https://");
+    }
+    return finalUrl;
   };
 
   console.log("BASE URL: ", BASE);
@@ -94,18 +99,15 @@ export const transformHomeData = (data) => {
         heading: data.achievements?.heading || defaultAchievements.heading,
         items:
           data.achievements?.items?.length > 0
-            ? data.achievements.items.map((item, index) => {
-                const customApiIcons = [
-                  "/assets/img/icon/experience.png",
-                  "/assets/img/icon/client.png",
-                  "/assets/img/icon/building.png"
-                ];
-                return {
-                  ...item,
-                  icon: index < 3 ? customApiIcons[index] : formatUrl(item.icon, BASE),
-                };
-              })
-            : defaultAchievements.items,
+            ? data.achievements.items
+                .filter((v, i, a) => a.findIndex(t => (t.title === v.title)) === i)
+                .map((item) => {
+                  return {
+                    ...item,
+                    icon: formatUrl(item.icon, BASE),
+                  };
+                })
+            : [],
       }
       : null,
   };
