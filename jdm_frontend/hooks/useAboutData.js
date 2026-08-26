@@ -22,7 +22,7 @@ export const useAboutData = () => {
 
       return transformAboutData(raw);
     },
-    staleTime: 1000 * 60 * 10, // optional: cache for 10 minutes
+    staleTime: 0, // always fetch fresh data
   });
 };
 
