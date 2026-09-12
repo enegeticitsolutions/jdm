@@ -42,7 +42,8 @@ export default function About() {
       {storyData && <StorySection data={storyData} />}
       {vmData && <VisionMissionFounder data={vmData} />}
       {achievementssData && <Achivements data={achievementssData} />}
-      <Team2 heading={teamHeading} />
+      {/* HIDDEN: Our Team section temporarily disabled */}
+      {/* <Team2 heading={teamHeading} /> */}
       {faqData && <Faq data={faqData} />}
     </Layout>
   );

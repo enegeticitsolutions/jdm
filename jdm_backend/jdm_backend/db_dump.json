@@ -1204,19 +1204,19 @@
         "story_paragraph": "JDM GROUP was conceptualized by Late Mr. Pahlad Singh in the year 1978, with an initial starting of Transportation in the logistics field. He was well known in this industry for his true commitments, passing the legacy that JDM proudly follows under the dynamic leadership of the Group Chairman & Managing Director Mr. Sahil Sehrawat and a team of dedicated professionals. JDM has evolved as one of the fastest growing integrated supply chain logistics enterprises with verticals as below:",
         "story_points": [
             "Founded with a vision for excellence in logistics",
-            "Over 30 years of industry experience",
+            "Over 48+ years of industry experience",
             "Pan-India presence with global reach",
             "Committed to customer satisfaction"
         ],
         "founder_image": "founder/Lt._Sh._Pahlad_Singh_Ji.png",
-        "para1": "We at JDM are committed to delivering Total Quality Management (TQM) services to our esteemed clientele. Our team of highly experienced professionals is dedicated to the expeditious execution of assignments through decentralized authority and accountable operations at every level.",
-        "para2": "The underlying principle of the company’s operations lies in close collaboration with customers and the adoption of state-of-the-art technology with integrated data platforms. Real-time updates, synchronized operations, and reduced processing timelines across Freight Forwarding, Customs Brokerage, and Transportation under one umbrella have evolved as our unique strength, ensuring customer delight at every touchpoint.",
+        "para1": "We at JDM are committed with Total Quality Management (TQM) services to our esteemed clientele. Our team of highly experienced professionals from industry are dedicated for expeditious execution of assignments with decentralization of authority at various levels.",
+        "para2": "The underlying principle of companyâ€™s operations include working in close collaboration with customers, harnessing latest state of the art technology with data integration platforms; the real time updates, synchronized operations to reduced processing time for Freight Forwarding, Customs Brokerage and Road Transportation, under one umbrella, has evolved as our USP. The company strives to earn customersâ€™ delight at all integrated touch points in each transaction.",
         "mission_heading": "Our Mission",
-        "mission_paragraph": "By acquiring and servicing reputed and ethical customers.\nBy constantly upgrading technology, team skills and infrastructure to increase freight management efficiency and creating cost effective logistics solutions.\nBy attracting and retaining quality people who possess enthusiasm for excellence, leadership and passion to win.\nTo function in an economically, socially and environmentally responsible manner respecting the interests of all stakeholders including our team members.",
-        "mission_image": "about/mission/Our Mission.jpg",
+        "mission_paragraph": "To provide operational excellence, competitive cost control and transparency to our customers for sourcing and distributing in the integrated supply chain environment, globally.",
+        "mission_image": "about/mission/ourmission.png",
         "vision_heading": "Our Vision",
-        "vision_paragraph": "To be the best freight management company, providing smart, innovative and socially responsible solutions to a diversified customer base.\nTo provide operational excellence, competitive cost control and transparency to our partners for sourcing and distributing in the integrated supply chain environment, globally.",
-        "vision_image": "about/vision/Our Vision.png",
+        "vision_paragraph": "To be the most trusted and preferred logistics partner globally, known for excellence in service delivery and customer satisfaction.",
+        "vision_image": "about/vision/ourvision.png",
         "values_heading": "Our Values",
         "values_image": "about/values/Our Values.jpg",
         "values_points": [
@@ -1398,7 +1398,7 @@
         "image": "assets/img/service/Exhibition.jpg",
         "description": "Express Cargo services for urgent deliveries.",
         "icon": "fa-regular fa-truck-front",
-        "description1": "We proudly hold a distinct reputation in managing exhibition cargo for both inward and outward movements with absolute precision and regulatory compliance. Whether its goods headed for the India Trade Promotion Organization (ITPO), or materials bound for public or privately funded seminars, expos, or demonstrations, our experienced team ensures smooth execution aligned with all customs regulations and procedural guidelines. We specialize in handling shipments governed under ATA Carnet and related exhibition protocols, offering tailored solutions for high-value display items, fragile exhibits, and demonstration kits. From meticulous planning to seamless delivery at the event site, we manage the entire logistics chain — ensuring that your materials arrive on time, intact, and exhibition-ready. With extensive knowledge of international exhibition standards and documentation formalities, we are your trusted partner for delivering excellence on the global exhibition stage.",
+        "description1": "We proudly hold a distinct reputation in managing exhibition cargo for both inward and outward movements with absolute precision and regulatory compliance. Whether its goods headed for the India Trade Promotion Organization (ITPO), or materials bound for public or privately funded seminars, expos, or demonstrations, our experienced team ensures smooth execution aligned with all customs regulations and procedural guidelines. We specialize in handling shipments governed under ATA Carnet and related exhibition protocols, offering tailored solutions for high-value display items, fragile exhibits, and demonstration kits. From meticulous planning to seamless delivery at the event site, we manage the entire logistics chain Â— ensuring that your materials arrive on time, intact, and exhibition-ready. With extensive knowledge of international exhibition standards and documentation formalities, we are your trusted partner for delivering excellence on the global exhibition stage.",
         "heading": ".",
         "description2": ".",
         "position": 9
@@ -1412,7 +1412,7 @@
         "image": "assets/img/service/Ocean.jpg",
         "description": "Cost-effective ocean freight solutions for bulk shipments.",
         "icon": "fa-regular fa-ship",
-        "description1": "We understand that **ocean freight is the backbone of global trade,** playing a pivotal role in connecting supply chains across continents. Our ocean freight solutions are built on a foundation of cost-effectiveness, **reliability, safety, and timely delivery,** offering seamless movement through **FCL, LCL, Reefer, and specialized vessel charters** equipped with onboard cranes for heavy or oversized cargo. With a team of highly qualified professionals, we manage both **bulk and liquid commodities** with unmatched precision and care. While our ocean division continues to expand, we bring **modern flexibility** to every shipment — from selecting the ideal carrier to arranging last-mile delivery. By leveraging our vast partner network and working in sync with shipping lines, we ensure your cargo reaches even the most remote interiors of the country and across borders, all at an optimized cost and with complete transparency.",
+        "description1": "We understand that **ocean freight is the backbone of global trade,** playing a pivotal role in connecting supply chains across continents. Our ocean freight solutions are built on a foundation of cost-effectiveness, **reliability, safety, and timely delivery,** offering seamless movement through **FCL, LCL, Reefer, and specialized vessel charters** equipped with onboard cranes for heavy or oversized cargo. With a team of highly qualified professionals, we manage both **bulk and liquid commodities** with unmatched precision and care. While our ocean division continues to expand, we bring **modern flexibility** to every shipment Â— from selecting the ideal carrier to arranging last-mile delivery. By leveraging our vast partner network and working in sync with shipping lines, we ensure your cargo reaches even the most remote interiors of the country and across borders, all at an optimized cost and with complete transparency.",
         "heading": "",
         "description2": "",
         "position": 1
@@ -1496,7 +1496,7 @@
         "image": "assets/img/service/Perishable.jpg",
         "description": "Express Cargo services for urgent deliveries.",
         "icon": "fa-regular fa-truck-front",
-        "description1": "We are trusted for delivering reliable, specialized logistics solutions for the export and import of perishable commodities, including vegetables, fruits, cut flowers, and other temperature-sensitive goods. What sets us apart is our deep understanding of the time-critical nature of perishables and our commitment to maintaining their freshness, quality, and safety at every stage of transit. Our team is trained in cold chain handling, ensuring proper packaging, temperature control, and hygiene protocols from origin to destination. Whether it’s a rose bouquet to Europe or fresh produce to the Middle East, we manage it with precision, speed, and care. With international expertise and a customer-centric approach, for goods that can’t wait, trust the team that never rests.",
+        "description1": "We are trusted for delivering reliable, specialized logistics solutions for the export and import of perishable commodities, including vegetables, fruits, cut flowers, and other temperature-sensitive goods. What sets us apart is our deep understanding of the time-critical nature of perishables and our commitment to maintaining their freshness, quality, and safety at every stage of transit. Our team is trained in cold chain handling, ensuring proper packaging, temperature control, and hygiene protocols from origin to destination. Whether itÂ’s a rose bouquet to Europe or fresh produce to the Middle East, we manage it with precision, speed, and care. With international expertise and a customer-centric approach, for goods that canÂ’t wait, trust the team that never rests.",
         "heading": "",
         "description2": "",
         "position": 8
@@ -1510,7 +1510,7 @@
         "image": "assets/img/service/Project_Cargo.jpg",
         "description": "Specialized handling for oversized and complex cargo.",
         "icon": "fa-regular fa-box-open",
-        "description1": "We take immense pride in offering **comprehensive project cargo handling services** that consistently exceed client expectations. From infrastructure giants to energy sector leaders, our clients trust us to move their most challenging and oversized cargo with unmatched precision. Our team, comprising **highly trained and experienced professionals**, brings meticulous planning and hands-on expertise to every project — be it **Over Dimensional Cargo (ODC)** or **Overweight Cargo (OWC)**. Utilizing **specialized equipment** like open-top and flat-rack containers, we handle end-to-end execution — starting from **vessel booking, route optimization, to safe on-board loading.** Our longstanding relationships with leading vessel owners allow us to offer **cost-effective solutions without compromising service quality.** What sets us apart is our ability to adapt to the complexity of each shipment, ensuring it is moved securely, timely, and in compliance with international standards. It's a mission delivered with integrity, care, and commitment.",
+        "description1": "We take immense pride in offering **comprehensive project cargo handling services** that consistently exceed client expectations. From infrastructure giants to energy sector leaders, our clients trust us to move their most challenging and oversized cargo with unmatched precision. Our team, comprising **highly trained and experienced professionals**, brings meticulous planning and hands-on expertise to every project Â— be it **Over Dimensional Cargo (ODC)** or **Overweight Cargo (OWC)**. Utilizing **specialized equipment** like open-top and flat-rack containers, we handle end-to-end execution Â— starting from **vessel booking, route optimization, to safe on-board loading.** Our longstanding relationships with leading vessel owners allow us to offer **cost-effective solutions without compromising service quality.** What sets us apart is our ability to adapt to the complexity of each shipment, ensuring it is moved securely, timely, and in compliance with international standards. It's a mission delivered with integrity, care, and commitment.",
         "heading": ".",
         "description2": ".",
         "position": 6
@@ -1524,7 +1524,7 @@
         "image": "assets/img/service/Courier.jpg",
         "description": "Express courier services for urgent deliveries.",
         "icon": "fa-regular fa-truck-front",
-        "description1": "We specialize in providing **customized, door-to-door express delivery solutions** designed to meet the fast-paced demands of modern business. Our courier services are tailored for the **swift and secure movement of time-sensitive documents and parcels** to destinations across the globe. Backed by a robust international network and diverse transit time options, we ensure, shipments reach on schedule, no matter the urgency or complexity. <br> What truly distinguishes our service is our approach: **before proposing a solution, we take time to understand your business challenge**, offering logistics that are not only efficient but also strategically aligned with your goals. Every package entrusted to us is handled with the utmost care, backed by advanced tracking systems and stringent safety protocols. Whether it’s an urgent contract, confidential paperwork, or a vital product sample, **we guarantee secure, reliable, and on-time global delivery — every time.**",
+        "description1": "We specialize in providing **customized, door-to-door express delivery solutions** designed to meet the fast-paced demands of modern business. Our courier services are tailored for the **swift and secure movement of time-sensitive documents and parcels** to destinations across the globe. Backed by a robust international network and diverse transit time options, we ensure, shipments reach on schedule, no matter the urgency or complexity. <br> What truly distinguishes our service is our approach: **before proposing a solution, we take time to understand your business challenge**, offering logistics that are not only efficient but also strategically aligned with your goals. Every package entrusted to us is handled with the utmost care, backed by advanced tracking systems and stringent safety protocols. Whether itÂ’s an urgent contract, confidential paperwork, or a vital product sample, **we guarantee secure, reliable, and on-time global delivery Â— every time.**",
         "heading": ".",
         "description2": ".",
         "position": 5
@@ -1615,7 +1615,7 @@
     "pk": 66,
     "fields": {
         "service": "26e2ec73-3aac-4bf3-8e7a-1aa0550918be",
-        "text": "Hi-tech sophisticated handling equipment’s for taking appropriate care of your cargo"
+        "text": "Hi-tech sophisticated handling equipmentÂ’s for taking appropriate care of your cargo"
     }
 },
 {
@@ -1653,7 +1653,7 @@
         "role": "Regional Head South",
         "excerpt": ".",
         "image": "team/palraj.png",
-        "bio": "With over 23 years in the logistics industry, Pal brings deep expertise in Operational Excellence, Customer Service Management, and P&L Oversight. As Regional Head – South at JDM Group, he leads seamless logistics operations with a customer-first mindset, overseeing P&L, launching new branches, and building strong cross-functional teams across sales, marketing, and operations. Pal has a proven track record of streamlining supply chain processes, enhancing service quality, and driving financial performance. His strategic leadership focuses on minimizing inefficiencies, strengthening client relationships, and balancing cost with service excellence. Through innovation and continuous improvement, Pal plays a key role in delivering high-impact, sustainable logistics solutions for JDM.",
+        "bio": "With over 23 years in the logistics industry, Pal brings deep expertise in Operational Excellence, Customer Service Management, and P&L Oversight. As Regional Head Â– South at JDM Group, he leads seamless logistics operations with a customer-first mindset, overseeing P&L, launching new branches, and building strong cross-functional teams across sales, marketing, and operations. Pal has a proven track record of streamlining supply chain processes, enhancing service quality, and driving financial performance. His strategic leadership focuses on minimizing inefficiencies, strengthening client relationships, and balancing cost with service excellence. Through innovation and continuous improvement, Pal plays a key role in delivering high-impact, sustainable logistics solutions for JDM.",
         "is_active": true
     }
 },
@@ -1665,7 +1665,7 @@
         "role": "Founder",
         "excerpt": "Visionary of JDM Group",
         "image": "team/Lt._Sh._Pahlad_Singh_Ji.png",
-        "bio": "Late Mr. Pahlad Singh was the visionary founder of JDM Group, who laid the foundation of the company in 1978 with a humble beginning in transportation services within the logistics sector. Renowned for his steadfast commitment, integrity, and forward-thinking approach, he built more than just a business—he built a legacy rooted in trust, hard work, and excellence. His entrepreneurial spirit continues to guide JDM Group's values and vision, inspiring generations and shaping the company’s journey as it grows under the leadership of the current management and an ever-dedicated team.",
+        "bio": "Late Mr. Pahlad Singh was the visionary founder of JDM Group, who laid the foundation of the company in 1978 with a humble beginning in transportation services within the logistics sector. Renowned for his steadfast commitment, integrity, and forward-thinking approach, he built more than just a businessÂ—he built a legacy rooted in trust, hard work, and excellence. His entrepreneurial spirit continues to guide JDM Group's values and vision, inspiring generations and shaping the companyÂ’s journey as it grows under the leadership of the current management and an ever-dedicated team.",
         "is_active": true
     }
 },
@@ -1713,7 +1713,7 @@
         "role": "Branch Manager Chennai",
         "excerpt": "Customs House Brokerage",
         "image": "team/abhilashD.png",
-        "bio": "Abhilash D, Branch Manager – Chennai at JDM Group, is a seasoned logistics professional with over 19 years of experience in customs operations. A BBA graduate from Kerala, he began his career in 2004 at an Export-Oriented Unit in New Delhi and later spent 15 years in Chennai managing import-export shipments for top multinational clients through the Chennai port. With deep expertise in Customs regulations, client management, and operational strategy, Abhilash leads customs processes at JDM Group, drives business development, and fosters strong stakeholder relationships. His leadership, compliance knowledge, and strategic insight continue to play a key role in streamlining operations and advancing JDM Group’s success in the logistics space.",
+        "bio": "Abhilash D, Branch Manager Â– Chennai at JDM Group, is a seasoned logistics professional with over 19 years of experience in customs operations. A BBA graduate from Kerala, he began his career in 2004 at an Export-Oriented Unit in New Delhi and later spent 15 years in Chennai managing import-export shipments for top multinational clients through the Chennai port. With deep expertise in Customs regulations, client management, and operational strategy, Abhilash leads customs processes at JDM Group, drives business development, and fosters strong stakeholder relationships. His leadership, compliance knowledge, and strategic insight continue to play a key role in streamlining operations and advancing JDM GroupÂ’s success in the logistics space.",
         "is_active": true
     }
 },
@@ -1737,7 +1737,7 @@
         "role": "Accounts Head",
         "excerpt": "Warehouse operations",
         "image": "team/Randhir Ji.jpg",
-        "bio": "Hailing from Madhubani, Bihar, Randhir Kumar Mishra is a seasoned accounting expert with over 16 years of experience in financial management. B.Com (Hons.) graduate from LNMU with an impressive 89% (2003), Randhir began his career with the Oraon Group of Companies in 2009, rising to the role of Manager – Accounts before joining JDM Group in 2018. At JDM, Randhir plays a critical role in ensuring financial accuracy, compliance, and operational efficiency. His responsibilities include preparing financial statements, managing receivables and payables, bank reconciliations, billing, and handling tax matters including TDS, EPF, ESIC, GST, and e-payments. Renowned for his adaptability, leadership, and attention to detail, Randhir consistently delivers reliable financial insights and ensures seamless accounting operations. His commitment to excellence and deep knowledge of tax and regulatory frameworks make him an invaluable asset to the JDM Group’s continued success.",
+        "bio": "Hailing from Madhubani, Bihar, Randhir Kumar Mishra is a seasoned accounting expert with over 16 years of experience in financial management. B.Com (Hons.) graduate from LNMU with an impressive 89% (2003), Randhir began his career with the Oraon Group of Companies in 2009, rising to the role of Manager Â– Accounts before joining JDM Group in 2018. At JDM, Randhir plays a critical role in ensuring financial accuracy, compliance, and operational efficiency. His responsibilities include preparing financial statements, managing receivables and payables, bank reconciliations, billing, and handling tax matters including TDS, EPF, ESIC, GST, and e-payments. Renowned for his adaptability, leadership, and attention to detail, Randhir consistently delivers reliable financial insights and ensures seamless accounting operations. His commitment to excellence and deep knowledge of tax and regulatory frameworks make him an invaluable asset to the JDM GroupÂ’s continued success.",
         "is_active": true
     }
 },
@@ -1749,7 +1749,7 @@
         "role": "Director",
         "excerpt": "Leading operations and strategic growth",
         "image": "team/Ajay Sir.jpg",
-        "bio": "Ajay Prakash was appointed as Director in May 2011, considering his 17 years’ experience in various matters related to custom clearance, compliance, liaison with govt. authorities. Prior to JDM, he has a vast experience of 7 years in RS Movers (a CHA Company) as General Manager, leading the role for customs clearance & compliance thereof from 2003 to 2011. Before to RS Movers, Ajay Sehrawat has held the position of Manager of Kunal Travels (Another CHA Company) from 1995 to 2003 worked as a leader responsible for the customs clearance, compliances, coordination with Airlines & shipping lines. Ajay Sehrawat has started his carrier since 1993 as Assistant manager of Romy Enterprises, in the field of Customs Clerance and coordination thereof with different agencies. Apart from above, Mr Ajay Sehrawat has been qualified ‘G’ Card examination in the year 1998-99 which is required to appear before the customs authorities at different locations.",
+        "bio": "Ajay Prakash was appointed as Director in May 2011, considering his 17 yearsÂ’ experience in various matters related to custom clearance, compliance, liaison with govt. authorities. Prior to JDM, he has a vast experience of 7 years in RS Movers (a CHA Company) as General Manager, leading the role for customs clearance & compliance thereof from 2003 to 2011. Before to RS Movers, Ajay Sehrawat has held the position of Manager of Kunal Travels (Another CHA Company) from 1995 to 2003 worked as a leader responsible for the customs clearance, compliances, coordination with Airlines & shipping lines. Ajay Sehrawat has started his carrier since 1993 as Assistant manager of Romy Enterprises, in the field of Customs Clerance and coordination thereof with different agencies. Apart from above, Mr Ajay Sehrawat has been qualified Â‘GÂ’ Card examination in the year 1998-99 which is required to appear before the customs authorities at different locations.",
         "is_active": true
     }
 },
@@ -1761,7 +1761,7 @@
         "role": "Corporate Sales Manager",
         "excerpt": ".",
         "image": "team/Anju_Maam.jpg",
-        "bio": "Anju Dubey is a dynamic professional with a solid foundation in logistics, supply chain, and client management. As Corporate Sales Manager at JDM Group, she leads sales efforts, nurtures client relationships, and ensures smooth, efficient operations. Known for her hands-on approach and results-driven mindset, Anju has a proven ability to onboard clients, streamline processes, and support team collaboration. Her passion for delivering value aligns seamlessly with JDM’s culture of innovation and excellence, making her a key player in driving both client satisfaction and business growth.",
+        "bio": "Anju Dubey is a dynamic professional with a solid foundation in logistics, supply chain, and client management. As Corporate Sales Manager at JDM Group, she leads sales efforts, nurtures client relationships, and ensures smooth, efficient operations. Known for her hands-on approach and results-driven mindset, Anju has a proven ability to onboard clients, streamline processes, and support team collaboration. Her passion for delivering value aligns seamlessly with JDMÂ’s culture of innovation and excellence, making her a key player in driving both client satisfaction and business growth.",
         "is_active": true
     }
 },
@@ -1773,7 +1773,7 @@
         "role": "Assistant General Manager",
         "excerpt": "Corporate Customs House Brokerage",
         "image": "team/Jaspreet Ji.jpg",
-        "bio": "Jaspreet Singh, AGM – Operations at JDM Cargo Planners Pvt. Ltd., brings over 21 years of experience in import customs clearance and customer relationship management. A Customs Rule 6-qualified expert with a postgraduate diploma in international business and certifications in IATA Cargo and Customs Compliance, he joined JDM Group in 2021 and now leads strategic planning, key account management, and end-to-end customs operations. One of his career highlights includes managing imports for the Formula One Grand Prix for three consecutive years—a testament to his ability to execute high-pressure, time-sensitive projects with precision. Jaspreet’s leadership, deep industry insight, and consistent delivery of excellence make him a vital contributor to JDM’s continued success and reliability in the logistics space.",
+        "bio": "Jaspreet Singh, AGM Â– Operations at JDM Cargo Planners Pvt. Ltd., brings over 21 years of experience in import customs clearance and customer relationship management. A Customs Rule 6-qualified expert with a postgraduate diploma in international business and certifications in IATA Cargo and Customs Compliance, he joined JDM Group in 2021 and now leads strategic planning, key account management, and end-to-end customs operations. One of his career highlights includes managing imports for the Formula One Grand Prix for three consecutive yearsÂ—a testament to his ability to execute high-pressure, time-sensitive projects with precision. JaspreetÂ’s leadership, deep industry insight, and consistent delivery of excellence make him a vital contributor to JDMÂ’s continued success and reliability in the logistics space.",
         "is_active": true
     }
 },

@@ -104,11 +104,13 @@ export default function MobileMenu() {
 						<li>
 							<Link href="/careers">Career</Link>
 						</li>
+						{/* HIDDEN: Industries page temporarily disabled
 						{industrySpec?.is_industry && (
 							<li>
 								<Link href="/industry">Industries</Link>
 							</li>
 						)}
+						*/}
 						{/* <li>
 							<Link href="/project">
 								Projects

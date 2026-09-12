@@ -39,24 +39,24 @@ export default function Brand1({
   console.log("image length", images.length);
   console.log("images", images);
 
+  const count = images.length;
+
   const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
-    spaceBetween: 30,
+    spaceBetween: 20,
     speed: 800,
-    loop: images.length > 1,
+    loop: count > 3,
     autoplay: {
-      delay: 1500,
+      delay: 2000,
       disableOnInteraction: false,
     },
-    pagination: pagination
-      ? { clickable: true }
-      : false,
+    pagination: pagination ? { clickable: true } : false,
     breakpoints: {
-      1350: { slidesPerView: Math.min(6, images.length - 1) },
-      991: { slidesPerView: Math.min(6, images.length - 1) },
-      767: { slidesPerView: Math.min(5, images.length - 1) },
-      575: { slidesPerView: Math.min(4, images.length - 1) },
-      0: { slidesPerView: 3 },
+      1200: { slidesPerView: Math.min(6, count), spaceBetween: 24 },
+      992: { slidesPerView: Math.min(5, count), spaceBetween: 20 },
+      768: { slidesPerView: Math.min(4, count), spaceBetween: 16 },
+      576: { slidesPerView: Math.min(3, count), spaceBetween: 12 },
+      0: { slidesPerView: Math.min(2, count), spaceBetween: 10 },
     },
   };
 
@@ -279,17 +279,17 @@ export default function Brand1({
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           transform: translateY(-2px);
         }
-        @media (max-width:475px){
+        @media (max-width:575px){
           .brand-image {
             padding: 8px 6px;
-            min-height: 130px;
+            min-height: 100px;
             height: auto;
           }
           .brand-image-with-title {
-            min-height: 180px !important;
+            min-height: 150px !important;
           }
           .brand-image-square {
-            min-height: 100px !important;
+            min-height: 85px !important;
           }
         }
         .brand-grid {

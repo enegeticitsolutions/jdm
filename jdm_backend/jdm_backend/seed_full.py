@@ -195,39 +195,32 @@ def seed_home_content():
         print(f"  Created {len(affiliation_files)} affiliation items.")
 
     # Association logos
-    # 1. ADD THIS LINE to delete the old ghost files:
-    #AssociationItem.objects.all().delete() 
-
-    # 2. COMMENT OUT this line so it doesn't block the script:
-if not AssociationItem.objects.exists():
-    
-    import glob
-    assoc_dir = os.path.join(os.path.dirname(__file__), 'media', 'associations')
-    
-    # Make sure this checks for both types just in case!
-    assoc_files = [f for f in os.listdir(assoc_dir) if f.endswith(('.png', '.jpg', '.webp'))]
-    
-    for f in assoc_files:
-        AssociationItem.objects.create(home=home, logo=f"associations/{f}")
-    print(f"  Created {len(assoc_files)} association items.")
+    if not AssociationItem.objects.exists():
+        import glob
+        assoc_dir = os.path.join(os.path.dirname(__file__), 'media', 'associations')
+        
+        # Make sure this checks for both types just in case!
+        assoc_files = [f for f in os.listdir(assoc_dir) if f.endswith(('.png', '.jpg', '.webp'))]
+        
+        for f in assoc_files:
+            AssociationItem.objects.create(home=home, logo=f"associations/{f}")
+        print(f"  Created {len(assoc_files)} association items.")
 
     # Sea partners
-    #SeaPartnerItem.objects.all().delete()  # 👈 ADD THIS: Deletes old records
-if not SeaPartnerItem.objects.exists():  # 👈 COMMENT THIS OUT
-    sea_dir = os.path.join(os.path.dirname(__file__), 'media', 'carriers', 'sea')
-    sea_files = [f for f in os.listdir(sea_dir) if f.endswith(('.jpg', '.png', '.webp'))]
-    for f in sea_files:
-        SeaPartnerItem.objects.create(home=home, logo=f"carriers/sea/{f}")
-    print(f"  Created {len(sea_files)} sea partner items.")
+    if not SeaPartnerItem.objects.exists():
+        sea_dir = os.path.join(os.path.dirname(__file__), 'media', 'carriers', 'sea')
+        sea_files = [f for f in os.listdir(sea_dir) if f.endswith(('.jpg', '.png', '.webp'))]
+        for f in sea_files:
+            SeaPartnerItem.objects.create(home=home, logo=f"carriers/sea/{f}")
+        print(f"  Created {len(sea_files)} sea partner items.")
 
     # Air partners
-    #AirPartnerItem.objects.all().delete()  # 👈 ADD THIS: Deletes old records
-if not AirPartnerItem.objects.exists():  # 👈 COMMENT THIS OUT
-    air_dir = os.path.join(os.path.dirname(__file__), 'media', 'carriers', 'air')
-    air_files = [f for f in os.listdir(air_dir) if f.endswith(('.jpg', '.png', '.webp'))]
-    for f in air_files:
-        AirPartnerItem.objects.create(home=home, logo=f"carriers/air/{f}")
-    print(f"  Created {len(air_files)} air partner items.")
+    if not AirPartnerItem.objects.exists():
+        air_dir = os.path.join(os.path.dirname(__file__), 'media', 'carriers', 'air')
+        air_files = [f for f in os.listdir(air_dir) if f.endswith(('.jpg', '.png', '.webp'))]
+        for f in air_files:
+            AirPartnerItem.objects.create(home=home, logo=f"carriers/air/{f}")
+        print(f"  Created {len(air_files)} air partner items.")
 
     # Locations
     if not Location.objects.exists():
@@ -251,7 +244,7 @@ if not AirPartnerItem.objects.exists():  # 👈 COMMENT THIS OUT
     # Achievements
     if not Achievement.objects.filter(home=home).exists():
         achievements_data = [
-            {"title": "Years of Experience", "count": 30, "icon": "achievements/30.svg", "delay": ".2s", "suffix": "+", "prefix": ""},
+            {"title": "Years of Experience", "count": 48, "icon": "achievements/30.svg", "delay": ".2s", "suffix": "+", "prefix": ""},
             {"title": "Happy Clients", "count": 500, "icon": "achievements/plus.svg", "delay": ".4s", "suffix": "+", "prefix": ""},
             {"title": "Offices Worldwide", "count": 15, "icon": "achievements/minus.svg", "delay": ".6s", "suffix": "+", "prefix": ""},
         ]
@@ -318,7 +311,7 @@ def seed_about():
     about.story_paragraph = "JDM Group is a leading logistics and supply chain solutions provider, established with a vision to deliver customer delight through innovative and reliable services."
     about.story_points = [
         "Founded with a vision for excellence in logistics",
-        "Over 30 years of industry experience",
+        "Over 48+ years of industry experience",
         "Pan-India presence with global reach",
         "Committed to customer satisfaction"
     ]
@@ -342,7 +335,7 @@ def seed_about():
     ]
     about.key_strengths_heading = "Our Key Strengths"
     about.key_strengths_points = [
-        "30+ years of industry experience",
+        "48+ years of industry experience",
         "Pan-India presence with 11+ offices",
         "Global network spanning 150+ countries",
         "500+ satisfied clients",

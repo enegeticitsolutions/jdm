@@ -36,9 +36,10 @@ export default function Menu() {
 
     },
     { title: "Gallery", href: "/gallery", submenu: null },
-    ...(industrySpec?.is_industry
-      ? [{ title: "Industries", href: "/industry", submenu: null }]
-      : []),
+    // HIDDEN: Industries page temporarily disabled
+    // ...(industrySpec?.is_industry
+    //   ? [{ title: "Industries", href: "/industry", submenu: null }]
+    //   : []),
     { title: "Careers", href: "/careers", submenu: null },
     // HIDDEN: News page temporarily disabled
     // { title: "News", href: "/news", submenu: [{ title: "All News", href: "/news-grid" }] },

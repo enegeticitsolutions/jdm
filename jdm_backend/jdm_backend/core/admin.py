@@ -222,6 +222,7 @@ class AboutPageContentAdmin(admin.ModelAdmin):
                 'heading',
                 'story_heading',
                 'story_paragraph',
+                'story_points',
                 ('founder_image', 'founder_image_preview'),
                 'para1',
                 'para2',

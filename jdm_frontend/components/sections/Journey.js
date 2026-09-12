@@ -42,31 +42,48 @@ const Journey = ({ url, heading }) => {
   }, [isVisible]);
   console.log("oooo: ", videoRef)
   return (
-    <section className="journey-section fix" id="journey">
-      <div className="section-title text-center">
-        {/* <h6 className="wow fadeInUp">
-          <i className="fa-regular fa-arrow-left-long" />
-          Milestones & Achievements
-          <i className="fa-regular fa-arrow-right-long" />
-        </h6> */}
-        <h2 className=" fadeInUp" data-wow-delay=".2s">
-          {heading}
-        </h2>
+    <section className="journey-section fix py-4" id="journey">
+      <div className="container">
+        <div className="section-title text-center mb-3">
+          <h2 className="fadeInUp" data-wow-delay=".2s">
+            {heading}
+          </h2>
+        </div>
       </div>
-      <video
-        key={url}
-        ref={videoRef}
-        className="w-full"
-        loop
-        muted
-        playsInline
-      >
-        {console.log("url---------------> video: ", url)}
-        <source src={url} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* <img src={url} alt="Journey" className="w-full" /> */}
-    </section >
+      <div className="journey-video-wrapper w-100 overflow-hidden">
+        <video
+          key={url}
+          ref={videoRef}
+          className="journey-video"
+          loop
+          muted
+          playsInline
+        >
+          <source src={url} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <style jsx>{`
+        .journey-video-wrapper {
+          width: 100%;
+          max-width: 100%;
+          overflow: hidden;
+        }
+        .journey-video {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          display: block;
+          object-fit: contain;
+        }
+        @media (max-width: 575px) {
+          .journey-section {
+            padding: 20px 0;
+          }
+        }
+      `}</style>
+    </section>
   );
 };
 
