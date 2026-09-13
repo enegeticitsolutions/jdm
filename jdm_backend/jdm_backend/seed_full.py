@@ -362,7 +362,7 @@ def seed_about():
     # About page achievements
     if not Achievement.objects.filter(about=about).exists():
         achievements = [
-            {"title": "Years of Experience", "count": 30, "icon": "achievements/30.svg", "delay": ".2s", "suffix": "+"},
+            {"title": "Years of Experience", "count": 48, "icon": "achievements/30.svg", "delay": ".2s", "suffix": "+"},
             {"title": "Happy Clients", "count": 500, "icon": "achievements/plus.svg", "delay": ".4s", "suffix": "+"},
             {"title": "Team Members", "count": 200, "icon": "achievements/minus.svg", "delay": ".6s", "suffix": "+"},
         ]

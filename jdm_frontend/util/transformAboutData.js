@@ -28,9 +28,14 @@ export const transformAboutData = (data) => {
           heading: data.story?.heading || defaultStoryData.heading,
           paragraph: data.story?.paragraph || defaultStoryData.paragraph,
           points:
-            data.story?.points?.length > 0
+            (data.story?.points?.length > 0
               ? data.story.points
-              : defaultStoryData.points,
+              : defaultStoryData.points
+            ).map((pt) =>
+              pt
+                .replace(/Over\s+30(?:\+)?\s*years/gi, "Over 48+ years")
+                .replace(/30(?:\+)?\s*years/gi, "48+ years")
+            ),
           founder_image_url:
             transformImage(data.story?.founder_image_url) ||
             defaultStoryData.founder_image_url,
@@ -82,10 +87,14 @@ export const transformAboutData = (data) => {
       keyStrengths: data.key_strengths
         ? {
           heading: data.key_strengths?.heading || "Our Key Strengths",
-          points:
-            data.key_strengths?.points?.length > 0
-              ? data.key_strengths.points
-              : defaultVMData.strengths,
+          points: (data.key_strengths?.points?.length > 0
+            ? data.key_strengths.points
+            : defaultVMData.strengths
+          ).map((pt) =>
+            pt
+              .replace(/Over\s+30(?:\+)?\s*years/gi, "Over 48+ years")
+              .replace(/30(?:\+)?\s*years/gi, "48+ years")
+          ),
           image_url: `${BASE}/media/about/keystrength/key_strenghts.png`,
         }
         : null,
