@@ -13,6 +13,9 @@ const nunito = Nunito({
 export const metadata = {
   title: "JDM Group - Customer Delight is Our Passion",
   description: "JDM Group - Customer Delight is Our Passion",
+  icons: {
+    icon: "/favicon-squared.jpg?v=2",
+  },
 };
 
 export default function RootLayout({ children }) {
