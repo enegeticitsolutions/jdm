@@ -15,8 +15,13 @@ build/
 # Virtual Environment
 # -------------------------
 venv/
+venv*/
 env/
 .venv/
+*.code-workspace
+*tempCodeRunnerFile*
+jdm_backend/media/resumes/*
+!jdm_backend/media/resumes/.gitkeep
 
 # -------------------------
 # Django Stuff

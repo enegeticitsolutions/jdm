@@ -256,3 +256,24 @@ class ContactQuerySchema(BaseModel):
     message: str = Field(..., min_length=5)
 
     model_config = ConfigDict(from_attributes=True)
+
+class TestimonialSchema(BaseModel):
+    id: UUID
+    name: str
+    position: str
+    text: str
+    image: Optional[str]
+    company_image: Optional[str]
+    rating: int
+    is_active: bool
+    created_at: datetime
+    model_config = ConfigDict(from_attributes=True)
+
+class NetworkSchema(BaseModel):
+    id: UUID
+    region: str
+    headquarters: str
+    branches: str
+    is_active: bool
+    position: int
+    model_config = ConfigDict(from_attributes=True)

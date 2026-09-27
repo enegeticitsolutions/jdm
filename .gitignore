@@ -1,0 +1,7 @@
+# Root ignore rules
+package-lock.json
+*.code-workspace
+*tempCodeRunnerFile*
+.DS_Store
+Thumbs.db
+desktop.ini

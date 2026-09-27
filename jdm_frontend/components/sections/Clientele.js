@@ -116,20 +116,57 @@ const Clientele = () => {
       setSectorLogos(sectors);
       setCountryLogos(countries);
     };
-
+    
     fetchStaticData();
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:8000';
     if (apiUrl) {
       const fetchData = async () => {
         try {
-          const response = await fetch(`${apiUrl}/clientele/api/`);
-          const data = await response.json();
-          if (data && data.sectors && Array.isArray(data.sectors) && data.sectors.length > 0) {
-            setSectorLogos(data.sectors);
+          const [sectorsResponse, countriesResponse] = await Promise.all([
+            fetch(`${apiUrl}/clientele/sectors/`),
+            fetch(`${apiUrl}/clientele/countries/`)
+          ]);
+
+          if (sectorsResponse.ok) {
+            const sectorsData = await sectorsResponse.json();
+            if (sectorsData && Array.isArray(sectorsData) && sectorsData.length > 0) {
+              // Prepend baseUrl to relative src paths
+              const updatedSectors = sectorsData.map(sector => ({
+                ...sector,
+                logos: sector.logos.map(logo => ({
+                  ...logo,
+                  src: logo.src.startsWith('http') ? logo.src : `${baseUrl}${logo.src}`
+                }))
+              }));
+              setSectorLogos(updatedSectors);
+            }
+          } else {
+            console.error("Failed to fetch sectors: ", sectorsResponse.status);
           }
-          if (data && data.countries && Array.isArray(data.countries) && data.countries.length > 0) {
-            setCountryLogos(data.countries);
+
+          if (countriesResponse.ok) {
+            const countriesData = await countriesResponse.json();
+            if (countriesData && Array.isArray(countriesData) && countriesData.length > 0) {
+              const updatedCountries = countriesData.map(country => ({
+                ...country,
+                logos: (country.logos || []).map(logo => ({
+                  ...logo,
+                  src: logo.src.startsWith('http') ? logo.src : `${baseUrl}${logo.src}`
+                })),
+                subcountries: (country.subcountries || []).map(sub => ({
+                  ...sub,
+                  logos: (sub.logos || []).map(logo => ({
+                    ...logo,
+                    src: logo.src.startsWith('http') ? logo.src : `${baseUrl}${logo.src}`
+                  }))
+                }))
+              }));
+              setCountryLogos(updatedCountries);
+            }
+          } else {
+            console.error("Failed to fetch countries: ", countriesResponse.status);
           }
         } catch (error) {
           console.error("Error fetching clientele data:", error);

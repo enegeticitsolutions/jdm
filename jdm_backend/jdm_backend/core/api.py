@@ -4,8 +4,8 @@ from ninja import NinjaAPI, Form, File
 from ninja.files import UploadedFile
 from typing import Optional
 from ninja.errors import HttpError
-from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry
-from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema
+from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network
+from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, TestimonialSchema, NetworkSchema
 import json
 from django.shortcuts import get_object_or_404
 # import form_
@@ -473,4 +473,37 @@ def get_industry(request):
         for obj in queryset
     ]
 
+    return result
+
+@api.get("/testimonials/", response=list[TestimonialSchema])
+def get_testimonials(request):
+    queryset = Testimonial.objects.filter(is_active=True).order_by('-created_at')
+    result = []
+    for obj in queryset:
+        result.append({
+            "id": obj.id,
+            "name": obj.name,
+            "position": obj.position,
+            "text": obj.text,
+            "image": build_file_url(request, obj.image) if obj.image else None,
+            "company_image": build_file_url(request, obj.company_image) if obj.company_image else None,
+            "rating": obj.rating,
+            "is_active": obj.is_active,
+            "created_at": obj.created_at,
+        })
+    return result
+
+@api.get("/network/", response=list[NetworkSchema])
+def get_network(request):
+    queryset = Network.objects.filter(is_active=True)
+    result = []
+    for obj in queryset:
+        result.append({
+            "id": obj.id,
+            "region": obj.region,
+            "headquarters": obj.headquarters,
+            "branches": obj.branches,
+            "is_active": obj.is_active,
+            "position": obj.position,
+        })
     return result

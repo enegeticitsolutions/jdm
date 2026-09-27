@@ -66,33 +66,24 @@ export default function Testimonial2() {
   const [testimonials, setTestimonials] = useState(defaultTestimonials); // Initialize with default testimonials
 
   // Fetch testimonials data from API on mount
-  // useEffect(() => {
-  //   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  useEffect(() => {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
 
-  //   const fetchTestimonialsData = async () => {
-  //     try {
-  //       const response = await fetch(`${apiUrl}/aboutus/api/testimonials/`);
-  //       const data = await response.json();
-  //       // Assuming the API returns an array of objects with text, name, position, image, companyImage, etc.
-  //       if (data && Array.isArray(data) && data.length > 0) {
-  //         const fetchedTestimonials = data.map(testimonial => ({
-  //           text: testimonial.text || testimonial.content || "No testimonial provided",
-  //           name: testimonial.name || "Anonymous",
-  //           position: testimonial.position || testimonial.role || "Unknown Position",
-  //           image: testimonial.image || testimonial.clientImage || "assets/img/testimonial/default-client.png",
-  //           companyImage: testimonial.companyImage || testimonial.logo || "assets/img/testimonial/default-company.png",
-  //           rating: testimonial.rating || 5, // Default to 5 stars if not provided
-  //         }));
-  //         setTestimonials(fetchedTestimonials);
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching testimonials data:", error);
-  //       // Fallback to defaultTestimonials (already set)
-  //     }
-  //   };
+    const fetchTestimonialsData = async () => {
+      try {
+        const response = await fetch(`${apiUrl}/testimonials/`);
+        const data = await response.json();
+        
+        if (data && Array.isArray(data) && data.length > 0) {
+          setTestimonials(data);
+        }
+      } catch (error) {
+        console.error("Error fetching testimonials data:", error);
+      }
+    };
 
-  //   fetchTestimonialsData();
-  // }, []); // Runs once on mount
+    fetchTestimonialsData();
+  }, []); // Runs once on mount
 
   return (
     <>
@@ -130,18 +121,18 @@ export default function Testimonial2() {
                     <p>{testimonial.text}</p>
                     <div className="client-info-items">
                       <div className="client-info">
-                        {/* <img src={testimonial.image} alt={testimonial.name} /> */}
+                        <img src={testimonial.image || "assets/img/testimonial/default-client.png"} alt={testimonial.name} />
                         <div className="content">
                           <h4>{testimonial.name}</h4>
                           <span>{testimonial.position}</span>
-                          {/* <div className="star">
-                            {Array.from({ length: testimonial.rating }, (_, i) => (
+                          <div className="star">
+                            {Array.from({ length: testimonial.rating || 5 }, (_, i) => (
                               <i key={i} className="fa-solid fa-star" />
                             ))}
-                          </div> */}
+                          </div>
                         </div>
                       </div>
-                      {/* <img src={testimonial.companyImage} alt="Company Logo" /> */}
+                      <img src={testimonial.companyImage || "assets/img/testimonial/default-company.png"} alt="Company Logo" />
                     </div>
                   </div>
                 </SwiperSlide>

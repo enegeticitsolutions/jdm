@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry
+from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network
 from django.utils.html import format_html
 from django import forms
 from django.core.exceptions import ValidationError
@@ -357,3 +357,17 @@ class ContactQueryAdmin(admin.ModelAdmin):
 
     def has_change_permission(self, request, obj=None):
         return False  # Make entries read-only (optional)
+
+@admin.register(Testimonial)
+class TestimonialAdmin(admin.ModelAdmin):
+    list_display = ('name', 'position', 'rating', 'is_active', 'created_at')
+    search_fields = ('name', 'position')
+    list_filter = ('is_active', 'rating')
+
+@admin.register(Network)
+class NetworkAdmin(admin.ModelAdmin):
+    list_display = ('region', 'headquarters', 'is_active', 'position')
+    list_editable = ('position', 'is_active')
+    search_fields = ('region', 'headquarters')
+    list_filter = ('is_active',)
+

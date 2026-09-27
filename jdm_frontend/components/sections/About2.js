@@ -16,15 +16,15 @@ export default function About2() {
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
-        const response = await fetch("https://jdm-backend.onrender.com/home/api/about/", {
-          cache: "no-store", // Fresh data every time
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1;
+        const response = await fetch(`${apiUrl}/about/`, {
+          cache: "no-store", 
         });
         const data = await response.json();
         console.log("home about data", data);
-        setAboutData(data.about[0]); // Take the first item from the "about" array
+        setAboutData(data); // Set the full data object
       } catch (err) {
         console.error("Failed to fetch about data:", err);
-        // Keep default data by not setting aboutData
       }
     };
     fetchAboutData();
@@ -86,33 +86,33 @@ export default function About2() {
                       className="wow fadeInUp fst-italic"
                       data-wow-delay=".2s"
                       dangerouslySetInnerHTML={{
-                        __html: renderDescription(aboutData?.Heading || defaultHeading),
+                        __html: renderDescription(aboutData?.story?.heading || defaultHeading),
                       }}
                     />
                   </div>
                   <p 
                     className="mt-3 mt-md-0 wow fadeInUp" 
                     data-wow-delay=".4s"
-                    dangerouslySetInnerHTML={{ __html: renderDescription(aboutData?.Paragraph || defaultParagraph) }}
+                    dangerouslySetInnerHTML={{ __html: renderDescription(aboutData?.story?.paragraph || defaultParagraph) }}
                   />
                   <ul className="list-items wow fadeInUp fst-italic" data-wow-delay=".2s">
-                    {(aboutData?.array_of_Points || defaultPoints).map((point, index) => (
+                    {(aboutData?.story?.points || defaultPoints).map((point, index) => (
                       <li key={index}>
                         <i className="fa-solid fa-circle-check" />
                         <span dangerouslySetInnerHTML={{ __html: renderDescription(point) }} />
                       </li>
                     ))}
                   </ul>
-                  {aboutData?.CEO_Photo && aboutData?.CEO_Name && (
+                  {aboutData?.story?.founder_image_url && (
                     <div className="about-author">
                       <div className="author-image wow fadeInUp" data-wow-delay=".2s">
                         <img
-                          src={`https://jdm-backend.onrender.com${aboutData.CEO_Photo}`}
+                          src={`${process.env.NEXT_PUBLIC_BASE_URL || ''}${aboutData.story.founder_image_url}`}
                           alt="ceo-img"
                           className="img-fluid rounded"
                           style={{ height: '100px', width: '100px', objectFit: 'cover' }}
                         />
-                        <h6>{aboutData.CEO_Name}</h6>
+                        {/* <h6>CEO Name</h6> */}
                       </div>
                     </div>
                   )}

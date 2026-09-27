@@ -25,11 +25,10 @@ const Network = () => {
 
   // Fetch network data from API on mount
   useEffect(() => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-
     const fetchNetworkData = async () => {
       try {
-        const response = await fetch(`${apiUrl}/home/api/network/`); // Hypothetical endpoint
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
+        const response = await fetch(`${apiUrl}/network/`);
         const data = await response.json();
         // Assuming the API returns an array of objects with region, headquarters, and branches
         if (data && Array.isArray(data) && data.length > 0) {
@@ -74,17 +73,17 @@ const Network = () => {
             </h2> */}
 
             {/* Branch List */}
-            {/* <div className="space-y-6 wow fadeInUp" data-wow-delay=".7s">
+            <div className="space-y-6 wow fadeInUp" data-wow-delay=".7s">
               {networkData.map((branch, index) => (
-                <div key={index} className="branch-item">
+                <div key={index} className="branch-item" style={{ marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid #ccc' }}>
                   <h3 className="text-xl font-semibold">{branch.region}</h3>
-                  <p className="text-white/70">
-                    Headquarters: {branch.headquarters}<br />
-                    Branches: {branch.branches}
+                  <p className="text-black/70">
+                    <strong>Headquarters:</strong> {branch.headquarters}<br />
+                    <strong>Branches:</strong> {branch.branches}
                   </p>
                 </div>
               ))}
-            </div> */}
+            </div>
           {/* </div> */}
           <div className="world-image-wrapper w-full h-full wow fadeInUp" data-wow-delay=".9s">
             <img

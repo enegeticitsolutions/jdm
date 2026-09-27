@@ -392,3 +392,31 @@ class ContactQuery(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.email}"
+class Testimonial(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    text = models.TextField()
+    image = models.ImageField(upload_to='testimonials/clients/', blank=True, null=True)
+    company_image = models.ImageField(upload_to='testimonials/companies/', blank=True, null=True)
+    rating = models.IntegerField(default=5)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+class Network(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    region = models.CharField(max_length=100)
+    headquarters = models.CharField(max_length=100)
+    branches = models.CharField(max_length=200)
+    is_active = models.BooleanField(default=True)
+    position = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['position']
+
+    def __str__(self):
+        return self.region
+
