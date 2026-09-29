@@ -1009,7 +1009,7 @@
     "fields": {
       "home": "5449eaee-fcba-41f3-9e2b-a881b5cfe688",
       "city": "Delhi",
-      "address": "A-75, Road No. 4,Street No. 6, Mahipalpur Extn., New Delhi - 110037",
+      "address": "A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037",
       "phone": [
         "+91-11-49536400"
       ],
@@ -1935,7 +1935,7 @@
     "fields": {
       "title": "Contact Us",
       "address_title": "Our Head Office",
-      "address": "4, Mahipalpur Extn., New Delhi - 110037, India",
+      "address": "A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037",
       "contact_title": "Get in Touch",
       "phone_label": "Phone",
       "phone": "+91-11-49536400",

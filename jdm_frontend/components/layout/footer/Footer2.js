@@ -214,7 +214,7 @@ export default function Footer2() {
                     <li>
                       <Link href="tel:+9149707070">
                         <i className="fa-solid fa-phone-volume" />
-                        +91-49707070-100 Lines
+                        +91-49707070-100
                       </Link>
                     </li>
                   </ul>
