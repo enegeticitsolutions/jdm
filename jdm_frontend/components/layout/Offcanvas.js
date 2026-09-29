@@ -21,7 +21,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 								</div>
 							</div>
 							<p className="text d-none d-xl-block">
-							Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.
+								Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.
 							</p>
 							<MobileMenu />
 							<div className="offcanvas__contact">
@@ -33,7 +33,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 										</div>
 										<div className="offcanvas__contact-text">
 											<Link target="_blank" href="#">
-												A-75, New Delhi - 1100037, India
+												A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037
 											</Link>
 										</div>
 									</li>
@@ -55,7 +55,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 										</div>
 										<div className="offcanvas__contact-text">
 											<Link target="_blank" href="#">
-												Mod-friday, 09am -05pm
+												Mon-Friday, 10am - 6:30pm
 											</Link>
 										</div>
 									</li>
@@ -64,7 +64,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 											<i className="far fa-phone" />
 										</div>
 										<div className="offcanvas__contact-text">
-										<Link href="tel:+9149707070">+91-49707070-100 Lines</Link>
+											<Link href="tel:+9149707070">+91-49707070-100</Link>
 										</div>
 									</li>
 								</ul>
@@ -77,18 +77,18 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 									</Link>
 								</div>
 								<div className="social-icon d-flex align-items-center">
-								<Link href="https://www.facebook.com/profile.php?id=100090951694492">
-									<i className="fab fa-facebook-f" />
-								</Link>
-								<Link href="https://x.com/home?lang=en">
-									<i className="fab fa-twitter" />
-								</Link>
-								<Link href="https://www.instagram.com/we_jdm/">
-									<i className="fab fa-instagram" />
-								</Link>
-								<Link href="https://www.linkedin.com/company/27983246" target="_blank">
-									<i className="fab fa-linkedin-in" />
-								</Link>
+									<Link href="https://www.facebook.com/profile.php?id=100090951694492">
+										<i className="fab fa-facebook-f" />
+									</Link>
+									<Link href="https://x.com/home?lang=en">
+										<i className="fab fa-twitter" />
+									</Link>
+									<Link href="https://www.instagram.com/we_jdm/">
+										<i className="fab fa-instagram" />
+									</Link>
+									<Link href="https://www.linkedin.com/company/27983246" target="_blank">
+										<i className="fab fa-linkedin-in" />
+									</Link>
 								</div>
 							</div>
 						</div>
