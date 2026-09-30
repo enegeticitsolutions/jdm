@@ -2,7 +2,7 @@ import { achievementsData as defaultAchievements } from "./achievement";
 import { defaultStoryData } from "./storyData";
 import { defaultVMData } from "./visionMission";
 
-const BASE = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:8000';
+const BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://api.jdmgroups.com';
 
 export const transformAboutData = (data) => {
   if (!data || !data.is_active) return null;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function NewsDetailsSection({ blogData, recentPosts = [] }) {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://jdm-backend.onrender.com";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.jdmgroups.com";
 
   // Prepare tags safely
   const tags = blogData?.tags || [];

@@ -5,7 +5,7 @@ export const useAboutData = () => {
   return useQuery({
     queryKey: ["about"],
     queryFn: async () => {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'https://api.jdmgroups.com/api/v1';
       const res = await fetch(`${apiUrl}/about/`, {
         cache: "no-store",
       });

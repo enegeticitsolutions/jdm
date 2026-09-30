@@ -3,7 +3,7 @@ import NewsDetailsSection from "@/components/sections/NewsDetailsSection";
 
 export default async function NewsDetails({ params }) {
   const { id } = params; // Get the dynamic id from the URL
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://jdm-backend.onrender.com";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.jdmgroups.com";
 
   // Fetch blog data for the specific id
   let blogData = null;

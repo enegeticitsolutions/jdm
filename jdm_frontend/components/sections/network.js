@@ -27,7 +27,7 @@ const Network = () => {
   useEffect(() => {
     const fetchNetworkData = async () => {
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'https://api.jdmgroups.com/api/v1';
         const response = await fetch(`${apiUrl}/network/`);
         const data = await response.json();
         // Assuming the API returns an array of objects with region, headquarters, and branches

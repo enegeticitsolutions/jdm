@@ -119,8 +119,8 @@ const Clientele = () => {
     
     fetchStaticData();
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:8000';
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'https://api.jdmgroups.com/api/v1';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://api.jdmgroups.com';
     if (apiUrl) {
       const fetchData = async () => {
         try {

@@ -67,7 +67,7 @@ export default function Testimonial2() {
 
   // Fetch testimonials data from API on mount
   useEffect(() => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'http://localhost:8000/api/v1';
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || 'https://api.jdmgroups.com/api/v1';
 
     const fetchTestimonialsData = async () => {
       try {
