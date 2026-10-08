@@ -171,8 +171,6 @@ class AboutPageContent(models.Model):
     values_points = models.JSONField(default=list)
     key_strengths_heading = models.CharField(max_length=255, default="Our Key Strengths")
     key_strengths_points = models.JSONField(default=list)   
-    # achievements = models.JSONField(default=list)
-    achievements_heading = models.CharField(max_length=200, default="Achievements")
     team_heading = models.CharField(max_length=200, default="Our Team")
     faq_heading = models.CharField(max_length=255)
     faq_paragraph = models.TextField()
@@ -182,7 +180,6 @@ class AboutPageContent(models.Model):
     is_values = models.BooleanField(default=True)
     is_story = models.BooleanField(default=True)
     is_faq = models.BooleanField(default=True)
-    is_achievements = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -193,7 +190,6 @@ def validate_svg(file):
 class Achievement(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     home = models.ForeignKey(HomePageContent, related_name='achievements', on_delete=models.CASCADE, default=None, null=True)
-    about = models.ForeignKey(AboutPageContent, related_name='achievements', on_delete=models.CASCADE, default=None, null=True, blank=True )
     title = models.CharField(max_length=200)
     count = models.IntegerField()
     icon = models.FileField(upload_to='achievements/', validators=[validate_svg])
@@ -201,6 +197,10 @@ class Achievement(models.Model):
     suffix = models.CharField(default="", blank=True, null=True)
     prefix = models.CharField(default="", blank=True, null=True)
     is_active = models.BooleanField(default=True)
+    position = models.PositiveIntegerField(default=0, help_text="Used for ordering (lower number = higher up)")
+
+    class Meta:
+        ordering = ['position', 'id']
 
     def __str__(self):
         return self.title
@@ -212,6 +212,10 @@ class FAQ(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     is_active= models.BooleanField(default=True)
+    position = models.PositiveIntegerField(default=0, help_text="Used for ordering (lower number = higher up)")
+
+    class Meta:
+        ordering = ['position', 'id']
 
 # Carrer Page Models
 class Job(models.Model):
@@ -417,6 +421,16 @@ class Network(models.Model):
     class Meta:
         ordering = ['position']
 
-    def __str__(self):
-        return self.region
+class SocialMediaLink(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    facebook_url = models.URLField(blank=True, null=True)
+    twitter_url = models.URLField(blank=True, null=True)
+    instagram_url = models.URLField(blank=True, null=True)
+    linkedin_url = models.URLField(blank=True, null=True)
 
+    class Meta:
+        verbose_name = "Social Media Link"
+        verbose_name_plural = "Social Media Links"
+
+    def __str__(self):
+        return "Social Media Links"

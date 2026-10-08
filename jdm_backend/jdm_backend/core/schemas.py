@@ -277,3 +277,13 @@ class NetworkSchema(BaseModel):
     is_active: bool
     position: int
     model_config = ConfigDict(from_attributes=True)
+
+
+class SocialMediaLinkSchema(BaseModel):
+    id: UUID
+    facebook_url: Optional[str]
+    twitter_url: Optional[str]
+    instagram_url: Optional[str]
+    linkedin_url: Optional[str]
+
+    model_config = ConfigDict(from_attributes=True)

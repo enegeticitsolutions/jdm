@@ -45,6 +45,18 @@ export default function ContactSection() {
         throw new Error(`Server error: ${response.status} - ${errorText}`);
       }
 
+      try {
+        await fetch('/api/email/contact', {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+      } catch(emailErr) {
+        console.error('Email notification failed', emailErr);
+      }
+
       const result = await response.json();
       console.log("Message submitted successfully:", result);
       alert("Message sent successfully!");

@@ -1,9 +1,10 @@
 from django.contrib import admin
-from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network
+from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink
 from django.utils.html import format_html
 from django import forms
 from django.core.exceptions import ValidationError
-# from django.contrib.admin import ModelAdmin
+from import_export.admin import ExportActionMixin
+from rangefilter.filters import DateRangeFilter
 
 class IndustryForm(forms.ModelForm):
     list_items_text = forms.CharField(
@@ -213,7 +214,7 @@ class FAQInline(admin.TabularInline):
 
 @admin.register(AboutPageContent)
 class AboutPageContentAdmin(admin.ModelAdmin):
-    inlines = [FAQInline, AchievementInline]
+    inlines = [FAQInline]
     readonly_fields = ("created_at", "updated_at", "mission_image_preview", "vision_image_preview", "values_image_preview", "founder_image_preview")
 
     fieldsets = (
@@ -245,7 +246,6 @@ class AboutPageContentAdmin(admin.ModelAdmin):
                 'is_vision',
                 'is_values',
                 'is_story',
-                'is_achievements',
                 'is_faq',
                 ('created_at', 'updated_at'),
             )
@@ -291,10 +291,27 @@ class JobAdmin(admin.ModelAdmin):
     search_fields = ("title", "location", "type")
     list_filter = ("type", "location")
 
+from import_export import resources
+from import_export.fields import Field
+
+class JobApplicationResource(resources.ModelResource):
+    cv = Field(attribute='cv', column_name='cv')
+    
+    class Meta:
+        model = JobApplication
+        
+    def dehydrate_cv(self, obj):
+        if obj.cv:
+            return f"https://api.jdmgroups.com{obj.cv.url}"
+        return ""
+
 @admin.register(JobApplication)
-class JobApplicationAdmin(admin.ModelAdmin):
+class JobApplicationAdmin(ExportActionMixin, admin.ModelAdmin):
+    show_change_form_export = False
+    resource_class = JobApplicationResource
     list_display = ('name', 'email', 'job', 'created_at')
     search_fields = ('name', 'email', 'job__title')
+    list_filter = (('created_at', DateRangeFilter),)
 
 # Registering The ServiceItem model
 class BenefitInline(admin.TabularInline):
@@ -345,10 +362,11 @@ class ContactInfoAdmin(admin.ModelAdmin):
     search_fields = ("title", "email", "phone", "address")
 
 @admin.register(ContactQuery)
-class ContactQueryAdmin(admin.ModelAdmin):
+class ContactQueryAdmin(ExportActionMixin, admin.ModelAdmin):
+    show_change_form_export = False
     list_display = ('first_name', 'last_name', 'email', 'phone', 'created_at')
     search_fields = ('first_name', 'last_name', 'email', 'phone')
-    list_filter = ('created_at',)
+    list_filter = (('created_at', DateRangeFilter),)
     ordering = ('-created_at',)
     readonly_fields = ('first_name', 'last_name', 'email', 'phone', 'message', 'created_at')
 
@@ -370,4 +388,14 @@ class NetworkAdmin(admin.ModelAdmin):
     list_editable = ('position', 'is_active')
     search_fields = ('region', 'headquarters')
     list_filter = ('is_active',)
+
+
+@admin.register(SocialMediaLink)
+class SocialMediaLinkAdmin(admin.ModelAdmin):
+    list_display = ('facebook_url', 'twitter_url', 'instagram_url', 'linkedin_url')
+
+    def has_add_permission(self, request):
+        if self.model.objects.exists():
+            return False
+        return super().has_add_permission(request)
 

@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'core',
     'clientele',
     # 'gallery',
-    'corsheaders'
+    'corsheaders',
+    'import_export',
+    'rangefilter',
 ]
 
 MIDDLEWARE = [

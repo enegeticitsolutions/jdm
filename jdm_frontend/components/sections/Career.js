@@ -119,6 +119,15 @@ const CareerSection = ({ jobs }) => {
       throw new Error(`Server error: ${response.status} - ${errorText}`);
     }
 
+    try {
+      await fetch('/api/email/job-apply', {
+        method: 'POST',
+        body: formData, // FormData directly
+      });
+    } catch(emailErr) {
+      console.error('Email notification failed', emailErr);
+    }
+
     const result = await response.json();
     console.log("Application submitted successfully:", result);
     alert("Application submitted successfully!");
@@ -167,7 +176,10 @@ const CareerSection = ({ jobs }) => {
                         <p>
                           Location: {job.location} | Type: {job.type}
                         </p>
-                        <p>{job.description}</p>
+                        <div 
+                          className="job-description" 
+                          dangerouslySetInnerHTML={{ __html: job.description }} 
+                        />
                         <button
                           onClick={() => handleApplyClick(job)}
                           className="theme-btn apply-btn wow fadeInUp"
@@ -255,8 +267,7 @@ const CareerSection = ({ jobs }) => {
                   type="text"
                   id="department"
                   name="department"
-                  value={getDepartmentFromJob(isGeneralForm ? "" : selectedJob?.title)}
-                  readOnly
+                  defaultValue={getDepartmentFromJob(isGeneralForm ? "" : selectedJob?.title)}
                 />
               </div>
               <div className="form-group">
