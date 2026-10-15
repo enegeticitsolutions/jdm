@@ -25,13 +25,21 @@ export default function Home2() {
   const [content, setContent] = useState(null);
 
   useEffect(() => {
-
     if (data && data.is_active) {
-
       setContent(transformHomeData(data));
     }
-
   }, [data]);
+
+  useEffect(() => {
+    if (content && typeof window !== "undefined" && window.location.hash === "#journey") {
+      setTimeout(() => {
+        const el = document.getElementById("journey");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+    }
+  }, [content]);
 
   // if (isLoading) return <Loading />;
   console.log("content678990: ", content);
