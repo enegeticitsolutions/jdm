@@ -89,6 +89,26 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/service-details",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        // Tells Google and search engines to ONLY index the main website homepage
+        // and de-index/hide all sub-pages from search results
+        source: "/:path((?!_next|assets|favicon|api).+)",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, follow",
+          },
+        ],
+      },
     ];
   },
 };
