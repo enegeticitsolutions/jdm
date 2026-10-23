@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink
+from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink, QuickLink
 from django.utils.html import format_html
+from django.urls import reverse
 from django import forms
 from django.core.exceptions import ValidationError
 from import_export.admin import ExportActionMixin
@@ -284,9 +285,40 @@ class FAQAdmin(admin.ModelAdmin):
     # Enables a search box that filters FAQs by title
     search_fields = ("title",)
 
+class JobForm(forms.ModelForm):
+    key_points_text = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 5, 'placeholder': 'Enter each pointer / key point on a new line'}),
+        required=False,
+        label="Key Points / Pointers (one per line)",
+        help_text="Enter key points or responsibilities for this job profile, one on each line."
+    )
+
+    class Meta:
+        model = Job
+        fields = ['title', 'location', 'type', 'description', 'key_points_text', 'apply_link', 'is_active']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance and self.instance.pk:
+            points = self.instance.key_points
+            if isinstance(points, list):
+                self.initial['key_points_text'] = "\n".join(points)
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        key_points_text = self.cleaned_data.get('key_points_text', '')
+        if key_points_text:
+            instance.key_points = [line.strip() for line in key_points_text.split('\n') if line.strip()]
+        else:
+            instance.key_points = []
+        if commit:
+            instance.save()
+        return instance
+
 # Registering the Job model for the Career page
 @admin.register(Job)
 class JobAdmin(admin.ModelAdmin):
+    form = JobForm
     list_display = ("title", "location", "type", "created_at")
     search_fields = ("title", "location", "type")
     list_filter = ("type", "location")
@@ -309,9 +341,31 @@ class JobApplicationResource(resources.ModelResource):
 class JobApplicationAdmin(ExportActionMixin, admin.ModelAdmin):
     show_change_form_export = False
     resource_class = JobApplicationResource
-    list_display = ('name', 'email', 'job', 'created_at')
-    search_fields = ('name', 'email', 'job__title')
-    list_filter = (('created_at', DateRangeFilter),)
+    list_display = ('name', 'email', 'get_job_profile', 'phone', 'city', 'created_at', 'delete_query_button')
+    search_fields = ('name', 'email', 'job__title', 'city', 'state', 'department')
+    list_filter = (('created_at', DateRangeFilter), 'job')
+    actions = ['delete_selected_queries']
+
+    def get_job_profile(self, obj):
+        return obj.job.title if obj.job else "General"
+    get_job_profile.short_description = "Job Profile"
+
+    def delete_query_button(self, obj):
+        delete_url = reverse('admin:core_jobapplication_delete', args=[obj.pk])
+        return format_html(
+            '<a class="button" style="background-color: #ba2121; color: #fff; padding: 4px 10px; border-radius: 4px; font-weight: 600; text-decoration: none;" href="{}">Delete Query</a>',
+            delete_url
+        )
+    delete_query_button.short_description = "Delete Option"
+
+    @admin.action(description="Delete selected Job Queries")
+    def delete_selected_queries(self, request, queryset):
+        count = queryset.count()
+        queryset.delete()
+        self.message_user(request, f"Successfully deleted {count} job query/queries.")
+
+    def has_delete_permission(self, request, obj=None):
+        return True
 
 # Registering The ServiceItem model
 class BenefitInline(admin.TabularInline):
@@ -361,20 +415,41 @@ class ContactInfoAdmin(admin.ModelAdmin):
     list_display = ("title", "email", "phone")
     search_fields = ("title", "email", "phone", "address")
 
+class ContactQueryResource(resources.ModelResource):
+    class Meta:
+        model = ContactQuery
+        fields = ('id', 'first_name', 'last_name', 'email', 'phone', 'message', 'created_at')
+        export_order = ('first_name', 'last_name', 'email', 'phone', 'message', 'created_at')
+
 @admin.register(ContactQuery)
 class ContactQueryAdmin(ExportActionMixin, admin.ModelAdmin):
-    show_change_form_export = False
-    list_display = ('first_name', 'last_name', 'email', 'phone', 'created_at')
+    resource_class = ContactQueryResource
+    list_display = ('first_name', 'last_name', 'email', 'phone', 'created_at', 'delete_query_button')
     search_fields = ('first_name', 'last_name', 'email', 'phone')
     list_filter = (('created_at', DateRangeFilter),)
     ordering = ('-created_at',)
     readonly_fields = ('first_name', 'last_name', 'email', 'phone', 'message', 'created_at')
+    actions = ['delete_selected_queries']
+
+    def delete_query_button(self, obj):
+        delete_url = reverse('admin:core_contactquery_delete', args=[obj.pk])
+        return format_html(
+            '<a class="button" style="background-color: #ba2121; color: #fff; padding: 4px 10px; border-radius: 4px; font-weight: 600; text-decoration: none;" href="{}">Delete Query</a>',
+            delete_url
+        )
+    delete_query_button.short_description = "Delete Option"
+
+    @admin.action(description="Delete selected Contact Queries")
+    def delete_selected_queries(self, request, queryset):
+        count = queryset.count()
+        queryset.delete()
+        self.message_user(request, f"Successfully deleted {count} contact query/queries.")
 
     def has_add_permission(self, request):
-        return False  # Prevent manual additions via admin (optional)
+        return False
 
-    def has_change_permission(self, request, obj=None):
-        return False  # Make entries read-only (optional)
+    def has_delete_permission(self, request, obj=None):
+        return True
 
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):
@@ -398,4 +473,13 @@ class SocialMediaLinkAdmin(admin.ModelAdmin):
         if self.model.objects.exists():
             return False
         return super().has_add_permission(request)
+
+
+@admin.register(QuickLink)
+class QuickLinkAdmin(admin.ModelAdmin):
+    list_display = ("title", "url", "position", "is_active", "open_in_new_tab")
+    list_editable = ("position", "is_active", "open_in_new_tab")
+    search_fields = ("title", "url")
+    list_filter = ("is_active",)
+    ordering = ("position", "id")
 

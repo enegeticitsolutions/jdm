@@ -161,6 +161,7 @@ class JobSchema(BaseModel):
     location: str
     type: str
     description: str
+    key_points: Optional[List[str]] = []
     apply_link: str
     created_at: datetime
     updated_at: datetime
@@ -176,6 +177,15 @@ class JobApplicationSchema(BaseModel):
     department: str
     job_id: Optional[UUID] = None
     resume: UploadedFile
+
+
+class QuickLinkSchema(BaseModel):
+    id: UUID
+    title: str
+    url: str
+    open_in_new_tab: bool = False
+    position: int = 0
+    model_config = ConfigDict(from_attributes=True)
 
 # SERVICE PAGE SCHEMA
 class ServiceBenefitSchema(BaseModel):

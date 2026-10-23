@@ -227,14 +227,19 @@ class Job(models.Model):
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, verbose_name="Job Profile")
     location = models.CharField(max_length=100)
     type = models.CharField(max_length=20, choices=JOB_TYPE_CHOICES)
     description = models.TextField()
+    key_points = models.JSONField(default=list, blank=True, help_text="List of key points/pointers for this job")
     apply_link = models.URLField()
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Job"
+        verbose_name_plural = "Jobs"
 
     def __str__(self):
         return self.title
@@ -247,10 +252,15 @@ class JobApplication(models.Model):
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
-    job = models.ForeignKey(Job, on_delete=models.SET_NULL, null=True, blank=True)
+    job = models.ForeignKey(Job, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Job Profile")
     cv = models.FileField(upload_to="resumes/", null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Job Query"
+        verbose_name_plural = "Job Queries"
+        ordering = ['-created_at']
 
     def __str__(self):
         return f"{self.name} - {self.job.title if self.job else 'General'}"
@@ -434,3 +444,20 @@ class SocialMediaLink(models.Model):
 
     def __str__(self):
         return "Social Media Links"
+
+
+class QuickLink(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    title = models.CharField(max_length=100)
+    url = models.CharField(max_length=255, help_text="e.g. /about, /service, /contact, or full external URL")
+    position = models.PositiveIntegerField(default=0, help_text="Order in footer (lower number comes first)")
+    is_active = models.BooleanField(default=True)
+    open_in_new_tab = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["position", "id"]
+        verbose_name = "Quick Link"
+        verbose_name_plural = "Quick Links"
+
+    def __str__(self):
+        return f"{self.title} ({self.url})"

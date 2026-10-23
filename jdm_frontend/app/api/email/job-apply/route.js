@@ -10,7 +10,7 @@ export async function POST(req) {
     const email = formData.get('email');
     const city = formData.get('city');
     const state = formData.get('state');
-    const jobTitle = formData.get('jobTitle');
+    const jobProfile = formData.get('jobProfile') || formData.get('jobTitle') || 'General';
     const department = formData.get('department');
     const resume = formData.get('resume'); // File object
 
@@ -36,16 +36,16 @@ export async function POST(req) {
     const mailOptions = {
       from: process.env.SMTP_USER,
       to: process.env.EMAIL_TO || 'info@jdmgroups.com',
-      subject: `New Job Application: ${jobTitle} - ${name}`,
+      subject: `New Job Query: ${jobProfile} - ${name}`,
       text: `
-New Job Application Received:
+New Job Application / Query Received:
 
 Name: ${name}
 Phone: ${phone}
 Email: ${email}
 City: ${city}
 State: ${state}
-Job Title: ${jobTitle}
+Job Profile: ${jobProfile}
 Department: ${department}
       `,
       attachments

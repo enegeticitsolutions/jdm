@@ -1,8 +1,36 @@
+"use client";
+import { useEffect, useState } from "react";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
+const defaultQuickLinks = [
+  { title: "About Us", url: "/about" },
+  { title: "Services", url: "/service" },
+  { title: "Contact Us", url: "/contact" },
+  { title: "FAQ’S", url: "/faq" },
+];
+
 export default function Footer2() {
+  const [quickLinks, setQuickLinks] = useState(defaultQuickLinks);
+
+  useEffect(() => {
+    const fetchQuickLinks = async () => {
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL_V1 || "https://api.jdmgroups.com/api";
+        const res = await fetch(`${apiUrl}/quick-links/`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            setQuickLinks(data);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch quick links:", err);
+      }
+    };
+    fetchQuickLinks();
+  }, []);
   return (
     <>
       {/* ======== Inline Styling & Hover Disable for JDM Section ========= */}
@@ -47,38 +75,18 @@ export default function Footer2() {
                     <h5>Quick Link</h5>
                   </div>
                   <ul className="list-area">
-                    <li>
-                      <Link href="/about">
-                        <i className="fa-solid fa-chevrons-right" />
-                        About Us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/service">
-                        <i className="fa-solid fa-chevrons-right" />
-                        Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">
-                        <i className="fa-solid fa-chevrons-right" />
-                        Contact Us
-                      </Link>
-                    </li>
-                    {/* HIDDEN: News page temporarily disabled
-                    <li>
-                      <Link href="/news">
-                        <i className="fa-solid fa-chevrons-right" />
-                        News
-                      </Link>
-                    </li>
-                    */}
-                    <li>
-                      <Link href="/faq">
-                        <i className="fa-solid fa-chevrons-right" />
-                        FAQ’S
-                      </Link>
-                    </li>
+                    {quickLinks.map((item, idx) => (
+                      <li key={item.id || idx}>
+                        <Link
+                          href={item.url || "#"}
+                          target={item.open_in_new_tab ? "_blank" : undefined}
+                          rel={item.open_in_new_tab ? "noopener noreferrer" : undefined}
+                        >
+                          <i className="fa-solid fa-chevrons-right" />
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
 
                     <a
                       className="theme-btn w-100"

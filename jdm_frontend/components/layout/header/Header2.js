@@ -62,7 +62,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 								<div className="header-left">
 									<div className="logo">
 										<Link href="/" className="header-logo">
-											<img src="/assets/img/logo/black-logo.jpg" alt="logo-img" />
+											<img src="/assets/img/logo/JDM New Logo.png" alt="JDM Logo" />
 										</Link>
 									</div>
 								</div>

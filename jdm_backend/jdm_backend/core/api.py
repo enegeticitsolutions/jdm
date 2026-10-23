@@ -4,8 +4,8 @@ from ninja import NinjaAPI, Form, File
 from ninja.files import UploadedFile
 from typing import Optional
 from ninja.errors import HttpError
-from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink
-from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, TestimonialSchema, NetworkSchema, SocialMediaLinkSchema
+from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink, QuickLink
+from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, TestimonialSchema, NetworkSchema, SocialMediaLinkSchema, QuickLinkSchema
 import json
 from django.shortcuts import get_object_or_404
 # import form_
@@ -259,6 +259,7 @@ def get_job(request, job_id: str):
         "location": job.location,
         "type": job.type,
         "description": job.description,
+        "key_points": job.key_points or [],
         "apply_link": job.apply_link,
         "created_at": job.created_at.isoformat(),
         "updated_at": job.updated_at.isoformat()
@@ -274,9 +275,11 @@ def apply_for_job(
     state: str = Form(...),
     department: str = Form(...),
     jobTitle: Optional[str] = Form(None),
+    jobProfile: Optional[str] = Form(None),
     resume: UploadedFile = File(...),
 ):
-    job = Job.objects.filter(title__iexact=jobTitle).first() if jobTitle else None
+    profile_name = jobProfile or jobTitle
+    job = Job.objects.filter(title__iexact=profile_name).first() if profile_name else None
 
     application = JobApplication.objects.create(
         name=name,
@@ -290,6 +293,10 @@ def apply_for_job(
     )
 
     return {"success": True, "application_id": application.id}
+
+@api.get("/quick-links/", response=list[QuickLinkSchema])
+def get_quick_links(request):
+    return QuickLink.objects.filter(is_active=True).order_by("position", "id")
 
 # newss
 

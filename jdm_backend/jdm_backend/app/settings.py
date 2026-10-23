@@ -85,6 +85,8 @@ CORS_ALLOWED_ORIGINS = (
     "https://api.jdmgroups.com",
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
     'http://jdmgroups.com:3000',
     'https://jdmgroups.com:3000',
     'http://jdmgroups.com',
@@ -96,6 +98,8 @@ CORS_ALLOWED_ORIGINS = (
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
     'http://jdmgroups.com:3000',
     'https://jdmgroups.com',
     'https://www.jdmgroups.com',
