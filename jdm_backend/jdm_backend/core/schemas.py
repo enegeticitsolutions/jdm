@@ -161,6 +161,7 @@ class JobSchema(BaseModel):
     location: str
     type: str
     description: str
+    key_points: Optional[List[str]] = []
     apply_link: str
     created_at: datetime
     updated_at: datetime
@@ -176,6 +177,15 @@ class JobApplicationSchema(BaseModel):
     department: str
     job_id: Optional[UUID] = None
     resume: UploadedFile
+
+
+class QuickLinkSchema(BaseModel):
+    id: UUID
+    title: str
+    url: str
+    open_in_new_tab: bool = False
+    position: int = 0
+    model_config = ConfigDict(from_attributes=True)
 
 # SERVICE PAGE SCHEMA
 class ServiceBenefitSchema(BaseModel):
@@ -276,4 +286,32 @@ class NetworkSchema(BaseModel):
     branches: str
     is_active: bool
     position: int
+    model_config = ConfigDict(from_attributes=True)
+
+
+class SocialMediaLinkSchema(BaseModel):
+    id: UUID
+    facebook_url: Optional[str]
+    twitter_url: Optional[str]
+    instagram_url: Optional[str]
+    linkedin_url: Optional[str]
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class MobileOffcanvasSchema(BaseModel):
+    id: UUID
+    title: str
+    address: str
+    address_url: Optional[str] = None
+    email: str
+    working_hours: str
+    phone: str
+    phone_href: Optional[str] = None
+    button_text: str
+    button_url: str
+    description: Optional[str] = None
+    logo: Optional[str] = None
+    is_active: bool
+
     model_config = ConfigDict(from_attributes=True)

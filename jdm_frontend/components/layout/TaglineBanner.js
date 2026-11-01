@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { useQuery } from '@tanstack/react-query';
 
 
@@ -21,12 +21,61 @@ const TaglineBanner = () => {
   console.log("imageUrl in tagline banner: ", imageUrl);
   return (
     <div className="tagline_banner">
-        {/* <span className="tagline_customerDelight">Customer Delight</span>
-        <span className="tagline_isOur">Is Our</span>
-        <span className="tagline_passion">Passion</span> */}
-        <img src={imageUrl}></img>
+      <div className="tagline-content">
+        <span className="text-red">Customer </span>
+        <span className="text-white">Delight </span>
+        <span className="text-small">Is Our </span>
+        <span className="text-red">Passion</span>
+      </div>
+
+      <style jsx>{`
+        .tagline_banner {
+          bottom: 6% !important;
+        }
+
+        .tagline-content {
+          text-align: center;
+          font-family: 'Arial', sans-serif;
+          font-style: italic;
+          font-weight: 700;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds depth like in the image */
+          white-space: nowrap;
+        }
+
+        .text-red {
+          color: #a81c24; /* Deep red color */
+          font-size: 5rem;
+        }
+
+        .text-white {
+          color: #ffffff;
+          font-size: 5rem;
+        }
+
+        .text-small {
+          color: #ffffff;
+          font-size: 3rem;
+          margin: 0 0.5rem;
+          vertical-align: baseline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+          .text-red, .text-white { font-size: 4rem; }
+          .text-small { font-size: 2.5rem; }
+        }
+        @media (max-width: 768px) {
+          .tagline-content { white-space: normal; }
+          .text-red, .text-white { font-size: 3rem; }
+          .text-small { font-size: 2rem; }
+        }
+        @media (max-width: 480px) {
+          .text-red, .text-white { font-size: 2rem; }
+          .text-small { font-size: 1.5rem; }
+        }
+      `}</style>
     </div>
-  )
+  );
 }
 
 export default TaglineBanner

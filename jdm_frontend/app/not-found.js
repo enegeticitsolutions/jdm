@@ -9,7 +9,7 @@ export default function NotFound(error) {
             <div className="col-lg-9">
               <div className="error-items">
                 <div className="error-image wow fadeInUp" data-wow-delay=".3s">
-                  <img src="assets/img/404.png" alt="img" />
+                  <img src="/assets/img/404.png" alt="img" />
                 </div>
                 <h2 className="wow fadeInUp" data-wow-delay=".5s">
                   <span>Oops!</span> Page not found

@@ -2,8 +2,26 @@ import Link from "next/link"
 import Menu from "../Menu"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons"
+import { useState, useEffect } from "react"
 
 export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffCanvas, handleOffCanvas, isSearch, handleSearch }) {
+	const [socialLinks, setSocialLinks] = useState(null)
+
+	useEffect(() => {
+		async function fetchSocialLinks() {
+			try {
+				const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/social-media-links/`)
+				if (res.ok) {
+					const data = await res.json()
+					setSocialLinks(data)
+				}
+			} catch (error) {
+				console.error("Failed to fetch social media links:", error)
+			}
+		}
+		fetchSocialLinks()
+	}, [])
+
 	return (
 		<>
 			<style>{`
@@ -44,7 +62,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 								<div className="header-left">
 									<div className="logo">
 										<Link href="/" className="header-logo">
-											<img src="/assets/img/logo/black-logo.jpg" alt="logo-img" />
+											<img src="/assets/img/logo/JDM New Logo.png" alt="JDM Logo" />
 										</Link>
 									</div>
 								</div>
@@ -64,21 +82,45 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 
 									{/* SOCIAL ICONS */}
 									<div className="search-item social-links d-none d-xl-flex">
-										<Link href="https://www.facebook.com/profile.php?id=100090951694492" target="_blank" className="facebook">
-											<i className="fab fa-facebook-f" />
-										</Link>
+										{socialLinks?.facebook_url ? (
+											<Link href={socialLinks.facebook_url} target="_blank" className="facebook">
+												<i className="fab fa-facebook-f" />
+											</Link>
+										) : (
+											<Link href="https://www.facebook.com/profile.php?id=100090951694492" target="_blank" className="facebook">
+												<i className="fab fa-facebook-f" />
+											</Link>
+										)}
 
-										<Link href="https://x.com/JDMGroup" target="_blank" className="twitter">
-											<FontAwesomeIcon icon={faXTwitter} />
-										</Link>
+										{socialLinks?.twitter_url ? (
+											<Link href={socialLinks.twitter_url} target="_blank" className="twitter">
+												<FontAwesomeIcon icon={faXTwitter} />
+											</Link>
+										) : (
+											<Link href="https://x.com/JDMGroup" target="_blank" className="twitter">
+												<FontAwesomeIcon icon={faXTwitter} />
+											</Link>
+										)}
 
-										<Link href="https://www.instagram.com/we_jdm/" target="_blank" className="instagram">
-											<i className="fab fa-instagram" />
-										</Link>
+										{socialLinks?.instagram_url ? (
+											<Link href={socialLinks.instagram_url} target="_blank" className="instagram">
+												<i className="fab fa-instagram" />
+											</Link>
+										) : (
+											<Link href="https://www.instagram.com/we_jdm/" target="_blank" className="instagram">
+												<i className="fab fa-instagram" />
+											</Link>
+										)}
 
-										<Link href="https://www.linkedin.com/company/27983246" target="_blank" className="linkedin">
-											<i className="fab fa-linkedin-in" />
-										</Link>
+										{socialLinks?.linkedin_url ? (
+											<Link href={socialLinks.linkedin_url} target="_blank" className="linkedin">
+												<i className="fab fa-linkedin-in" />
+											</Link>
+										) : (
+											<Link href="https://www.linkedin.com/company/27983246" target="_blank" className="linkedin">
+												<i className="fab fa-linkedin-in" />
+											</Link>
+										)}
 									</div>
 
 									<div className="header__hamburger d-xl-none my-auto">

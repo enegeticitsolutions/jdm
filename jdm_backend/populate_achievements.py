@@ -3,6 +3,11 @@ import shutil
 import django
 from django.core.files import File
 
+import sys
+
+# Ensure the current directory is in the Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "jdm_backend.settings")
 django.setup()
 

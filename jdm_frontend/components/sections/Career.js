@@ -90,10 +90,13 @@ const CareerSection = ({ jobs }) => {
   //   }
   //   closeModal();
   // };
- const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
   e.preventDefault();
   const form = e.target;
   const formData = new FormData(form);
+  if (!formData.get("jobProfile") && formData.get("jobTitle")) {
+    formData.append("jobProfile", formData.get("jobTitle"));
+  }
 
   try {
     // Fetch CSRF cookie first (optional but good if CSRF cookie needs to be refreshed)
@@ -117,6 +120,15 @@ const CareerSection = ({ jobs }) => {
     if (!response.ok) {
       const errorText = await response.text();
       throw new Error(`Server error: ${response.status} - ${errorText}`);
+    }
+
+    try {
+      await fetch('/api/email/job-apply', {
+        method: 'POST',
+        body: formData, // FormData directly
+      });
+    } catch(emailErr) {
+      console.error('Email notification failed', emailErr);
     }
 
     const result = await response.json();
@@ -167,7 +179,25 @@ const CareerSection = ({ jobs }) => {
                         <p>
                           Location: {job.location} | Type: {job.type}
                         </p>
-                        <p>{job.description}</p>
+                        <div 
+                          className="job-description" 
+                          dangerouslySetInnerHTML={{ __html: job.description }} 
+                        />
+                        {job.key_points && job.key_points.length > 0 && (
+                          <div className="job-key-points mt-3 mb-3">
+                            <h6 style={{ fontSize: "15px", fontWeight: "700", color: "#1f2937", marginBottom: "8px" }}>
+                              Key Points:
+                            </h6>
+                            <ul style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
+                              {job.key_points.map((point, idx) => (
+                                <li key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "8px", marginBottom: "6px" }}>
+                                  <i className="fa-solid fa-circle-check" style={{ color: "var(--theme)", marginTop: "4px", fontSize: "14px" }} />
+                                  <span style={{ fontSize: "14px", color: "#4b5563", lineHeight: "1.5" }}>{point}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                         <button
                           onClick={() => handleApplyClick(job)}
                           className="theme-btn apply-btn wow fadeInUp"
@@ -240,7 +270,7 @@ const CareerSection = ({ jobs }) => {
                 </div>
               ))}
               <div className="form-group">
-                <label htmlFor="jobTitle">Job Title</label>
+                <label htmlFor="jobTitle">Job Profile</label>
                 <input
                   type="text"
                   id="jobTitle"
@@ -255,8 +285,7 @@ const CareerSection = ({ jobs }) => {
                   type="text"
                   id="department"
                   name="department"
-                  value={getDepartmentFromJob(isGeneralForm ? "" : selectedJob?.title)}
-                  readOnly
+                  defaultValue={getDepartmentFromJob(isGeneralForm ? "" : selectedJob?.title)}
                 />
               </div>
               <div className="form-group">

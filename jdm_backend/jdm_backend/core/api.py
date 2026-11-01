@@ -4,8 +4,8 @@ from ninja import NinjaAPI, Form, File
 from ninja.files import UploadedFile
 from typing import Optional
 from ninja.errors import HttpError
-from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network
-from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, TestimonialSchema, NetworkSchema
+from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink, QuickLink, MobileOffcanvas
+from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, TestimonialSchema, NetworkSchema, SocialMediaLinkSchema, QuickLinkSchema, MobileOffcanvasSchema
 import json
 from django.shortcuts import get_object_or_404
 # import form_
@@ -159,6 +159,8 @@ def get_about(request):
     about = AboutPageContent.objects.first()
     if not about:
         raise HttpError(404, "About page content not found.")
+        
+    home = HomePageContent.objects.first()
 
     # Parse story points
     story_points = about.story_points
@@ -218,20 +220,20 @@ def get_about(request):
             ]
         },
         "achievements": {
-            "heading": about.achievements_heading,
+            "heading": home.achievements_heading if home else "Achievements",
             "items": [
                 {
                     "id": ach.id,
                     "title": ach.title,
                     "count": ach.count,
-                    "icon": ach.icon.url,
+                    "icon": ach.icon.url if ach.icon else None,
                     "delay": ach.delay,
                     "suffix": ach.suffix,
                     "prefix": ach.prefix,
                     "is_active": ach.is_active
                 }
-                for ach in about.achievements.all() if ach.is_active
-            ]
+                for ach in home.achievements.all() if ach.is_active
+            ] if home else []
         },
         "key_strengths": {
             "heading": about.key_strengths_heading,
@@ -241,7 +243,7 @@ def get_about(request):
         "is_active": about.is_active,
         "is_story": about.is_story,
         "is_faq": about.is_faq,
-        "is_achievements": about.is_achievements
+        "is_achievements": home.is_achievements if home else False
     }
 
 @api.get("/jobs/", response=list[JobSchema])
@@ -257,6 +259,7 @@ def get_job(request, job_id: str):
         "location": job.location,
         "type": job.type,
         "description": job.description,
+        "key_points": job.key_points or [],
         "apply_link": job.apply_link,
         "created_at": job.created_at.isoformat(),
         "updated_at": job.updated_at.isoformat()
@@ -272,9 +275,11 @@ def apply_for_job(
     state: str = Form(...),
     department: str = Form(...),
     jobTitle: Optional[str] = Form(None),
+    jobProfile: Optional[str] = Form(None),
     resume: UploadedFile = File(...),
 ):
-    job = Job.objects.filter(title__iexact=jobTitle).first() if jobTitle else None
+    profile_name = jobProfile or jobTitle
+    job = Job.objects.filter(title__iexact=profile_name).first() if profile_name else None
 
     application = JobApplication.objects.create(
         name=name,
@@ -288,6 +293,10 @@ def apply_for_job(
     )
 
     return {"success": True, "application_id": application.id}
+
+@api.get("/quick-links/", response=list[QuickLinkSchema])
+def get_quick_links(request):
+    return QuickLink.objects.filter(is_active=True).order_by("position", "id")
 
 # newss
 
@@ -507,3 +516,47 @@ def get_network(request):
             "position": obj.position,
         })
     return result
+
+
+@api.get("/social-media-links/", response=SocialMediaLinkSchema)
+def get_social_media_links(request):
+    settings = SocialMediaLink.objects.first()
+    if not settings:
+        raise HttpError(404, "Social Media Links not found.")
+    
+    return {
+        "id": settings.id,
+        "facebook_url": settings.facebook_url,
+        "twitter_url": settings.twitter_url,
+        "instagram_url": settings.instagram_url,
+        "linkedin_url": settings.linkedin_url,
+    }
+
+
+@api.get("/mobile-offcanvas/", response=MobileOffcanvasSchema)
+def get_mobile_offcanvas(request):
+    data = MobileOffcanvas.objects.filter(is_active=True).first()
+    if not data:
+        data = MobileOffcanvas.objects.first()
+    if not data:
+        data = MobileOffcanvas.objects.create()
+    
+    logo_url = None
+    if data.logo:
+        logo_url = build_file_url(request, data.logo)
+        
+    return {
+        "id": data.id,
+        "title": data.title,
+        "address": data.address,
+        "address_url": data.address_url,
+        "email": data.email,
+        "working_hours": data.working_hours,
+        "phone": data.phone,
+        "phone_href": data.phone_href,
+        "button_text": data.button_text,
+        "button_url": data.button_url,
+        "description": data.description,
+        "logo": logo_url,
+        "is_active": data.is_active,
+    }

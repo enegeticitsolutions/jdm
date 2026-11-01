@@ -171,8 +171,6 @@ class AboutPageContent(models.Model):
     values_points = models.JSONField(default=list)
     key_strengths_heading = models.CharField(max_length=255, default="Our Key Strengths")
     key_strengths_points = models.JSONField(default=list)   
-    # achievements = models.JSONField(default=list)
-    achievements_heading = models.CharField(max_length=200, default="Achievements")
     team_heading = models.CharField(max_length=200, default="Our Team")
     faq_heading = models.CharField(max_length=255)
     faq_paragraph = models.TextField()
@@ -182,7 +180,6 @@ class AboutPageContent(models.Model):
     is_values = models.BooleanField(default=True)
     is_story = models.BooleanField(default=True)
     is_faq = models.BooleanField(default=True)
-    is_achievements = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -193,7 +190,6 @@ def validate_svg(file):
 class Achievement(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     home = models.ForeignKey(HomePageContent, related_name='achievements', on_delete=models.CASCADE, default=None, null=True)
-    about = models.ForeignKey(AboutPageContent, related_name='achievements', on_delete=models.CASCADE, default=None, null=True, blank=True )
     title = models.CharField(max_length=200)
     count = models.IntegerField()
     icon = models.FileField(upload_to='achievements/', validators=[validate_svg])
@@ -201,6 +197,10 @@ class Achievement(models.Model):
     suffix = models.CharField(default="", blank=True, null=True)
     prefix = models.CharField(default="", blank=True, null=True)
     is_active = models.BooleanField(default=True)
+    position = models.PositiveIntegerField(default=0, help_text="Used for ordering (lower number = higher up)")
+
+    class Meta:
+        ordering = ['position', 'id']
 
     def __str__(self):
         return self.title
@@ -212,6 +212,10 @@ class FAQ(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     is_active= models.BooleanField(default=True)
+    position = models.PositiveIntegerField(default=0, help_text="Used for ordering (lower number = higher up)")
+
+    class Meta:
+        ordering = ['position', 'id']
 
 # Carrer Page Models
 class Job(models.Model):
@@ -223,14 +227,19 @@ class Job(models.Model):
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, verbose_name="Job Profile")
     location = models.CharField(max_length=100)
     type = models.CharField(max_length=20, choices=JOB_TYPE_CHOICES)
     description = models.TextField()
+    key_points = models.JSONField(default=list, blank=True, help_text="List of key points/pointers for this job")
     apply_link = models.URLField()
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Job"
+        verbose_name_plural = "Jobs"
 
     def __str__(self):
         return self.title
@@ -243,10 +252,15 @@ class JobApplication(models.Model):
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
-    job = models.ForeignKey(Job, on_delete=models.SET_NULL, null=True, blank=True)
+    job = models.ForeignKey(Job, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Job Profile")
     cv = models.FileField(upload_to="resumes/", null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Job Query"
+        verbose_name_plural = "Job Queries"
+        ordering = ['-created_at']
 
     def __str__(self):
         return f"{self.name} - {self.job.title if self.job else 'General'}"
@@ -417,6 +431,63 @@ class Network(models.Model):
     class Meta:
         ordering = ['position']
 
-    def __str__(self):
-        return self.region
+class SocialMediaLink(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    facebook_url = models.URLField(blank=True, null=True)
+    twitter_url = models.URLField(blank=True, null=True)
+    instagram_url = models.URLField(blank=True, null=True)
+    linkedin_url = models.URLField(blank=True, null=True)
 
+    class Meta:
+        verbose_name = "Social Media Link"
+        verbose_name_plural = "Social Media Links"
+
+    def __str__(self):
+        return "Social Media Links"
+
+
+class QuickLink(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    title = models.CharField(max_length=100)
+    url = models.CharField(max_length=255, help_text="e.g. /about, /service, /contact, or full external URL")
+    position = models.PositiveIntegerField(default=0, help_text="Order in footer (lower number comes first)")
+    is_active = models.BooleanField(default=True)
+    open_in_new_tab = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["position", "id"]
+        verbose_name = "Quick Link"
+        verbose_name_plural = "Quick Links"
+
+    def __str__(self):
+        return f"{self.title} ({self.url})"
+
+
+class MobileOffcanvas(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    title = models.CharField(max_length=255, default="Contact Info", help_text="Heading for contact section in mobile drawer")
+    address = models.TextField(default="A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037")
+    address_url = models.CharField(max_length=500, blank=True, null=True, default="#", help_text="Google Maps or location URL")
+    email = models.EmailField(default="info@jdmgroups.com")
+    working_hours = models.CharField(max_length=255, default="Mon-Sat, 9:30 Am – 6:30 Pm", help_text="Business / working hours")
+    phone = models.CharField(max_length=50, default="+91-49707070-100")
+    phone_href = models.CharField(max_length=100, blank=True, default="tel:+9149707070", help_text="Phone dial link (e.g. tel:+9149707070)")
+    button_text = models.CharField(max_length=100, default="Get A Quote", help_text="Action button text")
+    button_url = models.CharField(max_length=255, default="/contact", help_text="Action button link")
+    description = models.TextField(
+        blank=True,
+        null=True,
+        default="Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.",
+        help_text="Mission statement / description text"
+    )
+    logo = models.ImageField(upload_to="offcanvas/", blank=True, null=True, help_text="Optional custom offcanvas logo (leave blank for default site logo)")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Mobile Offcanvas"
+        verbose_name_plural = "Mobile Offcanvas"
+
+    def __str__(self):
+        return f"Mobile Offcanvas ({self.title})"
