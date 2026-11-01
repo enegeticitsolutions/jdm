@@ -461,3 +461,33 @@ class QuickLink(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.url})"
+
+
+class MobileOffcanvas(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    title = models.CharField(max_length=255, default="Contact Info", help_text="Heading for contact section in mobile drawer")
+    address = models.TextField(default="A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037")
+    address_url = models.CharField(max_length=500, blank=True, null=True, default="#", help_text="Google Maps or location URL")
+    email = models.EmailField(default="info@jdmgroups.com")
+    working_hours = models.CharField(max_length=255, default="Mon-Sat, 9:30 Am – 6:30 Pm", help_text="Business / working hours")
+    phone = models.CharField(max_length=50, default="+91-49707070-100")
+    phone_href = models.CharField(max_length=100, blank=True, default="tel:+9149707070", help_text="Phone dial link (e.g. tel:+9149707070)")
+    button_text = models.CharField(max_length=100, default="Get A Quote", help_text="Action button text")
+    button_url = models.CharField(max_length=255, default="/contact", help_text="Action button link")
+    description = models.TextField(
+        blank=True,
+        null=True,
+        default="Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.",
+        help_text="Mission statement / description text"
+    )
+    logo = models.ImageField(upload_to="offcanvas/", blank=True, null=True, help_text="Optional custom offcanvas logo (leave blank for default site logo)")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Mobile Offcanvas"
+        verbose_name_plural = "Mobile Offcanvas"
+
+    def __str__(self):
+        return f"Mobile Offcanvas ({self.title})"

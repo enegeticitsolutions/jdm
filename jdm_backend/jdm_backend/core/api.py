@@ -4,8 +4,8 @@ from ninja import NinjaAPI, Form, File
 from ninja.files import UploadedFile
 from typing import Optional
 from ninja.errors import HttpError
-from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink, QuickLink
-from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, TestimonialSchema, NetworkSchema, SocialMediaLinkSchema, QuickLinkSchema
+from .models import HomePageContent, HomeServiceOrder, AboutPageContent, Job, News, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink, QuickLink, MobileOffcanvas
+from .schemas import HomePageSchema, AboutPageSchema, JobSchema, NewsSchema, JobApplicationSchema, ServiceSchema, ValueAddedServiceSchema, TeamMemberSchema,GalleryEventSchema, ContactInfoSchema , ContactQuerySchema, IndustrySchema, IndustrySpecificationSchema, TestimonialSchema, NetworkSchema, SocialMediaLinkSchema, QuickLinkSchema, MobileOffcanvasSchema
 import json
 from django.shortcuts import get_object_or_404
 # import form_
@@ -530,4 +530,33 @@ def get_social_media_links(request):
         "twitter_url": settings.twitter_url,
         "instagram_url": settings.instagram_url,
         "linkedin_url": settings.linkedin_url,
+    }
+
+
+@api.get("/mobile-offcanvas/", response=MobileOffcanvasSchema)
+def get_mobile_offcanvas(request):
+    data = MobileOffcanvas.objects.filter(is_active=True).first()
+    if not data:
+        data = MobileOffcanvas.objects.first()
+    if not data:
+        data = MobileOffcanvas.objects.create()
+    
+    logo_url = None
+    if data.logo:
+        logo_url = build_file_url(request, data.logo)
+        
+    return {
+        "id": data.id,
+        "title": data.title,
+        "address": data.address,
+        "address_url": data.address_url,
+        "email": data.email,
+        "working_hours": data.working_hours,
+        "phone": data.phone,
+        "phone_href": data.phone_href,
+        "button_text": data.button_text,
+        "button_url": data.button_url,
+        "description": data.description,
+        "logo": logo_url,
+        "is_active": data.is_active,
     }

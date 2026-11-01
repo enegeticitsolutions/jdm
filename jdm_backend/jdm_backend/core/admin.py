@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink, QuickLink
+from .models import HomePageContent, ClienteleItem, AssociationItem, AffiliationItem, SeaPartnerItem, AirPartnerItem, Location, Achievement, News, AboutPageContent, FAQ, Job, JobApplication, Service, ServiceBenefit, ValueAddedService, TeamMember, GalleryPhoto, GalleryEvent, ContactInfo, ContactQuery, IndustrySpecification, Industry, Testimonial, Network, SocialMediaLink, QuickLink, MobileOffcanvas
 from django.utils.html import format_html
 from django.urls import reverse
 from django import forms
@@ -483,3 +483,35 @@ class QuickLinkAdmin(admin.ModelAdmin):
     list_filter = ("is_active",)
     ordering = ("position", "id")
 
+
+
+@admin.register(MobileOffcanvas)
+class MobileOffcanvasAdmin(admin.ModelAdmin):
+    list_display = ('title', 'phone', 'email', 'working_hours', 'button_text', 'is_active', 'updated_at')
+    search_fields = ('title', 'address', 'email', 'phone')
+    readonly_fields = ('created_at', 'updated_at', 'logo_preview')
+    fieldsets = (
+        ("Header & Brand", {
+            "fields": (("logo", "logo_preview"), "description")
+        }),
+        ("Contact Information (Mobile Drawer)", {
+            "fields": ("title", "address", "address_url", "email", "working_hours", ("phone", "phone_href"))
+        }),
+        ("Call to Action Button", {
+            "fields": (("button_text", "button_url"),)
+        }),
+        ("Status & Timestamps", {
+            "fields": ("is_active", ("created_at", "updated_at"))
+        }),
+    )
+
+    def logo_preview(self, obj):
+        if obj.logo:
+            return format_html('<img src="{}" width="120" style="object-fit: contain; max-height: 60px;" />', obj.logo.url)
+        return "Default site logo will be used"
+    logo_preview.short_description = "Current Logo Preview"
+
+    def has_add_permission(self, request):
+        if self.model.objects.exists():
+            return False
+        return super().has_add_permission(request)

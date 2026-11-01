@@ -296,4 +296,22 @@ class SocialMediaLinkSchema(BaseModel):
     instagram_url: Optional[str]
     linkedin_url: Optional[str]
 
-    model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)
+
+
+class MobileOffcanvasSchema(BaseModel):
+    id: UUID
+    title: str
+    address: str
+    address_url: Optional[str] = None
+    email: str
+    working_hours: str
+    phone: str
+    phone_href: Optional[str] = None
+    button_text: str
+    button_url: str
+    description: Optional[str] = None
+    logo: Optional[str] = None
+    is_active: bool
+
+    model_config = ConfigDict(from_attributes=True)

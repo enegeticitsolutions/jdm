@@ -28,7 +28,7 @@ import React from "react";
 export default function ContactInfo2() {
   // Google Maps embed with place name + coordinates
   const iframeURL =
-    "https://www.google.com/maps?q=JDM%20Groups@28.5491845,77.1287988&z=17&output=embed";
+    "https://www.google.com/maps?q=JDM%20Groups@28.5492304,77.128898&z=17&output=embed";
 
   return (
     <div className="office-google-map-wrapper" style={{ marginTop: "40px" }}>

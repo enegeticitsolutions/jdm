@@ -7,6 +7,7 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons"
 export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 	const [socialLinks, setSocialLinks] = useState(null)
 	const [contactInfo, setContactInfo] = useState(null)
+	const [mobileOffcanvas, setMobileOffcanvas] = useState(null)
 
 	useEffect(() => {
 		async function fetchSocialLinks() {
@@ -31,9 +32,32 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 				console.error("Failed to fetch contact info:", error)
 			}
 		}
+		async function fetchMobileOffcanvas() {
+			try {
+				const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_V1}/mobile-offcanvas/`)
+				if (res.ok) {
+					const data = await res.json()
+					setMobileOffcanvas(data)
+				}
+			} catch (error) {
+				console.error("Failed to fetch mobile offcanvas data:", error)
+			}
+		}
 		fetchSocialLinks()
 		fetchContact()
+		fetchMobileOffcanvas()
 	}, [])
+
+	const address = mobileOffcanvas?.address || contactInfo?.address || "A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037"
+	const email = mobileOffcanvas?.email || contactInfo?.email || "info@jdmgroups.com"
+	const phone = mobileOffcanvas?.phone || contactInfo?.phone || "+91-49707070-100"
+	const phoneHref = mobileOffcanvas?.phone_href || (phone ? `tel:${phone.replace(/[^+\d]/g, "")}` : "tel:+9149707070")
+	const hours = mobileOffcanvas?.working_hours || "Mon-Sat, 9:30 Am – 6:30 Pm"
+	const title = mobileOffcanvas?.title || "Contact Info"
+	const buttonText = mobileOffcanvas?.button_text || "Get A Quote"
+	const buttonUrl = mobileOffcanvas?.button_url || "/contact"
+	const description = mobileOffcanvas?.description || "Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment."
+	const logoUrl = mobileOffcanvas?.logo || "/assets/img/logo/JDM New Logo.png"
 
 	return (
 		<>
@@ -72,7 +96,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 							<div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
 								<div className="offcanvas__logo">
 									<Link href="/">
-										<img src="/assets/img/logo/JDM New Logo.png" alt="JDM Logo" />
+										<img src={logoUrl} alt="JDM Logo" />
 									</Link>
 								</div>
 								<div className="offcanvas__close">
@@ -82,19 +106,22 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 								</div>
 							</div>
 							<p className="text d-none d-xl-block">
-								Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.
+								{description}
 							</p>
 							<MobileMenu />
 							<div className="offcanvas__contact">
-								<h4>Contact Info</h4>
+								<h4>{title}</h4>
 								<ul>
 									<li className="d-flex align-items-center">
 										<div className="offcanvas__contact-icon">
 											<i className="fal fa-map-marker-alt" />
 										</div>
 										<div className="offcanvas__contact-text">
-											<Link target="_blank" href="#">
-												{contactInfo?.address || "A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037"}
+											<Link
+												target={mobileOffcanvas?.address_url && mobileOffcanvas.address_url !== "#" ? "_blank" : undefined}
+												href={mobileOffcanvas?.address_url || "#"}
+											>
+												{address}
 											</Link>
 										</div>
 									</li>
@@ -103,9 +130,9 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 											<i className="fal fa-envelope" />
 										</div>
 										<div className="offcanvas__contact-text">
-											<Link href={`mailto:${contactInfo?.email || "info@jdmgroups.com"}`}>
-												<span className={`mailto:${contactInfo?.email || "info@jdmgroups.com"}`}>
-													{contactInfo?.email || "info@jdmgroups.com"}
+											<Link href={`mailto:${email}`}>
+												<span>
+													{email}
 												</span>
 											</Link>
 										</div>
@@ -115,9 +142,9 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 											<i className="fal fa-clock" />
 										</div>
 										<div className="offcanvas__contact-text">
-											<Link target="_blank" href="#">
-												Mon-Sat, 9:30 am - 6:30 pm
-											</Link>
+											<span>
+												{hours}
+											</span>
 										</div>
 									</li>
 									<li className="d-flex align-items-center">
@@ -125,14 +152,14 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 											<i className="far fa-phone" />
 										</div>
 										<div className="offcanvas__contact-text">
-											<Link href={`tel:${contactInfo?.phone || "+9149707070"}`}>{contactInfo?.phone || "+91-49707070-100"}</Link>
+											<Link href={phoneHref}>{phone}</Link>
 										</div>
 									</li>
 								</ul>
 								<div className="header-button mt-4">
-									<Link href="contact" className="theme-btn text-center">
+									<Link href={buttonUrl} className="theme-btn text-center">
 										<span>
-											Get A Quote
+											{buttonText}
 											<i className="fa-solid fa-arrow-right-long" />
 										</span>
 									</Link>
