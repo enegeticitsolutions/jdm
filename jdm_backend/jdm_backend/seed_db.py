@@ -4,7 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')
 django.setup()
 
-from core.models import HomePageContent, AboutPageContent, IndustrySpecification, ContactInfo
+from core.models import HomePageContent, AboutPageContent, IndustrySpecification, ContactInfo, MobileOffcanvas
 
 def seed():
     # Home
@@ -51,6 +51,22 @@ def seed():
             iframe="<iframe src=''></iframe>"
         )
         print("Created default ContactInfo.")
+
+    # Mobile Offcanvas
+    if not MobileOffcanvas.objects.exists():
+        MobileOffcanvas.objects.create(
+            title="Contact Info",
+            address="A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037",
+            address_url="#",
+            email="info@jdmgroups.com",
+            working_hours="Mon-Sat, 9:30 Am - 6:30 Pm",
+            phone="+91-49707070-100",
+            phone_href="tel:+9149707070",
+            button_text="Get A Quote",
+            button_url="/contact",
+            description="Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.",
+        )
+        print("Created default MobileOffcanvas.")
 
 if __name__ == '__main__':
     seed()
